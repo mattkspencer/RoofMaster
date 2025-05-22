@@ -39,8 +39,8 @@ const Header = () => {
         <div className="flex items-center space-x-2">
           <Link href="/">
             <div className="text-2xl font-bold cursor-pointer">
-              <span className="text-primary">Spencer</span>
-              <span className="text-secondary">Roofing</span>
+              <span className="text-blue-500">Spencer</span>
+              <span className="text-gray-700">Roofing</span>
             </div>
           </Link>
         </div>
