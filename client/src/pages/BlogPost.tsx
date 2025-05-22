@@ -139,6 +139,7 @@ const BlogPost = () => {
           text="Contact us today for a free inspection and estimate for your roofing project."
           buttonText="Get a Free Estimate"
           buttonLink="/contact"
+          showPhoneButton={true}
         />
       </div>
     </div>

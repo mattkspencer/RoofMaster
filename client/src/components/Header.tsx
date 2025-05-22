@@ -38,10 +38,10 @@ const Header = () => {
       <div className="container mx-auto px-4 py-3 flex justify-between items-center">
         <div className="flex items-center space-x-2">
           <Link href="/">
-            <a className="text-2xl font-bold">
+            <div className="text-2xl font-bold cursor-pointer">
               <span className="text-primary">Spencer</span>
               <span className="text-secondary">Roofing</span>
-            </a>
+            </div>
           </Link>
         </div>
         
@@ -58,51 +58,51 @@ const Header = () => {
         {/* Desktop navigation */}
         <nav className="hidden lg:flex items-center space-x-8">
           <Link href="/">
-            <a className={`nav-link ${isActive('/') ? 'active text-primary font-semibold' : 'hover:text-primary'} transition-colors`}>
+            <div className={`nav-link ${isActive('/') ? 'active text-primary font-semibold' : 'hover:text-primary'} transition-colors cursor-pointer`}>
               Home
-            </a>
+            </div>
           </Link>
           <Link href="/about">
-            <a className={`nav-link ${isActive('/about') ? 'active text-primary font-semibold' : 'hover:text-primary'} transition-colors`}>
+            <div className={`nav-link ${isActive('/about') ? 'active text-primary font-semibold' : 'hover:text-primary'} transition-colors cursor-pointer`}>
               About
-            </a>
+            </div>
           </Link>
           <div className="relative group">
-            <a className={`nav-link cursor-pointer hover:text-primary transition-colors flex items-center`}>
+            <div className={`nav-link cursor-pointer hover:text-primary transition-colors flex items-center`}>
               Services <i className="fas fa-chevron-down ml-1 text-xs"></i>
-            </a>
+            </div>
             <div className="absolute left-0 mt-2 w-64 bg-white shadow-lg rounded-md overflow-hidden z-20 hidden group-hover:block">
               <Link href="/services/residential-roofing">
-                <a className="block px-4 py-2 hover:bg-primary hover:text-white transition-colors">Residential Roofing</a>
+                <div className="block px-4 py-2 hover:bg-primary hover:text-white transition-colors cursor-pointer">Residential Roofing</div>
               </Link>
               <Link href="/services/commercial-roofing">
-                <a className="block px-4 py-2 hover:bg-primary hover:text-white transition-colors">Commercial Roofing</a>
+                <div className="block px-4 py-2 hover:bg-primary hover:text-white transition-colors cursor-pointer">Commercial Roofing</div>
               </Link>
               <Link href="/services/roof-repair">
-                <a className="block px-4 py-2 hover:bg-primary hover:text-white transition-colors">Roof Repairs</a>
+                <div className="block px-4 py-2 hover:bg-primary hover:text-white transition-colors cursor-pointer">Roof Repairs</div>
               </Link>
               <Link href="/services/insurance-claims">
-                <a className="block px-4 py-2 hover:bg-primary hover:text-white transition-colors">Insurance Claims</a>
+                <div className="block px-4 py-2 hover:bg-primary hover:text-white transition-colors cursor-pointer">Insurance Claims</div>
               </Link>
               <Link href="/services/gutter-services">
-                <a className="block px-4 py-2 hover:bg-primary hover:text-white transition-colors">Gutter Services</a>
+                <div className="block px-4 py-2 hover:bg-primary hover:text-white transition-colors cursor-pointer">Gutter Services</div>
               </Link>
             </div>
           </div>
           <Link href="/portfolio">
-            <a className={`nav-link ${isActive('/portfolio') ? 'active text-primary font-semibold' : 'hover:text-primary'} transition-colors`}>
+            <div className={`nav-link ${isActive('/portfolio') ? 'active text-primary font-semibold' : 'hover:text-primary'} transition-colors cursor-pointer`}>
               Portfolio
-            </a>
+            </div>
           </Link>
           <Link href="/blog">
-            <a className={`nav-link ${isActive('/blog') ? 'active text-primary font-semibold' : 'hover:text-primary'} transition-colors`}>
+            <div className={`nav-link ${isActive('/blog') ? 'active text-primary font-semibold' : 'hover:text-primary'} transition-colors cursor-pointer`}>
               Blog
-            </a>
+            </div>
           </Link>
           <Link href="/contact">
-            <a className="bg-secondary hover:bg-secondary-dark text-white font-semibold py-2 px-4 rounded-md transition-colors">
+            <div className="bg-secondary hover:bg-secondary-dark text-white font-semibold py-2 px-4 rounded-md transition-colors cursor-pointer">
               Get a Free Quote
-            </a>
+            </div>
           </Link>
         </nav>
       </div>
@@ -111,49 +111,49 @@ const Header = () => {
       <div id="mobile-menu" className={`${mobileMenuOpen ? 'block' : 'hidden'} lg:hidden bg-white shadow-md`}>
         <div className="container mx-auto px-4 py-3 flex flex-col space-y-4">
           <Link href="/">
-            <a className={`nav-link ${isActive('/') ? 'active text-primary font-semibold' : ''} hover:text-primary transition-colors`}>
+            <div className={`nav-link ${isActive('/') ? 'active text-primary font-semibold' : ''} hover:text-primary transition-colors cursor-pointer`}>
               Home
-            </a>
+            </div>
           </Link>
           <Link href="/about">
-            <a className={`nav-link ${isActive('/about') ? 'active text-primary font-semibold' : ''} hover:text-primary transition-colors`}>
+            <div className={`nav-link ${isActive('/about') ? 'active text-primary font-semibold' : ''} hover:text-primary transition-colors cursor-pointer`}>
               About
-            </a>
+            </div>
           </Link>
           <div className="py-1 border-b border-gray-100">
             <span className="text-gray-500 font-semibold">Services</span>
             <div className="ml-4 mt-2 space-y-2">
               <Link href="/services/residential-roofing">
-                <a className="block hover:text-primary transition-colors">Residential Roofing</a>
+                <div className="block hover:text-primary transition-colors cursor-pointer">Residential Roofing</div>
               </Link>
               <Link href="/services/commercial-roofing">
-                <a className="block hover:text-primary transition-colors">Commercial Roofing</a>
+                <div className="block hover:text-primary transition-colors cursor-pointer">Commercial Roofing</div>
               </Link>
               <Link href="/services/roof-repair">
-                <a className="block hover:text-primary transition-colors">Roof Repairs</a>
+                <div className="block hover:text-primary transition-colors cursor-pointer">Roof Repairs</div>
               </Link>
               <Link href="/services/insurance-claims">
-                <a className="block hover:text-primary transition-colors">Insurance Claims</a>
+                <div className="block hover:text-primary transition-colors cursor-pointer">Insurance Claims</div>
               </Link>
               <Link href="/services/gutter-services">
-                <a className="block hover:text-primary transition-colors">Gutter Services</a>
+                <div className="block hover:text-primary transition-colors cursor-pointer">Gutter Services</div>
               </Link>
             </div>
           </div>
           <Link href="/portfolio">
-            <a className={`nav-link ${isActive('/portfolio') ? 'active text-primary font-semibold' : ''} hover:text-primary transition-colors`}>
+            <div className={`nav-link ${isActive('/portfolio') ? 'active text-primary font-semibold' : ''} hover:text-primary transition-colors cursor-pointer`}>
               Portfolio
-            </a>
+            </div>
           </Link>
           <Link href="/blog">
-            <a className={`nav-link ${isActive('/blog') ? 'active text-primary font-semibold' : ''} hover:text-primary transition-colors`}>
+            <div className={`nav-link ${isActive('/blog') ? 'active text-primary font-semibold' : ''} hover:text-primary transition-colors cursor-pointer`}>
               Blog
-            </a>
+            </div>
           </Link>
           <Link href="/contact">
-            <a className="bg-secondary hover:bg-secondary-dark text-white text-center font-semibold py-2 px-4 rounded-md transition-colors">
+            <div className="bg-secondary hover:bg-secondary-dark text-white text-center font-semibold py-2 px-4 rounded-md transition-colors cursor-pointer">
               Get a Free Quote
-            </a>
+            </div>
           </Link>
         </div>
       </div>
