@@ -25,14 +25,14 @@ const HeroSection = () => {
           </p>
           <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
             <Link href="/contact">
-              <a className="bg-secondary hover:bg-secondary-dark text-white text-center font-semibold py-3 px-6 rounded-md transition-colors">
+              <div className="bg-secondary hover:bg-secondary-dark text-white text-center font-semibold py-3 px-6 rounded-md transition-colors cursor-pointer shadow-lg">
                 Get a Free Inspection
-              </a>
+              </div>
             </Link>
             <Link href="/services/residential-roofing">
-              <a className="bg-white hover:bg-gray-100 text-primary text-center font-semibold py-3 px-6 rounded-md transition-colors">
+              <div className="bg-primary-dark hover:bg-primary border-2 border-white text-white text-center font-semibold py-3 px-6 rounded-md transition-colors cursor-pointer shadow-lg">
                 Explore Services
-              </a>
+              </div>
             </Link>
           </div>
         </div>
