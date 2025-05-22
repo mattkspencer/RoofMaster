@@ -21,9 +21,9 @@ const ServicesSection = () => {
           <div className="md:w-1/2">
             {/* A high-quality residential roof installation */}
             <img 
-              src="https://pixabay.com/get/gb6ec6978156f2c370488c6ee6dbd16279a893b76c0150be87ff23b54208171ee981231caecb36c707e516ecd50b6da827c366d5f71f21f37fc2975eb0b0c1bca_1280.jpg" 
+              src="https://images.unsplash.com/photo-1632759145351-1099f3252110?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" 
               alt="Residential roofing installation" 
-              className="rounded-lg shadow-lg w-full h-auto"
+              className="rounded-lg shadow-lg w-full h-auto object-cover"
             />
           </div>
           <div className="md:w-1/2">
@@ -65,9 +65,9 @@ const ServicesSection = () => {
           <div className="md:w-1/2">
             {/* A commercial roofing project */}
             <img 
-              src="https://pixabay.com/get/gc559579da89f7055788592f17fb8b1166a0ba7add3cbf03419fcf0c33af24b820cf224dd2316271aaa46d2fc42b70ec66e113e4d77d8804fc6b3658da2fe169b_1280.jpg" 
+              src="https://images.unsplash.com/photo-1635424710928-0605ac366db5?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" 
               alt="Commercial roofing project" 
-              className="rounded-lg shadow-lg w-full h-auto"
+              className="rounded-lg shadow-lg w-full h-auto object-cover"
             />
           </div>
           <div className="md:w-1/2">
@@ -109,9 +109,9 @@ const ServicesSection = () => {
           <div className="md:w-1/2">
             {/* Roof repair work in progress */}
             <img 
-              src="https://pixabay.com/get/g001fca5ec131bba332f54004f3b9d633eb36318d6728232befddffe04c71537b067524fe47135920db4212b1ec096c81f0f4fc393712da5336610b4d180c325e_1280.jpg" 
+              src="https://images.unsplash.com/photo-1605118936239-e04a8a10b31f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" 
               alt="Roof repair work" 
-              className="rounded-lg shadow-lg w-full h-auto"
+              className="rounded-lg shadow-lg w-full h-auto object-cover"
             />
           </div>
           <div className="md:w-1/2">
@@ -153,9 +153,9 @@ const ServicesSection = () => {
           <div className="md:w-1/2">
             {/* Hail damaged roof inspection */}
             <img 
-              src="https://pixabay.com/get/g6796bce29ce37f6e768e664bb0e123138fe19f4e67a7dfd9a900c92b78e535eb2e3371eb27ee4e8a797cdf6e37002306a64d64a97ac05453ce27effac41cae2b_1280.jpg" 
+              src="https://images.unsplash.com/photo-1626178793926-22b28830aa30?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" 
               alt="Roof inspection for insurance claim" 
-              className="rounded-lg shadow-lg w-full h-auto"
+              className="rounded-lg shadow-lg w-full h-auto object-cover"
             />
           </div>
           <div className="md:w-1/2">
