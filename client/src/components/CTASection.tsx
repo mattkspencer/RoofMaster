@@ -1,7 +1,21 @@
 import { Link } from 'wouter';
 import { trackEvent } from '@/lib/analytics';
 
-const CTASection = () => {
+interface CTASectionProps {
+  title?: string;
+  text?: string;
+  buttonText?: string;
+  buttonLink?: string;
+  showPhoneButton?: boolean;
+}
+
+const CTASection = ({
+  title = "Ready to Discuss Your Roofing Project?",
+  text = "Whether you need a roof repair, replacement, or help with an insurance claim, we're here to provide professional service throughout the Denver metro area.",
+  buttonText = "Contact Us",
+  buttonLink = "/contact",
+  showPhoneButton = true
+}: CTASectionProps) => {
   const handleContactClick = () => {
     trackEvent('cta_click', 'cta_section', 'contact_us');
   };
@@ -13,26 +27,28 @@ const CTASection = () => {
   return (
     <section className="py-20 bg-primary text-white">
       <div className="container mx-auto px-4 text-center">
-        <h2 className="text-3xl md:text-4xl font-bold font-sans mb-6">Ready to Discuss Your Roofing Project?</h2>
+        <h2 className="text-3xl md:text-4xl font-bold font-sans mb-6">{title}</h2>
         <p className="text-xl max-w-3xl mx-auto mb-8 opacity-90">
-          Whether you need a roof repair, replacement, or help with an insurance claim, we're here to provide professional service throughout the Denver metro area.
+          {text}
         </p>
         <div className="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-6">
-          <Link href="/contact">
+          <Link href={buttonLink}>
             <a 
               className="bg-white text-primary hover:bg-gray-100 font-semibold py-3 px-8 rounded-md transition-colors"
               onClick={handleContactClick}
             >
-              Contact Us
+              {buttonText}
             </a>
           </Link>
-          <a 
-            href="tel:720-360-8546" 
-            className="bg-secondary hover:bg-secondary-dark text-white font-semibold py-3 px-8 rounded-md transition-colors"
-            onClick={handleCallClick}
-          >
-            Call 720-360-8546
-          </a>
+          {showPhoneButton && (
+            <a 
+              href="tel:720-360-8546" 
+              className="bg-secondary hover:bg-secondary-dark text-white font-semibold py-3 px-8 rounded-md transition-colors"
+              onClick={handleCallClick}
+            >
+              Call 720-360-8546
+            </a>
+          )}
         </div>
       </div>
     </section>
