@@ -25,25 +25,35 @@ const CTASection = ({
   };
 
   return (
-    <section className="py-20 bg-primary text-white">
-      <div className="container mx-auto px-4 text-center">
+    <section className="py-20 text-white relative overflow-hidden">
+      {/* Background Image with Overlay */}
+      <div className="absolute inset-0 z-0">
+        <img 
+          src="https://images.unsplash.com/photo-1598811629267-fafb1de2abd3?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80" 
+          alt="Roofing background" 
+          className="w-full h-full object-cover"
+        />
+        <div className="absolute inset-0 bg-blue-600/90"></div>
+      </div>
+      
+      <div className="container mx-auto px-4 text-center relative z-10">
         <h2 className="text-3xl md:text-4xl font-bold font-sans mb-6">{title}</h2>
-        <p className="text-xl max-w-3xl mx-auto mb-8 opacity-90">
+        <p className="text-xl max-w-3xl mx-auto mb-10 opacity-90">
           {text}
         </p>
-        <div className="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-6">
+        <div className="flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-8">
           <Link href={buttonLink}>
-            <a 
-              className="bg-white text-primary hover:bg-gray-100 font-semibold py-3 px-8 rounded-md transition-colors"
+            <div 
+              className="bg-white text-blue-700 hover:bg-gray-100 font-semibold py-3 px-8 rounded-md transition-colors cursor-pointer min-w-[180px] shadow-md"
               onClick={handleContactClick}
             >
               {buttonText}
-            </a>
+            </div>
           </Link>
           {showPhoneButton && (
             <a 
               href="tel:720-360-8546" 
-              className="bg-secondary hover:bg-secondary-dark text-white font-semibold py-3 px-8 rounded-md transition-colors"
+              className="border-2 border-white hover:bg-white/10 text-white font-semibold py-3 px-8 rounded-md transition-colors min-w-[180px] shadow-md"
               onClick={handleCallClick}
             >
               Call 720-360-8546
