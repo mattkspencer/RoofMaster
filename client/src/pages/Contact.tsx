@@ -367,7 +367,12 @@ const Contact = () => {
                   </div>
                   <div>
                     <p className="text-sm">Call our emergency line</p>
-                    <p className="text-xl font-bold">720-360-8546</p>
+                    <a 
+                      href="tel:720-360-8546" 
+                      className="text-xl font-bold hover:underline hover:text-gray-200 transition-colors cursor-pointer"
+                    >
+                      720-360-8546
+                    </a>
                   </div>
                 </div>
               </div>
