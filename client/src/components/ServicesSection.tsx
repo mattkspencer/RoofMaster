@@ -20,7 +20,7 @@ const ServicesSection = () => {
         <div className="mb-16 grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
           <div className="order-2 md:order-1">
             <img 
-              src="https://images.unsplash.com/photo-1632759145351-1099f3252110?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" 
+              src="https://picsum.photos/600/400?random=90" 
               alt="Residential roofing installation" 
               className="rounded-lg shadow-lg w-full h-auto object-cover"
             />
@@ -55,7 +55,7 @@ const ServicesSection = () => {
         <div className="mb-16 grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
           <div className="md:order-2">
             <img 
-              src="https://images.unsplash.com/photo-1635424710928-0605ac366db5?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" 
+              src="https://picsum.photos/600/400?random=91" 
               alt="Commercial roofing project" 
               className="rounded-lg shadow-lg w-full h-auto object-cover"
             />
@@ -90,7 +90,7 @@ const ServicesSection = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
           <div className="order-2 md:order-1">
             <img 
-              src="https://images.unsplash.com/photo-1605118936239-e04a8a10b31f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" 
+              src="https://picsum.photos/600/400?random=92" 
               alt="Roof repair work" 
               className="rounded-lg shadow-lg w-full h-auto object-cover"
             />
