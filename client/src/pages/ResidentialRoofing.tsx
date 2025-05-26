@@ -69,9 +69,11 @@ const ResidentialRoofing = () => {
             
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               <div className="bg-white rounded-lg shadow-md overflow-hidden">
-                <div className="h-48 bg-primary/10 flex items-center justify-center">
-                  <i className="fas fa-home text-6xl text-primary"></i>
-                </div>
+                <img 
+                  src="https://images.unsplash.com/photo-1632759145351-1099f3252110?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" 
+                  alt="New roof installation" 
+                  className="w-full h-48 object-cover"
+                />
                 <div className="p-6">
                   <h3 className="text-xl font-bold mb-3">New Roof Installation</h3>
                   <p className="text-gray-600 mb-4">
@@ -95,9 +97,11 @@ const ResidentialRoofing = () => {
               </div>
               
               <div className="bg-white rounded-lg shadow-md overflow-hidden">
-                <div className="h-48 bg-primary/10 flex items-center justify-center">
-                  <i className="fas fa-exchange-alt text-6xl text-primary"></i>
-                </div>
+                <img 
+                  src="https://images.unsplash.com/photo-1605118936239-e04a8a10b31f?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" 
+                  alt="Roof replacement service" 
+                  className="w-full h-48 object-cover"
+                />
                 <div className="p-6">
                   <h3 className="text-xl font-bold mb-3">Roof Replacement</h3>
                   <p className="text-gray-600 mb-4">
@@ -121,9 +125,11 @@ const ResidentialRoofing = () => {
               </div>
               
               <div className="bg-white rounded-lg shadow-md overflow-hidden">
-                <div className="h-48 bg-primary/10 flex items-center justify-center">
-                  <i className="fas fa-tools text-6xl text-primary"></i>
-                </div>
+                <img 
+                  src="https://images.unsplash.com/photo-1626178793926-22b28830aa30?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" 
+                  alt="Roof repair work" 
+                  className="w-full h-48 object-cover"
+                />
                 <div className="p-6">
                   <h3 className="text-xl font-bold mb-3">Roof Repairs</h3>
                   <p className="text-gray-600 mb-4">
