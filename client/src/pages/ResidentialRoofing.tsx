@@ -36,7 +36,7 @@ const ResidentialRoofing = () => {
           {/* Hero Section */}
           <div className="mb-16 relative rounded-lg overflow-hidden shadow-xl">
             <img 
-              src="https://images.unsplash.com/photo-1632759145351-1099f3252110?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" 
+              src="https://picsum.photos/1200/400?random=10" 
               alt="Residential roof installation in Denver" 
               className="w-full h-96 object-cover"
             />
