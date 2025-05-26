@@ -130,7 +130,12 @@ const Contact = () => {
                 </div>
                 <div>
                   <h3 className="font-semibold">Email</h3>
-                  <p className="text-lg">mattkspencer@gmail.com</p>
+                  <a 
+                    href="mailto:mattkspencer@gmail.com" 
+                    className="text-lg hover:text-primary hover:underline transition-colors cursor-pointer"
+                  >
+                    mattkspencer@gmail.com
+                  </a>
                 </div>
               </div>
               <div className="flex items-center">
