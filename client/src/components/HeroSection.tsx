@@ -36,9 +36,9 @@ const HeroSection = () => {
               <i className="fas fa-calendar-alt mr-2"></i>
               12+ Years Experience
             </div>
-            <div className="flex items-center bg-orange-600 text-white px-3 py-1 rounded-full">
-              <i className="fas fa-clock mr-1"></i>
-              24/7 Emergency Service
+            <div className="flex items-center bg-yellow-600 text-white px-3 py-1 rounded-full">
+              <i className="fas fa-star mr-1"></i>
+              A+ BBB Rating
             </div>
           </div>
           <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">

@@ -1,4 +1,5 @@
 import { Link } from 'wouter';
+import TrustBadges from './TrustBadges';
 
 const Footer = () => {
   return (
@@ -12,9 +13,14 @@ const Footer = () => {
                 <span className="text-secondary">Roofing</span>
               </span>
             </div>
-            <p className="mb-6 opacity-80">
+            <p className="mb-4 opacity-80">
               Your trusted roofing project manager for the Denver metropolitan area, specializing in residential, commercial, and insurance claim assistance.
             </p>
+            
+            {/* Trust Badges in Footer */}
+            <div className="mb-6">
+              <TrustBadges variant="dark" />
+            </div>
             <div className="flex space-x-4">
               <a 
                 href="https://www.facebook.com/spencerroofingsolutions" 
