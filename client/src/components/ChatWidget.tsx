@@ -151,11 +151,11 @@ const ChatWidget = () => {
   return (
     <div 
       id="chat-widget" 
-      className={`chat-widget fixed bottom-6 left-6 z-40 w-72 bg-white rounded-lg shadow-lg overflow-hidden transition-all ${isExpanded ? 'h-[400px]' : 'h-[60px]'}`}
+      className={`chat-widget fixed bottom-6 left-6 z-40 w-72 bg-white rounded-lg shadow-lg transition-all ${isExpanded ? 'h-[480px]' : 'h-[60px]'} flex flex-col`}
     >
       <div 
         id="chat-header" 
-        className="bg-primary p-4 flex justify-between items-center cursor-pointer"
+        className="bg-primary p-4 flex justify-between items-center cursor-pointer flex-shrink-0"
         onClick={toggleChat}
       >
         <div className="flex items-center">
@@ -171,74 +171,78 @@ const ChatWidget = () => {
         </button>
       </div>
       
-      <div 
-        id="chat-body" 
-        className={`${isExpanded ? 'block' : 'hidden'} p-4 h-80 overflow-y-auto bg-gray-50`}
-      >
-        <div className="space-y-4">
-          {messages.map((msg, index) => (
-            <div key={index} className={`flex items-start ${msg.isUser ? 'justify-end' : ''}`}>
-              <div className={`${msg.isUser ? 'bg-gray-200' : 'bg-primary text-white'} rounded-lg py-2 px-4 max-w-xs ${msg.isUser ? 'ml-auto' : ''}`}>
-                <p>{msg.text}</p>
+      {isExpanded && (
+        <>
+          <div 
+            id="chat-body" 
+            className="flex-1 p-4 overflow-y-auto bg-gray-50 min-h-0"
+          >
+            <div className="space-y-4">
+              {messages.map((msg, index) => (
+                <div key={index} className={`flex items-start ${msg.isUser ? 'justify-end' : ''}`}>
+                  <div className={`${msg.isUser ? 'bg-gray-200' : 'bg-primary text-white'} rounded-lg py-2 px-4 max-w-xs ${msg.isUser ? 'ml-auto' : ''}`}>
+                    <p className="text-sm whitespace-pre-line">{msg.text}</p>
+                  </div>
+                </div>
+              ))}
+              <div ref={messagesEndRef} />
+            </div>
+          </div>
+          
+          <div 
+            id="chat-footer" 
+            className="flex-shrink-0 p-4 border-t bg-white"
+          >
+            <div className="mb-2">
+              <div className="flex flex-wrap gap-1 mb-2">
+                <button 
+                  className="text-xs bg-gray-100 hover:bg-gray-200 px-2 py-1 rounded-full text-gray-700"
+                  onClick={() => setInputValue("What materials do you recommend?")}
+                >
+                  Materials
+                </button>
+                <button 
+                  className="text-xs bg-gray-100 hover:bg-gray-200 px-2 py-1 rounded-full text-gray-700"
+                  onClick={() => setInputValue("How much does a new roof cost?")}
+                >
+                  Costs
+                </button>
+                <button 
+                  className="text-xs bg-gray-100 hover:bg-gray-200 px-2 py-1 rounded-full text-gray-700"
+                  onClick={() => setInputValue("I need help with insurance claim")}
+                >
+                  Insurance
+                </button>
+                <button 
+                  className="text-xs bg-gray-100 hover:bg-gray-200 px-2 py-1 rounded-full text-gray-700"
+                  onClick={() => setInputValue("Schedule free estimate")}
+                >
+                  Estimate
+                </button>
               </div>
             </div>
-          ))}
-          <div ref={messagesEndRef} />
-        </div>
-      </div>
-      
-      <div 
-        id="chat-footer" 
-        className={`${isExpanded ? 'block' : 'hidden'} p-4 border-t`}
-      >
-        <div className="mb-2">
-          <div className="flex flex-wrap gap-1 mb-2">
-            <button 
-              className="text-xs bg-gray-100 hover:bg-gray-200 px-2 py-1 rounded-full text-gray-700"
-              onClick={() => setInputValue("What materials do you recommend?")}
-            >
-              Materials
-            </button>
-            <button 
-              className="text-xs bg-gray-100 hover:bg-gray-200 px-2 py-1 rounded-full text-gray-700"
-              onClick={() => setInputValue("How much does a new roof cost?")}
-            >
-              Costs
-            </button>
-            <button 
-              className="text-xs bg-gray-100 hover:bg-gray-200 px-2 py-1 rounded-full text-gray-700"
-              onClick={() => setInputValue("I need help with insurance claim")}
-            >
-              Insurance
-            </button>
-            <button 
-              className="text-xs bg-gray-100 hover:bg-gray-200 px-2 py-1 rounded-full text-gray-700"
-              onClick={() => setInputValue("Schedule free estimate")}
-            >
-              Estimate
-            </button>
+            <div className="flex items-center">
+              <input 
+                type="text" 
+                id="chat-input" 
+                placeholder="Ask about materials, costs, repairs, insurance..." 
+                className="flex-1 border border-gray-300 rounded-l-md py-2 px-4 focus:outline-none focus:ring-2 focus:ring-primary text-sm"
+                value={inputValue}
+                onChange={handleInputChange}
+                onKeyPress={handleKeyPress}
+              />
+              <button 
+                id="chat-send" 
+                className="bg-primary hover:bg-blue-700 text-white px-4 py-2 rounded-r-md transition-colors"
+                onClick={sendMessage}
+                aria-label="Send message"
+              >
+                <i className="fas fa-paper-plane"></i>
+              </button>
+            </div>
           </div>
-        </div>
-        <div className="flex items-center">
-          <input 
-            type="text" 
-            id="chat-input" 
-            placeholder="Ask about materials, costs, repairs, insurance..." 
-            className="flex-1 border border-gray-300 rounded-l-md py-2 px-4 focus:outline-none focus:ring-2 focus:ring-primary text-sm"
-            value={inputValue}
-            onChange={handleInputChange}
-            onKeyPress={handleKeyPress}
-          />
-          <button 
-            id="chat-send" 
-            className="bg-primary hover:bg-blue-700 text-white px-4 py-2 rounded-r-md transition-colors"
-            onClick={sendMessage}
-            aria-label="Send message"
-          >
-            <i className="fas fa-paper-plane"></i>
-          </button>
-        </div>
-      </div>
+        </>
+      )}
     </div>
   );
 };
