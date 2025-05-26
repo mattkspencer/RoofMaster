@@ -44,15 +44,15 @@ const Header = () => {
             </div>
           </Link>
           
-          {/* Trust Signals */}
-          <div className="hidden md:flex flex-col text-xs text-gray-600">
-            <div className="flex items-center mb-1">
-              <i className="fas fa-shield-alt text-green-600 mr-1"></i>
-              <span className="font-semibold">Licensed & Insured</span>
+          {/* Trust Signals with Interactive Hover Animations */}
+          <div className="hidden md:flex flex-col text-xs text-gray-600 space-y-1">
+            <div className="flex items-center group cursor-pointer transition-all duration-300 hover:scale-105 hover:bg-green-50 px-2 py-1 rounded-md">
+              <i className="fas fa-shield-alt text-green-600 mr-1 group-hover:text-green-700 group-hover:animate-pulse transition-colors duration-300"></i>
+              <span className="font-semibold group-hover:text-green-800 transition-colors duration-300">Licensed & Insured</span>
             </div>
-            <div className="flex items-center">
-              <i className="fas fa-calendar-alt text-blue-600 mr-1"></i>
-              <span>Serving Denver Since 2012</span>
+            <div className="flex items-center group cursor-pointer transition-all duration-300 hover:scale-105 hover:bg-blue-50 px-2 py-1 rounded-md">
+              <i className="fas fa-calendar-alt text-blue-600 mr-1 group-hover:text-blue-700 group-hover:rotate-12 transition-all duration-300"></i>
+              <span className="group-hover:text-blue-800 transition-colors duration-300">Serving Denver Since 2012</span>
             </div>
           </div>
         </div>
