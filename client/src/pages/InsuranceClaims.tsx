@@ -238,7 +238,7 @@ const InsuranceClaims = () => {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
               <div className="bg-white rounded-lg shadow-md overflow-hidden">
                 <img 
-                  src="https://pixabay.com/get/gad3ca8c95a6679cdd1043ec8600a842d346afb92be6d7e6f6abbacfbf5f314603cb235510bc26d7bc3bdd4be3f799568c4e34ff877db60a35cad90a8cf003fc3_1280.jpg" 
+                  src="https://picsum.photos/600/300?random=70" 
                   alt="Hail damage on roof" 
                   className="w-full h-48 object-cover"
                 />
@@ -274,7 +274,7 @@ const InsuranceClaims = () => {
               
               <div className="bg-white rounded-lg shadow-md overflow-hidden">
                 <img 
-                  src="https://images.unsplash.com/photo-1622623222795-2bc927d7a28e?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" 
+                  src="https://picsum.photos/600/300?random=71" 
                   alt="Wind damage on roof" 
                   className="w-full h-48 object-cover"
                 />
