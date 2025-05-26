@@ -116,7 +116,12 @@ const Contact = () => {
                 </div>
                 <div>
                   <h3 className="font-semibold">Phone</h3>
-                  <p className="text-lg">720-360-8546 cell</p>
+                  <a 
+                    href="tel:720-360-8546" 
+                    className="text-lg hover:text-primary hover:underline transition-colors cursor-pointer"
+                  >
+                    720-360-8546 cell
+                  </a>
                 </div>
               </div>
               <div className="flex items-center">
