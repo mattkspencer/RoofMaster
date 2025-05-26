@@ -110,7 +110,7 @@ const ChatWidget = () => {
   return (
     <div 
       id="chat-widget" 
-      className={`chat-widget fixed bottom-6 right-6 z-40 w-72 bg-white rounded-lg shadow-lg overflow-hidden transition-all ${isExpanded ? 'h-[400px]' : 'h-[60px]'}`}
+      className={`chat-widget fixed bottom-6 left-6 z-40 w-72 bg-white rounded-lg shadow-lg overflow-hidden transition-all ${isExpanded ? 'h-[400px]' : 'h-[60px]'}`}
     >
       <div 
         id="chat-header" 
