@@ -2,6 +2,7 @@ import { ReactNode } from 'react';
 import Header from './Header';
 import Footer from './Footer';
 import ChatWidget from './ChatWidget';
+import StickyCallButton from './StickyCallButton';
 import { useAnalytics } from '@/hooks/use-analytics';
 
 interface LayoutProps {
@@ -18,6 +19,7 @@ const Layout = ({ children }: LayoutProps) => {
       <main className="flex-grow">{children}</main>
       <Footer />
       <ChatWidget />
+      <StickyCallButton />
     </div>
   );
 };
