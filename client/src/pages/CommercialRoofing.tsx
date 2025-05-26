@@ -34,27 +34,27 @@ const CommercialRoofing = () => {
           <h1 className="text-4xl font-bold mb-8 text-center">Commercial Roofing Services</h1>
           
           {/* Hero Section */}
-          <div className="mb-16 relative rounded-lg overflow-hidden">
+          <div className="mb-16 relative rounded-lg overflow-hidden shadow-xl">
             <img 
-              src="https://pixabay.com/get/gc559579da89f7055788592f17fb8b1166a0ba7add3cbf03419fcf0c33af24b820cf224dd2316271aaa46d2fc42b70ec66e113e4d77d8804fc6b3658da2fe169b_1280.jpg" 
+              src="https://picsum.photos/1200/400?random=20" 
               alt="Commercial roofing project in Denver" 
               className="w-full h-96 object-cover"
             />
-            <div className="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center">
-              <div className="text-center max-w-3xl px-4">
-                <h2 className="text-3xl md:text-4xl text-white font-bold mb-4">
+            <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/50 to-black/70 flex items-center justify-center">
+              <div className="text-center max-w-3xl px-6">
+                <h2 className="text-3xl md:text-4xl text-white font-bold mb-4 drop-shadow-lg">
                   Protect Your Business Investment
                 </h2>
-                <p className="text-lg text-white mb-6">
+                <p className="text-lg text-white mb-8 drop-shadow-md opacity-95">
                   Durable, high-performance commercial roofing solutions designed specifically for Denver's unique climate
                 </p>
                 <Link href="/contact">
-                  <a 
-                    className="inline-block bg-secondary hover:bg-secondary-dark text-white font-semibold py-3 px-8 rounded-md transition-colors"
+                  <div 
+                    className="inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold py-4 px-8 rounded-md transition-colors shadow-lg cursor-pointer"
                     onClick={handleCTAClick}
                   >
                     Request a Consultation
-                  </a>
+                  </div>
                 </Link>
               </div>
             </div>
@@ -69,9 +69,11 @@ const CommercialRoofing = () => {
             
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               <div className="bg-white rounded-lg shadow-md overflow-hidden">
-                <div className="h-48 bg-primary/10 flex items-center justify-center">
-                  <i className="fas fa-building text-6xl text-primary"></i>
-                </div>
+                <img 
+                  src="https://picsum.photos/600/300?random=21" 
+                  alt="New commercial roof installation" 
+                  className="w-full h-48 object-cover"
+                />
                 <div className="p-6">
                   <h3 className="text-xl font-bold mb-3">New Roof Installation</h3>
                   <p className="text-gray-600 mb-4">
@@ -95,9 +97,11 @@ const CommercialRoofing = () => {
               </div>
               
               <div className="bg-white rounded-lg shadow-md overflow-hidden">
-                <div className="h-48 bg-primary/10 flex items-center justify-center">
-                  <i className="fas fa-tools text-6xl text-primary"></i>
-                </div>
+                <img 
+                  src="https://picsum.photos/600/300?random=22" 
+                  alt="Commercial roof repairs and maintenance" 
+                  className="w-full h-48 object-cover"
+                />
                 <div className="p-6">
                   <h3 className="text-xl font-bold mb-3">Roof Repairs & Maintenance</h3>
                   <p className="text-gray-600 mb-4">
@@ -121,9 +125,11 @@ const CommercialRoofing = () => {
               </div>
               
               <div className="bg-white rounded-lg shadow-md overflow-hidden">
-                <div className="h-48 bg-primary/10 flex items-center justify-center">
-                  <i className="fas fa-search text-6xl text-primary"></i>
-                </div>
+                <img 
+                  src="https://picsum.photos/600/300?random=23" 
+                  alt="Commercial roof inspections and surveys" 
+                  className="w-full h-48 object-cover"
+                />
                 <div className="p-6">
                   <h3 className="text-xl font-bold mb-3">Roof Inspections & Surveys</h3>
                   <p className="text-gray-600 mb-4">
