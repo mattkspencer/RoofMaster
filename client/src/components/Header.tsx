@@ -68,24 +68,24 @@ const Header = () => {
             </div>
           </Link>
           <div className="relative group">
-            <div className={`nav-link cursor-pointer hover:text-primary transition-colors flex items-center`}>
+            <div className={`nav-link cursor-pointer hover:text-primary transition-colors flex items-center py-2`}>
               Services <i className="fas fa-chevron-down ml-1 text-xs"></i>
             </div>
-            <div className="absolute left-0 mt-2 w-64 bg-white shadow-lg rounded-md overflow-hidden z-20 hidden group-hover:block">
+            <div className="absolute left-0 top-full w-64 bg-white shadow-lg rounded-md overflow-hidden z-20 hidden group-hover:block">
               <Link href="/services/residential-roofing">
-                <div className="block px-4 py-2 hover:bg-primary hover:text-white transition-colors cursor-pointer">Residential Roofing</div>
+                <div className="block px-4 py-3 hover:bg-primary hover:text-white transition-colors cursor-pointer border-b border-gray-100">Residential Roofing</div>
               </Link>
               <Link href="/services/commercial-roofing">
-                <div className="block px-4 py-2 hover:bg-primary hover:text-white transition-colors cursor-pointer">Commercial Roofing</div>
+                <div className="block px-4 py-3 hover:bg-primary hover:text-white transition-colors cursor-pointer border-b border-gray-100">Commercial Roofing</div>
               </Link>
               <Link href="/services/roof-repair">
-                <div className="block px-4 py-2 hover:bg-primary hover:text-white transition-colors cursor-pointer">Roof Repairs</div>
+                <div className="block px-4 py-3 hover:bg-primary hover:text-white transition-colors cursor-pointer border-b border-gray-100">Roof Repairs</div>
               </Link>
               <Link href="/services/insurance-claims">
-                <div className="block px-4 py-2 hover:bg-primary hover:text-white transition-colors cursor-pointer">Insurance Claims</div>
+                <div className="block px-4 py-3 hover:bg-primary hover:text-white transition-colors cursor-pointer border-b border-gray-100">Insurance Claims</div>
               </Link>
               <Link href="/services/gutter-services">
-                <div className="block px-4 py-2 hover:bg-primary hover:text-white transition-colors cursor-pointer">Gutter Services</div>
+                <div className="block px-4 py-3 hover:bg-primary hover:text-white transition-colors cursor-pointer">Gutter Services</div>
               </Link>
             </div>
           </div>
