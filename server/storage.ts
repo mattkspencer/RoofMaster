@@ -298,7 +298,7 @@ export class MemStorage implements IStorage {
                   <li>Schedule professional inspections twice a year (spring and fall)</li>
                 </ul>
                 <p>Remember, safety first! Many roof maintenance tasks can be done from the ground using binoculars. For tasks requiring roof access, consider hiring a professional. At Spencer Roofing Solutions, we offer maintenance programs designed specifically for Denver's climate to keep your roof in optimal condition year-round.</p>`,
-        imageUrl: "https://images.unsplash.com/photo-1489396160836-2c99c977e970?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+        imageUrl: "https://picsum.photos/600/400?random=104",
         publishedAt: new Date("2023-02-17T10:00:00Z"),
         tags: ["roof maintenance", "seasonal tips", "denver weather"]
       }
