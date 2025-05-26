@@ -116,7 +116,7 @@ const Contact = () => {
                 </div>
                 <div>
                   <h3 className="font-semibold">Phone</h3>
-                  <p className="text-lg">(303) 555-1234</p>
+                  <p className="text-lg">720-360-8546 cell</p>
                 </div>
               </div>
               <div className="flex items-center">
@@ -125,7 +125,7 @@ const Contact = () => {
                 </div>
                 <div>
                   <h3 className="font-semibold">Email</h3>
-                  <p className="text-lg">info@spencerroofing.com</p>
+                  <p className="text-lg">mattkspencer@gmail.com</p>
                 </div>
               </div>
               <div className="flex items-center">
@@ -134,7 +134,7 @@ const Contact = () => {
                 </div>
                 <div>
                   <h3 className="font-semibold">Address</h3>
-                  <p className="text-lg">1234 Roofing Way, Denver, CO 80201</p>
+                  <p className="text-lg">Englewood, Colorado</p>
                 </div>
               </div>
             </div>
@@ -357,7 +357,7 @@ const Contact = () => {
                   </div>
                   <div>
                     <p className="text-sm">Call our emergency line</p>
-                    <p className="text-xl font-bold">(303) 555-4321</p>
+                    <p className="text-xl font-bold">720-360-8546</p>
                   </div>
                 </div>
               </div>
