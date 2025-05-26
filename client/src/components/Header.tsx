@@ -100,7 +100,7 @@ const Header = () => {
             </div>
           </Link>
           <Link href="/contact">
-            <div className="bg-secondary hover:bg-secondary-dark text-white font-semibold py-2 px-4 rounded-md transition-colors cursor-pointer">
+            <div className="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded-md transition-colors cursor-pointer">
               Get a Free Quote
             </div>
           </Link>
@@ -151,7 +151,7 @@ const Header = () => {
             </div>
           </Link>
           <Link href="/contact">
-            <div className="bg-secondary hover:bg-secondary-dark text-white text-center font-semibold py-2 px-4 rounded-md transition-colors cursor-pointer">
+            <div className="bg-blue-600 hover:bg-blue-700 text-white text-center font-semibold py-2 px-4 rounded-md transition-colors cursor-pointer">
               Get a Free Quote
             </div>
           </Link>
