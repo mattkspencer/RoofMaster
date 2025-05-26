@@ -34,27 +34,27 @@ const RoofRepair = () => {
           <h1 className="text-4xl font-bold mb-8 text-center">Roof Repair Services</h1>
           
           {/* Hero Section */}
-          <div className="mb-16 relative rounded-lg overflow-hidden">
+          <div className="mb-16 relative rounded-lg overflow-hidden shadow-xl">
             <img 
-              src="https://pixabay.com/get/g001fca5ec131bba332f54004f3b9d633eb36318d6728232befddffe04c71537b067524fe47135920db4212b1ec096c81f0f4fc393712da5336610b4d180c325e_1280.jpg" 
+              src="https://picsum.photos/1200/400?random=40" 
               alt="Roof repair work in Denver" 
               className="w-full h-96 object-cover"
             />
-            <div className="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center">
-              <div className="text-center max-w-3xl px-4">
-                <h2 className="text-3xl md:text-4xl text-white font-bold mb-4">
+            <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/50 to-black/70 flex items-center justify-center">
+              <div className="text-center max-w-3xl px-6">
+                <h2 className="text-3xl md:text-4xl text-white font-bold mb-4 drop-shadow-lg">
                   Fast, Reliable Roof Repairs
                 </h2>
-                <p className="text-lg text-white mb-6">
+                <p className="text-lg text-white mb-8 drop-shadow-md opacity-95">
                   Expert repair services for all types of roof damage throughout the Denver metro area
                 </p>
                 <Link href="/contact">
-                  <a 
-                    className="inline-block bg-secondary hover:bg-secondary-dark text-white font-semibold py-3 px-8 rounded-md transition-colors"
+                  <div 
+                    className="inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold py-4 px-8 rounded-md transition-colors shadow-lg cursor-pointer"
                     onClick={handleCTAClick}
                   >
                     Schedule a Repair
-                  </a>
+                  </div>
                 </Link>
               </div>
             </div>
