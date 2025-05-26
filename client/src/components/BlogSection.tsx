@@ -12,21 +12,21 @@ interface BlogPost {
 const BlogSection = () => {
   const blogPosts: BlogPost[] = [
     {
-      image: "https://pixabay.com/get/gad3ca8c95a6679cdd1043ec8600a842d346afb92be6d7e6f6abbacfbf5f314603cb235510bc26d7bc3bdd4be3f799568c4e34ff877db60a35cad90a8cf003fc3_1280.jpg",
+      image: "https://picsum.photos/600/300?random=30",
       date: "2023-06-15",
       title: "How to Identify Hail Damage on Your Roof",
       excerpt: "Learn the telltale signs of hail damage and what steps to take if you suspect your roof has been compromised after a storm.",
       slug: "how-to-identify-hail-damage"
     },
     {
-      image: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
+      image: "https://picsum.photos/600/300?random=31",
       date: "2023-05-28",
       title: "The Best Roofing Materials for Colorado's Climate",
       excerpt: "Discover which roofing materials stand up best to Colorado's unique climate challenges, from hail to intense sun and everything in between.",
       slug: "best-roofing-materials-colorado"
     },
     {
-      image: "https://images.unsplash.com/photo-1620912189865-1e8a33da4c5e?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
+      image: "https://picsum.photos/600/300?random=32",
       date: "2023-04-10",
       title: "When to Repair vs. Replace Your Roof",
       excerpt: "Is it time for a full roof replacement, or can repairs extend your roof's life? This guide helps you make the right decision for your home.",
