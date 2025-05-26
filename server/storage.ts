@@ -307,8 +307,15 @@ export class MemStorage implements IStorage {
     defaultBlogPosts.forEach(post => {
       const id = this.currentIds.blogPosts++;
       this.blogPosts.set(id, {
-        ...post,
-        id
+        id,
+        title: post.title,
+        slug: post.slug,
+        excerpt: post.excerpt,
+        content: post.content,
+        imageUrl: post.imageUrl,
+        author: "Spencer Roofing Solutions",
+        publishedAt: post.publishedAt,
+        tags: post.tags
       });
     });
     

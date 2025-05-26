@@ -83,7 +83,7 @@ const Blog = () => {
                       <Link href={`/blog/${post.slug}`}>
                         <a className="block overflow-hidden h-48">
                           <img 
-                            src={post.image} 
+                            src={post.imageUrl} 
                             alt={post.title} 
                             className="w-full h-full object-cover transition-transform hover:scale-105 duration-300"
                           />
