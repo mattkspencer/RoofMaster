@@ -36,7 +36,7 @@ const GutterServices = () => {
           {/* Hero Section */}
           <div className="mb-16 relative rounded-lg overflow-hidden">
             <img 
-              src="https://images.unsplash.com/photo-1611160131978-9a4f085d73d3?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+              src="https://picsum.photos/800/400?random=80" 
               alt="Gutter installation on a home" 
               className="w-full h-96 object-cover"
             />
@@ -50,7 +50,7 @@ const GutterServices = () => {
                 </p>
                 <Link href="/contact">
                   <a 
-                    className="inline-block bg-secondary hover:bg-secondary-dark text-white font-semibold py-3 px-8 rounded-md transition-colors"
+                    className="inline-block bg-primary hover:bg-primary/90 text-white font-semibold py-3 px-8 rounded-md transition-colors"
                     onClick={handleCTAClick}
                   >
                     Get a Free Estimate
