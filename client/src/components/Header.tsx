@@ -36,13 +36,25 @@ const Header = () => {
   return (
     <header className={`fixed w-full bg-white z-50 transition-shadow ${scrolled ? 'shadow-md' : ''}`}>
       <div className="container mx-auto px-4 py-3 flex justify-between items-center">
-        <div className="flex items-center space-x-2">
+        <div className="flex items-center space-x-4">
           <Link href="/">
             <div className="text-3xl font-bold cursor-pointer">
               <span className="text-blue-500">Spencer</span>
               <span className="text-gray-700">Roofing</span>
             </div>
           </Link>
+          
+          {/* Trust Signals */}
+          <div className="hidden md:flex flex-col text-xs text-gray-600">
+            <div className="flex items-center mb-1">
+              <i className="fas fa-shield-alt text-green-600 mr-1"></i>
+              <span className="font-semibold">Licensed & Insured</span>
+            </div>
+            <div className="flex items-center">
+              <i className="fas fa-calendar-alt text-blue-600 mr-1"></i>
+              <span>Serving Denver Since 2012</span>
+            </div>
+          </div>
         </div>
         
         {/* Mobile menu button */}
