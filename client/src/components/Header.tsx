@@ -55,6 +55,17 @@ const Header = () => {
           <i className={`fas ${mobileMenuOpen ? 'fa-times' : 'fa-bars'} text-xl`}></i>
         </button>
         
+        {/* Phone number - Desktop only */}
+        <div className="hidden lg:flex items-center mr-4">
+          <a 
+            href="tel:720-360-8546" 
+            className="flex items-center text-primary hover:text-primary/80 transition-colors font-semibold"
+          >
+            <i className="fas fa-phone mr-2"></i>
+            720-360-8546
+          </a>
+        </div>
+
         {/* Desktop navigation */}
         <nav className="hidden lg:flex items-center space-x-8">
           <Link href="/">
