@@ -23,7 +23,7 @@ const TrustBadges = ({ variant = 'light', showExperience = true }: TrustBadgesPr
       
       <div className={`flex items-center ${textColor}`}>
         <i className={`fas fa-award ${iconColor} mr-2`}></i>
-        <span className="font-semibold">A+ BBB Rating</span>
+        <span className="font-semibold">Fully Bonded</span>
       </div>
       
       <div className={`flex items-center ${textColor}`}>
