@@ -21,10 +21,26 @@ const HeroSection = () => {
             Partner in the <br className="hidden md:block" />
             Denver Metro Area
           </h1>
-          <p className="text-lg md:text-xl mb-8">
+          <p className="text-lg md:text-xl mb-6">
             Expert roofing solutions for residential and commercial properties, 
             specializing in storm damage repair and insurance claim assistance.
           </p>
+          
+          {/* Trust Signals */}
+          <div className="flex flex-wrap items-center gap-4 mb-8 text-sm">
+            <div className="flex items-center bg-green-600 text-white px-3 py-1 rounded-full">
+              <i className="fas fa-shield-alt mr-2"></i>
+              Licensed & Insured
+            </div>
+            <div className="flex items-center bg-blue-600 text-white px-3 py-1 rounded-full">
+              <i className="fas fa-calendar-alt mr-2"></i>
+              12+ Years Experience
+            </div>
+            <div className="flex items-center bg-yellow-600 text-white px-3 py-1 rounded-full">
+              <i className="fas fa-star mr-1"></i>
+              A+ BBB Rating
+            </div>
+          </div>
           <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
             <Link href="/contact">
               <div className="bg-blue-500 hover:bg-blue-600 text-white text-center font-semibold py-3 px-8 rounded-md transition-colors cursor-pointer shadow-lg">
