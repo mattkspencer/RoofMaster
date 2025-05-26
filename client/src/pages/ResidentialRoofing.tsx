@@ -70,7 +70,7 @@ const ResidentialRoofing = () => {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               <div className="bg-white rounded-lg shadow-md overflow-hidden">
                 <img 
-                  src="https://images.unsplash.com/photo-1632759145351-1099f3252110?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" 
+                  src="https://picsum.photos/600/300?random=1" 
                   alt="New roof installation" 
                   className="w-full h-48 object-cover"
                 />
@@ -98,7 +98,7 @@ const ResidentialRoofing = () => {
               
               <div className="bg-white rounded-lg shadow-md overflow-hidden">
                 <img 
-                  src="https://images.unsplash.com/photo-1605118936239-e04a8a10b31f?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" 
+                  src="https://picsum.photos/600/300?random=2" 
                   alt="Roof replacement service" 
                   className="w-full h-48 object-cover"
                 />
@@ -126,7 +126,7 @@ const ResidentialRoofing = () => {
               
               <div className="bg-white rounded-lg shadow-md overflow-hidden">
                 <img 
-                  src="https://images.unsplash.com/photo-1626178793926-22b28830aa30?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" 
+                  src="https://picsum.photos/600/300?random=3" 
                   alt="Roof repair work" 
                   className="w-full h-48 object-cover"
                 />
