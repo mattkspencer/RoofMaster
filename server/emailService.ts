@@ -16,10 +16,10 @@ interface ContactFormData {
   name: string;
   email: string;
   phone: string;
-  address?: string | null;
+  address?: string | null | undefined;
   service: string;
-  message?: string | null;
-  hearAbout?: string | null;
+  message?: string | null | undefined;
+  hearAbout?: string | null | undefined;
 }
 
 // Send contact form notification email
