@@ -4,6 +4,7 @@ import { storage } from "./storage";
 import { insertContactSchema } from "@shared/schema";
 import { ZodError } from "zod";
 import { fromZodError } from "zod-validation-error";
+import { sendContactFormEmail, sendCustomerConfirmationEmail } from "./emailService";
 
 export async function registerRoutes(app: Express): Promise<Server> {
   // API routes for contact form submissions
@@ -15,13 +16,21 @@ export async function registerRoutes(app: Express): Promise<Server> {
       // Save contact submission to storage
       const submission = await storage.createContactSubmission(validatedData);
       
+      // Send email notification to business owner
+      const emailSent = await sendContactFormEmail(validatedData);
+      
+      // Send confirmation email to customer
+      const confirmationSent = await sendCustomerConfirmationEmail(validatedData);
+      
       // Return success response
       return res.status(201).json({
         message: "Contact form submitted successfully",
         submission: {
           id: submission.id,
           createdAt: submission.createdAt
-        }
+        },
+        emailSent,
+        confirmationSent
       });
     } catch (error) {
       console.error("Error submitting contact form:", error);
