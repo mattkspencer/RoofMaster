@@ -17,10 +17,26 @@ export async function registerRoutes(app: Express): Promise<Server> {
       const submission = await storage.createContactSubmission(validatedData);
       
       // Send email notification to business owner
-      const emailSent = await sendContactFormEmail(validatedData);
+      const emailSent = await sendContactFormEmail({
+        name: validatedData.name,
+        email: validatedData.email,
+        phone: validatedData.phone,
+        address: validatedData.address || undefined,
+        service: validatedData.service,
+        message: validatedData.message || undefined,
+        hearAbout: validatedData.hearAbout || undefined
+      });
       
       // Send confirmation email to customer
-      const confirmationSent = await sendCustomerConfirmationEmail(validatedData);
+      const confirmationSent = await sendCustomerConfirmationEmail({
+        name: validatedData.name,
+        email: validatedData.email,
+        phone: validatedData.phone,
+        address: validatedData.address || undefined,
+        service: validatedData.service,
+        message: validatedData.message || undefined,
+        hearAbout: validatedData.hearAbout || undefined
+      });
       
       // Return success response
       return res.status(201).json({
