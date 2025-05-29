@@ -35,7 +35,7 @@ const EmergencyBanner = () => {
         : 'bg-gradient-to-r from-orange-600 to-red-600'
     } text-white`}>
       {/* Pulsing animation overlay */}
-      <div className="absolute inset-0 bg-white opacity-10 animate-[pulse_3s_ease-in-out_infinite]"></div>
+      <div className="absolute inset-0 bg-white opacity-10 animate-[pulse_4.5s_ease-in-out_infinite]"></div>
       
       <div className="relative max-w-7xl mx-auto px-4 py-3">
         <div className="flex items-center justify-between">
