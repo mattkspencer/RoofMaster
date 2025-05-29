@@ -1,0 +1,45 @@
+"Redesign the existing contact form component to reduce friction and increase conversions by implementing a progressive disclosure approach. Create two form options:
+OPTION 1: Quick Quote Form (Primary/Default)
+
+Only 3 required fields with asterisks:
+
+Name* (required)
+Phone* (required)
+Service Type* (required - dropdown with options like 'Emergency Repair', 'Insurance Claim', 'New Installation', 'Free Inspection')
+
+
+Optional fields (no asterisks, lighter styling):
+
+Email (optional - but incentivize with 'Get project updates via email')
+Address (optional - with placeholder 'Property address for accurate estimate')
+Message (optional - placeholder: 'Brief description of your needs')
+
+
+
+OPTION 2: Detailed Form (Secondary)
+
+Add a small link below Quick Quote: 'Need to provide more details? Use detailed form'
+Include all your current fields but make only Name, Phone, Service required
+Move 'How did you hear about us?' to optional section
+
+Key Changes:
+
+Remove asterisks from: Email, Address, Message, 'How did you hear about us'
+Change required field styling: Make asterisks smaller and less prominent, use subtle red color instead of bright red
+Add progress indicators: Show 'Step 1 of 1' for Quick Quote to emphasize simplicity
+Improve CTA button: Change from 'Submit' to 'Get My Free Quote' or 'Schedule My Inspection'
+Add trust signals: Small text under form: 'No obligation • Licensed & Insured • Response within 2 hours'
+Smart defaults: Pre-select 'Free Inspection' as default service type
+Mobile optimization: Larger touch targets, simplified keyboard types (tel for phone, email for email)
+
+Form Validation Updates:
+
+Keep your existing backend validation but only enforce Name, Phone, Service as required
+Update error messages to be friendlier: 'We need your phone number to schedule your inspection' instead of 'Phone is required'
+Add real-time validation (green checkmarks as fields are completed correctly)
+
+Visual Hierarchy:
+
+Make the Quick Quote form prominent with larger text and more visual weight
+Style optional fields with lighter borders and smaller labels
+Use progressive disclosure - show optional fields in a collapsed 'Additional Details' section
