@@ -8,6 +8,7 @@ import { initGA } from "./lib/analytics";
 
 // Components
 import Layout from "./components/Layout";
+import EmergencyBanner from "./components/EmergencyBanner";
 
 // Pages
 import Home from "./pages/Home";
@@ -38,6 +39,7 @@ function App() {
     <QueryClientProvider client={queryClient}>
       <TooltipProvider>
         <Toaster />
+        <EmergencyBanner />
         <Layout>
           <Switch>
             <Route path="/" component={Home} />
