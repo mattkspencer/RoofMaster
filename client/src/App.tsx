@@ -23,6 +23,13 @@ import Blog from "./pages/Blog";
 import BlogPost from "./pages/BlogPost";
 import Contact from "./pages/Contact";
 import NotFound from "@/pages/not-found";
+// Service Area Pages
+import EnglewoodRoofing from "./pages/EnglewoodRoofing";
+import DenverRoofing from "./pages/DenverRoofing";
+import AuroraRoofing from "./pages/AuroraRoofing";
+import LittletonRoofing from "./pages/LittletonRoofing";
+import ArvadaRoofing from "./pages/ArvadaRoofing";
+import CastleRockRoofing from "./pages/CastleRockRoofing";
 
 function App() {
   // Initialize Google Analytics when app loads
@@ -53,6 +60,13 @@ function App() {
             <Route path="/blog" component={Blog} />
             <Route path="/blog/:id" component={BlogPost} />
             <Route path="/contact" component={Contact} />
+            {/* Service Area Pages */}
+            <Route path="/englewood-roofing-services" component={EnglewoodRoofing} />
+            <Route path="/denver-roofing-contractor" component={DenverRoofing} />
+            <Route path="/aurora-roofing-company" component={AuroraRoofing} />
+            <Route path="/littleton-roof-replacement" component={LittletonRoofing} />
+            <Route path="/arvada-roof-repair" component={ArvadaRoofing} />
+            <Route path="/castle-rock-roofing-services" component={CastleRockRoofing} />
             <Route component={NotFound} />
           </Switch>
         </Layout>
