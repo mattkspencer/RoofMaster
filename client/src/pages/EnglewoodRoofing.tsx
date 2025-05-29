@@ -20,7 +20,7 @@ const EnglewoodRoofing = () => {
 
   return (
     <div className="min-h-screen bg-gray-50">
-      <div className="bg-gradient-to-br from-blue-900 via-blue-800 to-blue-700 text-white py-16">
+      <div className="bg-gradient-to-br from-blue-600 via-blue-500 to-blue-600 text-white py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <Breadcrumb items={breadcrumbItems} />
           <div className="mt-8">
@@ -39,7 +39,7 @@ const EnglewoodRoofing = () => {
               </a>
               <a
                 href="#contact"
-                className="bg-white text-blue-900 px-8 py-3 rounded-lg font-semibold text-lg hover:bg-gray-100 transition-colors duration-200 text-center"
+                className="bg-white text-blue-700 px-8 py-3 rounded-lg font-semibold text-lg hover:bg-gray-100 transition-colors duration-200 text-center"
               >
                 Get Free Estimate
               </a>
