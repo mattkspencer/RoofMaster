@@ -1,32 +1,23 @@
 import { useState, useRef, useEffect } from 'react';
 import { trackEvent } from '@/lib/analytics';
-import { MessageCircle, X, Send, Phone } from 'lucide-react';
 
 interface ChatMessage {
   text: string;
   isUser: boolean;
   timestamp: Date;
-  options?: ChatOption[];
-}
-
-interface ChatOption {
-  text: string;
-  action: string;
-  data?: any;
 }
 
 const ChatWidget = () => {
   const [isExpanded, setIsExpanded] = useState(false);
-  const [messages, setMessages] = useState<ChatMessage[]>([]);
+  const [messages, setMessages] = useState<ChatMessage[]>([
+    {
+      text: "Hi there! 👋 I'm your Spencer Roofing assistant. I can help you with:\n\n• Roofing materials & costs\n• Insurance claims\n• Emergency repairs\n• Maintenance tips\n• Scheduling estimates\n\nWhat can I help you with today?",
+      isUser: false,
+      timestamp: new Date()
+    }
+  ]);
   const [inputValue, setInputValue] = useState('');
-  const [isLoading, setIsLoading] = useState(false);
-  const [sessionId] = useState(() => generateSessionId());
   const messagesEndRef = useRef<HTMLDivElement>(null);
-
-  // Generate unique session ID
-  function generateSessionId() {
-    return 'session-' + Math.random().toString(36).substr(2, 9) + '-' + Date.now();
-  }
 
   const toggleChat = () => {
     const newState = !isExpanded;
