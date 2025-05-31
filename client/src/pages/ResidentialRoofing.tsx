@@ -98,16 +98,16 @@ const ResidentialRoofing = () => {
               
               <div className="bg-white rounded-lg shadow-md overflow-hidden">
                 <img 
-                  src="/images/woodshakebuild.jpg?v=1" 
+                  src="/images/woodshakebuild.jpg?v=2" 
                   alt="Roof replacement service" 
                   className="w-full h-48 object-cover max-w-full"
                   loading="eager"
                   width="600"
                   height="300"
-                  onLoad={() => console.log('Successfully loaded woodshakebuild.jpg on mobile')}
+                  onLoad={() => console.log('✓ woodshakebuild.jpg loaded successfully')}
                   onError={(e) => {
-                    console.error('Failed to load woodshakebuild.jpg:', e);
-                    console.log('Wood shake image failed to load on mobile device');
+                    console.error('✗ woodshakebuild.jpg failed to load:', e);
+                    console.log('URL attempted:', e.target.src);
                   }}
                 />
                 <div className="p-6">
