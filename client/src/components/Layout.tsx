@@ -1,7 +1,7 @@
 import { ReactNode } from 'react';
 import Header from './Header';
 import Footer from './Footer';
-import EnhancedChatWidget from './EnhancedChatWidget';
+import ChatWidget from './ChatWidget';
 import StickyCallButton from './StickyCallButton';
 import { useAnalytics } from '@/hooks/use-analytics';
 
@@ -18,7 +18,7 @@ const Layout = ({ children }: LayoutProps) => {
       <Header />
       <main className="flex-grow">{children}</main>
       <Footer />
-      <EnhancedChatWidget />
+      <ChatWidget />
       <StickyCallButton />
     </div>
   );
