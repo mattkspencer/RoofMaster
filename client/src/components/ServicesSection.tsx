@@ -23,6 +23,8 @@ const ServicesSection = () => {
               src="/images/colburnbuild.jpg" 
               alt="Residential roofing installation" 
               className="rounded-lg shadow-lg w-full h-auto object-cover"
+              loading="lazy"
+              onError={(e) => console.error('Failed to load colburnbuild.jpg:', e)}
             />
           </div>
           <div className="order-1 md:order-2">
