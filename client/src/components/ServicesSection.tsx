@@ -20,11 +20,17 @@ const ServicesSection = () => {
         <div className="mb-16 grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
           <div className="order-2 md:order-1">
             <img 
-              src="/images/colburnbuild.jpg" 
+              src="/images/colburnbuild.jpg?v=1" 
               alt="Residential roofing installation" 
-              className="rounded-lg shadow-lg w-full h-auto object-cover"
-              loading="lazy"
-              onError={(e) => console.error('Failed to load colburnbuild.jpg:', e)}
+              className="rounded-lg shadow-lg w-full h-auto object-cover max-w-full"
+              loading="eager"
+              width="600"
+              height="400"
+              onLoad={() => console.log('Successfully loaded colburnbuild.jpg on mobile')}
+              onError={(e) => {
+                console.error('Failed to load colburnbuild.jpg:', e);
+                console.log('Image failed to load on mobile device');
+              }}
             />
           </div>
           <div className="order-1 md:order-2">
