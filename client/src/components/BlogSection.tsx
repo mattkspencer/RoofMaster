@@ -12,7 +12,7 @@ interface BlogPost {
 const BlogSection = () => {
   const blogPosts: BlogPost[] = [
     {
-      image: "https://picsum.photos/600/300?random=30",
+      image: "/attached_assets/haildamagepic.jpg",
       date: "2023-06-15",
       title: "How to Identify Hail Damage on Your Roof",
       excerpt: "Learn the telltale signs of hail damage and what steps to take if you suspect your roof has been compromised after a storm.",
