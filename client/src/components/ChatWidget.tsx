@@ -179,7 +179,7 @@ const ChatWidget = () => {
   return (
     <div 
       id="chat-widget" 
-      className={`chat-widget fixed bottom-6 left-6 z-40 w-80 bg-white rounded-lg shadow-lg transition-all ${isExpanded ? 'h-[800px] min-h-[700px]' : 'h-[60px]'} flex flex-col`}
+      className={`chat-widget fixed bottom-6 left-6 z-40 w-80 bg-white rounded-lg shadow-lg transition-all ${isExpanded ? 'h-[400px] md:h-[600px] lg:h-[800px] min-h-[350px] md:min-h-[500px] lg:min-h-[700px]' : 'h-[60px]'} flex flex-col`}
     >
       <div 
         id="chat-header" 
@@ -203,7 +203,7 @@ const ChatWidget = () => {
         <>
           <div 
             id="chat-body" 
-            className="flex-1 p-4 overflow-y-auto bg-gray-50 min-h-0 max-h-[600px]"
+            className="flex-1 p-4 overflow-y-auto bg-gray-50 min-h-0 max-h-[300px] md:max-h-[450px] lg:max-h-[600px]"
           >
             <div className="space-y-4 pb-4">
               {messages.map((msg, index) => (
