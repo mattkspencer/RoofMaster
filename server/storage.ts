@@ -12,13 +12,13 @@ export interface IStorage {
   getUser(id: number): Promise<User | undefined>;
   getUserByUsername(username: string): Promise<User | undefined>;
   createUser(user: InsertUser): Promise<User>;
-  
+
   // Contact submissions
   createContactSubmission(submission: InsertContact): Promise<ContactSubmission>;
   getContactSubmissions(): Promise<ContactSubmission[]>;
   getContactSubmission(id: number): Promise<ContactSubmission | undefined>;
   updateContactSubmissionStatus(id: number, status: string): Promise<ContactSubmission | undefined>;
-  
+
   // Blog posts
   createBlogPost(post: InsertBlogPost): Promise<BlogPost>;
   getBlogPosts(): Promise<BlogPost[]>;
@@ -26,7 +26,7 @@ export interface IStorage {
   getBlogPostBySlug(slug: string): Promise<BlogPost | undefined>;
   updateBlogPost(id: number, post: Partial<InsertBlogPost>): Promise<BlogPost | undefined>;
   deleteBlogPost(id: number): Promise<boolean>;
-  
+
   // Portfolio projects
   createPortfolioProject(project: InsertPortfolioProject): Promise<PortfolioProject>;
   getPortfolioProjects(): Promise<PortfolioProject[]>;
@@ -34,7 +34,7 @@ export interface IStorage {
   getPortfolioProjectsByCategory(category: string): Promise<PortfolioProject[]>;
   updatePortfolioProject(id: number, project: Partial<InsertPortfolioProject>): Promise<PortfolioProject | undefined>;
   deletePortfolioProject(id: number): Promise<boolean>;
-  
+
   // Testimonials
   createTestimonial(testimonial: InsertTestimonial): Promise<Testimonial>;
   getTestimonials(approvedOnly?: boolean): Promise<Testimonial[]>;
@@ -70,7 +70,7 @@ export class MemStorage implements IStorage {
       portfolioProjects: 1,
       testimonials: 1
     };
-    
+
     // Initialize with default blog posts
     this.initializeDefaultData();
   }
@@ -303,7 +303,7 @@ export class MemStorage implements IStorage {
         tags: ["roof maintenance", "seasonal tips", "denver weather"]
       }
     ];
-    
+
     defaultBlogPosts.forEach(post => {
       const id = this.currentIds.blogPosts++;
       this.blogPosts.set(id, {
@@ -318,7 +318,7 @@ export class MemStorage implements IStorage {
         tags: post.tags
       });
     });
-    
+
     // Add portfolio projects
     const defaultPortfolioProjects: InsertPortfolioProject[] = [
       {
@@ -358,7 +358,7 @@ export class MemStorage implements IStorage {
         client: "Thompson Residence"
       }
     ];
-    
+
     defaultPortfolioProjects.forEach(project => {
       const id = this.currentIds.portfolioProjects++;
       this.portfolioProjects.set(id, {
@@ -366,7 +366,7 @@ export class MemStorage implements IStorage {
         id
       });
     });
-    
+
     // Add testimonials
     const defaultTestimonials: InsertTestimonial[] = [
       {
@@ -402,7 +402,7 @@ export class MemStorage implements IStorage {
         imageUrl: undefined
       }
     ];
-    
+
     defaultTestimonials.forEach(testimonial => {
       const id = this.currentIds.testimonials++;
       this.testimonials.set(id, {
@@ -431,7 +431,7 @@ export class MemStorage implements IStorage {
     this.users.set(id, user);
     return user;
   }
-  
+
   // Contact submission methods
   async createContactSubmission(submission: InsertContact): Promise<ContactSubmission> {
     const id = this.currentIds.contactSubmissions++;
@@ -444,25 +444,25 @@ export class MemStorage implements IStorage {
     this.contactSubmissions.set(id, newSubmission);
     return newSubmission;
   }
-  
+
   async getContactSubmissions(): Promise<ContactSubmission[]> {
     return Array.from(this.contactSubmissions.values())
       .sort((a, b) => b.createdAt.getTime() - a.createdAt.getTime());
   }
-  
+
   async getContactSubmission(id: number): Promise<ContactSubmission | undefined> {
     return this.contactSubmissions.get(id);
   }
-  
+
   async updateContactSubmissionStatus(id: number, status: string): Promise<ContactSubmission | undefined> {
     const submission = this.contactSubmissions.get(id);
     if (!submission) return undefined;
-    
+
     const updatedSubmission = { ...submission, status };
     this.contactSubmissions.set(id, updatedSubmission);
     return updatedSubmission;
   }
-  
+
   // Blog post methods
   async createBlogPost(post: InsertBlogPost): Promise<BlogPost> {
     const id = this.currentIds.blogPosts++;
@@ -470,33 +470,33 @@ export class MemStorage implements IStorage {
     this.blogPosts.set(id, newPost);
     return newPost;
   }
-  
+
   async getBlogPosts(): Promise<BlogPost[]> {
     return Array.from(this.blogPosts.values())
       .sort((a, b) => b.publishedAt.getTime() - a.publishedAt.getTime());
   }
-  
+
   async getBlogPostById(id: number): Promise<BlogPost | undefined> {
     return this.blogPosts.get(id);
   }
-  
+
   async getBlogPostBySlug(slug: string): Promise<BlogPost | undefined> {
     return Array.from(this.blogPosts.values()).find(post => post.slug === slug);
   }
-  
+
   async updateBlogPost(id: number, post: Partial<InsertBlogPost>): Promise<BlogPost | undefined> {
     const existingPost = this.blogPosts.get(id);
     if (!existingPost) return undefined;
-    
+
     const updatedPost = { ...existingPost, ...post };
     this.blogPosts.set(id, updatedPost);
     return updatedPost;
   }
-  
+
   async deleteBlogPost(id: number): Promise<boolean> {
     return this.blogPosts.delete(id);
   }
-  
+
   // Portfolio project methods
   async createPortfolioProject(project: InsertPortfolioProject): Promise<PortfolioProject> {
     const id = this.currentIds.portfolioProjects++;
@@ -504,33 +504,33 @@ export class MemStorage implements IStorage {
     this.portfolioProjects.set(id, newProject);
     return newProject;
   }
-  
+
   async getPortfolioProjects(): Promise<PortfolioProject[]> {
     return Array.from(this.portfolioProjects.values());
   }
-  
+
   async getPortfolioProjectById(id: number): Promise<PortfolioProject | undefined> {
     return this.portfolioProjects.get(id);
   }
-  
+
   async getPortfolioProjectsByCategory(category: string): Promise<PortfolioProject[]> {
     return Array.from(this.portfolioProjects.values())
       .filter(project => project.category === category);
   }
-  
+
   async updatePortfolioProject(id: number, project: Partial<InsertPortfolioProject>): Promise<PortfolioProject | undefined> {
     const existingProject = this.portfolioProjects.get(id);
     if (!existingProject) return undefined;
-    
+
     const updatedProject = { ...existingProject, ...project };
     this.portfolioProjects.set(id, updatedProject);
     return updatedProject;
   }
-  
+
   async deletePortfolioProject(id: number): Promise<boolean> {
     return this.portfolioProjects.delete(id);
   }
-  
+
   // Testimonial methods
   async createTestimonial(testimonial: InsertTestimonial): Promise<Testimonial> {
     const id = this.currentIds.testimonials++;
@@ -543,30 +543,30 @@ export class MemStorage implements IStorage {
     this.testimonials.set(id, newTestimonial);
     return newTestimonial;
   }
-  
+
   async getTestimonials(approvedOnly = true): Promise<Testimonial[]> {
     let testimonials = Array.from(this.testimonials.values());
-    
+
     if (approvedOnly) {
       testimonials = testimonials.filter(t => t.isApproved);
     }
-    
+
     return testimonials.sort((a, b) => b.createdAt.getTime() - a.createdAt.getTime());
   }
-  
+
   async getTestimonialById(id: number): Promise<Testimonial | undefined> {
     return this.testimonials.get(id);
   }
-  
+
   async updateTestimonial(id: number, testimonial: Partial<InsertTestimonial>): Promise<Testimonial | undefined> {
     const existingTestimonial = this.testimonials.get(id);
     if (!existingTestimonial) return undefined;
-    
+
     const updatedTestimonial = { ...existingTestimonial, ...testimonial };
     this.testimonials.set(id, updatedTestimonial);
     return updatedTestimonial;
   }
-  
+
   async deleteTestimonial(id: number): Promise<boolean> {
     return this.testimonials.delete(id);
   }
