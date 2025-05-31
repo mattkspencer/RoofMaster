@@ -179,7 +179,7 @@ const ChatWidget = () => {
   return (
     <div 
       id="chat-widget" 
-      className={`chat-widget fixed bottom-6 left-6 z-40 w-72 bg-white rounded-lg shadow-lg transition-all ${isExpanded ? 'h-[480px]' : 'h-[60px]'} flex flex-col`}
+      className={`chat-widget fixed bottom-6 left-6 z-40 w-80 bg-white rounded-lg shadow-lg transition-all ${isExpanded ? 'h-[600px]' : 'h-[60px]'} flex flex-col`}
     >
       <div 
         id="chat-header" 
@@ -203,13 +203,13 @@ const ChatWidget = () => {
         <>
           <div 
             id="chat-body" 
-            className="flex-1 p-4 overflow-y-auto bg-gray-50 min-h-0"
+            className="flex-1 p-4 overflow-y-auto bg-gray-50 min-h-0 max-h-[400px]"
           >
-            <div className="space-y-4">
+            <div className="space-y-4 pb-4">
               {messages.map((msg, index) => (
                 <div key={index} className={`flex items-start ${msg.isUser ? 'justify-end' : ''}`}>
-                  <div className={`${msg.isUser ? 'bg-gray-200' : 'bg-primary text-white'} rounded-lg py-2 px-4 max-w-xs ${msg.isUser ? 'ml-auto' : ''}`}>
-                    <p className="text-sm whitespace-pre-line">{msg.text}</p>
+                  <div className={`${msg.isUser ? 'bg-gray-200' : 'bg-primary text-white'} rounded-lg py-3 px-4 max-w-[280px] ${msg.isUser ? 'ml-auto' : ''}`}>
+                    <p className="text-sm whitespace-pre-line leading-relaxed">{msg.text}</p>
                   </div>
                 </div>
               ))}
