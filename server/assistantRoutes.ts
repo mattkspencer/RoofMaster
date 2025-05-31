@@ -145,7 +145,7 @@ class RoofingAI {
 
   analyzeMessage(text: string) {
     const tokens = tokenizer.tokenize(text.toLowerCase());
-    const stems = tokens.map((token: string) => stemmer.stem(token));
+    const stems = tokens.map(token => stemmer.stem(token));
     
     return {
       urgency: this.detectUrgency(text),
