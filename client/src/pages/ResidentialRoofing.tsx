@@ -98,7 +98,7 @@ const ResidentialRoofing = () => {
               
               <div className="bg-white rounded-lg shadow-md overflow-hidden">
                 <img 
-                  src="https://picsum.photos/600/300?random=2" 
+                  src="/images/woodshakebuild.JPG" 
                   alt="Roof replacement service" 
                   className="w-full h-48 object-cover"
                 />
