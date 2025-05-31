@@ -5,8 +5,12 @@ import { insertContactSchema } from "@shared/schema";
 import { ZodError } from "zod";
 import { fromZodError } from "zod-validation-error";
 import { sendContactFormEmail, sendCustomerConfirmationEmail } from "./emailService";
+import assistantRoutes from "./assistantRoutes";
 
 export async function registerRoutes(app: Express): Promise<Server> {
+  // Register assistant routes
+  app.use("/api/assistant", assistantRoutes);
+
   // API routes for contact form submissions
   app.post("/api/contact", async (req: Request, res: Response) => {
     try {
