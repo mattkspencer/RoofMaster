@@ -101,6 +101,8 @@ const ResidentialRoofing = () => {
                   src="/images/woodshakebuild.JPG" 
                   alt="Roof replacement service" 
                   className="w-full h-48 object-cover"
+                  loading="lazy"
+                  onError={(e) => console.error('Failed to load woodshakebuild.JPG:', e)}
                 />
                 <div className="p-6">
                   <h3 className="text-xl font-bold mb-3">Roof Replacement</h3>
