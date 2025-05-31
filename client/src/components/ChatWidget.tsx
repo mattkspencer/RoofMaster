@@ -179,24 +179,33 @@ const ChatWidget = () => {
   return (
     <div 
       id="chat-widget" 
-      className={`chat-widget fixed bottom-6 left-6 z-40 w-80 bg-white rounded-lg shadow-lg transition-all ${isExpanded ? 'h-[400px] md:h-[600px] lg:h-[800px] min-h-[350px] md:min-h-[500px] lg:min-h-[700px]' : 'h-[60px]'} flex flex-col`}
+      className={`chat-widget fixed bottom-4 left-4 z-40 transition-all ${isExpanded ? 'w-80 bg-white rounded-lg shadow-lg h-[400px] md:h-[600px] lg:h-[800px] min-h-[350px] md:min-h-[500px] lg:min-h-[700px]' : 'w-[100px] md:w-[140px] lg:w-[180px] h-[40px] md:h-[50px] lg:h-[60px] bg-primary rounded-full shadow-lg hover:scale-105'} flex flex-col`}
     >
       <div 
         id="chat-header" 
-        className="bg-primary p-4 flex justify-between items-center cursor-pointer flex-shrink-0"
+        className={`cursor-pointer flex-shrink-0 flex items-center ${isExpanded ? 'bg-primary p-4 justify-between' : 'h-full w-full justify-center'}`}
         onClick={toggleChat}
       >
-        <div className="flex items-center">
-          <i className="fas fa-comment-dots text-white mr-2"></i>
-          <h4 className="text-white font-semibold">Roofing Assistant</h4>
-        </div>
-        <button 
-          id="chat-toggle" 
-          className="text-white focus:outline-none"
-          aria-label={isExpanded ? 'Minimize chat' : 'Expand chat'}
-        >
-          <i className={`fas fa-chevron-${isExpanded ? 'down' : 'up'}`}></i>
-        </button>
+        {isExpanded ? (
+          <>
+            <div className="flex items-center">
+              <i className="fas fa-comment-dots text-white mr-2"></i>
+              <h4 className="text-white font-semibold">Roofing Assistant</h4>
+            </div>
+            <button 
+              id="chat-toggle" 
+              className="text-white focus:outline-none"
+              aria-label="Minimize chat"
+            >
+              <i className="fas fa-chevron-down"></i>
+            </button>
+          </>
+        ) : (
+          <div className="flex items-center space-x-1 text-white">
+            <span className="text-xs md:text-sm lg:text-base font-medium">Assistant</span>
+            <span className="text-xs md:text-sm">💬</span>
+          </div>
+        )}
       </div>
       
       {isExpanded && (
