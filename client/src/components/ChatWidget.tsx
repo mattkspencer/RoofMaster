@@ -75,18 +75,29 @@ const ChatWidget = () => {
     }
   };
 
+  // Enhanced emergency detection with expanded keywords
+  const detectEmergency = (input: string): boolean => {
+    const emergencyKeywords = [
+      'leak', 'leaking', 'water damage', 'emergency', 'urgent', 'storm damage', 
+      'tree fell', 'tree on roof', 'hole in roof', 'flooding', 'water coming in',
+      'collapsed', 'caved in', 'immediate', 'asap', 'help now', 'right now'
+    ];
+    
+    return emergencyKeywords.some(keyword => input.includes(keyword));
+  };
+
   // Enhanced bot response system with comprehensive knowledge base
   const generateBotResponse = (userInput: string): string => {
     const input = userInput.toLowerCase();
     
-    // Emergency/Urgent Issues - Highest Priority
-    if (input.includes('emergency') || input.includes('urgent') || (input.includes('leak') && (input.includes('now') || input.includes('help')))) {
-      return "🚨 EMERGENCY SERVICE: For immediate roof leaks or urgent repairs, call us NOW at 720-360-8546. We provide 24/7 emergency response and can typically arrive within 2-4 hours in the Denver metro area.";
+    // Emergency/Urgent Issues - Enhanced Detection
+    if (detectEmergency(input)) {
+      return "🚨 THIS SOUNDS URGENT! For immediate emergency roofing service, call us NOW at 720-360-8546.\n\n✅ 24/7 Emergency Response\n✅ Typically arrive within 2-4 hours\n✅ Serving entire Denver metro area\n✅ Licensed emergency contractors\n\nDon't wait - roof emergencies can cause extensive damage quickly!";
     }
     
-    // Roofing Materials - Detailed Information
-    if (input.includes('material') || input.includes('shingle') || input.includes('metal') || input.includes('tile') || input.includes('type')) {
-      return "🏠 ROOFING MATERIALS WE INSTALL:\n\n• Asphalt Shingles ($8-15/sq ft) - Most popular, 20-30 year warranty, great value\n• Metal Roofing ($12-20/sq ft) - 40-70 year lifespan, energy efficient, hail resistant\n• Tile Roofing ($10-18/sq ft) - 50+ years, perfect for Colorado climate, fire resistant\n• TPO Commercial ($6-12/sq ft) - White membrane, energy efficient\n\nNeed material recommendations for your specific situation? Call 720-360-8546";
+    // Roofing Materials - Colorado-Appropriate Options
+    if (input.includes('material') || input.includes('shingle') || input.includes('metal') || input.includes('tile') || input.includes('type') || input.includes('recommend')) {
+      return "🏠 COLORADO-APPROPRIATE ROOFING MATERIALS:\n\n• Impact-Resistant Shingles ($10-18/sq ft) - Class 4 hail protection, insurance discounts\n• Metal Roofing ($15-25/sq ft) - Superior hail/wind resistance, 50+ year lifespan\n• Concrete Tile ($12-20/sq ft) - Excellent for Colorado climate, fire/wind resistant\n• Synthetic Materials ($14-22/sq ft) - Modern composites, extreme weather protection\n\nFor Colorado conditions, we recommend Class 4 impact-resistant materials. Call 720-360-8546 for personalized recommendations";
     }
     
     // Signs You Need Roof Work
@@ -94,14 +105,31 @@ const ChatWidget = () => {
       return "⚠️ SIGNS YOU NEED ROOF ATTENTION:\n\n• Missing, cracked, or curling shingles\n• Granules accumulating in gutters\n• Sagging or uneven roof lines\n• Water stains on interior ceilings\n• Roof age over 20 years\n• Increasing energy bills\n• Moss or algae growth\n\nSpotting any of these? Get a FREE inspection: 720-360-8546";
     }
     
-    // Insurance Claims Process
-    if (input.includes('insurance') || input.includes('claim') || input.includes('hail') || input.includes('storm') || input.includes('adjuster')) {
-      return "💼 INSURANCE CLAIMS MADE EASY:\n\nWe handle everything:\n✅ Document damage with detailed photos\n✅ Meet with insurance adjusters\n✅ Negotiate fair settlements\n✅ Handle all paperwork and permits\n✅ Coordinate timeline with insurance\n\n95% claim approval rate! Call 720-360-8546 for FREE claim assistance.";
+    // Colorado-Specific Weather Issues
+    if (input.includes('hail') || input.includes('hail damage')) {
+      return "🌨️ COLORADO HAIL DAMAGE EXPERTS:\n\nColorado's severe hail season (April-July) causes extensive roof damage. We specialize in:\n✅ Hail damage assessment & documentation\n✅ Insurance claim assistance (95% approval rate)\n✅ Impact-resistant materials for future protection\n✅ Fast repairs before next storm season\n\nHail damage can be invisible to untrained eyes. FREE inspection: 720-360-8546";
     }
     
-    // Costs and Pricing Information
+    if (input.includes('wind') || input.includes('wind damage') || input.includes('missing shingle')) {
+      return "💨 COLORADO WIND DAMAGE SPECIALISTS:\n\nColorado's high winds (especially chinook winds) frequently cause:\n• Missing or loose shingles\n• Lifted roof edges\n• Gutter damage\n• Flashing issues\n\nWind damage can lead to leaks if not addressed quickly. Emergency repairs available! Call 720-360-8546";
+    }
+    
+    if (input.includes('snow') || input.includes('ice dam') || input.includes('winter')) {
+      return "❄️ COLORADO WINTER ROOF PROTECTION:\n\nColorado's heavy snow loads and freeze-thaw cycles create:\n• Ice dams blocking proper drainage\n• Snow load stress on roof structure\n• Icicle formation damaging gutters\n• Rapid temperature changes causing expansion/contraction\n\nPrevent winter damage with proper insulation and ventilation. Call 720-360-8546";
+    }
+    
+    if (input.includes('sun') || input.includes('uv') || input.includes('fading') || input.includes('altitude')) {
+      return "☀️ HIGH ALTITUDE UV PROTECTION:\n\nColorado's high altitude means 25% more UV exposure than sea level:\n• Accelerated shingle aging and fading\n• Faster material deterioration\n• Increased cooling costs\n• Premium UV-resistant materials essential\n\nProtect your investment with Colorado-appropriate materials. Call 720-360-8546";
+    }
+
+    // Insurance Claims Process - Enhanced for Colorado
+    if (input.includes('insurance') || input.includes('claim') || input.includes('adjuster')) {
+      return "💼 COLORADO INSURANCE CLAIMS EXPERTS:\n\nSpecializing in Colorado weather damage claims:\n✅ Hail damage documentation & assessment\n✅ Wind damage evaluations\n✅ Meet with insurance adjusters\n✅ Negotiate fair settlements for Colorado conditions\n✅ Handle all paperwork and permits\n✅ Know Colorado insurance requirements\n\n95% claim approval rate! Call 720-360-8546 for FREE claim assistance.";
+    }
+    
+    // Costs and Pricing Information - Colorado-Specific
     if (input.includes('cost') || input.includes('price') || input.includes('quote') || input.includes('estimate') || input.includes('$') || input.includes('expensive')) {
-      return "💰 ROOFING INVESTMENT GUIDE:\n\n• Minor repairs: $150-500\n• Major repairs: $500-2,000\n• Asphalt shingle roof: $15,000-25,000\n• Metal roof: $20,000-35,000\n• Tile roof: $18,000-30,000\n• Commercial TPO: $6-12/sq ft\n\n🆓 FREE detailed estimates with no pressure! Call 720-360-8546";
+      return "💰 COLORADO ROOFING INVESTMENT GUIDE:\n\n• Emergency repairs: $300-1,200\n• Hail damage repairs: $500-3,000\n• Wind damage repairs: $400-1,500\n• Asphalt shingle roof: $15,000-28,000\n• Impact-resistant shingles: $18,000-32,000\n• Metal roof (hail-resistant): $22,000-38,000\n• Tile roof: $20,000-35,000\n\nColorado prices reflect weather-resistant materials. FREE detailed estimates! Call 720-360-8546";
     }
     
     // Warranty Information
@@ -114,9 +142,9 @@ const ChatWidget = () => {
       return "🔧 ROOF MAINTENANCE ESSENTIALS:\n\n• Clean gutters spring & fall\n• Trim tree branches away from roof\n• Remove debris and leaves regularly\n• Check for loose or missing shingles\n• Clear moss and algae immediately\n• Schedule annual professional inspections\n\n📅 We offer maintenance plans starting at $99/year! Call 720-360-8546";
     }
     
-    // Timeline and Scheduling
-    if (input.includes('time') || input.includes('long') || input.includes('schedule') || input.includes('quick') || input.includes('fast')) {
-      return "⏰ PROJECT TIMELINES:\n\n• Emergency repairs: Same day service\n• Small repairs: 1-2 days\n• Residential reroof: 2-4 days\n• Commercial projects: 3-10 days\n• Insurance claims: 2-4 weeks (total process)\n\nWeather dependent. Rush jobs available for emergencies. Call 720-360-8546 to discuss your timeline.";
+    // Timeline and Scheduling - Colorado Weather Considerations
+    if (input.includes('time') || input.includes('long') || input.includes('schedule') || input.includes('quick') || input.includes('fast') || input.includes('how long')) {
+      return "⏰ COLORADO PROJECT TIMELINES:\n\n• Emergency repairs: Same day/24 hours\n• Storm damage repairs: 1-3 days\n• Residential reroof: 2-5 days (weather permitting)\n• Commercial projects: 3-10 days\n• Insurance claims: 2-6 weeks (total process)\n• Hail damage season: Book early (April-July busy)\n\nColorado weather can affect scheduling. We monitor forecasts closely. Call 720-360-8546 to discuss your timeline.";
     }
     
     // Residential Services
@@ -196,28 +224,40 @@ const ChatWidget = () => {
             <div className="mb-2">
               <div className="flex flex-wrap gap-1 mb-2">
                 <button 
-                  className="text-xs bg-gray-100 hover:bg-gray-200 px-2 py-1 rounded-full text-gray-700"
-                  onClick={() => setInputValue("What materials do you recommend?")}
+                  className="text-xs bg-red-100 hover:bg-red-200 px-2 py-1 rounded-full text-red-700 font-medium"
+                  onClick={() => setInputValue("Emergency roof repair")}
+                >
+                  🚨 Emergency
+                </button>
+                <button 
+                  className="text-xs bg-blue-100 hover:bg-blue-200 px-2 py-1 rounded-full text-blue-700"
+                  onClick={() => setInputValue("Schedule free roof inspection")}
+                >
+                  Free Inspection
+                </button>
+                <button 
+                  className="text-xs bg-green-100 hover:bg-green-200 px-2 py-1 rounded-full text-green-700"
+                  onClick={() => setInputValue("Hail damage assessment")}
+                >
+                  Hail Damage
+                </button>
+                <button 
+                  className="text-xs bg-purple-100 hover:bg-purple-200 px-2 py-1 rounded-full text-purple-700"
+                  onClick={() => setInputValue("Insurance claim help")}
+                >
+                  Insurance Claims
+                </button>
+                <button 
+                  className="text-xs bg-orange-100 hover:bg-orange-200 px-2 py-1 rounded-full text-orange-700"
+                  onClick={() => setInputValue("Colorado roofing materials")}
                 >
                   Materials
                 </button>
                 <button 
-                  className="text-xs bg-gray-100 hover:bg-gray-200 px-2 py-1 rounded-full text-gray-700"
-                  onClick={() => setInputValue("How much does a new roof cost?")}
+                  className="text-xs bg-yellow-100 hover:bg-yellow-200 px-2 py-1 rounded-full text-yellow-700"
+                  onClick={() => setInputValue("Roofing costs Colorado")}
                 >
-                  Costs
-                </button>
-                <button 
-                  className="text-xs bg-gray-100 hover:bg-gray-200 px-2 py-1 rounded-full text-gray-700"
-                  onClick={() => setInputValue("I need help with insurance claim")}
-                >
-                  Insurance
-                </button>
-                <button 
-                  className="text-xs bg-gray-100 hover:bg-gray-200 px-2 py-1 rounded-full text-gray-700"
-                  onClick={() => setInputValue("Schedule free estimate")}
-                >
-                  Estimate
+                  Pricing
                 </button>
               </div>
             </div>
