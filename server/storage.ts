@@ -107,7 +107,7 @@ export class MemStorage implements IStorage {
                   <li>Call your insurance company to report the damage</li>
                 </ol>
                 <p>Remember, climbing onto your roof can be dangerous. It's always best to have a professional roofing contractor inspect for damage. At Spencer Roofing Solutions, we offer free post-storm inspections to help you determine if you have a valid insurance claim.</p>`,
-        imageUrl: "/attached_assets/haildamagepic.jpg",
+        imageUrl: "/images/haildamagepic.jpg",
         publishedAt: new Date("2023-06-15T12:00:00Z"),
         tags: ["hail damage", "roof inspection", "insurance claims"]
       },
