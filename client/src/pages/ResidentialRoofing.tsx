@@ -107,7 +107,7 @@ const ResidentialRoofing = () => {
                   onLoad={() => console.log('✓ woodshakebuild.jpg loaded successfully')}
                   onError={(e) => {
                     console.error('✗ woodshakebuild.jpg failed to load:', e);
-                    console.log('URL attempted:', e.target.src);
+                    console.log('URL attempted:', (e.target as HTMLImageElement).src);
                   }}
                 />
                 <div className="p-6">
