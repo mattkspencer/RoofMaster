@@ -3,6 +3,7 @@ import { Link, useLocation } from 'wouter';
 
 const Header = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [servicesDropdownOpen, setServicesDropdownOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [location] = useLocation();
 
@@ -26,12 +27,34 @@ const Header = () => {
 
   const toggleMobileMenu = () => {
     setMobileMenuOpen(!mobileMenuOpen);
+    // Close services dropdown when main menu closes
+    if (mobileMenuOpen) {
+      setServicesDropdownOpen(false);
+    }
+  };
+
+  const toggleServicesDropdown = () => {
+    setServicesDropdownOpen(!servicesDropdownOpen);
   };
 
   // Close mobile menu when route changes
   useEffect(() => {
     setMobileMenuOpen(false);
+    setServicesDropdownOpen(false);
   }, [location]);
+
+  // Prevent body scroll when mobile menu is open
+  useEffect(() => {
+    if (mobileMenuOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'unset';
+    }
+    
+    return () => {
+      document.body.style.overflow = 'unset';
+    };
+  }, [mobileMenuOpen]);
 
   return (
     <header className={`relative w-full bg-white z-50 transition-shadow ${scrolled ? 'shadow-md' : ''}`}>
@@ -130,54 +153,134 @@ const Header = () => {
         </nav>
       </div>
       
-      {/* Mobile navigation */}
-      <div id="mobile-menu" className={`${mobileMenuOpen ? 'block' : 'hidden'} lg:hidden bg-white shadow-md`}>
-        <div className="container mx-auto px-4 py-3 flex flex-col space-y-4">
-          <Link href="/">
-            <div className={`nav-link ${isActive('/') ? 'active text-primary font-semibold' : ''} hover:text-primary transition-colors cursor-pointer`}>
-              Home
+      {/* Enhanced Mobile navigation */}
+      <div className={`${mobileMenuOpen ? 'fixed' : 'hidden'} inset-0 z-50 lg:hidden`}>
+        {/* Backdrop */}
+        <div 
+          className="fixed inset-0 bg-black bg-opacity-50 transition-opacity"
+          onClick={toggleMobileMenu}
+        ></div>
+        
+        {/* Mobile menu panel */}
+        <div className={`fixed top-0 right-0 h-full w-80 max-w-[85vw] bg-white shadow-xl transform transition-transform duration-300 ease-in-out ${
+          mobileMenuOpen ? 'translate-x-0' : 'translate-x-full'
+        }`}>
+          {/* Mobile menu header */}
+          <div className="flex items-center justify-between p-6 border-b border-gray-200">
+            <div className="text-xl font-bold">
+              <span className="text-blue-500">Spencer</span>
+              <span className="text-gray-700">Roofing</span>
             </div>
-          </Link>
-          <Link href="/about">
-            <div className={`nav-link ${isActive('/about') ? 'active text-primary font-semibold' : ''} hover:text-primary transition-colors cursor-pointer`}>
-              About
-            </div>
-          </Link>
-          <div className="py-1 border-b border-gray-100">
-            <span className="text-gray-500 font-semibold">Services</span>
-            <div className="ml-4 mt-2 space-y-2">
-              <Link href="/services/residential-roofing">
-                <div className="block hover:text-primary transition-colors cursor-pointer">Residential Roofing</div>
+            <button 
+              onClick={toggleMobileMenu}
+              className="p-2 -mr-2 rounded-md hover:bg-gray-100 transition-colors"
+              aria-label="Close menu"
+            >
+              <i className="fas fa-times text-xl text-gray-600"></i>
+            </button>
+          </div>
+          
+          {/* Mobile menu content */}
+          <div className="flex flex-col h-full overflow-y-auto pb-20">
+            <nav className="flex-1 px-6 py-6 space-y-2">
+              <Link href="/">
+                <div className={`mobile-nav-item ${isActive('/') ? 'text-blue-600 bg-blue-50' : 'text-gray-700'} hover:text-blue-600 hover:bg-blue-50 transition-all duration-200 py-4 px-4 rounded-lg font-medium cursor-pointer`}>
+                  <i className="fas fa-home w-5 mr-3"></i>
+                  Home
+                </div>
               </Link>
-              <Link href="/services/commercial-roofing">
-                <div className="block hover:text-primary transition-colors cursor-pointer">Commercial Roofing</div>
+              
+              <Link href="/about">
+                <div className={`mobile-nav-item ${isActive('/about') ? 'text-blue-600 bg-blue-50' : 'text-gray-700'} hover:text-blue-600 hover:bg-blue-50 transition-all duration-200 py-4 px-4 rounded-lg font-medium cursor-pointer`}>
+                  <i className="fas fa-info-circle w-5 mr-3"></i>
+                  About
+                </div>
               </Link>
-              <Link href="/services/roof-repair">
-                <div className="block hover:text-primary transition-colors cursor-pointer">Roof Repairs</div>
+              
+              {/* Services dropdown */}
+              <div className="space-y-0">
+                <button 
+                  onClick={toggleServicesDropdown}
+                  className={`w-full flex items-center justify-between py-4 px-4 rounded-lg font-medium transition-all duration-200 ${
+                    servicesDropdownOpen ? 'text-blue-600 bg-blue-50' : 'text-gray-700 hover:text-blue-600 hover:bg-blue-50'
+                  }`}
+                >
+                  <div className="flex items-center">
+                    <i className="fas fa-tools w-5 mr-3"></i>
+                    Services
+                  </div>
+                  <i className={`fas fa-chevron-down transition-transform duration-200 ${
+                    servicesDropdownOpen ? 'rotate-180' : ''
+                  }`}></i>
+                </button>
+                
+                {/* Services submenu */}
+                <div className={`overflow-hidden transition-all duration-300 ease-in-out ${
+                  servicesDropdownOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
+                }`}>
+                  <div className="ml-8 mt-2 space-y-1 border-l-2 border-blue-100 pl-4">
+                    <Link href="/services/residential-roofing">
+                      <div className="mobile-nav-subitem py-3 px-3 rounded-md text-gray-600 hover:text-blue-600 hover:bg-blue-50 transition-all duration-200 font-medium cursor-pointer">
+                        Residential Roofing
+                      </div>
+                    </Link>
+                    <Link href="/services/commercial-roofing">
+                      <div className="mobile-nav-subitem py-3 px-3 rounded-md text-gray-600 hover:text-blue-600 hover:bg-blue-50 transition-all duration-200 font-medium cursor-pointer">
+                        Commercial Roofing
+                      </div>
+                    </Link>
+                    <Link href="/services/roof-repair">
+                      <div className="mobile-nav-subitem py-3 px-3 rounded-md text-gray-600 hover:text-blue-600 hover:bg-blue-50 transition-all duration-200 font-medium cursor-pointer">
+                        Roof Repairs
+                      </div>
+                    </Link>
+                    <Link href="/services/insurance-claims">
+                      <div className="mobile-nav-subitem py-3 px-3 rounded-md text-gray-600 hover:text-blue-600 hover:bg-blue-50 transition-all duration-200 font-medium cursor-pointer">
+                        Insurance Claims
+                      </div>
+                    </Link>
+                    <Link href="/services/gutter-services">
+                      <div className="mobile-nav-subitem py-3 px-3 rounded-md text-gray-600 hover:text-blue-600 hover:bg-blue-50 transition-all duration-200 font-medium cursor-pointer">
+                        Gutter Services
+                      </div>
+                    </Link>
+                  </div>
+                </div>
+              </div>
+              
+              <Link href="/portfolio">
+                <div className={`mobile-nav-item ${isActive('/portfolio') ? 'text-blue-600 bg-blue-50' : 'text-gray-700'} hover:text-blue-600 hover:bg-blue-50 transition-all duration-200 py-4 px-4 rounded-lg font-medium cursor-pointer`}>
+                  <i className="fas fa-images w-5 mr-3"></i>
+                  Portfolio
+                </div>
               </Link>
-              <Link href="/services/insurance-claims">
-                <div className="block hover:text-primary transition-colors cursor-pointer">Insurance Claims</div>
+              
+              <Link href="/blog">
+                <div className={`mobile-nav-item ${isActive('/blog') ? 'text-blue-600 bg-blue-50' : 'text-gray-700'} hover:text-blue-600 hover:bg-blue-50 transition-all duration-200 py-4 px-4 rounded-lg font-medium cursor-pointer`}>
+                  <i className="fas fa-blog w-5 mr-3"></i>
+                  Blog
+                </div>
               </Link>
-              <Link href="/services/gutter-services">
-                <div className="block hover:text-primary transition-colors cursor-pointer">Gutter Services</div>
+            </nav>
+            
+            {/* Mobile contact section */}
+            <div className="px-6 py-4 space-y-4 border-t border-gray-200 bg-gray-50">
+              <a 
+                href="tel:720-360-8546" 
+                className="flex items-center justify-center py-4 px-4 bg-green-600 hover:bg-green-700 text-white font-semibold rounded-lg transition-all duration-200 shadow-md"
+              >
+                <i className="fas fa-phone mr-3"></i>
+                Call Now: 720-360-8546
+              </a>
+              
+              <Link href="/contact">
+                <div className="flex items-center justify-center py-4 px-4 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-lg transition-all duration-200 shadow-md cursor-pointer">
+                  <i className="fas fa-quote-left mr-3"></i>
+                  Get a Free Quote
+                </div>
               </Link>
             </div>
           </div>
-          <Link href="/portfolio">
-            <div className={`nav-link ${isActive('/portfolio') ? 'active text-primary font-semibold' : ''} hover:text-primary transition-colors cursor-pointer`}>
-              Portfolio
-            </div>
-          </Link>
-          <Link href="/blog">
-            <div className={`nav-link ${isActive('/blog') ? 'active text-primary font-semibold' : ''} hover:text-primary transition-colors cursor-pointer`}>
-              Blog
-            </div>
-          </Link>
-          <Link href="/contact">
-            <div className="bg-blue-600 hover:bg-blue-700 text-white text-center font-semibold py-2 px-4 rounded-md transition-colors cursor-pointer">
-              Get a Free Quote
-            </div>
-          </Link>
         </div>
       </div>
     </header>
