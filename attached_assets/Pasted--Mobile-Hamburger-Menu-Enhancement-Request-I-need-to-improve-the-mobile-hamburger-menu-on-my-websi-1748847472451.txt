@@ -1,0 +1,41 @@
+# Mobile Hamburger Menu Enhancement Request
+
+I need to improve the mobile hamburger menu on my website. Currently, the services dropdown items are too cramped and create a poor user experience on mobile devices.
+
+## Current Structure:
+- Home
+- About  
+- Services (dropdown with: Residential Roofing, Commercial Roofing, Roof Repairs, Insurance Claims, Gutter Services)
+- Portfolio
+- Blog
+
+## Issues to Fix:
+1. Services dropdown items are lumped too close together on mobile
+2. Difficult to tap individual service options accurately
+3. Poor spacing and readability on small screens
+
+## Requirements for Mobile Menu:
+1. **Better Spacing**: Add proper padding and margins between all menu items, especially service dropdown options
+2. **Touch-Friendly Design**: Make all clickable areas at least 44px tall for easy finger tapping
+3. **Clear Visual Separation**: Add subtle borders or dividers between service categories
+4. **Smooth Animation**: Implement smooth expand/collapse animation for the services dropdown
+5. **Improved Typography**: Ensure text is readable with appropriate font sizes for mobile
+6. **Proper Hierarchy**: Main menu items should be visually distinct from sub-menu items
+7. **Easy Navigation**: Clear back/close functionality
+
+## Specific Mobile Enhancements Needed:
+- Increase vertical spacing between service options to at least 12-16px
+- Add left indentation for service sub-items to show hierarchy
+- Implement proper touch targets (minimum 44px height)
+- Add hover/active states that work well on touch devices
+- Ensure the hamburger menu closes when a service is selected
+- Make the services dropdown toggleable (tap to open/close)
+
+## Technical Preferences:
+- Use CSS flexbox or grid for consistent spacing
+- Implement smooth CSS transitions
+- Ensure cross-browser compatibility
+- Keep code clean and maintainable
+- Use semantic HTML structure
+
+Please provide the complete HTML, CSS, and JavaScript code needed to create a professional, user-friendly mobile hamburger menu that addresses these spacing and usability issues.
