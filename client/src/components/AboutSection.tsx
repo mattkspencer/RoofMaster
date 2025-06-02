@@ -7,24 +7,23 @@ const AboutSection = () => {
   };
 
   return (
-    <section id="about" className="py-16 bg-neutral-light">
-      <div className="container mx-auto px-4">
-        <div className="flex flex-col lg:flex-row items-center gap-12">
+    <section id="about" className="section-spacing bg-neutral-light">
+      <div className="container-custom">
+        <div className="flex flex-col lg:flex-row items-center gap-16">
           <div className="lg:w-1/2">
-            {/* A professional roofing contractor consulting with a client */}
             <img 
               src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
               alt="Professional roofing consultation" 
-              className="rounded-lg shadow-lg w-full h-auto"
+              className="card-professional w-full h-auto"
             />
           </div>
           
-          <div className="lg:w-1/2">
-            <h2 className="text-3xl font-bold font-sans mb-6">About Spencer Roofing Solutions</h2>
-            <p className="text-lg mb-4">
+          <div className="lg:w-1/2 space-y-professional">
+            <h2>About Spencer Roofing Solutions</h2>
+            <p className="text-professional">
               As your dedicated roofing project manager in the Denver metropolitan area, I provide expert guidance throughout your entire roofing project.
             </p>
-            <p className="text-lg mb-6">
+            <p className="text-professional">
               I partner with established roofing companies as an independent 1099 project manager and salesperson, bringing years of experience in navigating complex roofing projects, particularly those involving insurance claims for hail and wind damage.
             </p>
             
