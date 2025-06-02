@@ -112,30 +112,15 @@ const Blog = () => {
             </>
           )}
         </div>
-        
-        {/* Call-to-Action Section with Consistent Styling */}
-        <section className="py-16 bg-gray-50">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl font-bold mb-6">Need Professional Roofing Help?</h2>
-            <p className="text-lg text-gray-600 mb-8">
-              Our team of experts is ready to assist you with all your roofing needs.
-            </p>
-            <div className="flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-6">
-              <Link href="/contact">
-                <button className="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-8 rounded-md transition-colors shadow-md min-w-[180px]">
-                  Contact Us Today
-                </button>
-              </Link>
-              <a 
-                href="tel:720-360-8546" 
-                className="border-2 border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white font-semibold py-3 px-8 rounded-md transition-colors min-w-[180px]"
-              >
-                Call 720-360-8546
-              </a>
-            </div>
-          </div>
-        </section>
       </div>
+      
+      <CTASection 
+        title="Ready to Discuss Your Roofing Project?" 
+        text="Whether you need a roof repair, replacement, or help with an insurance claim, we're here to provide professional service throughout the Denver metro area."
+        buttonText="Contact Us"
+        buttonLink="/contact"
+        showPhoneButton={true}
+      />
     </div>
   );
 };
