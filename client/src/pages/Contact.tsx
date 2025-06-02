@@ -152,6 +152,24 @@ const Contact = () => {
             <div className="lg:col-span-3 bg-white rounded-lg shadow-md p-8">
               <h2 className="text-2xl font-bold mb-6">Get Your Free Roof Inspection</h2>
               
+              {/* Trust Badges */}
+              <div className="flex flex-col sm:flex-row items-center justify-center text-sm text-gray-600 py-3 mb-6 border-b border-gray-100">
+                <div className="flex items-center mb-2 sm:mb-0">
+                  <span className="text-green-600 mr-1">✓</span>
+                  <span>Licensed & Insured</span>
+                </div>
+                <span className="hidden sm:inline mx-3 text-gray-400">|</span>
+                <div className="flex items-center mb-2 sm:mb-0">
+                  <span className="text-green-600 mr-1">✓</span>
+                  <span>Serving Denver Since 2012</span>
+                </div>
+                <span className="hidden sm:inline mx-3 text-gray-400">|</span>
+                <div className="flex items-center">
+                  <span className="text-green-600 mr-1">✓</span>
+                  <span>Free Estimates</span>
+                </div>
+              </div>
+              
               <Form {...form}>
                 <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
                   {/* Full Name - Required */}
