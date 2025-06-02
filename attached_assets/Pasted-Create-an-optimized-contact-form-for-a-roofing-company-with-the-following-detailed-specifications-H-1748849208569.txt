@@ -1,0 +1,64 @@
+Create an optimized contact form for a roofing company with the following detailed specifications:
+HTML Structure & Form Fields:
+Create a contact form with these fields in exact order:
+
+Full Name * (required text input)
+Email Address * (required email input with validation)
+Service Needed * (required dropdown with these exact options):
+
+Select a Service (default)
+Free Roof Inspection
+Roof Repair
+New Roof Installation
+Insurance Claims Assistance
+Gutter Installation/Repair
+Emergency Roof Repair
+Other
+
+
+Phone Number (optional text input - NO asterisk, include placeholder "Optional")
+Property Address (optional text input)
+Project Details (optional textarea with placeholder: "Tell us about your roofing needs or describe the issue...")
+
+Design & Styling Requirements:
+
+Use a clean, professional layout with proper spacing between fields
+Color scheme: Blue (#4A90E2) and white with gray (#666) text
+All field labels should be OUTSIDE the input boxes (not placeholder text inside)
+Input fields should have light gray borders that turn blue on focus
+Make form width responsive (max-width: 600px, centered)
+Add proper padding and margins for mobile-friendly design
+Required fields should have a small red asterisk next to the label
+
+Submit Button:
+
+Text: "Schedule My Free Inspection"
+Background color: Blue (#4A90E2)
+White text, rounded corners
+Hover effect that slightly darkens the blue
+Full width on mobile, fixed width on desktop
+
+Form Validation:
+
+Email field must validate proper email format
+Show inline error messages for invalid entries
+Prevent form submission if required fields are empty
+Success message after form submission
+
+Additional Elements:
+
+Add a reassuring message below the submit button: "We typically reply within 12 hours"
+Style this message in smaller, gray text
+Include basic CSS for hover effects on form elements
+Ensure form is fully responsive for mobile devices
+
+Technical Requirements:
+
+Use semantic HTML5 form elements
+Include proper form validation attributes
+Add CSS for clean, modern styling
+Make sure tab navigation works properly through all fields
+Ensure accessibility with proper labels and ARIA attributes
+
+Overall Goal:
+Create a conversion-optimized form that reduces friction by minimizing required fields while maintaining a professional appearance suitable for a roofing business. The form should feel quick and easy to complete, especially for mobile users who might be dealing with urgent roofing issues.
