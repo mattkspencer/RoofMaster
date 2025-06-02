@@ -1,0 +1,44 @@
+# Fix Website Consistency Issues Across All Pages
+
+I have several styling and consistency problems across different pages of my website that need to be fixed:
+
+## Critical Issues to Fix:
+
+### 1. **Submit Request Button (Home Page Contact Form)**
+- The "Submit Request" button in the contact form has lost its proper styling
+- It should be a prominent blue button that matches all other buttons on the site
+- Ensure it has proper contrast, hover effects, and consistent styling with other call-to-action buttons
+
+### 2. **Footer Inconsistency Across Pages**
+The footer styling varies between pages and needs to be standardized:
+- **Home Page**: Footer looks correct (use this as the template)
+- **About Page**: Minor spacing/alignment differences from home page
+- **Portfolio Page**: Slight variations in layout
+- **Blog Page**: **MAJOR ISSUES** - Footer is severely broken, asymmetrical, and has poor spacing
+
+### 3. **Footer Layout Problems (Especially Blog Page)**
+- Footer content is not properly aligned
+- Spacing between footer sections is inconsistent
+- Some pages have asymmetrical footer layouts
+- Footer links and text positioning varies between pages
+
+## Required Fixes:
+
+1. **Standardize Footer Design**: Use the HOME PAGE footer as the master template and apply identical styling to ALL pages:
+   - Same dark navy background color (current color is perfect)
+   - Same white text color (current color is perfect) 
+   - Same spacing, padding, and margins
+   - Same column layout and alignment
+   - Same social media icon styling
+
+2. **Fix Form Button Styling**: Restore the submit button to match other blue buttons with proper contrast and hover effects
+
+3. **Ensure Cross-Page Consistency**: All pages should have identical footer appearance, spacing, and functionality
+
+## Pages to Fix:
+- Home Page: Fix submit button only (footer is correct)
+- About Page: Standardize footer to match home page
+- Portfolio Page: Standardize footer to match home page  
+- Blog Page: **Priority fix** - completely rebuild footer to match home page template
+
+The current footer color scheme (dark navy with white text) is excellent - just make it consistent across all pages and fix the broken layouts, especially on the blog page.

@@ -50,28 +50,28 @@ const Footer = () => {
             <h3 className="text-xl font-semibold mb-6 text-white">Services</h3>
             <ul className="space-y-3 text-gray-300">
               <li>
-                <Link href="/services/residential-roofing">
-                  <a className="hover:text-blue-400 transition-colors">Residential Roofing</a>
+                <Link href="/services/residential-roofing" className="hover:text-blue-400 transition-colors">
+                  Residential Roofing
                 </Link>
               </li>
               <li>
-                <Link href="/services/commercial-roofing">
-                  <a className="hover:text-blue-400 transition-colors">Commercial Roofing</a>
+                <Link href="/services/commercial-roofing" className="hover:text-blue-400 transition-colors">
+                  Commercial Roofing
                 </Link>
               </li>
               <li>
-                <Link href="/services/roof-repair">
-                  <a className="hover:text-blue-400 transition-colors">Roof Repairs</a>
+                <Link href="/services/roof-repair" className="hover:text-blue-400 transition-colors">
+                  Roof Repairs
                 </Link>
               </li>
               <li>
-                <Link href="/services/insurance-claims">
-                  <a className="hover:text-blue-400 transition-colors">Insurance Claims</a>
+                <Link href="/services/insurance-claims" className="hover:text-blue-400 transition-colors">
+                  Insurance Claims
                 </Link>
               </li>
               <li>
-                <Link href="/services/gutter-services">
-                  <a className="hover:text-blue-400 transition-colors">Gutter Installation</a>
+                <Link href="/services/gutter-services" className="hover:text-blue-400 transition-colors">
+                  Gutter Installation
                 </Link>
               </li>
             </ul>
@@ -81,28 +81,28 @@ const Footer = () => {
             <h3 className="text-xl font-semibold mb-6 text-white">Resources</h3>
             <ul className="space-y-3 text-gray-300">
               <li>
-                <Link href="/blog">
-                  <a className="hover:text-blue-400 transition-colors">Blog</a>
+                <Link href="/blog" className="hover:text-blue-400 transition-colors">
+                  Blog
                 </Link>
               </li>
               <li>
-                <Link href="/faq">
-                  <a className="hover:text-blue-400 transition-colors">FAQ</a>
+                <Link href="/faq" className="hover:text-blue-400 transition-colors">
+                  FAQ
                 </Link>
               </li>
               <li>
-                <Link href="/blog/roofing-materials">
-                  <a className="hover:text-blue-400 transition-colors">Roofing Materials</a>
+                <Link href="/blog/roofing-materials" className="hover:text-blue-400 transition-colors">
+                  Roofing Materials
                 </Link>
               </li>
               <li>
-                <Link href="/services/insurance-claims">
-                  <a className="hover:text-blue-400 transition-colors">Insurance Process</a>
+                <Link href="/services/insurance-claims" className="hover:text-blue-400 transition-colors">
+                  Insurance Process
                 </Link>
               </li>
               <li>
-                <Link href="/blog/maintenance-tips">
-                  <a className="hover:text-blue-400 transition-colors">Maintenance Tips</a>
+                <Link href="/blog/maintenance-tips" className="hover:text-blue-400 transition-colors">
+                  Maintenance Tips
                 </Link>
               </li>
             </ul>
@@ -138,14 +138,14 @@ const Footer = () => {
             &copy; {new Date().getFullYear()} Spencer Roofing Solutions. All rights reserved.
           </p>
           <div className="flex space-x-6 text-sm text-gray-400">
-            <Link href="/privacy-policy">
-              <a className="hover:text-blue-400 transition-colors">Privacy Policy</a>
+            <Link href="/privacy-policy" className="hover:text-blue-400 transition-colors">
+              Privacy Policy
             </Link>
-            <Link href="/terms-of-service">
-              <a className="hover:text-blue-400 transition-colors">Terms of Service</a>
+            <Link href="/terms-of-service" className="hover:text-blue-400 transition-colors">
+              Terms of Service
             </Link>
-            <Link href="/sitemap">
-              <a className="hover:text-blue-400 transition-colors">Sitemap</a>
+            <Link href="/sitemap" className="hover:text-blue-400 transition-colors">
+              Sitemap
             </Link>
           </div>
         </div>
