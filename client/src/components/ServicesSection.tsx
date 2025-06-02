@@ -7,11 +7,11 @@ const ServicesSection = () => {
   };
 
   return (
-    <section id="services" className="section-spacing-lg bg-white">
-      <div className="container-custom">
-        <div className="text-center mb-16">
-          <h2 className="mb-6">Our Comprehensive Services</h2>
-          <p className="lead max-w-3xl mx-auto">
+    <section id="services" className="py-16 bg-white">
+      <div className="container mx-auto px-4">
+        <div className="text-center mb-12">
+          <h2 className="text-3xl font-bold font-sans mb-4">Our Comprehensive Services</h2>
+          <p className="text-lg max-w-2xl mx-auto text-gray-600">
             We provide end-to-end roofing solutions for residential and commercial properties throughout the Denver metropolitan area.
           </p>
         </div>
@@ -33,27 +33,27 @@ const ServicesSection = () => {
               }}
             />
           </div>
-          <div className="order-1 md:order-2 space-y-professional">
-            <h3>Residential Roofing</h3>
-            <p className="text-professional">
+          <div className="order-1 md:order-2">
+            <h3 className="text-2xl font-bold font-sans mb-4">Residential Roofing</h3>
+            <p className="text-lg mb-4">
               From asphalt shingles to metal roofing, we provide expert installation, repair, and replacement services for homes across the Denver area.
             </p>
-            <ul className="space-y-4">
+            <ul className="mb-6 space-y-2">
               <li className="flex items-start">
-                <i className="fas fa-check text-accent mt-1.5 mr-3 text-sm"></i>
-                <span className="text-professional">Asphalt shingle, metal, tile, and flat roof systems</span>
+                <i className="fas fa-check text-blue-500 mt-1 mr-2"></i>
+                <span>Asphalt shingle, metal, tile, and flat roof systems</span>
               </li>
               <li className="flex items-start">
-                <i className="fas fa-check text-accent mt-1.5 mr-3 text-sm"></i>
-                <span className="text-professional">Complete roof replacements and new installations</span>
+                <i className="fas fa-check text-blue-500 mt-1 mr-2"></i>
+                <span>Complete roof replacements and new installations</span>
               </li>
               <li className="flex items-start">
-                <i className="fas fa-check text-accent mt-1.5 mr-3 text-sm"></i>
-                <span className="text-professional">Roof inspections and maintenance plans</span>
+                <i className="fas fa-check text-blue-500 mt-1 mr-2"></i>
+                <span>Roof inspections and maintenance plans</span>
               </li>
               <li className="flex items-start">
-                <i className="fas fa-check text-accent mt-1.5 mr-3 text-sm"></i>
-                <span className="text-professional">Energy-efficient and sustainable roofing options</span>
+                <i className="fas fa-check text-blue-500 mt-1 mr-2"></i>
+                <span>Energy-efficient and sustainable roofing options</span>
               </li>
             </ul>
           </div>
