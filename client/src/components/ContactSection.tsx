@@ -103,7 +103,7 @@ const ContactSection = () => {
                 <p className="mb-4">Your message has been received. We'll get back to you as soon as possible.</p>
                 <button 
                   onClick={() => setSubmitSuccess(false)}
-                  className="bg-primary hover:bg-primary-dark text-white font-semibold py-2 px-4 rounded-md transition-colors"
+                  className="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded-md transition-colors"
                 >
                   Send Another Message
                 </button>
@@ -222,7 +222,7 @@ const ContactSection = () => {
                 
                 <button 
                   type="submit" 
-                  className="w-full bg-secondary hover:bg-secondary-dark text-white font-semibold py-3 px-6 rounded-md transition-colors flex justify-center"
+                  className="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-md transition-colors flex justify-center shadow-md"
                   disabled={isSubmitting}
                 >
                   {isSubmitting ? (
@@ -240,33 +240,33 @@ const ContactSection = () => {
           </div>
           
           <div>
-            <div className="bg-neutral-light rounded-lg shadow-md p-8 mb-8">
+            <div className="bg-gray-50 rounded-lg shadow-md p-8 mb-8">
               <h3 className="text-2xl font-semibold mb-6">Contact Information</h3>
               
               <div className="space-y-6">
                 <div className="flex items-start">
-                  <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center mr-4">
-                    <i className="fas fa-phone text-primary"></i>
+                  <div className="w-10 h-10 rounded-full bg-blue-100 flex items-center justify-center mr-4">
+                    <i className="fas fa-phone text-blue-600"></i>
                   </div>
                   <div>
                     <p className="font-semibold">Phone</p>
-                    <a href="tel:720-360-8546" className="text-primary hover:underline">720-360-8546</a>
+                    <a href="tel:720-360-8546" className="text-blue-600 hover:underline">720-360-8546</a>
                   </div>
                 </div>
                 
                 <div className="flex items-start">
-                  <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center mr-4">
-                    <i className="fas fa-envelope text-primary"></i>
+                  <div className="w-10 h-10 rounded-full bg-blue-100 flex items-center justify-center mr-4">
+                    <i className="fas fa-envelope text-blue-600"></i>
                   </div>
                   <div>
                     <p className="font-semibold">Email</p>
-                    <a href="mailto:mattkspencer@gmail.com" className="text-primary hover:underline">mattkspencer@gmail.com</a>
+                    <a href="mailto:mattkspencer@gmail.com" className="text-blue-600 hover:underline">mattkspencer@gmail.com</a>
                   </div>
                 </div>
                 
                 <div className="flex items-start">
-                  <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center mr-4">
-                    <i className="fas fa-map-marker-alt text-primary"></i>
+                  <div className="w-10 h-10 rounded-full bg-blue-100 flex items-center justify-center mr-4">
+                    <i className="fas fa-map-marker-alt text-blue-600"></i>
                   </div>
                   <div>
                     <p className="font-semibold">Location</p>
@@ -276,8 +276,8 @@ const ContactSection = () => {
                 </div>
                 
                 <div className="flex items-start">
-                  <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center mr-4">
-                    <i className="fas fa-clock text-primary"></i>
+                  <div className="w-10 h-10 rounded-full bg-blue-100 flex items-center justify-center mr-4">
+                    <i className="fas fa-clock text-blue-600"></i>
                   </div>
                   <div>
                     <p className="font-semibold">Hours</p>
@@ -288,7 +288,7 @@ const ContactSection = () => {
               </div>
             </div>
             
-            <div className="bg-neutral-light rounded-lg shadow-md p-8">
+            <div className="bg-gray-50 rounded-lg shadow-md p-8">
               <h3 className="text-2xl font-semibold mb-6">Service Area</h3>
               <p className="mb-4">We proudly serve the Denver metropolitan area and surrounding suburbs within a 2-hour radius.</p>
               <div className="aspect-w-16 aspect-h-9 bg-gray-200 rounded-md h-64 relative">
