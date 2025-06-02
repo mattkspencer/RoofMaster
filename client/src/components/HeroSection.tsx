@@ -14,25 +14,25 @@ const HeroSection = () => {
         <div className="absolute inset-0 bg-black/30"></div>
       </div>
       
-      <div className="container mx-auto px-4 relative z-20">
-        <div className="max-w-2xl text-white">
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold font-sans leading-tight mb-6">
+      <div className="container-custom relative z-20">
+        <div className="max-w-3xl text-white">
+          <h1 className="text-white mb-8">
             Your Trusted Roofing <br className="hidden md:block" />
             Partner in the <br className="hidden md:block" />
             Denver Metro Area
           </h1>
-          <p className="text-lg md:text-xl mb-8">
+          <p className="lead text-gray-100 mb-10 max-w-2xl">
             Expert roofing solutions for residential and commercial properties, 
             specializing in storm damage repair and insurance claim assistance.
           </p>
-          <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
+          <div className="flex flex-col sm:flex-row gap-6">
             <Link href="/contact">
-              <div className="bg-blue-500 hover:bg-blue-600 text-white text-center font-semibold py-3 px-8 rounded-md transition-colors cursor-pointer shadow-lg">
+              <div className="btn-primary cursor-pointer text-center inline-block">
                 Get a Free Inspection
               </div>
             </Link>
             <Link href="/services/residential-roofing">
-              <div className="bg-white hover:bg-gray-100 text-blue-800 text-center font-semibold py-3 px-8 rounded-md transition-colors cursor-pointer shadow-lg">
+              <div className="btn-secondary cursor-pointer text-center inline-block">
                 Explore Services
               </div>
             </Link>
