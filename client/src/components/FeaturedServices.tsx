@@ -8,16 +8,14 @@ interface ServiceCardProps {
 }
 
 const ServiceCard = ({ icon, title, description, link }: ServiceCardProps) => (
-  <div className="service-card bg-neutral-light rounded-lg shadow-md p-6 hover:shadow-lg transition-all duration-300">
-    <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-4">
-      <i className={`fas ${icon} text-2xl text-primary`}></i>
+  <div className="service-card bg-gray-50 rounded-lg shadow-md p-6 hover:shadow-lg transition-all duration-300">
+    <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mb-4">
+      <i className={`fas ${icon} text-2xl text-blue-600`}></i>
     </div>
     <h3 className="text-xl font-semibold mb-3">{title}</h3>
     <p className="text-gray-600 mb-4">{description}</p>
-    <Link href={link}>
-      <a className="inline-flex items-center text-primary font-semibold hover:text-primary-dark">
-        Learn More <i className="fas fa-arrow-right ml-2"></i>
-      </a>
+    <Link href={link} className="inline-flex items-center text-blue-600 font-semibold hover:text-blue-700">
+      Learn More <i className="fas fa-arrow-right ml-2"></i>
     </Link>
   </div>
 );
