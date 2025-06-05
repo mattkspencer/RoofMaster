@@ -70,7 +70,7 @@ const ContactSection = () => {
     setSubmitError('');
     
     try {
-      await apiRequest('POST', '/api/contact', formData);
+      await apiRequest('/api/contact', 'POST', formData);
       
       // Track form submission
       trackEvent('contact_form_submit', 'form', formData.service);
