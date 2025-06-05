@@ -50,7 +50,7 @@ const TermsOfService = () => {
                 <li>Free roof inspections and estimates</li>
               </ul>
               <p className="mb-4">
-                We serve the Denver metropolitan area and surrounding communities within a 2-hour radius.
+                We serve the Denver metropolitan area and surrounding communities within a 2-hour radius, subject to availability and scheduling.
               </p>
             </section>
 
@@ -89,7 +89,7 @@ const TermsOfService = () => {
               <h2 className="text-2xl font-bold mb-4">Insurance and Permits</h2>
               <ul className="list-disc pl-6 mb-4 space-y-2">
                 <li>We carry appropriate liability and workers' compensation insurance</li>
-                <li>We assist with insurance claims but cannot guarantee claim approval</li>
+                <li>We can provide documentation to support insurance claims but cannot guarantee claim approval</li>
                 <li>Necessary permits are the responsibility of the property owner unless otherwise agreed</li>
                 <li>We will advise you of permit requirements for your project</li>
               </ul>
@@ -98,8 +98,8 @@ const TermsOfService = () => {
             <section className="mb-8">
               <h2 className="text-2xl font-bold mb-4">Warranties</h2>
               <p className="mb-4">
-                We provide warranties on our workmanship as specified in your service agreement. 
-                Material warranties are provided by the manufacturer. Warranty terms vary by project type and will be clearly explained before work begins.
+                Warranty terms are determined per project and outlined in your written service agreement. 
+                Material warranties are provided by the manufacturer. All warranty coverage, duration, and limitations will be clearly specified in writing before work begins.
               </p>
             </section>
 
@@ -132,7 +132,7 @@ const TermsOfService = () => {
               <h2 className="text-2xl font-bold mb-4">Force Majeure</h2>
               <p className="mb-4">
                 We are not responsible for delays or inability to perform services due to circumstances beyond our reasonable control, 
-                including severe weather, natural disasters, material shortages, or government restrictions.
+                including severe weather, natural disasters, supply chain disruptions, material shortages, labor shortages, or government restrictions.
               </p>
             </section>
 
