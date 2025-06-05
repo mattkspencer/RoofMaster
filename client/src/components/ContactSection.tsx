@@ -260,6 +260,15 @@ const ContactSection = () => {
                       By checking this box, I give my express written consent for Spencer Roofing to send me marketing text messages about roofing services, tips, and promotions to the phone number provided. I understand that message and data rates may apply, message frequency varies, and I can opt out by replying STOP at any time.
                     </label>
                   </div>
+                  
+                  {/* Legal Disclaimer */}
+                  <div className="text-xs text-gray-500 mt-4 leading-relaxed">
+                    By submitting this form, you agree to our{' '}
+                    <a href="/terms-of-service" className="text-blue-600 hover:underline">Terms of Service</a>{' '}
+                    and{' '}
+                    <a href="/privacy-policy" className="text-blue-600 hover:underline">Privacy Policy</a>.
+                    Your information will only be used to contact you about your roofing project and, if you opt-in above, to send marketing communications.
+                  </div>
                 </div>
                 
                 {submitError && (

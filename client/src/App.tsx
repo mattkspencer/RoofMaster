@@ -22,6 +22,8 @@ import Portfolio from "./pages/Portfolio";
 import Blog from "./pages/Blog";
 import BlogPost from "./pages/BlogPost";
 import Contact from "./pages/Contact";
+import PrivacyPolicy from "./pages/PrivacyPolicy";
+import TermsOfService from "./pages/TermsOfService";
 import NotFound from "@/pages/not-found";
 // Service Area Pages
 import EnglewoodRoofing from "./pages/EnglewoodRoofing";
@@ -60,6 +62,8 @@ function App() {
             <Route path="/blog" component={Blog} />
             <Route path="/blog/:id" component={BlogPost} />
             <Route path="/contact" component={Contact} />
+            <Route path="/privacy-policy" component={PrivacyPolicy} />
+            <Route path="/terms-of-service" component={TermsOfService} />
             {/* Service Area Pages */}
             <Route path="/englewood-roofing-services" component={EnglewoodRoofing} />
             <Route path="/denver-roofing-contractor" component={DenverRoofing} />
