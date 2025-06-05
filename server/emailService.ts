@@ -20,6 +20,8 @@ interface ContactFormData {
   service: string;
   message?: string | null | undefined;
   hearAbout?: string | null | undefined;
+  emailConsent?: boolean;
+  smsConsent?: boolean;
 }
 
 // Send contact form notification email
@@ -56,6 +58,15 @@ export const sendContactFormEmail = async (formData: ContactFormData): Promise<b
           <div style="background-color: #fff7ed; padding: 20px; border-radius: 8px; margin: 20px 0;">
             <h3 style="color: #ea580c; margin-top: 0;">Message</h3>
             <p style="white-space: pre-wrap;">${formData.message}</p>
+          </div>
+          ` : ''}
+          
+          ${(formData.emailConsent || formData.smsConsent) ? `
+          <div style="background-color: #eff6ff; padding: 20px; border-radius: 8px; margin: 20px 0;">
+            <h3 style="color: #1d4ed8; margin-top: 0;">Marketing Consent</h3>
+            <p><strong>Email Marketing:</strong> ${formData.emailConsent ? 'YES - Customer consented to email marketing' : 'No'}</p>
+            <p><strong>SMS Marketing:</strong> ${formData.smsConsent ? 'YES - Customer consented to SMS marketing' : 'No'}</p>
+            ${(formData.emailConsent || formData.smsConsent) ? '<p style="color: #059669; font-weight: bold;">✓ Customer provided TCPA-compliant consent</p>' : ''}
           </div>
           ` : ''}
           
