@@ -10,6 +10,8 @@ interface FormData {
   service: string;
   message: string;
   hearAbout: string;
+  emailConsent: boolean;
+  smsConsent: boolean;
 }
 
 const ContactSection = () => {
@@ -20,7 +22,9 @@ const ContactSection = () => {
     address: '',
     service: '',
     message: '',
-    hearAbout: ''
+    hearAbout: '',
+    emailConsent: false,
+    smsConsent: false
   });
   
   const [errors, setErrors] = useState<Partial<FormData>>({});
@@ -29,8 +33,10 @@ const ContactSection = () => {
   const [submitError, setSubmitError] = useState('');
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
-    const { name, value } = e.target;
-    setFormData(prev => ({ ...prev, [name]: value }));
+    const { name, value, type } = e.target;
+    const checked = (e.target as HTMLInputElement).checked;
+    const newValue = type === 'checkbox' ? checked : value;
+    setFormData(prev => ({ ...prev, [name]: newValue }));
     // Clear error for this field when user starts typing
     if (errors[name as keyof FormData]) {
       setErrors(prev => ({ ...prev, [name]: '' }));
@@ -45,6 +51,11 @@ const ContactSection = () => {
     if (!formData.email.trim()) newErrors.email = 'Email is required';
     else if (!/\S+@\S+\.\S+/.test(formData.email)) newErrors.email = 'Email is invalid';
     if (!formData.service) newErrors.service = 'Please select a service';
+    
+    // SMS consent validation
+    if (formData.smsConsent && !formData.phone.trim()) {
+      newErrors.phone = 'Phone number is required for SMS marketing consent';
+    }
     
     setErrors(newErrors);
     return Object.keys(newErrors).length === 0;
@@ -72,7 +83,9 @@ const ContactSection = () => {
         address: '',
         service: '',
         message: '',
-        hearAbout: ''
+        hearAbout: '',
+        emailConsent: false,
+        smsConsent: false
       });
     } catch (error) {
       console.error('Error submitting form:', error);
@@ -212,6 +225,41 @@ const ContactSection = () => {
                     <option value="drive-by">Saw a Job in Progress</option>
                     <option value="other">Other</option>
                   </select>
+                </div>
+                
+                {/* Marketing Consent Checkboxes */}
+                <div className="border-t pt-6 space-y-4">
+                  <h4 className="text-lg font-semibold text-gray-800 mb-3">Marketing Preferences (Optional)</h4>
+                  
+                  {/* Email Marketing Consent */}
+                  <div className="flex items-start space-x-3">
+                    <input
+                      type="checkbox"
+                      id="emailConsent"
+                      name="emailConsent"
+                      checked={formData.emailConsent}
+                      onChange={handleChange}
+                      className="mt-1 h-4 w-4 text-blue-600 border-gray-300 rounded focus:ring-blue-500"
+                    />
+                    <label htmlFor="emailConsent" className="text-sm text-gray-700 leading-relaxed">
+                      Send me helpful roofing tips, maintenance reminders, and special offers via email. You can unsubscribe anytime.
+                    </label>
+                  </div>
+                  
+                  {/* SMS Marketing Consent */}
+                  <div className="flex items-start space-x-3">
+                    <input
+                      type="checkbox"
+                      id="smsConsent"
+                      name="smsConsent"
+                      checked={formData.smsConsent}
+                      onChange={handleChange}
+                      className="mt-1 h-4 w-4 text-blue-600 border-gray-300 rounded focus:ring-blue-500"
+                    />
+                    <label htmlFor="smsConsent" className="text-sm text-gray-700 leading-relaxed">
+                      By checking this box, I give my express written consent for Spencer Roofing to send me marketing text messages about roofing services, tips, and promotions to the phone number provided. I understand that message and data rates may apply, message frequency varies, and I can opt out by replying STOP at any time.
+                    </label>
+                  </div>
                 </div>
                 
                 {submitError && (
