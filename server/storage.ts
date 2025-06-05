@@ -435,10 +435,16 @@ export class MemStorage implements IStorage {
   // Contact submission methods
   async createContactSubmission(submission: InsertContact): Promise<ContactSubmission> {
     const id = this.currentIds.contactSubmissions++;
+    const currentTime = new Date();
+    
+    // Set consent timestamp if either consent is given
+    const consentTimestamp = (submission.emailConsent || submission.smsConsent) ? currentTime : null;
+    
     const newSubmission: ContactSubmission = { 
       ...submission, 
       id,
-      createdAt: new Date(),
+      consentTimestamp,
+      createdAt: currentTime,
       status: "new"
     };
     this.contactSubmissions.set(id, newSubmission);

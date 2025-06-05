@@ -27,6 +27,9 @@ export const contactSubmissions = pgTable("contact_submissions", {
   service: text("service").notNull(),
   message: text("message"),
   hearAbout: text("hear_about"),
+  emailConsent: boolean("email_consent").default(false).notNull(),
+  smsConsent: boolean("sms_consent").default(false).notNull(),
+  consentTimestamp: timestamp("consent_timestamp"),
   createdAt: timestamp("created_at").defaultNow().notNull(),
   status: text("status").default("new").notNull(),
 });
