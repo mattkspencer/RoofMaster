@@ -1,0 +1,37 @@
+# Image Replacement Prompt for Expert Insurance Claim Assistance Section
+
+Please help me replace the existing placeholder image in the "Expert Insurance Claim Assistance" section on my website's main page with my new image.
+
+## Target Location
+- **Page**: Main page (homepage)
+- **Section**: "Expert Insurance Claim Assistance" section
+- **Element**: Placeholder image that needs to be replaced
+
+## File Information
+- **Image file**: `insuranceclaimphotowebsite.jpg`
+- **Current location**: Already saved in `client/public/images/`
+- **Status**: File is confirmed to be in the correct directory
+
+## Code Integration Required
+Please provide the HTML/CSS code changes to:
+- Replace the existing placeholder image in the "Expert Insurance Claim Assistance" section
+- Update the image source to reference: `insuranceclaimphotowebsite.jpg`
+- Ensure the image maintains proper sizing and layout within the insurance claim section
+- Ensure responsive design (mobile-friendly)
+- Add appropriate alt text for accessibility (something related to insurance claim assistance services)
+- Maintain consistency with other service section images and styling
+
+## Specific Instructions
+- Locate the current placeholder image in the "Expert Insurance Claim Assistance" section on the main page
+- Show me exactly which line of code needs to be modified
+- Provide the exact HTML/CSS changes needed to reference the new image file
+- Ensure the image fits well within the insurance claim assistance section layout
+- Verify the file path is correctly formatted for the web application
+- Maintain visual consistency with other service images on the main page
+
+## Additional Considerations
+- The image should complement the insurance claim assistance theme
+- Ensure the image conveys professionalism and trustworthiness
+- Maintain proper aspect ratio and image quality
+
+Please examine my current main page code, find the "Expert Insurance Claim Assistance" section, and show me exactly how to replace the placeholder image with `insuranceclaimphotowebsite.jpg` for the best visual presentation and consistency with the overall design.

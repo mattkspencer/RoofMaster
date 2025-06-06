@@ -6,10 +6,10 @@ const InsuranceClaimsSection = () => {
       <div className="container mx-auto px-4">
         <div className="flex flex-col lg:flex-row items-center gap-12">
           <div className="lg:w-1/2">
-            {/* An image showing hail damaged roof */}
+            {/* An image showing insurance claim documentation */}
             <img 
-              src="https://images.unsplash.com/photo-1489396160836-2c99c977e970?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
-              alt="Storm damaged roof inspection" 
+              src="/images/insuranceclaimphotowebsite.jpg" 
+              alt="Homeowners insurance claim form and documentation for roof damage assessment" 
               className="rounded-lg shadow-lg w-full h-auto"
             />
           </div>
