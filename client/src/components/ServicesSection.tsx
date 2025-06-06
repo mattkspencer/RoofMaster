@@ -98,8 +98,8 @@ const ServicesSection = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
           <div className="order-2 md:order-1">
             <img 
-              src="https://picsum.photos/600/400?random=92" 
-              alt="Roof repair work" 
+              src="/images/roofrepairswebsitepic.jpg" 
+              alt="Professional roof repair work showing damaged shingles being replaced by Spencer Roofing Solutions team" 
               className="rounded-lg shadow-lg w-full h-auto object-cover"
             />
           </div>
