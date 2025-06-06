@@ -33,8 +33,8 @@ const About = () => {
           <div className="flex flex-col md:flex-row gap-12 mb-16">
             <div className="md:w-1/2">
               <img 
-                src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
-                alt="Professional roofing consultation" 
+                src="/images/aboutspencerroofingsolutionswebsitephoto.jpg" 
+                alt="Spencer from Spencer Roofing Solutions giving thumbs up in front of residential home" 
                 className="rounded-lg shadow-lg w-full h-auto"
               />
             </div>

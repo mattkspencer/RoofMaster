@@ -11,10 +11,10 @@ const AboutSection = () => {
       <div className="container mx-auto px-4">
         <div className="flex flex-col lg:flex-row items-center gap-12">
           <div className="lg:w-1/2">
-            {/* A professional roofing contractor consulting with a client */}
+            {/* Spencer from Spencer Roofing Solutions */}
             <img 
-              src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
-              alt="Professional roofing consultation" 
+              src="/images/aboutspencerroofingsolutionswebsitephoto.jpg" 
+              alt="Spencer from Spencer Roofing Solutions giving thumbs up in front of residential home" 
               className="rounded-lg shadow-lg w-full h-auto"
             />
           </div>
