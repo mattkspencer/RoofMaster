@@ -145,6 +145,11 @@ const Header = () => {
               Blog
             </div>
           </Link>
+          <Link href="/faq">
+            <div className={`nav-link ${isActive('/faq') ? 'active text-primary font-semibold' : 'hover:text-primary'} transition-colors cursor-pointer`}>
+              FAQ
+            </div>
+          </Link>
           <Link href="/contact">
             <div className="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded-md transition-colors cursor-pointer">
               Get a Free Quote
@@ -259,6 +264,13 @@ const Header = () => {
                 <div className={`mobile-nav-item ${isActive('/blog') ? 'text-blue-600 bg-blue-50' : 'text-gray-700'} hover:text-blue-600 hover:bg-blue-50 transition-all duration-200 py-4 px-4 rounded-lg font-medium cursor-pointer`}>
                   <i className="fas fa-blog w-5 mr-3"></i>
                   Blog
+                </div>
+              </Link>
+              
+              <Link href="/faq">
+                <div className={`mobile-nav-item ${isActive('/faq') ? 'text-blue-600 bg-blue-50' : 'text-gray-700'} hover:text-blue-600 hover:bg-blue-50 transition-all duration-200 py-4 px-4 rounded-lg font-medium cursor-pointer`}>
+                  <i className="fas fa-question-circle w-5 mr-3"></i>
+                  FAQ
                 </div>
               </Link>
             </nav>

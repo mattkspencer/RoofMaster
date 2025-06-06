@@ -1,0 +1,139 @@
+# RoofMaster Website FAQ Integration Prompt
+
+## Project Context
+You are working on a professional roofing contractor website called "RoofMaster" built with:
+- **Frontend**: React with TypeScript
+- **Styling**: Tailwind CSS
+- **Backend**: Node.js with Express
+- **Hosting**: Replit
+- **Company**: Spencer Roofing (Denver Metro Area)
+
+## Task Requirements
+
+### 1. Create FAQ Page Component
+Create a new React component called `FAQ.tsx` that includes:
+
+**Design Requirements:**
+- Match the existing website's color scheme and typography
+- Use professional, clean layout consistent with other pages
+- Implement responsive design for mobile/desktop
+- Include smooth animations and transitions
+- Use appropriate spacing and visual hierarchy
+
+**Functionality Requirements:**
+- Collapsible/expandable FAQ sections with smooth animations
+- Search functionality to filter FAQs
+- Category filtering (General, Insurance, Seasonal, etc.)
+- Scroll-to-top functionality
+- SEO-optimized structure with proper headings
+- Accessibility features (ARIA labels, keyboard navigation)
+
+### 2. FAQ Content Structure
+Organize the provided FAQ content into these main categories:
+1. **General Roofing Questions**
+2. **Hail Damage & Insurance Claims**
+3. **Seasonal & Weather Considerations**
+4. **Costs & Financing**
+5. **Maintenance & Repair**
+6. **Choosing Contractors**
+7. **Energy Efficiency**
+8. **Emergency Services**
+9. **Commercial Roofing**
+
+### 3. Technical Implementation
+
+**Component Structure:**
+```typescript
+interface FAQItem {
+  id: string;
+  category: string;
+  question: string;
+  answer: string;
+  keywords: string[];
+}
+
+interface FAQCategory {
+  id: string;
+  title: string;
+  description: string;
+  icon: string; // Lucide React icon name
+}
+```
+
+**Key Features to Implement:**
+- TypeScript interfaces for type safety
+- Custom hooks for search and filtering logic
+- Lazy loading for performance
+- Local state management with React hooks
+- URL routing integration (if applicable)
+- Schema.org structured data for SEO
+
+### 4. Styling Guidelines
+- Use Tailwind CSS classes consistent with existing components
+- Implement hover effects and focus states
+- Use appropriate color contrast for accessibility
+- Include loading states and smooth transitions
+- Mobile-first responsive design approach
+
+### 5. SEO & Performance Optimization
+- Add proper meta tags and structured data
+- Optimize for Core Web Vitals
+- Include internal linking to other site pages
+- Use semantic HTML structure
+- Implement proper heading hierarchy (H1, H2, H3)
+
+### 6. Integration Requirements
+- Add FAQ route to existing router configuration
+- Update navigation menu to include FAQ link
+- Ensure consistent header/footer integration
+- Add breadcrumb navigation
+- Include call-to-action sections linking to contact form
+
+### 7. Additional Features
+- Print-friendly styling
+- Social sharing buttons for individual FAQs
+- Related questions suggestions
+- Contact form integration for unanswered questions
+- Analytics tracking for popular questions
+
+## FAQ Content to Include
+[Include the complete FAQ content from the provided document, properly structured and formatted]
+
+## Best Practices to Follow
+1. **Code Organization**: Separate concerns with custom hooks and utility functions
+2. **Performance**: Implement virtualization for large lists if needed
+3. **Accessibility**: Full WCAG 2.1 AA compliance
+4. **SEO**: Rich snippets and FAQ schema markup
+5. **User Experience**: Intuitive navigation and search functionality
+6. **Mobile Optimization**: Touch-friendly interface elements
+7. **Error Handling**: Graceful fallbacks and error boundaries
+8. **Testing**: Unit tests for key functionality
+
+## Deliverables Expected
+1. Complete `FAQ.tsx` React component
+2. Supporting TypeScript interfaces and types
+3. Custom hooks for search/filter functionality
+4. CSS/Tailwind styling
+5. Router integration code
+6. SEO meta tags and structured data
+7. Updated navigation components
+8. Mobile-responsive design implementation
+
+## Technical Specifications
+- Ensure TypeScript strict mode compliance
+- Follow existing code style and naming conventions
+- Use existing UI patterns and components where possible
+- Implement proper error boundaries
+- Include proper PropTypes or TypeScript interfaces
+- Use React.memo() for performance optimization where appropriate
+
+## Success Criteria
+- FAQ page loads quickly and smoothly
+- All content is easily searchable and filterable
+- Design matches existing site aesthetics perfectly
+- Fully responsive across all device sizes
+- Meets accessibility standards
+- SEO-optimized with proper structured data
+- Integrates seamlessly with existing site navigation
+
+Create a professional, user-friendly FAQ page that enhances the Spencer Roofing website's value proposition and helps potential customers find answers to their roofing questions quickly and easily.
