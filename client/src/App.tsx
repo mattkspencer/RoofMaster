@@ -22,6 +22,7 @@ import Portfolio from "./pages/Portfolio";
 import Blog from "./pages/Blog";
 import BlogPost from "./pages/BlogPost";
 import Contact from "./pages/Contact";
+import FAQ from "./pages/FAQ";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import TermsOfService from "./pages/TermsOfService";
 import NotFound from "@/pages/not-found";
@@ -62,6 +63,7 @@ function App() {
             <Route path="/blog" component={Blog} />
             <Route path="/blog/:id" component={BlogPost} />
             <Route path="/contact" component={Contact} />
+            <Route path="/faq" component={FAQ} />
             <Route path="/privacy-policy" component={PrivacyPolicy} />
             <Route path="/terms-of-service" component={TermsOfService} />
             {/* Service Area Pages */}
