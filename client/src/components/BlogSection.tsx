@@ -7,6 +7,7 @@ interface BlogPost {
   title: string;
   excerpt: string;
   slug: string;
+  linkText?: string;
 }
 
 const BlogSection = () => {
@@ -16,21 +17,24 @@ const BlogSection = () => {
       date: "2023-06-15",
       title: "How to Identify Hail Damage on Your Roof",
       excerpt: "Learn the telltale signs of hail damage and what steps to take if you suspect your roof has been compromised after a storm.",
-      slug: "how-to-identify-hail-damage"
+      slug: "how-to-identify-hail-damage",
+      linkText: "Read About Identifying Hail Damage"
     },
     {
       image: "https://picsum.photos/600/300?random=31",
       date: "2023-05-28",
       title: "The Best Roofing Materials for Colorado's Climate",
       excerpt: "Discover which roofing materials stand up best to Colorado's unique climate challenges, from hail to intense sun and everything in between.",
-      slug: "best-roofing-materials-colorado"
+      slug: "best-roofing-materials-colorado",
+      linkText: "Discover Best Roofing Materials for Colorado"
     },
     {
       image: "https://picsum.photos/600/300?random=32",
       date: "2023-04-10",
       title: "When to Repair vs. Replace Your Roof",
       excerpt: "Is it time for a full roof replacement, or can repairs extend your roof's life? This guide helps you make the right decision for your home.",
-      slug: "repair-vs-replace-roof"
+      slug: "repair-vs-replace-roof",
+      linkText: "Learn When to Repair vs Replace Your Roof"
     }
   ];
 
@@ -60,7 +64,7 @@ const BlogSection = () => {
                 <h3 className="text-xl font-semibold mb-3">{post.title}</h3>
                 <p className="text-gray-600 mb-4">{truncateText(post.excerpt, 120)}</p>
                 <Link href={`/blog/${post.slug}`} className="inline-flex items-center text-primary font-semibold hover:text-primary-dark">
-                  Read More <i className="fas fa-arrow-right ml-2"></i>
+                  {post.linkText || "Read More"} <i className="fas fa-arrow-right ml-2"></i>
                 </Link>
               </div>
             </div>

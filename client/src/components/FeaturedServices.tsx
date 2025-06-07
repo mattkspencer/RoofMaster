@@ -5,9 +5,10 @@ interface ServiceCardProps {
   title: string;
   description: string;
   link: string;
+  linkText: string;
 }
 
-const ServiceCard = ({ icon, title, description, link }: ServiceCardProps) => (
+const ServiceCard = ({ icon, title, description, link, linkText }: ServiceCardProps) => (
   <div className="service-card bg-gray-50 rounded-lg shadow-md p-6 hover:shadow-lg transition-all duration-300">
     <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mb-4">
       <i className={`fas ${icon} text-2xl text-blue-600`}></i>
@@ -15,7 +16,7 @@ const ServiceCard = ({ icon, title, description, link }: ServiceCardProps) => (
     <h3 className="text-xl font-semibold mb-3">{title}</h3>
     <p className="text-gray-600 mb-4">{description}</p>
     <Link href={link} className="inline-flex items-center text-blue-600 font-semibold hover:text-blue-700">
-      Learn More <i className="fas fa-arrow-right ml-2"></i>
+      {linkText} <i className="fas fa-arrow-right ml-2"></i>
     </Link>
   </div>
 );
@@ -26,25 +27,29 @@ const FeaturedServices = () => {
       icon: 'fa-home',
       title: 'Residential Roofing',
       description: 'Expert installation, repair and maintenance for all types of residential roofs.',
-      link: '/services/residential-roofing'
+      link: '/services/residential-roofing',
+      linkText: 'Learn About Residential Roofing Services'
     },
     {
       icon: 'fa-building',
       title: 'Commercial Roofing',
       description: 'Durable, high-performance roofing solutions for commercial properties of all sizes.',
-      link: '/services/commercial-roofing'
+      link: '/services/commercial-roofing',
+      linkText: 'Explore Commercial Roofing Solutions'
     },
     {
       icon: 'fa-tools',
       title: 'Roof Repairs',
       description: 'Fast, reliable repairs for leaks, storm damage, and other roofing issues.',
-      link: '/services/roof-repair'
+      link: '/services/roof-repair',
+      linkText: 'Get Professional Roof Repair Services'
     },
     {
       icon: 'fa-file-invoice-dollar',
       title: 'Insurance Claims',
       description: 'Expert assistance navigating the insurance claim process for storm damage.',
-      link: '/services/insurance-claims'
+      link: '/services/insurance-claims',
+      linkText: 'Learn About Insurance Claim Assistance'
     }
   ];
 
@@ -66,6 +71,7 @@ const FeaturedServices = () => {
               title={service.title}
               description={service.description}
               link={service.link}
+              linkText={service.linkText}
             />
           ))}
         </div>
