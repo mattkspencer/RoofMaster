@@ -179,9 +179,9 @@ const Header = () => {
         ></div>
         
         {/* Mobile menu panel */}
-        <div className={`fixed top-0 right-0 h-full w-80 max-w-[85vw] bg-white shadow-xl transform transition-transform duration-300 ease-in-out ${
+        <div className={`fixed top-0 right-0 h-screen w-80 max-w-[85vw] bg-white shadow-xl transform transition-transform duration-300 ease-in-out ${
           mobileMenuOpen ? 'translate-x-0' : 'translate-x-full'
-        }`} style={{ backgroundColor: '#ffffff', backdropFilter: 'none', WebkitBackdropFilter: 'none' }}>
+        }`} style={{ backgroundColor: '#ffffff', backdropFilter: 'none', WebkitBackdropFilter: 'none', height: '100vh', minHeight: '100vh' }}>
           {/* Mobile menu header */}
           <div className="flex items-center justify-between p-6 border-b border-gray-200 bg-white">
             <div className="text-xl font-bold">
@@ -198,8 +198,8 @@ const Header = () => {
           </div>
           
           {/* Mobile menu content */}
-          <div className="flex flex-col h-full overflow-y-auto pb-20 bg-white">
-            <nav className="flex-1 px-6 py-6 space-y-2">
+          <div className="flex flex-col h-full overflow-y-auto bg-white" style={{ height: 'calc(100vh - 80px)' }}>
+            <nav className="flex-1 px-6 py-6 space-y-3">
               <Link href="/">
                 <div onClick={handleMobileNavClick} className={`mobile-nav-item ${isActive('/') ? 'text-blue-600 bg-blue-50' : 'text-gray-700'} hover:text-blue-600 hover:bg-blue-50 transition-all duration-200 py-4 px-4 rounded-lg font-medium cursor-pointer`}>
                   <i className="fas fa-home w-5 mr-3"></i>
@@ -288,7 +288,7 @@ const Header = () => {
             </nav>
             
             {/* Mobile contact section */}
-            <div className="px-6 py-4 space-y-4 border-t border-gray-200 bg-gray-50">
+            <div className="mt-auto px-6 py-6 space-y-4 border-t border-gray-200 bg-white">
               <a 
                 href="tel:720-360-8546" 
                 onClick={handleMobileNavClick}
