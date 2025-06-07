@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import { Link } from "wouter";
 import Breadcrumb from "@/components/Breadcrumb";
 import CTASection from "@/components/CTASection";
+import OptimizedImage from "@/components/OptimizedImage";
 
 const About = () => {
   useEffect(() => {
@@ -32,10 +33,11 @@ const About = () => {
           
           <div className="flex flex-col md:flex-row gap-12 mb-16">
             <div className="md:w-1/2">
-              <img 
+              <OptimizedImage 
                 src="/images/aboutspencerroofingsolutionswebsitephoto.jpg" 
                 alt="Spencer from Spencer Roofing Solutions giving thumbs up in front of residential home" 
                 className="rounded-lg shadow-lg w-full h-auto"
+                loading="eager"
               />
             </div>
             

@@ -1,5 +1,6 @@
 import { Link } from 'wouter';
 import { trackEvent } from '@/lib/analytics';
+import OptimizedImage from './OptimizedImage';
 
 const ServicesSection = () => {
   const handleCTAClick = (service: string) => {
@@ -19,18 +20,13 @@ const ServicesSection = () => {
         {/* Residential Roofing */}
         <div className="mb-16 grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
           <div className="order-2 md:order-1">
-            <img 
-              src="/images/colburnbuild.jpg?v=1" 
+            <OptimizedImage 
+              src="/images/colburnbuild.jpg" 
               alt="Residential roofing installation" 
               className="rounded-lg shadow-lg w-full h-auto object-cover max-w-full"
               loading="eager"
-              width="600"
-              height="400"
-              onLoad={() => console.log('Successfully loaded colburnbuild.jpg on mobile')}
-              onError={(e) => {
-                console.error('Failed to load colburnbuild.jpg:', e);
-                console.log('Image failed to load on mobile device');
-              }}
+              width={600}
+              height={400}
             />
           </div>
           <div className="order-1 md:order-2">
