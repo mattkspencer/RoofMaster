@@ -33,6 +33,21 @@ const Blog = () => {
     queryKey: ['/api/blog'],
   });
 
+  // Generate descriptive link text based on blog post title
+  const generateLinkText = (title: string): string => {
+    if (title.toLowerCase().includes('hail')) return 'Read About Identifying Hail Damage';
+    if (title.toLowerCase().includes('material')) return 'Discover Best Roofing Materials for Colorado';
+    if (title.toLowerCase().includes('repair') && title.toLowerCase().includes('replace')) return 'Learn When to Repair vs Replace Your Roof';
+    if (title.toLowerCase().includes('maintenance')) return 'Learn Roof Maintenance Tips';
+    if (title.toLowerCase().includes('insurance')) return 'Read About Insurance Claims Process';
+    if (title.toLowerCase().includes('cost')) return 'Learn About Roofing Costs';
+    if (title.toLowerCase().includes('winter')) return 'Read Winter Roofing Tips';
+    if (title.toLowerCase().includes('commercial')) return 'Learn About Commercial Roofing';
+    // Default fallback with first few words of title
+    const words = title.split(' ').slice(0, 4).join(' ');
+    return `Read About ${words}`;
+  };
+
   return (
     <div className="pt-24">
       <div className="container mx-auto px-4">
@@ -94,7 +109,7 @@ const Blog = () => {
                         </Link>
                         <p className="text-gray-600 mb-4 flex-grow">{truncateText(post.excerpt, 120)}</p>
                         <Link href={`/blog/${post.slug}`} className="text-blue-600 font-semibold hover:text-blue-700 transition-colors inline-flex items-center">
-                          Read More
+                          {generateLinkText(post.title)}
                           <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                           </svg>
