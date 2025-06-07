@@ -299,10 +299,10 @@ const Header = () => {
               </a>
               
               <Link href="/contact">
-                <div onClick={handleMobileNavClick} className="flex items-center justify-center py-4 px-4 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-lg transition-all duration-200 shadow-md cursor-pointer">
+                <a onClick={handleMobileNavClick} className="flex items-center justify-center py-4 px-4 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-lg transition-all duration-200 shadow-md cursor-pointer">
                   <i className="fas fa-quote-left mr-3"></i>
                   Get a Free Quote
-                </div>
+                </a>
               </Link>
             </div>
           </div>
