@@ -1,0 +1,54 @@
+# Fix Uncrawlable Links for SEO
+
+## PROBLEM
+My roofing website has 10 important CTA buttons that search engines cannot crawl because they lack proper `href` attributes. These buttons currently use JavaScript/onClick handlers but are invisible to search engines.
+
+## TASK
+Convert JavaScript-only buttons to proper anchor tags with `href` attributes so search engines can crawl and follow these important links.
+
+## SPECIFIC BUTTONS TO FIX
+
+### High-Priority CTA Buttons:
+1. **"Schedule a Consultation"** - Should link to contact form or scheduling page
+2. **"Get Your Free Consultation"** - Should link to contact form
+3. **"Discuss Your Project"** - Should link to contact form
+4. **"Schedule a Free Inspection"** - Should link to contact form or scheduling
+
+### Service Page Buttons:
+5. **"View Project Details"** (appears multiple times) - Should link to portfolio/projects page
+
+### Blog Navigation:
+6. **"Read More"** buttons in blog section - Should link to individual blog posts
+7. **"View All Articles"** - Should link to blog index page
+
+## REQUIREMENTS
+1. Find all buttons/links that currently have CSS classes but no `href` attributes
+2. Add proper `href` attributes pointing to relevant pages
+3. Keep existing styling and hover effects
+4. Maintain any existing JavaScript functionality (onClick handlers)
+5. Use relative URLs where possible (e.g., `/contact`, `/services`, `/blog`)
+
+## EXAMPLE CONVERSION
+**Before:**
+```jsx
+<a class="inline-block bg-primary hover:bg-primary-dark text-white font-semibold py-3 px-6 rounded-lg">
+  Schedule a Consultation
+</a>
+```
+
+**After:**
+```jsx
+<a href="/contact" class="inline-block bg-primary hover:bg-primary-dark text-white font-semibold py-3 px-6 rounded-lg">
+  Schedule a Consultation
+</a>
+```
+
+## SUGGESTED LINK DESTINATIONS
+- Contact/Consultation buttons → `/contact` or `/#contact`
+- Service details → `/services` or specific service pages
+- Blog "Read More" → individual blog post URLs
+- "View All Articles" → `/blog`
+- Project details → `/portfolio` or `/projects`
+
+## CONTEXT
+This is a React-based Spencer Roofing Solutions website. These CTA buttons are critical for lead generation, and making them crawlable will help search engines understand the site structure and improve SEO rankings.

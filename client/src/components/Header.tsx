@@ -66,10 +66,10 @@ const Header = () => {
       <div className="container mx-auto px-4 py-3 flex justify-between items-center">
         <div className="flex items-center space-x-4">
           <Link href="/">
-            <div className="text-3xl font-bold cursor-pointer">
+            <a className="text-3xl font-bold cursor-pointer">
               <span className="text-blue-500">Spencer</span>
               <span className="text-gray-700">Roofing</span>
-            </div>
+            </a>
           </Link>
           
           {/* Trust Signals with Interactive Hover Animations */}
@@ -88,9 +88,9 @@ const Header = () => {
         {/* Mobile CTA and Menu */}
         <div className="lg:hidden flex items-center space-x-3">
           <Link href="/contact">
-            <div className="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-3 rounded-md transition-colors text-sm cursor-pointer">
+            <a className="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-3 rounded-md transition-colors text-sm cursor-pointer inline-block">
               Get Quote
-            </div>
+            </a>
           </Link>
           <button 
             id="mobile-menu-button" 
@@ -116,14 +116,14 @@ const Header = () => {
         {/* Desktop navigation */}
         <nav className="hidden lg:flex items-center space-x-8">
           <Link href="/">
-            <div className={`nav-link ${isActive('/') ? 'active text-primary font-semibold' : 'hover:text-primary'} transition-colors cursor-pointer`}>
+            <a className={`nav-link ${isActive('/') ? 'active text-primary font-semibold' : 'hover:text-primary'} transition-colors cursor-pointer`}>
               Home
-            </div>
+            </a>
           </Link>
           <Link href="/about">
-            <div className={`nav-link ${isActive('/about') ? 'active text-primary font-semibold' : 'hover:text-primary'} transition-colors cursor-pointer`}>
+            <a className={`nav-link ${isActive('/about') ? 'active text-primary font-semibold' : 'hover:text-primary'} transition-colors cursor-pointer`}>
               About
-            </div>
+            </a>
           </Link>
           <div className="relative group">
             <div className={`nav-link cursor-pointer hover:text-primary transition-colors flex items-center py-2`}>
