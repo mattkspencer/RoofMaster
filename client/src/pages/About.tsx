@@ -38,6 +38,10 @@ const About = () => {
                 alt="Spencer from Spencer Roofing Solutions giving thumbs up in front of residential home" 
                 className="rounded-lg shadow-lg w-full h-auto"
                 loading="eager"
+                width={600}
+                height={400}
+                mobileWidth={350}
+                mobileHeight={250}
               />
             </div>
             

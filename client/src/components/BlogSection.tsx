@@ -61,6 +61,10 @@ const BlogSection = () => {
                 className="w-full h-48 object-cover"
                 loading="lazy"
                 decoding="async"
+                width={600}
+                height={300}
+                mobileWidth={400}
+                mobileHeight={200}
               />
               <div className="p-6">
                 <p className="text-sm text-gray-500 mb-2">{formatDate(post.date)}</p>

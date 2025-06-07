@@ -102,6 +102,10 @@ const PortfolioSection = () => {
                 className="w-full h-60 object-cover"
                 loading="lazy"
                 decoding="async"
+                width={600}
+                height={400}
+                mobileWidth={350}
+                mobileHeight={250}
               />
               <div className="p-4">
                 <h3 className="text-xl font-semibold mb-2">{item.title}</h3>

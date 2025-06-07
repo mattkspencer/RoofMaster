@@ -119,11 +119,98 @@
 
     <!-- Critical CSS inlined for faster rendering -->
     <style>
-      /* Critical above-the-fold styles */
-      html, body { margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, sans-serif; }
-      .hero-skeleton { height: 550px; background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%); }
-      .loading-skeleton { background: #f3f4f6; border-radius: 4px; animation: pulse 2s infinite; }
-      @keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.5; } }
+      /* Critical above-the-fold styles for mobile performance */
+      html, body { 
+        margin: 0; 
+        padding: 0; 
+        font-family: -apple-system, BlinkMacSystemFont, 'Inter', sans-serif;
+        line-height: 1.6;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+      }
+      
+      /* Critical hero section styles */
+      .hero-section { 
+        position: relative;
+        min-height: 550px;
+        display: flex;
+        align-items: center;
+        background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%);
+      }
+      
+      .hero-content {
+        position: relative;
+        z-index: 20;
+        color: white;
+        max-width: 42rem;
+        padding: 1rem;
+      }
+      
+      .hero-title {
+        font-size: 2.5rem;
+        font-weight: 700;
+        line-height: 1.2;
+        margin-bottom: 1.5rem;
+      }
+      
+      @media (min-width: 768px) {
+        .hero-title { font-size: 3rem; }
+      }
+      
+      @media (min-width: 1024px) {
+        .hero-title { font-size: 3.75rem; }
+      }
+      
+      /* Critical button styles */
+      .cta-button {
+        display: inline-block;
+        background: #3b82f6;
+        color: white;
+        font-weight: 600;
+        padding: 0.75rem 2rem;
+        border-radius: 0.375rem;
+        text-decoration: none;
+        transition: background-color 0.2s;
+        margin: 0.5rem 0.5rem 0.5rem 0;
+      }
+      
+      .cta-button:hover {
+        background: #2563eb;
+      }
+      
+      .cta-button-secondary {
+        background: white;
+        color: #1e3a8a;
+      }
+      
+      .cta-button-secondary:hover {
+        background: #f3f4f6;
+      }
+      
+      /* Loading skeleton */
+      .loading-skeleton { 
+        background: #f3f4f6; 
+        border-radius: 4px; 
+        animation: pulse 2s infinite; 
+      }
+      
+      @keyframes pulse { 
+        0%, 100% { opacity: 1; } 
+        50% { opacity: 0.5; } 
+      }
+      
+      /* Layout stability */
+      img {
+        max-width: 100%;
+        height: auto;
+        display: block;
+      }
+      
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 1rem;
+      }
     </style>
 
     <!-- Fonts with optimized loading -->

@@ -3,11 +3,13 @@ import { HTMLAttributes } from 'react';
 interface OptimizedImageProps extends HTMLAttributes<HTMLImageElement> {
   src: string;
   alt: string;
-  width?: number;
-  height?: number;
+  width: number;
+  height: number;
   loading?: 'lazy' | 'eager';
   decoding?: 'async' | 'sync' | 'auto';
   sizes?: string;
+  mobileWidth?: number;
+  mobileHeight?: number;
 }
 
 const OptimizedImage = ({ 
@@ -17,7 +19,9 @@ const OptimizedImage = ({
   height, 
   loading = 'lazy', 
   decoding = 'async',
-  sizes,
+  sizes = '(max-width: 768px) 100vw, 50vw',
+  mobileWidth,
+  mobileHeight,
   className,
   ...props 
 }: OptimizedImageProps) => {
@@ -25,10 +29,30 @@ const OptimizedImage = ({
   const webpSrc = src.replace(/\.(jpg|jpeg)$/i, '.webp');
   const isLocalImage = src.startsWith('/images/');
 
+  // Generate responsive srcsets for mobile optimization
+  const generateSrcSet = (baseSrc: string) => {
+    if (!isLocalImage) return baseSrc;
+    
+    const mobileW = mobileWidth || Math.round(width * 0.6);
+    const mobileH = mobileHeight || Math.round(height * 0.6);
+    
+    // Mobile-first approach with explicit sizes
+    return `${baseSrc}?w=${mobileW}&h=${mobileH} 480w, ${baseSrc}?w=${width}&h=${height} 768w`;
+  };
+
   if (isLocalImage) {
     return (
       <picture>
-        <source srcSet={webpSrc} type="image/webp" />
+        <source 
+          srcSet={generateSrcSet(webpSrc)} 
+          type="image/webp" 
+          sizes={sizes}
+        />
+        <source 
+          srcSet={generateSrcSet(src)} 
+          type="image/jpeg" 
+          sizes={sizes}
+        />
         <img
           src={src}
           alt={alt}
@@ -36,15 +60,15 @@ const OptimizedImage = ({
           height={height}
           loading={loading}
           decoding={decoding}
-          sizes={sizes}
           className={className}
+          style={{ aspectRatio: `${width}/${height}` }}
           {...props}
         />
       </picture>
     );
   }
 
-  // For external images (like Unsplash), use regular img tag
+  // For external images (like Unsplash), use regular img tag with aspect ratio
   return (
     <img
       src={src}
@@ -55,6 +79,7 @@ const OptimizedImage = ({
       decoding={decoding}
       sizes={sizes}
       className={className}
+      style={{ aspectRatio: `${width}/${height}` }}
       {...props}
     />
   );
