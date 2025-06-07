@@ -97,8 +97,10 @@ const PortfolioSection = () => {
             >
               <img 
                 src={item.image} 
-                alt={item.title} 
+                alt={`${item.title} roofing project in ${item.location}`}
                 className="w-full h-60 object-cover"
+                loading="lazy"
+                decoding="async"
               />
               <div className="p-4">
                 <h3 className="text-xl font-semibold mb-2">{item.title}</h3>

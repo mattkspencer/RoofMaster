@@ -56,8 +56,10 @@ const BlogSection = () => {
             >
               <img 
                 src={post.image} 
-                alt={post.title} 
+                alt={`${post.title} - Spencer Roofing Solutions blog article`}
                 className="w-full h-48 object-cover"
+                loading="lazy"
+                decoding="async"
               />
               <div className="p-6">
                 <p className="text-sm text-gray-500 mb-2">{formatDate(post.date)}</p>
