@@ -64,7 +64,7 @@ const BlogSection = () => {
                 <h3 className="text-xl font-semibold mb-3">{post.title}</h3>
                 <p className="text-gray-600 mb-4">{truncateText(post.excerpt, 120)}</p>
                 <Link href={`/blog/${post.slug}`} className="inline-flex items-center text-primary font-semibold hover:text-primary-dark">
-                  {post.linkText || "Read More"} <i className="fas fa-arrow-right ml-2"></i>
+                  {post.linkText || "Read Roofing Article"} <i className="fas fa-arrow-right ml-2"></i>
                 </Link>
               </div>
             </div>
