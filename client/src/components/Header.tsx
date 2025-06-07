@@ -37,6 +37,11 @@ const Header = () => {
     setServicesDropdownOpen(!servicesDropdownOpen);
   };
 
+  const handleMobileNavClick = () => {
+    setMobileMenuOpen(false);
+    setServicesDropdownOpen(false);
+  };
+
   // Close mobile menu when route changes
   useEffect(() => {
     setMobileMenuOpen(false);
@@ -80,15 +85,22 @@ const Header = () => {
           </div>
         </div>
         
-        {/* Mobile menu button */}
-        <button 
-          id="mobile-menu-button" 
-          className="lg:hidden text-neutral-dark"
-          onClick={toggleMobileMenu}
-          aria-label="Toggle mobile menu"
-        >
-          <i className={`fas ${mobileMenuOpen ? 'fa-times' : 'fa-bars'} text-xl`}></i>
-        </button>
+        {/* Mobile CTA and Menu */}
+        <div className="lg:hidden flex items-center space-x-3">
+          <Link href="/contact">
+            <div className="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-3 rounded-md transition-colors text-sm cursor-pointer">
+              Get Quote
+            </div>
+          </Link>
+          <button 
+            id="mobile-menu-button" 
+            className="text-neutral-dark"
+            onClick={toggleMobileMenu}
+            aria-label="Toggle mobile menu"
+          >
+            <i className={`fas ${mobileMenuOpen ? 'fa-times' : 'fa-bars'} text-xl`}></i>
+          </button>
+        </div>
         
         {/* Phone number - Desktop only */}
         <div className="hidden lg:flex items-center mr-4">
@@ -189,14 +201,14 @@ const Header = () => {
           <div className="flex flex-col h-full overflow-y-auto pb-20">
             <nav className="flex-1 px-6 py-6 space-y-2">
               <Link href="/">
-                <div className={`mobile-nav-item ${isActive('/') ? 'text-blue-600 bg-blue-50' : 'text-gray-700'} hover:text-blue-600 hover:bg-blue-50 transition-all duration-200 py-4 px-4 rounded-lg font-medium cursor-pointer`}>
+                <div onClick={handleMobileNavClick} className={`mobile-nav-item ${isActive('/') ? 'text-blue-600 bg-blue-50' : 'text-gray-700'} hover:text-blue-600 hover:bg-blue-50 transition-all duration-200 py-4 px-4 rounded-lg font-medium cursor-pointer`}>
                   <i className="fas fa-home w-5 mr-3"></i>
                   Home
                 </div>
               </Link>
               
               <Link href="/about">
-                <div className={`mobile-nav-item ${isActive('/about') ? 'text-blue-600 bg-blue-50' : 'text-gray-700'} hover:text-blue-600 hover:bg-blue-50 transition-all duration-200 py-4 px-4 rounded-lg font-medium cursor-pointer`}>
+                <div onClick={handleMobileNavClick} className={`mobile-nav-item ${isActive('/about') ? 'text-blue-600 bg-blue-50' : 'text-gray-700'} hover:text-blue-600 hover:bg-blue-50 transition-all duration-200 py-4 px-4 rounded-lg font-medium cursor-pointer`}>
                   <i className="fas fa-info-circle w-5 mr-3"></i>
                   About
                 </div>
@@ -225,27 +237,27 @@ const Header = () => {
                 }`}>
                   <div className="ml-8 mt-2 space-y-1 border-l-2 border-blue-100 pl-4">
                     <Link href="/services/residential-roofing">
-                      <div className="mobile-nav-subitem py-3 px-3 rounded-md text-gray-600 hover:text-blue-600 hover:bg-blue-50 transition-all duration-200 font-medium cursor-pointer">
+                      <div onClick={handleMobileNavClick} className="mobile-nav-subitem py-3 px-3 rounded-md text-gray-600 hover:text-blue-600 hover:bg-blue-50 transition-all duration-200 font-medium cursor-pointer">
                         Residential Roofing
                       </div>
                     </Link>
                     <Link href="/services/commercial-roofing">
-                      <div className="mobile-nav-subitem py-3 px-3 rounded-md text-gray-600 hover:text-blue-600 hover:bg-blue-50 transition-all duration-200 font-medium cursor-pointer">
+                      <div onClick={handleMobileNavClick} className="mobile-nav-subitem py-3 px-3 rounded-md text-gray-600 hover:text-blue-600 hover:bg-blue-50 transition-all duration-200 font-medium cursor-pointer">
                         Commercial Roofing
                       </div>
                     </Link>
                     <Link href="/services/roof-repair">
-                      <div className="mobile-nav-subitem py-3 px-3 rounded-md text-gray-600 hover:text-blue-600 hover:bg-blue-50 transition-all duration-200 font-medium cursor-pointer">
+                      <div onClick={handleMobileNavClick} className="mobile-nav-subitem py-3 px-3 rounded-md text-gray-600 hover:text-blue-600 hover:bg-blue-50 transition-all duration-200 font-medium cursor-pointer">
                         Roof Repairs
                       </div>
                     </Link>
                     <Link href="/services/insurance-claims">
-                      <div className="mobile-nav-subitem py-3 px-3 rounded-md text-gray-600 hover:text-blue-600 hover:bg-blue-50 transition-all duration-200 font-medium cursor-pointer">
+                      <div onClick={handleMobileNavClick} className="mobile-nav-subitem py-3 px-3 rounded-md text-gray-600 hover:text-blue-600 hover:bg-blue-50 transition-all duration-200 font-medium cursor-pointer">
                         Insurance Claims
                       </div>
                     </Link>
                     <Link href="/services/gutter-services">
-                      <div className="mobile-nav-subitem py-3 px-3 rounded-md text-gray-600 hover:text-blue-600 hover:bg-blue-50 transition-all duration-200 font-medium cursor-pointer">
+                      <div onClick={handleMobileNavClick} className="mobile-nav-subitem py-3 px-3 rounded-md text-gray-600 hover:text-blue-600 hover:bg-blue-50 transition-all duration-200 font-medium cursor-pointer">
                         Gutter Services
                       </div>
                     </Link>
@@ -254,21 +266,21 @@ const Header = () => {
               </div>
               
               <Link href="/portfolio">
-                <div className={`mobile-nav-item ${isActive('/portfolio') ? 'text-blue-600 bg-blue-50' : 'text-gray-700'} hover:text-blue-600 hover:bg-blue-50 transition-all duration-200 py-4 px-4 rounded-lg font-medium cursor-pointer`}>
+                <div onClick={handleMobileNavClick} className={`mobile-nav-item ${isActive('/portfolio') ? 'text-blue-600 bg-blue-50' : 'text-gray-700'} hover:text-blue-600 hover:bg-blue-50 transition-all duration-200 py-4 px-4 rounded-lg font-medium cursor-pointer`}>
                   <i className="fas fa-images w-5 mr-3"></i>
                   Portfolio
                 </div>
               </Link>
               
               <Link href="/blog">
-                <div className={`mobile-nav-item ${isActive('/blog') ? 'text-blue-600 bg-blue-50' : 'text-gray-700'} hover:text-blue-600 hover:bg-blue-50 transition-all duration-200 py-4 px-4 rounded-lg font-medium cursor-pointer`}>
+                <div onClick={handleMobileNavClick} className={`mobile-nav-item ${isActive('/blog') ? 'text-blue-600 bg-blue-50' : 'text-gray-700'} hover:text-blue-600 hover:bg-blue-50 transition-all duration-200 py-4 px-4 rounded-lg font-medium cursor-pointer`}>
                   <i className="fas fa-blog w-5 mr-3"></i>
                   Blog
                 </div>
               </Link>
               
               <Link href="/faq">
-                <div className={`mobile-nav-item ${isActive('/faq') ? 'text-blue-600 bg-blue-50' : 'text-gray-700'} hover:text-blue-600 hover:bg-blue-50 transition-all duration-200 py-4 px-4 rounded-lg font-medium cursor-pointer`}>
+                <div onClick={handleMobileNavClick} className={`mobile-nav-item ${isActive('/faq') ? 'text-blue-600 bg-blue-50' : 'text-gray-700'} hover:text-blue-600 hover:bg-blue-50 transition-all duration-200 py-4 px-4 rounded-lg font-medium cursor-pointer`}>
                   <i className="fas fa-question-circle w-5 mr-3"></i>
                   FAQ
                 </div>
@@ -279,6 +291,7 @@ const Header = () => {
             <div className="px-6 py-4 space-y-4 border-t border-gray-200 bg-gray-50">
               <a 
                 href="tel:720-360-8546" 
+                onClick={handleMobileNavClick}
                 className="flex items-center justify-center py-4 px-4 bg-green-600 hover:bg-green-700 text-white font-semibold rounded-lg transition-all duration-200 shadow-md"
               >
                 <i className="fas fa-phone mr-3"></i>
@@ -286,7 +299,7 @@ const Header = () => {
               </a>
               
               <Link href="/contact">
-                <div className="flex items-center justify-center py-4 px-4 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-lg transition-all duration-200 shadow-md cursor-pointer">
+                <div onClick={handleMobileNavClick} className="flex items-center justify-center py-4 px-4 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-lg transition-all duration-200 shadow-md cursor-pointer">
                   <i className="fas fa-quote-left mr-3"></i>
                   Get a Free Quote
                 </div>
