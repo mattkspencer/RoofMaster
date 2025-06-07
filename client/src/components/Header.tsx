@@ -57,7 +57,7 @@ const Header = () => {
   }, [mobileMenuOpen]);
 
   return (
-    <header className={`relative w-full bg-white z-50 transition-shadow ${scrolled ? 'shadow-md' : ''}`}>
+    <header className={`sticky top-0 w-full bg-white z-50 transition-all duration-300 ${scrolled ? 'shadow-md bg-white/95 backdrop-blur-sm' : 'bg-white'}`}>
       <div className="container mx-auto px-4 py-3 flex justify-between items-center">
         <div className="flex items-center space-x-4">
           <Link href="/">
