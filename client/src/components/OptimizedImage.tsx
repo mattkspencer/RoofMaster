@@ -33,11 +33,10 @@ const OptimizedImage = ({
   const generateSrcSet = (baseSrc: string) => {
     if (!isLocalImage) return baseSrc;
     
-    const mobileW = mobileWidth || Math.round(width * 0.6);
-    const mobileH = mobileHeight || Math.round(height * 0.6);
+    // Use actual mobile-optimized images
+    const mobileSrc = baseSrc.replace(/\.([^.]+)$/, '-mobile.$1');
     
-    // Mobile-first approach with explicit sizes
-    return `${baseSrc}?w=${mobileW}&h=${mobileH} 480w, ${baseSrc}?w=${width}&h=${height} 768w`;
+    return `${mobileSrc} 480w, ${baseSrc} 768w`;
   };
 
   if (isLocalImage) {
