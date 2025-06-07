@@ -104,8 +104,8 @@ const PortfolioSection = () => {
                 <h3 className="text-xl font-semibold mb-2">{item.title}</h3>
                 <p className="text-gray-600 mb-3">{item.location}</p>
                 <p className="text-sm text-gray-600 mb-4">{item.description}</p>
-                <Link href={`/portfolio/${index}`}>
-                  <a className="text-primary hover:text-primary-dark font-semibold">View Project Details</a>
+                <Link href={`/portfolio/${index}`} className="text-primary hover:text-primary-dark font-semibold">
+                  View Project Details
                 </Link>
               </div>
             </div>
@@ -113,10 +113,11 @@ const PortfolioSection = () => {
         </div>
         
         <div className="text-center mt-10">
-          <Link href="/contact">
-            <a className="inline-block bg-primary hover:bg-primary-dark text-white font-semibold py-3 px-6 rounded-md transition-colors">
-              Discuss Your Project
-            </a>
+          <Link 
+            href="/contact"
+            className="inline-block bg-primary hover:bg-primary-dark text-white font-semibold py-3 px-6 rounded-md transition-colors"
+          >
+            Discuss Your Project
           </Link>
         </div>
       </div>
