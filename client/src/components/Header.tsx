@@ -171,7 +171,7 @@ const Header = () => {
       </div>
       
       {/* Enhanced Mobile navigation */}
-      <div className={`${mobileMenuOpen ? 'fixed' : 'hidden'} inset-0 z-50 lg:hidden`}>
+      <div className={`${mobileMenuOpen ? 'fixed' : 'hidden'} inset-0 z-[60] lg:hidden`}>
         {/* Backdrop */}
         <div 
           className="fixed inset-0 bg-black bg-opacity-50 transition-opacity"
@@ -181,9 +181,9 @@ const Header = () => {
         {/* Mobile menu panel */}
         <div className={`fixed top-0 right-0 h-full w-80 max-w-[85vw] bg-white shadow-xl transform transition-transform duration-300 ease-in-out ${
           mobileMenuOpen ? 'translate-x-0' : 'translate-x-full'
-        }`}>
+        }`} style={{ backgroundColor: '#ffffff', backdropFilter: 'none', WebkitBackdropFilter: 'none' }}>
           {/* Mobile menu header */}
-          <div className="flex items-center justify-between p-6 border-b border-gray-200">
+          <div className="flex items-center justify-between p-6 border-b border-gray-200 bg-white">
             <div className="text-xl font-bold">
               <span className="text-blue-500">Spencer</span>
               <span className="text-gray-700">Roofing</span>
@@ -198,7 +198,7 @@ const Header = () => {
           </div>
           
           {/* Mobile menu content */}
-          <div className="flex flex-col h-full overflow-y-auto pb-20">
+          <div className="flex flex-col h-full overflow-y-auto pb-20 bg-white">
             <nav className="flex-1 px-6 py-6 space-y-2">
               <Link href="/">
                 <div onClick={handleMobileNavClick} className={`mobile-nav-item ${isActive('/') ? 'text-blue-600 bg-blue-50' : 'text-gray-700'} hover:text-blue-600 hover:bg-blue-50 transition-all duration-200 py-4 px-4 rounded-lg font-medium cursor-pointer`}>
