@@ -26,15 +26,11 @@ const HeroSection = () => {
             specializing in storm damage repair and insurance claim assistance.
           </p>
           <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
-            <Link href="/contact">
-              <a className="bg-blue-500 hover:bg-blue-600 text-white text-center font-semibold py-3 px-8 rounded-md transition-colors cursor-pointer shadow-lg inline-block">
-                Get a Free Inspection
-              </a>
+            <Link href="/contact" className="bg-blue-500 hover:bg-blue-600 text-white text-center font-semibold py-3 px-8 rounded-md transition-colors cursor-pointer shadow-lg inline-block">
+              Get a Free Inspection
             </Link>
-            <Link href="/services/residential-roofing">
-              <a className="bg-white hover:bg-gray-100 text-blue-800 text-center font-semibold py-3 px-8 rounded-md transition-colors cursor-pointer shadow-lg inline-block">
-                Explore Services
-              </a>
+            <Link href="/services/residential-roofing" className="bg-white hover:bg-gray-100 text-blue-800 text-center font-semibold py-3 px-8 rounded-md transition-colors cursor-pointer shadow-lg inline-block">
+              Explore Services
             </Link>
           </div>
         </div>
