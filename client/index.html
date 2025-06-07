@@ -4,8 +4,10 @@
     <meta charset="UTF-8" />
     <meta
       name="viewport"
-      content="width=device-width, initial-scale=1.0, maximum-scale=1"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1, viewport-fit=cover"
     />
+    <meta name="format-detection" content="telephone=no">
+    <meta http-equiv="x-dns-prefetch-control" content="on">
     <title>
       Spencer Roofing Solutions | Your Trusted Roofing Project Manager for the
       Denver Metro Area
@@ -92,7 +94,12 @@
     />
 
     <!-- Performance: Preload LCP Image -->
-    <link rel="preload" as="image" href="https://images.unsplash.com/photo-1546156929-a4c0ac411f47?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" />
+    <link rel="preload" as="image" href="https://images.unsplash.com/photo-1546156929-a4c0ac411f47?ixlib=rb-4.0.3&ixid=M3wxMJA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" />
+    
+    <!-- Performance: Preload critical scripts -->
+    <link rel="modulepreload" href="/src/main.tsx" />
+    <link rel="modulepreload" href="/src/App.tsx" />
+    <link rel="preload" href="/src/index.css" as="style" />
 
     <!-- Performance: DNS Prefetch for external resources -->
     <link rel="dns-prefetch" href="//fonts.googleapis.com">
