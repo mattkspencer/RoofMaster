@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://roof-master-mattspen.replit.app/sitemap.xml
