@@ -162,10 +162,11 @@ const TestimonialsSection = () => {
         </div>
         
         <div className="text-center mt-8">
-          <Link href="/contact">
-            <a className="inline-block bg-primary hover:bg-primary-dark text-white font-semibold py-3 px-6 rounded-md transition-colors">
-              Get Your Free Consultation
-            </a>
+          <Link 
+            href="/contact"
+            className="inline-block bg-primary hover:bg-primary-dark text-white font-semibold py-3 px-6 rounded-md transition-colors"
+          >
+            Get Your Free Consultation
           </Link>
         </div>
       </div>

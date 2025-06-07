@@ -47,13 +47,12 @@ const AboutSection = () => {
               </div>
             </div>
             
-            <Link href="/contact">
-              <a 
-                className="inline-block bg-secondary hover:bg-secondary-dark text-white font-semibold py-3 px-6 rounded-md transition-colors"
-                onClick={handleContactClick}
-              >
-                Schedule a Consultation
-              </a>
+            <Link 
+              href="/contact"
+              className="inline-block bg-secondary hover:bg-secondary-dark text-white font-semibold py-3 px-6 rounded-md transition-colors"
+              onClick={handleContactClick}
+            >
+              Schedule a Consultation
             </Link>
           </div>
         </div>

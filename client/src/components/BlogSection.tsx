@@ -59,10 +59,8 @@ const BlogSection = () => {
                 <p className="text-sm text-gray-500 mb-2">{formatDate(post.date)}</p>
                 <h3 className="text-xl font-semibold mb-3">{post.title}</h3>
                 <p className="text-gray-600 mb-4">{truncateText(post.excerpt, 120)}</p>
-                <Link href={`/blog/${post.slug}`}>
-                  <a className="inline-flex items-center text-primary font-semibold hover:text-primary-dark">
-                    Read More <i className="fas fa-arrow-right ml-2"></i>
-                  </a>
+                <Link href={`/blog/${post.slug}`} className="inline-flex items-center text-primary font-semibold hover:text-primary-dark">
+                  Read More <i className="fas fa-arrow-right ml-2"></i>
                 </Link>
               </div>
             </div>
@@ -70,10 +68,11 @@ const BlogSection = () => {
         </div>
         
         <div className="text-center mt-10">
-          <Link href="/blog">
-            <a className="inline-block border-2 border-primary text-primary hover:bg-primary hover:text-white font-semibold py-3 px-6 rounded-md transition-colors">
-              View All Articles
-            </a>
+          <Link 
+            href="/blog"
+            className="inline-block border-2 border-primary text-primary hover:bg-primary hover:text-white font-semibold py-3 px-6 rounded-md transition-colors"
+          >
+            View All Articles
           </Link>
         </div>
       </div>

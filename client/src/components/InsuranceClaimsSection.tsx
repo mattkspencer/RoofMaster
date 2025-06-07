@@ -54,10 +54,11 @@ const InsuranceClaimsSection = () => {
               </div>
             </div>
             
-            <Link href="/contact">
-              <a className="inline-block bg-secondary hover:bg-secondary-dark text-white font-semibold py-3 px-6 rounded-md transition-colors">
-                Schedule a Free Inspection
-              </a>
+            <Link 
+              href="/contact"
+              className="inline-block bg-secondary hover:bg-secondary-dark text-white font-semibold py-3 px-6 rounded-md transition-colors"
+            >
+              Schedule a Free Inspection
             </Link>
           </div>
         </div>
