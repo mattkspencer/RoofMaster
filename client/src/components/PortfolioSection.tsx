@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { Link } from 'wouter';
 import { trackEvent } from '@/lib/analytics';
+import OptimizedImage from './OptimizedImage';
 
 interface PortfolioItem {
   image: string;
@@ -95,7 +96,7 @@ const PortfolioSection = () => {
               key={index}
               className="portfolio-item bg-neutral-light rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-all duration-300"
             >
-              <img 
+              <OptimizedImage 
                 src={item.image} 
                 alt={`${item.title} roofing project in ${item.location}`}
                 className="w-full h-60 object-cover"

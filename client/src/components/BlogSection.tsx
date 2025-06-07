@@ -1,5 +1,6 @@
 import { Link } from 'wouter';
 import { formatDate, truncateText } from '@/lib/utils';
+import OptimizedImage from './OptimizedImage';
 
 interface BlogPost {
   image: string;
@@ -54,7 +55,7 @@ const BlogSection = () => {
               key={index}
               className="bg-neutral-light rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-all duration-300"
             >
-              <img 
+              <OptimizedImage 
                 src={post.image} 
                 alt={`${post.title} - Spencer Roofing Solutions blog article`}
                 className="w-full h-48 object-cover"
