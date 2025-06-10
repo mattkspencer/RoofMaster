@@ -143,9 +143,12 @@ const Header = () => {
             id="mobile-menu-button" 
             className="text-neutral-dark"
             onClick={toggleMobileMenu}
-            aria-label="Toggle mobile menu"
+            aria-label={mobileMenuOpen ? "Close navigation menu" : "Open navigation menu"}
+            aria-expanded={mobileMenuOpen}
+            aria-controls="mobile-navigation"
+            type="button"
           >
-            <i className={`fas ${mobileMenuOpen ? 'fa-times' : 'fa-bars'} text-xl`}></i>
+            <i className={`fas ${mobileMenuOpen ? 'fa-times' : 'fa-bars'} text-xl`} aria-hidden="true"></i>
           </button>
         </div>
         
@@ -234,7 +237,7 @@ const Header = () => {
           
           {/* Mobile menu content */}
           <div className="flex flex-col h-full overflow-y-auto bg-white" style={{ height: 'calc(100vh - 80px)' }}>
-            <nav className="flex-1 px-6 py-6 space-y-3">
+            <nav id="mobile-navigation" className="flex-1 px-6 py-6 space-y-3" role="navigation" aria-label="Mobile navigation menu">
               <Link to="/" onClick={handleMobileNavClick} className={`mobile-nav-item ${isActive('/') ? 'text-blue-600 bg-blue-50' : 'text-gray-700'} hover:text-blue-600 hover:bg-blue-50 transition-all duration-200 py-4 px-4 rounded-lg font-medium cursor-pointer block`}>
                 <i className="fas fa-home w-5 mr-3"></i>
                 Home
@@ -252,34 +255,38 @@ const Header = () => {
                   className={`w-full flex items-center justify-between py-4 px-4 rounded-lg font-medium transition-all duration-200 ${
                     servicesDropdownOpen ? 'text-blue-600 bg-blue-50' : 'text-gray-700 hover:text-blue-600 hover:bg-blue-50'
                   }`}
+                  aria-expanded={servicesDropdownOpen}
+                  aria-controls="services-submenu"
+                  aria-label="Services menu"
+                  type="button"
                 >
                   <div className="flex items-center">
-                    <i className="fas fa-tools w-5 mr-3"></i>
+                    <i className="fas fa-tools w-5 mr-3" aria-hidden="true"></i>
                     Services
                   </div>
                   <i className={`fas fa-chevron-down transition-transform duration-200 ${
                     servicesDropdownOpen ? 'rotate-180' : ''
-                  }`}></i>
+                  }`} aria-hidden="true"></i>
                 </button>
                 
                 {/* Services submenu */}
-                <div className={`overflow-hidden transition-all duration-300 ease-in-out ${
+                <div id="services-submenu" className={`overflow-hidden transition-all duration-300 ease-in-out ${
                   servicesDropdownOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
-                }`}>
+                }`} role="menu" aria-hidden={!servicesDropdownOpen}>
                   <div className="ml-8 mt-2 space-y-1 border-l-2 border-blue-100 pl-4">
-                    <button onClick={navigateToResidential} className="mobile-nav-subitem py-3 px-3 rounded-md text-gray-600 hover:text-blue-600 hover:bg-blue-50 transition-all duration-200 font-medium cursor-pointer block w-full text-left">
+                    <button onClick={navigateToResidential} className="mobile-nav-subitem py-3 px-3 rounded-md text-gray-600 hover:text-blue-600 hover:bg-blue-50 transition-all duration-200 font-medium cursor-pointer block w-full text-left" role="menuitem" type="button">
                       Residential Roofing
                     </button>
-                    <button onClick={navigateToCommercial} className="mobile-nav-subitem py-3 px-3 rounded-md text-gray-600 hover:text-blue-600 hover:bg-blue-50 transition-all duration-200 font-medium cursor-pointer block w-full text-left">
+                    <button onClick={navigateToCommercial} className="mobile-nav-subitem py-3 px-3 rounded-md text-gray-600 hover:text-blue-600 hover:bg-blue-50 transition-all duration-200 font-medium cursor-pointer block w-full text-left" role="menuitem" type="button">
                       Commercial Roofing
                     </button>
-                    <button onClick={navigateToRoofRepair} className="mobile-nav-subitem py-3 px-3 rounded-md text-gray-600 hover:text-blue-600 hover:bg-blue-50 transition-all duration-200 font-medium cursor-pointer block w-full text-left">
+                    <button onClick={navigateToRoofRepair} className="mobile-nav-subitem py-3 px-3 rounded-md text-gray-600 hover:text-blue-600 hover:bg-blue-50 transition-all duration-200 font-medium cursor-pointer block w-full text-left" role="menuitem" type="button">
                       Roof Repairs
                     </button>
-                    <button onClick={navigateToInsurance} className="mobile-nav-subitem py-3 px-3 rounded-md text-gray-600 hover:text-blue-600 hover:bg-blue-50 transition-all duration-200 font-medium cursor-pointer block w-full text-left">
+                    <button onClick={navigateToInsurance} className="mobile-nav-subitem py-3 px-3 rounded-md text-gray-600 hover:text-blue-600 hover:bg-blue-50 transition-all duration-200 font-medium cursor-pointer block w-full text-left" role="menuitem" type="button">
                       Insurance Claims
                     </button>
-                    <button onClick={navigateToGutters} className="mobile-nav-subitem py-3 px-3 rounded-md text-gray-600 hover:text-blue-600 hover:bg-blue-50 transition-all duration-200 font-medium cursor-pointer block w-full text-left">
+                    <button onClick={navigateToGutters} className="mobile-nav-subitem py-3 px-3 rounded-md text-gray-600 hover:text-blue-600 hover:bg-blue-50 transition-all duration-200 font-medium cursor-pointer block w-full text-left" role="menuitem" type="button">
                       Gutter Services
                     </button>
                   </div>

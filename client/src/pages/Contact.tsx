@@ -109,7 +109,7 @@ const Contact = () => {
             </p>
             <div className="flex flex-col md:flex-row justify-center items-center gap-6 mt-8">
               <div className="flex items-center">
-                <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mr-4">
+                <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mr-4" aria-hidden="true">
                   <i className="fas fa-phone text-primary"></i>
                 </div>
                 <div>
@@ -117,6 +117,7 @@ const Contact = () => {
                   <a 
                     href="tel:720-360-8546" 
                     className="text-lg hover:text-primary hover:underline transition-colors cursor-pointer"
+                    aria-label="Call Spencer Roofing at 720-360-8546"
                   >
                     720-360-8546 cell
                   </a>
