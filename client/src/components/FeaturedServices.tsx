@@ -54,16 +54,16 @@ const FeaturedServices = () => {
   ];
 
   return (
-    <section className="py-16 bg-white">
+    <section className="py-16 bg-white" aria-labelledby="services-heading" role="region">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold font-sans mb-4">Expert Roofing Services</h2>
+          <h2 id="services-heading" className="text-3xl font-bold font-sans mb-4">Expert Roofing Services</h2>
           <p className="text-lg max-w-2xl mx-auto text-gray-600">
             From new installations to repairs and insurance claims, we provide comprehensive roofing solutions for the Denver metro area.
           </p>
         </div>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6" role="list" aria-label="Our roofing services">
           {services.map((service, index) => (
             <ServiceCard
               key={index}
