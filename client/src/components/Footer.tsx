@@ -46,8 +46,8 @@ const Footer = () => {
             </div>
           </div>
           
-          <nav aria-labelledby="services-heading">
-            <h3 id="services-heading" className="text-xl font-semibold mb-6 text-white">Services</h3>
+          <nav aria-labelledby="footer-services-heading">
+            <h3 id="footer-services-heading" className="text-xl font-semibold mb-6 text-white">Services</h3>
             <ul className="space-y-3 text-gray-300" role="list">
               <li>
                 <Link href="/services/residential-roofing" className="hover:text-blue-400 transition-colors">

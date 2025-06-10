@@ -1,0 +1,101 @@
+83
+Accessibility
+These checks highlight opportunities to improve the accessibility of your web app. Automatic detection can only detect a subset of issues and does not guarantee the accessibility of your web app, so manual testing is also encouraged.
+ARIA
+Elements with an ARIA [role] that require children to contain a specific [role] are missing some or all of those required children.
+Some ARIA parent roles must contain specific child roles to perform their intended accessibility functions. Learn more about roles and required children elements.
+Failing Elements
+Residential Roofing Expert installation, repair and maintenance for all types …
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6" role="list" aria-label="Our roofing services">
+Residential Roofing Expert installation, repair and maintenance for all types …
+<article class="service-card bg-gray-50 rounded-lg shadow-md p-6 hover:shadow-lg transitio…" role="article">
+Commercial Roofing Durable, high-performance roofing solutions for commercial …
+<article class="service-card bg-gray-50 rounded-lg shadow-md p-6 hover:shadow-lg transitio…" role="article">
+Roof Repairs Fast, reliable repairs for leaks, storm damage, and other roofing…
+<article class="service-card bg-gray-50 rounded-lg shadow-md p-6 hover:shadow-lg transitio…" role="article">
+ARIA IDs are unique
+The value of an ARIA ID must be unique to prevent other instances from being overlooked by assistive technologies. Learn how to fix duplicate ARIA IDs.
+Failing Elements
+Expert Roofing Services
+<h2 id="services-heading" class="text-3xl font-bold font-sans mb-4">
+Services
+<h3 id="services-heading" class="text-xl font-semibold mb-6 text-white">
+These are opportunities to improve the usage of ARIA in your application which may enhance the experience for users of assistive technology, like a screen reader.
+Best practices
+[user-scalable="no"] is used in the <meta name="viewport"> element or the [maximum-scale] attribute is less than 5.
+Disabling zooming is problematic for users with low vision who rely on screen magnification to properly see the contents of a web page. Learn more about the viewport meta tag.
+Failing Elements
+head > meta
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, viewport-fit=cover">
+These items highlight common accessibility best practices.
+Contrast
+Background and foreground colors do not have a sufficient contrast ratio.
+Low-contrast text is difficult or impossible for many users to read. Learn how to provide sufficient color contrast.
+Failing Elements
+Get a Free Inspection
+<a aria-describedby="free-inspection-desc" href="/contact" class="bg-blue-500 hover:bg-blue-600 text-white text-center font-semibold py-3 px…">
+720-360-8546
+<a href="tel:720-360-8546" class="text-2xl font-bold text-secondary hover:text-secondary-dark transition-col…">
+Emergency Roof Repairs? Call us now: 720-360-8546
+<div class="bg-white shadow-md p-4 flex justify-between items-center md:hidden">
+Schedule a Consultation
+<a href="/contact" class="inline-block bg-secondary hover:bg-secondary-dark text-white font-semibold…">
+Get Your Free Consultation
+<a href="/contact" class="inline-block bg-primary hover:bg-primary-dark text-white font-semibold py-…">
+All Projects
+<button class="filter-btn px-4 py-2 rounded-md transition-colors bg-primary text-white">
+View Project Details
+<a href="/portfolio/0" class="text-primary hover:text-primary-dark font-semibold">
+Our Recent Projects Browse through our portfolio of completed roofing projects…
+<section id="portfolio" class="py-16 bg-white">
+View Project Details
+<a href="/portfolio/1" class="text-primary hover:text-primary-dark font-semibold">
+Our Recent Projects Browse through our portfolio of completed roofing projects…
+<section id="portfolio" class="py-16 bg-white">
+View Project Details
+<a href="/portfolio/2" class="text-primary hover:text-primary-dark font-semibold">
+Our Recent Projects Browse through our portfolio of completed roofing projects…
+<section id="portfolio" class="py-16 bg-white">
+Discuss Your Project
+<a href="/contact" class="inline-block bg-primary hover:bg-primary-dark text-white font-semibold py-…">
+Schedule a Free Inspection
+<a href="/contact" class="inline-block bg-secondary hover:bg-secondary-dark text-white font-semibold…">
+Read About Identifying Hail Damage
+<a href="/blog/how-to-identify-hail-damage" class="inline-flex items-center text-primary font-semibold hover:text-primary-dark">
+Roofing Tips & Insights Helpful articles and resources to help you make inform…
+<section id="blog" class="py-16 bg-white">
+Discover Best Roofing Materials for Colorado
+<a href="/blog/best-roofing-materials-colorado" class="inline-flex items-center text-primary font-semibold hover:text-primary-dark">
+Roofing Tips & Insights Helpful articles and resources to help you make inform…
+<section id="blog" class="py-16 bg-white">
+Learn When to Repair vs Replace Your Roof
+<a href="/blog/repair-vs-replace-roof" class="inline-flex items-center text-primary font-semibold hover:text-primary-dark">
+Roofing Tips & Insights Helpful articles and resources to help you make inform…
+<section id="blog" class="py-16 bg-white">
+View All Articles
+<a href="/blog" class="inline-block border-2 border-primary text-primary hover:bg-primary hover:t…">
+Roofing Tips & Insights Helpful articles and resources to help you make inform…
+<section id="blog" class="py-16 bg-white">
+Assistant
+<span class="text-xs md:text-sm lg:text-base font-medium">
+Assistant 💬
+<div id="chat-widget" class="chat-widget fixed bottom-4 left-4 z-40 transition-all w-[100px] md:w-[140p…">
+Links rely on color to be distinguishable.
+Low-contrast text is difficult or impossible for many users to read. Link text that is discernible improves the experience for users with low vision. Learn how to make links distinguishable.
+Failing Elements
+Terms of Service
+<a href="/terms-of-service" class="text-blue-600 hover:underline">
+By submitting this form, you agree to our Terms of Service and Privacy Policy. …
+<div class="text-xs text-gray-500 mt-4 leading-relaxed">
+Privacy Policy
+<a href="/privacy-policy" class="text-blue-600 hover:underline">
+By submitting this form, you agree to our Terms of Service and Privacy Policy. …
+<div class="text-xs text-gray-500 mt-4 leading-relaxed">
+These are opportunities to improve the legibility of your content.
+Navigation
+Heading elements are not in a sequentially-descending order
+Properly ordered headings that do not skip levels convey the semantic structure of the page, making it easier to navigate and understand when using assistive technologies. Learn more about heading order.
+Failing Elements
+Marketing Preferences (Optional)
+<h4 class="text-lg font-semibold text-gray-800 mb-3">
+These are opportunities to improve keyboard navigation in your application.

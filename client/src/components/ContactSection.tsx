@@ -229,7 +229,7 @@ const ContactSection = () => {
                 
                 {/* Marketing Consent Checkboxes */}
                 <div className="border-t pt-6 space-y-4">
-                  <h4 className="text-lg font-semibold text-gray-800 mb-3">Marketing Preferences (Optional)</h4>
+                  <h3 className="text-lg font-semibold text-gray-800 mb-3">Marketing Preferences (Optional)</h3>
                   
                   {/* Email Marketing Consent */}
                   <div className="flex items-start space-x-3">
@@ -262,11 +262,11 @@ const ContactSection = () => {
                   </div>
                   
                   {/* Legal Disclaimer */}
-                  <div className="text-xs text-gray-500 mt-4 leading-relaxed">
+                  <div className="text-xs text-gray-700 mt-4 leading-relaxed">
                     By submitting this form, you agree to our{' '}
-                    <a href="/terms-of-service" className="text-blue-600 hover:underline">Terms of Service</a>{' '}
+                    <a href="/terms-of-service" className="text-blue-700 underline hover:text-blue-900 font-medium">Terms of Service</a>{' '}
                     and{' '}
-                    <a href="/privacy-policy" className="text-blue-600 hover:underline">Privacy Policy</a>.
+                    <a href="/privacy-policy" className="text-blue-700 underline hover:text-blue-900 font-medium">Privacy Policy</a>.
                     Your information will only be used to contact you about your roofing project and, if you opt-in above, to send marketing communications.
                   </div>
                 </div>
