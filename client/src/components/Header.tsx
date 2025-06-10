@@ -42,6 +42,21 @@ const Header = () => {
     setServicesDropdownOpen(false);
   };
 
+  // Handle keyboard navigation for mobile menu and dropdowns
+  const handleKeyDown = (event: React.KeyboardEvent, action: () => void) => {
+    if (event.key === 'Enter' || event.key === ' ') {
+      event.preventDefault();
+      action();
+    }
+  };
+
+  const handleEscapeKey = (event: React.KeyboardEvent) => {
+    if (event.key === 'Escape') {
+      setMobileMenuOpen(false);
+      setServicesDropdownOpen(false);
+    }
+  };
+
   // Mobile navigation handlers for each service page
   const navigateToResidential = () => {
     setMobileMenuOpen(false);

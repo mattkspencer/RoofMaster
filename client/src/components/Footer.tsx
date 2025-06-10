@@ -91,8 +91,8 @@ const Footer = () => {
                 </Link>
               </li>
               <li>
-                <Link href="/blog/roofing-materials" className="hover:text-blue-400 transition-colors">
-                  Roofing Materials
+                <Link href="/portfolio" className="hover:text-blue-400 transition-colors">
+                  Portfolio
                 </Link>
               </li>
               <li>
@@ -108,35 +108,35 @@ const Footer = () => {
             </ul>
           </nav>
           
-          <div>
-            <h3 className="text-xl font-semibold mb-6 text-white">Contact</h3>
-            <ul className="space-y-3 text-gray-300">
+          <section aria-labelledby="contact-heading">
+            <h3 id="contact-heading" className="text-xl font-semibold mb-6 text-white">Contact</h3>
+            <ul className="space-y-3 text-gray-300" role="list">
               <li className="flex items-center">
-                <i className="fas fa-phone mr-3 text-blue-400"></i>
-                <a href="tel:720-360-8546" className="hover:text-blue-400 transition-colors">720-360-8546</a>
+                <i className="fas fa-phone mr-3 text-blue-400" aria-hidden="true"></i>
+                <a href="tel:720-360-8546" className="hover:text-blue-400 transition-colors" aria-label="Call Spencer Roofing at 720-360-8546">720-360-8546</a>
               </li>
               <li className="flex items-center">
-                <i className="fas fa-envelope mr-3 text-blue-400"></i>
-                <a href="mailto:mattkspencer@gmail.com" className="hover:text-blue-400 transition-colors">mattkspencer@gmail.com</a>
+                <i className="fas fa-envelope mr-3 text-blue-400" aria-hidden="true"></i>
+                <a href="mailto:mattkspencer@gmail.com" className="hover:text-blue-400 transition-colors" aria-label="Email Spencer Roofing at mattkspencer@gmail.com">mattkspencer@gmail.com</a>
               </li>
               <li className="flex items-center">
-                <i className="fas fa-map-marker-alt mr-3 text-blue-400"></i>
+                <i className="fas fa-map-marker-alt mr-3 text-blue-400" aria-hidden="true"></i>
                 <span>Englewood, Colorado</span>
               </li>
               <li className="flex items-center">
-                <i className="fas fa-clock mr-3 text-blue-400"></i>
+                <i className="fas fa-clock mr-3 text-blue-400" aria-hidden="true"></i>
                 <span>Mon-Fri: 8am-6pm</span>
               </li>
             </ul>
-          </div>
+          </section>
         </div>
         
         <hr className="border-gray-700 mb-6" />
         
-        <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
-          <p className="text-sm text-gray-400">
-            &copy; {new Date().getFullYear()} Spencer Roofing Solutions. All rights reserved.
-          </p>
+        <div className="flex flex-col md:flex-row justify-between items-center text-gray-400">
+          <div className="mb-4 md:mb-0">
+            <p>&copy; {new Date().getFullYear()} Spencer Roofing Solutions. All rights reserved.</p>
+          </div>
           <div className="flex space-x-6 text-sm text-gray-400">
             <Link href="/privacy-policy" className="hover:text-blue-400 transition-colors">
               Privacy Policy
