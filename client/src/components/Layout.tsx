@@ -1,9 +1,11 @@
-import { ReactNode } from 'react';
+import { ReactNode, lazy, Suspense } from 'react';
 import Header from './Header';
 import Footer from './Footer';
-import ChatWidget from './ChatWidget';
 import StickyCallButton from './StickyCallButton';
 import { useAnalytics } from '@/hooks/use-analytics';
+
+// Lazy load chat widget to reduce main bundle size
+const ChatWidget = lazy(() => import('./ChatWidget'));
 
 interface LayoutProps {
   children: ReactNode;
@@ -18,7 +20,9 @@ const Layout = ({ children }: LayoutProps) => {
       <Header />
       <main className="flex-grow">{children}</main>
       <Footer />
-      <ChatWidget />
+      <Suspense fallback={null}>
+        <ChatWidget />
+      </Suspense>
       <StickyCallButton />
     </div>
   );

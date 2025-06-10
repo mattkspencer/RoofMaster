@@ -13,27 +13,27 @@ import EmergencyBanner from "./components/EmergencyBanner";
 // Critical page loaded immediately
 import Home from "./pages/Home";
 
-// Lazy load non-critical pages for better performance
-const About = lazy(() => import("./pages/About"));
-const ResidentialRoofing = lazy(() => import("./pages/ResidentialRoofing"));
-const CommercialRoofing = lazy(() => import("./pages/CommercialRoofing"));
-const RoofRepair = lazy(() => import("./pages/RoofRepair"));
-const InsuranceClaims = lazy(() => import("./pages/InsuranceClaims"));
-const GutterServices = lazy(() => import("./pages/GutterServices"));
-const Portfolio = lazy(() => import("./pages/Portfolio"));
-const Blog = lazy(() => import("./pages/Blog"));
-const BlogPost = lazy(() => import("./pages/BlogPost"));
-const Contact = lazy(() => import("./pages/Contact"));
-const FAQ = lazy(() => import("./pages/FAQ"));
-const PrivacyPolicy = lazy(() => import("./pages/PrivacyPolicy"));
-const TermsOfService = lazy(() => import("./pages/TermsOfService"));
-const NotFound = lazy(() => import("@/pages/not-found"));
-const EnglewoodRoofing = lazy(() => import("./pages/EnglewoodRoofing"));
-const DenverRoofing = lazy(() => import("./pages/DenverRoofing"));
-const AuroraRoofing = lazy(() => import("./pages/AuroraRoofing"));
-const LittletonRoofing = lazy(() => import("./pages/LittletonRoofing"));
-const ArvadaRoofing = lazy(() => import("./pages/ArvadaRoofing"));
-const CastleRockRoofing = lazy(() => import("./pages/CastleRockRoofing"));
+// Lazy load non-critical pages for better performance with chunk names
+const About = lazy(() => import(/* webpackChunkName: "about" */ "./pages/About"));
+const ResidentialRoofing = lazy(() => import(/* webpackChunkName: "services" */ "./pages/ResidentialRoofing"));
+const CommercialRoofing = lazy(() => import(/* webpackChunkName: "services" */ "./pages/CommercialRoofing"));
+const RoofRepair = lazy(() => import(/* webpackChunkName: "services" */ "./pages/RoofRepair"));
+const InsuranceClaims = lazy(() => import(/* webpackChunkName: "services" */ "./pages/InsuranceClaims"));
+const GutterServices = lazy(() => import(/* webpackChunkName: "services" */ "./pages/GutterServices"));
+const Portfolio = lazy(() => import(/* webpackChunkName: "portfolio" */ "./pages/Portfolio"));
+const Blog = lazy(() => import(/* webpackChunkName: "blog" */ "./pages/Blog"));
+const BlogPost = lazy(() => import(/* webpackChunkName: "blog" */ "./pages/BlogPost"));
+const Contact = lazy(() => import(/* webpackChunkName: "contact" */ "./pages/Contact"));
+const FAQ = lazy(() => import(/* webpackChunkName: "faq" */ "./pages/FAQ"));
+const PrivacyPolicy = lazy(() => import(/* webpackChunkName: "legal" */ "./pages/PrivacyPolicy"));
+const TermsOfService = lazy(() => import(/* webpackChunkName: "legal" */ "./pages/TermsOfService"));
+const NotFound = lazy(() => import(/* webpackChunkName: "misc" */ "@/pages/not-found"));
+const EnglewoodRoofing = lazy(() => import(/* webpackChunkName: "locations" */ "./pages/EnglewoodRoofing"));
+const DenverRoofing = lazy(() => import(/* webpackChunkName: "locations" */ "./pages/DenverRoofing"));
+const AuroraRoofing = lazy(() => import(/* webpackChunkName: "locations" */ "./pages/AuroraRoofing"));
+const LittletonRoofing = lazy(() => import(/* webpackChunkName: "locations" */ "./pages/LittletonRoofing"));
+const ArvadaRoofing = lazy(() => import(/* webpackChunkName: "locations" */ "./pages/ArvadaRoofing"));
+const CastleRockRoofing = lazy(() => import(/* webpackChunkName: "locations" */ "./pages/CastleRockRoofing"));
 
 function App() {
   // Initialize Google Analytics when app loads
