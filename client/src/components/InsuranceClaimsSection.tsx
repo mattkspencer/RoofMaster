@@ -9,13 +9,10 @@ const InsuranceClaimsSection = () => {
             {/* An image showing insurance claim documentation */}
             <img 
               src="/images/insuranceclaimphotowebsite.webp" 
-              srcSet="/images/insuranceclaimphotowebsite.webp 600w"
-              sizes="(max-width: 768px) 100vw, 600px"
               alt="Homeowners insurance claim form and documentation for roof damage assessment" 
               width="600"
               height="400"
               loading="lazy"
-              decoding="async"
               className="rounded-lg shadow-lg w-full h-auto"
               style={{ width: '100%', height: 'auto' }}
             />

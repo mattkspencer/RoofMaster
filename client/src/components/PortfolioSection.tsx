@@ -96,17 +96,16 @@ const PortfolioSection = () => {
               key={index}
               className="portfolio-item bg-neutral-light rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-all duration-300"
             >
-              <img 
+              <OptimizedImage 
                 src={item.image} 
-                srcSet={`${item.image} 600w`}
-                sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
                 alt={`${item.title} roofing project in ${item.location}`}
                 className="w-full h-60 object-cover"
                 loading="lazy"
                 decoding="async"
-                width="600"
-                height="400"
-                style={{ width: '100%', height: '240px', objectFit: 'cover' }}
+                width={600}
+                height={400}
+                mobileWidth={350}
+                mobileHeight={250}
               />
               <div className="p-4">
                 <h3 className="text-xl font-semibold mb-2">{item.title}</h3>

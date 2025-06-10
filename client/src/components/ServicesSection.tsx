@@ -20,17 +20,13 @@ const ServicesSection = () => {
         {/* Residential Roofing */}
         <div className="mb-16 grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
           <div className="order-2 md:order-1">
-            <img 
+            <OptimizedImage 
               src="/images/colburnbuild.jpg" 
-              srcSet="/images/colburnbuild.jpg 600w"
-              sizes="(max-width: 768px) 100vw, 600px"
               alt="Residential roofing installation" 
               className="rounded-lg shadow-lg w-full h-auto object-cover max-w-full"
-              loading="lazy"
-              decoding="async"
-              width="600"
-              height="400"
-              style={{ width: '100%', height: 'auto' }}
+              loading="eager"
+              width={600}
+              height={400}
             />
           </div>
           <div className="order-1 md:order-2">
@@ -64,13 +60,10 @@ const ServicesSection = () => {
           <div className="md:order-2">
             <img 
               src="/images/commercialphotoroofwebsite.webp" 
-              srcSet="/images/commercialphotoroofwebsite.webp 600w"
-              sizes="(max-width: 768px) 100vw, 600px"
               alt="Commercial roofing project showing flat roof installation with HVAC units on multi-story building in Denver" 
               width="600"
               height="400"
               loading="lazy"
-              decoding="async"
               className="rounded-lg shadow-lg w-full h-auto object-cover"
               style={{ width: '100%', height: 'auto' }}
             />
@@ -106,13 +99,10 @@ const ServicesSection = () => {
           <div className="order-2 md:order-1">
             <img 
               src="/images/roofrepairswebsitepic.webp" 
-              srcSet="/images/roofrepairswebsitepic.webp 600w"
-              sizes="(max-width: 768px) 100vw, 600px"
               alt="Professional roof repair work showing damaged shingles being replaced by Spencer Roofing Solutions team" 
               width="600"
               height="400"
               loading="lazy"
-              decoding="async"
               className="rounded-lg shadow-lg w-full h-auto object-cover"
               style={{ width: '100%', height: 'auto' }}
             />

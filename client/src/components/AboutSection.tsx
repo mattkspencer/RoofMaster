@@ -14,13 +14,10 @@ const AboutSection = () => {
             {/* Spencer from Spencer Roofing Solutions */}
             <img 
               src="/images/aboutspencerroofingsolutionswebsitephoto.webp" 
-              srcSet="/images/aboutspencerroofingsolutionswebsitephoto.webp 600w"
-              sizes="(max-width: 768px) 100vw, 600px"
               alt="Spencer from Spencer Roofing Solutions giving thumbs up in front of residential home" 
               width="600"
               height="400"
               loading="lazy"
-              decoding="async"
               className="rounded-lg shadow-lg w-full h-auto"
               style={{ width: '100%', height: 'auto' }}
             />
