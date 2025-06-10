@@ -211,7 +211,58 @@
         margin: 0 auto;
         padding: 0 1rem;
       }
+      
+      /* Additional critical Tailwind utilities for above-the-fold */
+      .relative { position: relative; }
+      .absolute { position: absolute; }
+      .inset-0 { inset: 0; }
+      .z-0 { z-index: 0; }
+      .z-20 { z-index: 20; }
+      .flex { display: flex; }
+      .flex-col { flex-direction: column; }
+      .items-center { align-items: center; }
+      .justify-center { justify-content: center; }
+      .w-full { width: 100%; }
+      .h-full { height: 100%; }
+      .max-w-2xl { max-width: 42rem; }
+      .object-cover { object-fit: cover; }
+      .text-white { color: white; }
+      .font-bold { font-weight: 700; }
+      .font-sans { font-family: Inter, system-ui, sans-serif; }
+      .leading-tight { line-height: 1.25; }
+      .mb-6 { margin-bottom: 1.5rem; }
+      .mb-8 { margin-bottom: 2rem; }
+      .py-20 { padding-top: 5rem; padding-bottom: 5rem; }
+      .px-4 { padding-left: 1rem; padding-right: 1rem; }
+      .mx-auto { margin-left: auto; margin-right: auto; }
+      .min-h-550 { min-height: 550px; }
+      .bg-black\/30 { background-color: rgb(0 0 0 / 0.3); }
+      .text-4xl { font-size: 2.25rem; }
+      .text-lg { font-size: 1.125rem; }
+      .space-y-4 > * + * { margin-top: 1rem; }
+      .space-x-4 > * + * { margin-left: 1rem; }
+      .hidden { display: none; }
+      
+      @media (min-width: 640px) {
+        .sm\\:flex-row { flex-direction: row; }
+        .sm\\:space-y-0 > * + * { margin-top: 0; }
+        .sm\\:space-x-4 > * + * { margin-left: 1rem; }
+      }
+      
+      @media (min-width: 768px) {
+        .md\\:text-5xl { font-size: 3rem; }
+        .md\\:text-xl { font-size: 1.25rem; }
+        .md\\:block { display: block; }
+      }
+      
+      @media (min-width: 1024px) {
+        .lg\\:text-6xl { font-size: 3.75rem; }
+      }
     </style>
+
+    <!-- Load main CSS asynchronously to eliminate render-blocking -->
+    <link rel="preload" href="/src/index.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="/src/index.css"></noscript>
 
     <!-- Fonts with optimized loading - defer for better FCP -->
     <link
