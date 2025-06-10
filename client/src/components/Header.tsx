@@ -42,14 +42,55 @@ const Header = () => {
     setServicesDropdownOpen(false);
   };
 
-  const navigateToPage = (path: string) => {
+  // Mobile navigation handlers for each service page
+  const navigateToResidential = () => {
     setMobileMenuOpen(false);
     setServicesDropdownOpen(false);
-    
-    // Force navigation for mobile devices with proper timing
-    setTimeout(() => {
-      window.location.href = path;
-    }, 100);
+    setTimeout(() => window.location.href = '/services/residential-roofing', 100);
+  };
+
+  const navigateToCommercial = () => {
+    setMobileMenuOpen(false);
+    setServicesDropdownOpen(false);
+    setTimeout(() => window.location.href = '/services/commercial-roofing', 100);
+  };
+
+  const navigateToRoofRepair = () => {
+    setMobileMenuOpen(false);
+    setServicesDropdownOpen(false);
+    setTimeout(() => window.location.href = '/services/roof-repair', 100);
+  };
+
+  const navigateToInsurance = () => {
+    setMobileMenuOpen(false);
+    setServicesDropdownOpen(false);
+    setTimeout(() => window.location.href = '/services/insurance-claims', 100);
+  };
+
+  const navigateToGutters = () => {
+    setMobileMenuOpen(false);
+    setServicesDropdownOpen(false);
+    setTimeout(() => window.location.href = '/services/gutter-services', 100);
+  };
+
+  const navigateToPortfolio = () => {
+    setMobileMenuOpen(false);
+    setTimeout(() => window.location.href = '/portfolio', 100);
+  };
+
+  const navigateToBlog = () => {
+    setMobileMenuOpen(false);
+    setTimeout(() => window.location.href = '/blog', 100);
+  };
+
+  const navigateToFAQ = () => {
+    setMobileMenuOpen(false);
+    setTimeout(() => window.location.href = '/faq', 100);
+  };
+
+  const navigateToContact = () => {
+    setMobileMenuOpen(false);
+    setTimeout(() => window.location.href = '/contact', 100);
   };
 
   // Close mobile menu when route changes
@@ -226,39 +267,39 @@ const Header = () => {
                   servicesDropdownOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
                 }`}>
                   <div className="ml-8 mt-2 space-y-1 border-l-2 border-blue-100 pl-4">
-                    <button onClick={() => navigateToPage('/services/residential-roofing')} className="mobile-nav-subitem py-3 px-3 rounded-md text-gray-600 hover:text-blue-600 hover:bg-blue-50 transition-all duration-200 font-medium cursor-pointer block w-full text-left">
+                    <button onClick={navigateToResidential} className="mobile-nav-subitem py-3 px-3 rounded-md text-gray-600 hover:text-blue-600 hover:bg-blue-50 transition-all duration-200 font-medium cursor-pointer block w-full text-left">
                       Residential Roofing
                     </button>
-                    <button onClick={() => navigateToPage('/services/commercial-roofing')} className="mobile-nav-subitem py-3 px-3 rounded-md text-gray-600 hover:text-blue-600 hover:bg-blue-50 transition-all duration-200 font-medium cursor-pointer block w-full text-left">
+                    <button onClick={navigateToCommercial} className="mobile-nav-subitem py-3 px-3 rounded-md text-gray-600 hover:text-blue-600 hover:bg-blue-50 transition-all duration-200 font-medium cursor-pointer block w-full text-left">
                       Commercial Roofing
                     </button>
-                    <button onClick={() => navigateToPage('/services/roof-repair')} className="mobile-nav-subitem py-3 px-3 rounded-md text-gray-600 hover:text-blue-600 hover:bg-blue-50 transition-all duration-200 font-medium cursor-pointer block w-full text-left">
+                    <button onClick={navigateToRoofRepair} className="mobile-nav-subitem py-3 px-3 rounded-md text-gray-600 hover:text-blue-600 hover:bg-blue-50 transition-all duration-200 font-medium cursor-pointer block w-full text-left">
                       Roof Repairs
                     </button>
-                    <button onClick={() => navigateToPage('/services/insurance-claims')} className="mobile-nav-subitem py-3 px-3 rounded-md text-gray-600 hover:text-blue-600 hover:bg-blue-50 transition-all duration-200 font-medium cursor-pointer block w-full text-left">
+                    <button onClick={navigateToInsurance} className="mobile-nav-subitem py-3 px-3 rounded-md text-gray-600 hover:text-blue-600 hover:bg-blue-50 transition-all duration-200 font-medium cursor-pointer block w-full text-left">
                       Insurance Claims
                     </button>
-                    <button onClick={() => navigateToPage('/services/gutter-services')} className="mobile-nav-subitem py-3 px-3 rounded-md text-gray-600 hover:text-blue-600 hover:bg-blue-50 transition-all duration-200 font-medium cursor-pointer block w-full text-left">
+                    <button onClick={navigateToGutters} className="mobile-nav-subitem py-3 px-3 rounded-md text-gray-600 hover:text-blue-600 hover:bg-blue-50 transition-all duration-200 font-medium cursor-pointer block w-full text-left">
                       Gutter Services
                     </button>
                   </div>
                 </div>
               </div>
               
-              <Link to="/portfolio" onClick={handleMobileNavClick} className={`mobile-nav-item ${isActive('/portfolio') ? 'text-blue-600 bg-blue-50' : 'text-gray-700'} hover:text-blue-600 hover:bg-blue-50 transition-all duration-200 py-4 px-4 rounded-lg font-medium cursor-pointer block`}>
+              <button onClick={navigateToPortfolio} className={`mobile-nav-item ${isActive('/portfolio') ? 'text-blue-600 bg-blue-50' : 'text-gray-700'} hover:text-blue-600 hover:bg-blue-50 transition-all duration-200 py-4 px-4 rounded-lg font-medium cursor-pointer block w-full text-left`}>
                 <i className="fas fa-images w-5 mr-3"></i>
                 Portfolio
-              </Link>
+              </button>
               
-              <Link to="/blog" onClick={handleMobileNavClick} className={`mobile-nav-item ${isActive('/blog') ? 'text-blue-600 bg-blue-50' : 'text-gray-700'} hover:text-blue-600 hover:bg-blue-50 transition-all duration-200 py-4 px-4 rounded-lg font-medium cursor-pointer block`}>
+              <button onClick={navigateToBlog} className={`mobile-nav-item ${isActive('/blog') ? 'text-blue-600 bg-blue-50' : 'text-gray-700'} hover:text-blue-600 hover:bg-blue-50 transition-all duration-200 py-4 px-4 rounded-lg font-medium cursor-pointer block w-full text-left`}>
                 <i className="fas fa-blog w-5 mr-3"></i>
                 Blog
-              </Link>
+              </button>
               
-              <Link to="/faq" onClick={handleMobileNavClick} className={`mobile-nav-item ${isActive('/faq') ? 'text-blue-600 bg-blue-50' : 'text-gray-700'} hover:text-blue-600 hover:bg-blue-50 transition-all duration-200 py-4 px-4 rounded-lg font-medium cursor-pointer block`}>
+              <button onClick={navigateToFAQ} className={`mobile-nav-item ${isActive('/faq') ? 'text-blue-600 bg-blue-50' : 'text-gray-700'} hover:text-blue-600 hover:bg-blue-50 transition-all duration-200 py-4 px-4 rounded-lg font-medium cursor-pointer block w-full text-left`}>
                 <i className="fas fa-question-circle w-5 mr-3"></i>
                 FAQ
-              </Link>
+              </button>
             </nav>
             
             {/* Mobile contact section */}
@@ -272,10 +313,10 @@ const Header = () => {
                 Call Now: 720-360-8546
               </a>
               
-              <Link to="/contact" onClick={handleMobileNavClick} className="flex items-center justify-center py-4 px-4 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-lg transition-all duration-200 shadow-md cursor-pointer">
+              <button onClick={navigateToContact} className="flex items-center justify-center py-4 px-4 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-lg transition-all duration-200 shadow-md cursor-pointer w-full">
                 <i className="fas fa-quote-left mr-3"></i>
                 Get a Free Quote
-              </Link>
+              </button>
             </div>
           </div>
         </div>
