@@ -35,9 +35,12 @@ const About = () => {
             <div className="md:w-1/2">
               <img 
                 src="/images/aboutspencerroofingsolutionswebsitephoto.webp" 
+                srcSet="/images/aboutspencerroofingsolutionswebsitephoto.webp 600w"
+                sizes="(max-width: 768px) 100vw, 600px"
                 alt="Spencer from Spencer Roofing Solutions giving thumbs up in front of residential home" 
                 className="rounded-lg shadow-lg w-full h-auto"
-                loading="eager"
+                loading="lazy"
+                decoding="async"
                 width="600"
                 height="400"
                 style={{ width: '100%', height: 'auto' }}
