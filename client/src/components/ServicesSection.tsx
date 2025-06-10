@@ -59,8 +59,10 @@ const ServicesSection = () => {
         <div className="mb-16 grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
           <div className="md:order-2">
             <img 
-              src="/images/commercial-roofing.jpg" 
+              src="/images/commercialphotoroofwebsite.jpg" 
               alt="Commercial roofing project showing flat roof installation with HVAC units on multi-story building in Denver" 
+              width="600"
+              height="400"
               className="rounded-lg shadow-lg w-full h-auto object-cover"
             />
           </div>
@@ -96,6 +98,8 @@ const ServicesSection = () => {
             <img 
               src="/images/roofrepairswebsitepic.jpg" 
               alt="Professional roof repair work showing damaged shingles being replaced by Spencer Roofing Solutions team" 
+              width="600"
+              height="400"
               className="rounded-lg shadow-lg w-full h-auto object-cover"
             />
           </div>

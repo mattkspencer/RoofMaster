@@ -10,6 +10,8 @@ const InsuranceClaimsSection = () => {
             <img 
               src="/images/insuranceclaimphotowebsite.jpg" 
               alt="Homeowners insurance claim form and documentation for roof damage assessment" 
+              width="600"
+              height="400"
               className="rounded-lg shadow-lg w-full h-auto"
             />
           </div>
