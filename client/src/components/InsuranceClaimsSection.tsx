@@ -26,7 +26,7 @@ const InsuranceClaimsSection = () => {
             
             <ol className="space-y-4 mb-6" role="list" aria-label="Insurance claim process steps">
               <li className="flex">
-                <div className="flex-shrink-0 w-10 h-10 rounded-full bg-primary flex items-center justify-center text-white font-bold" aria-hidden="true">1</div>
+                <div className="flex-shrink-0 w-10 h-10 rounded-full bg-blue-800 flex items-center justify-center text-white font-bold" aria-hidden="true">1</div>
                 <div className="ml-4">
                   <h3 className="text-xl font-semibold">Free Inspection</h3>
                   <p className="text-gray-600">We thoroughly document all storm damage with photos and detailed reports.</p>
@@ -34,7 +34,7 @@ const InsuranceClaimsSection = () => {
               </li>
               
               <li className="flex">
-                <div className="flex-shrink-0 w-10 h-10 rounded-full bg-primary flex items-center justify-center text-white font-bold" aria-hidden="true">2</div>
+                <div className="flex-shrink-0 w-10 h-10 rounded-full bg-blue-800 flex items-center justify-center text-white font-bold" aria-hidden="true">2</div>
                 <div className="ml-4">
                   <h3 className="text-xl font-semibold">Claim Filing Assistance</h3>
                   <p className="text-gray-600">We help you initiate and file your insurance claim with proper documentation.</p>
@@ -42,7 +42,7 @@ const InsuranceClaimsSection = () => {
               </li>
               
               <li className="flex">
-                <div className="flex-shrink-0 w-10 h-10 rounded-full bg-primary flex items-center justify-center text-white font-bold" aria-hidden="true">3</div>
+                <div className="flex-shrink-0 w-10 h-10 rounded-full bg-blue-800 flex items-center justify-center text-white font-bold" aria-hidden="true">3</div>
                 <div className="ml-4">
                   <h3 className="text-xl font-semibold">Adjuster Meeting</h3>
                   <p className="text-gray-600">We meet with your insurance adjuster to ensure all damage is properly identified.</p>
@@ -50,7 +50,7 @@ const InsuranceClaimsSection = () => {
               </li>
               
               <li className="flex">
-                <div className="flex-shrink-0 w-10 h-10 rounded-full bg-primary flex items-center justify-center text-white font-bold" aria-hidden="true">4</div>
+                <div className="flex-shrink-0 w-10 h-10 rounded-full bg-blue-800 flex items-center justify-center text-white font-bold" aria-hidden="true">4</div>
                 <div className="ml-4">
                   <h3 className="text-xl font-semibold">Project Management</h3>
                   <p className="text-gray-600">Once approved, we coordinate and oversee the entire repair or replacement process.</p>
@@ -60,7 +60,7 @@ const InsuranceClaimsSection = () => {
             
             <Link 
               href="/contact"
-              className="inline-block bg-secondary hover:bg-secondary-dark text-white font-semibold py-3 px-6 rounded-md transition-colors"
+              className="inline-block bg-blue-800 hover:bg-blue-900 text-white font-semibold py-3 px-6 rounded-md transition-colors"
             >
               Schedule a Free Inspection
             </Link>

@@ -10,12 +10,12 @@ interface ServiceCardProps {
 
 const ServiceCard = ({ icon, title, description, link, linkText }: ServiceCardProps) => (
   <article className="service-card bg-gray-50 rounded-lg shadow-md p-6 hover:shadow-lg transition-all duration-300" role="article">
-    <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mb-4" aria-hidden="true">
-      <i className={`fas ${icon} text-2xl text-blue-600`}></i>
+    <div className="w-16 h-16 bg-blue-200 rounded-full flex items-center justify-center mb-4" aria-hidden="true">
+      <i className={`fas ${icon} text-2xl text-blue-900`}></i>
     </div>
     <h3 className="text-xl font-semibold mb-3">{title}</h3>
-    <p className="text-gray-600 mb-4">{description}</p>
-    <Link href={link} className="inline-flex items-center text-blue-600 font-semibold hover:text-blue-700" aria-label={`Learn more about ${title}`}>
+    <p className="text-gray-700 mb-4">{description}</p>
+    <Link href={link} className="inline-flex items-center text-blue-800 font-semibold hover:text-blue-900 underline" aria-label={`Learn more about ${title}`}>
       {linkText} <i className="fas fa-arrow-right ml-2" aria-hidden="true"></i>
     </Link>
   </article>
