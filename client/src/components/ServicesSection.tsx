@@ -58,16 +58,15 @@ const ServicesSection = () => {
         {/* Commercial Roofing */}
         <div className="mb-16 grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
           <div className="md:order-2">
-            <picture>
-              <source srcSet="/images/commercialphotoroofwebsite.webp" type="image/webp" />
-              <img 
-                src="/images/commercialphotoroofwebsite.jpg" 
-                alt="Commercial roofing project showing flat roof installation with HVAC units on multi-story building in Denver" 
-                width="600"
-                height="400"
-                className="rounded-lg shadow-lg w-full h-auto object-cover"
-              />
-            </picture>
+            <img 
+              src="/images/commercialphotoroofwebsite.webp" 
+              alt="Commercial roofing project showing flat roof installation with HVAC units on multi-story building in Denver" 
+              width="600"
+              height="400"
+              loading="lazy"
+              className="rounded-lg shadow-lg w-full h-auto object-cover"
+              style={{ width: '100%', height: 'auto' }}
+            />
           </div>
           <div className="md:order-1">
             <h3 className="text-2xl font-bold font-sans mb-4">Commercial Roofing</h3>
@@ -98,16 +97,15 @@ const ServicesSection = () => {
         {/* Roof Repairs */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
           <div className="order-2 md:order-1">
-            <picture>
-              <source srcSet="/images/roofrepairswebsitepic.webp" type="image/webp" />
-              <img 
-                src="/images/roofrepairswebsitepic.jpg" 
-                alt="Professional roof repair work showing damaged shingles being replaced by Spencer Roofing Solutions team" 
-                width="600"
-                height="400"
-                className="rounded-lg shadow-lg w-full h-auto object-cover"
-              />
-            </picture>
+            <img 
+              src="/images/roofrepairswebsitepic.webp" 
+              alt="Professional roof repair work showing damaged shingles being replaced by Spencer Roofing Solutions team" 
+              width="600"
+              height="400"
+              loading="lazy"
+              className="rounded-lg shadow-lg w-full h-auto object-cover"
+              style={{ width: '100%', height: 'auto' }}
+            />
           </div>
           <div className="order-1 md:order-2">
             <h3 className="text-2xl font-bold font-sans mb-4">Roof Repairs</h3>

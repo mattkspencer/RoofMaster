@@ -1,0 +1,105 @@
+# WebP Performance Drop Debug & Fix
+## Issue: Mobile 76→73 despite 716KB savings
+
+Despite massive bandwidth savings, mobile performance dropped. This suggests the `<picture>` element approach or WebP processing is creating new bottlenecks.
+
+## PROMPT FOR REPLIT:
+
+My WebP conversion saved 716KB but mobile PageSpeed dropped from 76→73. I need to diagnose and fix this performance regression immediately.
+
+## DIAGNOSIS STEPS:
+
+### 1. Check Current Image Implementation
+Look at how the `<picture>` elements are currently implemented. The issue might be:
+- Multiple HTTP requests (WebP + JPEG fallback)
+- Browser decision overhead
+- Cumulative Layout Shift (CLS) issues
+- Loading attribute conflicts
+
+### 2. Simplify WebP Implementation
+**Replace complex `<picture>` elements with direct WebP:**
+
+```html
+<!-- BEFORE (complex): -->
+<picture>
+  <source srcset="image.webp" type="image/webp">
+  <img src="image.jpg" alt="description" loading="lazy">
+</picture>
+
+<!-- AFTER (simple): -->
+<img src="image.webp" alt="description" loading="lazy">
+```
+
+### 3. Add Explicit Width/Height to Prevent CLS
+```html
+<!-- Add dimensions to prevent layout shift -->
+<img 
+  src="image.webp"
+  width="800" 
+  height="600"
+  alt="description" 
+  loading="lazy"
+  style="width: 100%; height: auto;"
+>
+```
+
+### 4. Check Hero Image Priority
+Make sure the hero/above-fold image loads immediately:
+```html
+<!-- Hero image should be eager loading -->
+<img 
+  src="hero.webp"
+  width="1200"
+  height="800"
+  alt="hero image"
+  loading="eager"
+  fetchpriority="high"
+>
+```
+
+## SPECIFIC FIXES TO IMPLEMENT:
+
+### Fix 1: Remove Picture Elements
+Convert all current `<picture>` implementations back to simple `<img>` tags using only WebP format. Modern browser support is 95%+.
+
+### Fix 2: Add Explicit Dimensions
+Add `width` and `height` attributes to ALL images to prevent Cumulative Layout Shift (CLS).
+
+### Fix 3: Optimize Loading Priority
+- Hero images: `loading="eager"` + `fetchpriority="high"`
+- Below-fold images: `loading="lazy"`
+
+### Fix 4: Check Image Compression
+Verify WebP quality settings aren't too high:
+- Try 75-80% quality instead of 90%+
+- Ensure images aren't larger in WebP than original JPEG
+
+## TESTING PRIORITIES:
+
+1. **Core Web Vitals focus:**
+   - LCP (Largest Contentful Paint)
+   - CLS (Cumulative Layout Shift)
+   - FID (First Input Delay)
+
+2. **Mobile-specific metrics:**
+   - First Contentful Paint
+   - Speed Index
+   - Total Blocking Time
+
+## EMERGENCY ROLLBACK OPTION:
+
+If WebP continues causing issues, temporarily rollback to optimized JPEGs:
+```html
+<!-- Use optimized JPEGs as fallback -->
+<img src="image.jpg" alt="description" loading="lazy">
+```
+
+## EXPECTED RESULTS AFTER FIX:
+
+- **Mobile:** 73 → 82-85 (should exceed original 76)
+- **Desktop:** Maintain 98+
+- **Key improvement:** CLS score should improve significantly
+
+**PRIORITY:** Fix the WebP implementation to realize the 716KB bandwidth savings without performance regression. The savings are real - we just need to implement them correctly for mobile devices.
+
+Please implement these fixes and focus on eliminating any Cumulative Layout Shift issues that the picture elements might have introduced.
