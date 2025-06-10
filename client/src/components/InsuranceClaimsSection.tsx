@@ -7,13 +7,16 @@ const InsuranceClaimsSection = () => {
         <div className="flex flex-col lg:flex-row items-center gap-12">
           <div className="lg:w-1/2">
             {/* An image showing insurance claim documentation */}
-            <img 
-              src="/images/insuranceclaimphotowebsite.jpg" 
-              alt="Homeowners insurance claim form and documentation for roof damage assessment" 
-              width="600"
-              height="400"
-              className="rounded-lg shadow-lg w-full h-auto"
-            />
+            <picture>
+              <source srcSet="/images/insuranceclaimphotowebsite.webp" type="image/webp" />
+              <img 
+                src="/images/insuranceclaimphotowebsite.jpg" 
+                alt="Homeowners insurance claim form and documentation for roof damage assessment" 
+                width="600"
+                height="400"
+                className="rounded-lg shadow-lg w-full h-auto"
+              />
+            </picture>
           </div>
           
           <div className="lg:w-1/2">
