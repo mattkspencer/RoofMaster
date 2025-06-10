@@ -18,7 +18,9 @@ const Layout = ({ children }: LayoutProps) => {
   return (
     <div className="font-body text-neutral-dark bg-neutral-light min-h-screen flex flex-col">
       <Header />
-      <main className="flex-grow">{children}</main>
+      <main className="flex-grow" role="main" id="main-content">
+        {children}
+      </main>
       <Footer />
       <Suspense fallback={null}>
         <ChatWidget />

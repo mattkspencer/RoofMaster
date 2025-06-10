@@ -2,7 +2,7 @@ import { Link } from 'wouter';
 
 const Footer = () => {
   return (
-    <footer className="bg-gray-900 text-white pt-12 pb-6">
+    <footer className="bg-gray-900 text-white pt-12 pb-6" role="contentinfo">
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
           <div>
@@ -15,40 +15,40 @@ const Footer = () => {
             <p className="mb-6 text-gray-300">
               Your trusted roofing project manager for the Denver metropolitan area, specializing in residential, commercial, and insurance claim assistance.
             </p>
-            <div className="flex space-x-4">
+            <div className="flex space-x-4" role="navigation" aria-label="Social media links">
               <a 
                 href="https://www.facebook.com/spencerroofingsolutions" 
                 className="text-white hover:text-blue-400 transition-colors" 
-                aria-label="Facebook"
+                aria-label="Visit Spencer Roofing Solutions on Facebook"
                 target="_blank" 
                 rel="noopener noreferrer"
               >
-                <i className="fab fa-facebook-f text-xl"></i>
+                <i className="fab fa-facebook-f text-xl" aria-hidden="true"></i>
               </a>
               <a 
                 href="https://www.instagram.com/spencerroofingsolutions" 
                 className="text-white hover:text-blue-400 transition-colors" 
-                aria-label="Instagram"
+                aria-label="Visit Spencer Roofing Solutions on Instagram"
                 target="_blank" 
                 rel="noopener noreferrer"
               >
-                <i className="fab fa-instagram text-xl"></i>
+                <i className="fab fa-instagram text-xl" aria-hidden="true"></i>
               </a>
               <a 
                 href="https://www.linkedin.com/in/spencer-roofing-solutions" 
                 className="text-white hover:text-blue-400 transition-colors" 
-                aria-label="LinkedIn"
+                aria-label="Visit Spencer Roofing Solutions on LinkedIn"
                 target="_blank" 
                 rel="noopener noreferrer"
               >
-                <i className="fab fa-linkedin-in text-xl"></i>
+                <i className="fab fa-linkedin-in text-xl" aria-hidden="true"></i>
               </a>
             </div>
           </div>
           
-          <div>
-            <h3 className="text-xl font-semibold mb-6 text-white">Services</h3>
-            <ul className="space-y-3 text-gray-300">
+          <nav aria-labelledby="services-heading">
+            <h3 id="services-heading" className="text-xl font-semibold mb-6 text-white">Services</h3>
+            <ul className="space-y-3 text-gray-300" role="list">
               <li>
                 <Link href="/services/residential-roofing" className="hover:text-blue-400 transition-colors">
                   Residential Roofing
@@ -75,11 +75,11 @@ const Footer = () => {
                 </Link>
               </li>
             </ul>
-          </div>
+          </nav>
           
-          <div>
-            <h3 className="text-xl font-semibold mb-6 text-white">Resources</h3>
-            <ul className="space-y-3 text-gray-300">
+          <nav aria-labelledby="resources-heading">
+            <h3 id="resources-heading" className="text-xl font-semibold mb-6 text-white">Resources</h3>
+            <ul className="space-y-3 text-gray-300" role="list">
               <li>
                 <Link href="/blog" className="hover:text-blue-400 transition-colors">
                   Blog
@@ -106,7 +106,7 @@ const Footer = () => {
                 </Link>
               </li>
             </ul>
-          </div>
+          </nav>
           
           <div>
             <h3 className="text-xl font-semibold mb-6 text-white">Contact</h3>
