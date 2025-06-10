@@ -13,7 +13,6 @@ const HeroSection = () => {
           height="800"
           className="w-full h-full object-cover"
           loading="eager"
-          fetchpriority="high"
           decoding="sync"
           style={{ width: '100%', height: '100%' }}
         />

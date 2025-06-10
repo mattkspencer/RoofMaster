@@ -124,7 +124,7 @@ const Contact = () => {
                 </div>
               </div>
               <div className="flex items-center">
-                <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mr-4">
+                <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mr-4" aria-hidden="true">
                   <i className="fas fa-envelope text-primary"></i>
                 </div>
                 <div>
@@ -132,13 +132,14 @@ const Contact = () => {
                   <a 
                     href="mailto:mattkspencer@gmail.com" 
                     className="text-lg hover:text-primary hover:underline transition-colors cursor-pointer"
+                    aria-label="Send email to Spencer Roofing at mattkspencer@gmail.com"
                   >
                     mattkspencer@gmail.com
                   </a>
                 </div>
               </div>
               <div className="flex items-center">
-                <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mr-4">
+                <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mr-4" aria-hidden="true">
                   <i className="fas fa-map-marker-alt text-primary"></i>
                 </div>
                 <div>
@@ -151,7 +152,7 @@ const Contact = () => {
           
           <div className="grid grid-cols-1 lg:grid-cols-5 gap-12 max-w-6xl mx-auto">
             <div className="lg:col-span-3 bg-white rounded-lg shadow-md p-8">
-              <h2 className="text-2xl font-bold mb-6">Get Your Free Roof Inspection</h2>
+              <h2 id="contact-form-heading" className="text-2xl font-bold mb-6">Get Your Free Roof Inspection</h2>
               
               {/* Trust Badges */}
               <div className="flex flex-col sm:flex-row items-center justify-center text-sm text-gray-600 py-3 mb-6 border-b border-gray-100">
@@ -172,7 +173,7 @@ const Contact = () => {
               </div>
               
               <Form {...form}>
-                <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
+                <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6" role="form" aria-labelledby="contact-form-heading">
                   {/* Full Name - Required */}
                   <FormField
                     control={form.control}
@@ -186,9 +187,12 @@ const Contact = () => {
                           <Input 
                             {...field}
                             className="border-gray-300 focus:border-blue-500 focus:ring-blue-500 h-12 text-gray-700"
+                            placeholder="Enter your full name"
+                            aria-required="true"
+                            aria-describedby="name-error"
                           />
                         </FormControl>
-                        <FormMessage className="text-red-500 text-sm" />
+                        <FormMessage className="text-red-500 text-sm" id="name-error" />
                       </FormItem>
                     )}
                   />
