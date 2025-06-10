@@ -12,13 +12,16 @@ const AboutSection = () => {
         <div className="flex flex-col lg:flex-row items-center gap-12">
           <div className="lg:w-1/2">
             {/* Spencer from Spencer Roofing Solutions */}
-            <img 
-              src="/images/aboutspencerroofingsolutionswebsitephoto.jpg" 
-              alt="Spencer from Spencer Roofing Solutions giving thumbs up in front of residential home" 
-              width="600"
-              height="400"
-              className="rounded-lg shadow-lg w-full h-auto"
-            />
+            <picture>
+              <source srcSet="/images/aboutspencerroofingsolutionswebsitephoto.webp" type="image/webp" />
+              <img 
+                src="/images/aboutspencerroofingsolutionswebsitephoto.jpg" 
+                alt="Spencer from Spencer Roofing Solutions giving thumbs up in front of residential home" 
+                width="600"
+                height="400"
+                className="rounded-lg shadow-lg w-full h-auto"
+              />
+            </picture>
           </div>
           
           <div className="lg:w-1/2">

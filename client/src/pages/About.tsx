@@ -33,16 +33,17 @@ const About = () => {
           
           <div className="flex flex-col md:flex-row gap-12 mb-16">
             <div className="md:w-1/2">
-              <OptimizedImage 
-                src="/images/aboutspencerroofingsolutionswebsitephoto.jpg" 
-                alt="Spencer from Spencer Roofing Solutions giving thumbs up in front of residential home" 
-                className="rounded-lg shadow-lg w-full h-auto"
-                loading="eager"
-                width={600}
-                height={400}
-                mobileWidth={350}
-                mobileHeight={250}
-              />
+              <picture>
+                <source srcSet="/images/aboutspencerroofingsolutionswebsitephoto.webp" type="image/webp" />
+                <img 
+                  src="/images/aboutspencerroofingsolutionswebsitephoto.jpg" 
+                  alt="Spencer from Spencer Roofing Solutions giving thumbs up in front of residential home" 
+                  className="rounded-lg shadow-lg w-full h-auto"
+                  loading="eager"
+                  width="600"
+                  height="400"
+                />
+              </picture>
             </div>
             
             <div className="md:w-1/2">

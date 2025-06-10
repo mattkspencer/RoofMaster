@@ -58,13 +58,16 @@ const ServicesSection = () => {
         {/* Commercial Roofing */}
         <div className="mb-16 grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
           <div className="md:order-2">
-            <img 
-              src="/images/commercialphotoroofwebsite.jpg" 
-              alt="Commercial roofing project showing flat roof installation with HVAC units on multi-story building in Denver" 
-              width="600"
-              height="400"
-              className="rounded-lg shadow-lg w-full h-auto object-cover"
-            />
+            <picture>
+              <source srcSet="/images/commercialphotoroofwebsite.webp" type="image/webp" />
+              <img 
+                src="/images/commercialphotoroofwebsite.jpg" 
+                alt="Commercial roofing project showing flat roof installation with HVAC units on multi-story building in Denver" 
+                width="600"
+                height="400"
+                className="rounded-lg shadow-lg w-full h-auto object-cover"
+              />
+            </picture>
           </div>
           <div className="md:order-1">
             <h3 className="text-2xl font-bold font-sans mb-4">Commercial Roofing</h3>
