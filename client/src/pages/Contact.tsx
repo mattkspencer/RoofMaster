@@ -211,9 +211,13 @@ const Contact = () => {
                             type="email"
                             {...field}
                             className="border-gray-300 focus:border-blue-500 focus:ring-blue-500 h-12 text-gray-700"
+                            placeholder="your.email@example.com"
+                            aria-required="true"
+                            aria-describedby="email-error"
+                            autoComplete="email"
                           />
                         </FormControl>
-                        <FormMessage className="text-red-500 text-sm" />
+                        <FormMessage className="text-red-500 text-sm" id="email-error" />
                       </FormItem>
                     )}
                   />
@@ -229,7 +233,7 @@ const Contact = () => {
                         </FormLabel>
                         <Select onValueChange={field.onChange} defaultValue={field.value}>
                           <FormControl>
-                            <SelectTrigger className="border-gray-300 focus:border-blue-500 focus:ring-blue-500 h-12 text-gray-700">
+                            <SelectTrigger className="border-gray-300 focus:border-blue-500 focus:ring-blue-500 h-12 text-gray-700" aria-required="true" aria-describedby="service-error">
                               <SelectValue placeholder="Select a Service" />
                             </SelectTrigger>
                           </FormControl>
@@ -259,11 +263,15 @@ const Contact = () => {
                         </FormLabel>
                         <FormControl>
                           <Input 
-                            placeholder="Optional"
+                            type="tel"
+                            placeholder="(720) 555-0123"
                             {...field}
                             className="border-gray-300 focus:border-blue-500 focus:ring-blue-500 h-12 text-gray-700"
+                            autoComplete="tel"
+                            aria-describedby="phone-help"
                           />
                         </FormControl>
+                        <p id="phone-help" className="text-sm text-gray-500 mt-1">Optional - We'll call you to schedule your free inspection</p>
                         <FormMessage className="text-red-500 text-sm" />
                       </FormItem>
                     )}
@@ -282,8 +290,12 @@ const Contact = () => {
                           <Input 
                             {...field}
                             className="border-gray-300 focus:border-blue-500 focus:ring-blue-500 h-12 text-gray-700"
+                            placeholder="1234 Main St, Denver, CO 80202"
+                            autoComplete="street-address"
+                            aria-describedby="address-help"
                           />
                         </FormControl>
+                        <p id="address-help" className="text-sm text-gray-500 mt-1">Optional - Address where roofing work is needed</p>
                         <FormMessage className="text-red-500 text-sm" />
                       </FormItem>
                     )}
@@ -304,8 +316,10 @@ const Contact = () => {
                             rows={4}
                             {...field}
                             className="border-gray-300 focus:border-blue-500 focus:ring-blue-500 text-gray-700 resize-none"
+                            aria-describedby="message-help"
                           />
                         </FormControl>
+                        <p id="message-help" className="text-sm text-gray-500 mt-1">Optional - Describe your roofing project, damage, or questions</p>
                         <FormMessage className="text-red-500 text-sm" />
                       </FormItem>
                     )}
@@ -317,17 +331,18 @@ const Contact = () => {
                       type="submit" 
                       disabled={contactMutation.isPending}
                       className="w-full md:w-auto md:min-w-[280px] h-12 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-md transition-colors duration-200 shadow-md"
+                      aria-describedby="submit-help"
                     >
                       {contactMutation.isPending ? (
                         <>
-                          <i className="fas fa-spinner fa-spin mr-2"></i>
+                          <i className="fas fa-spinner fa-spin mr-2" aria-hidden="true"></i>
                           Sending...
                         </>
                       ) : "Schedule My Free Inspection"}
                     </Button>
                     
                     {/* Reassuring message */}
-                    <p className="text-sm text-gray-500 mt-3">
+                    <p id="submit-help" className="text-sm text-gray-500 mt-3">
                       We typically reply within 12 hours
                     </p>
                   </div>
