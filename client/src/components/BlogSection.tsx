@@ -81,7 +81,7 @@ const BlogSection = () => {
         <div className="text-center mt-10">
           <Link 
             href="/blog"
-            className="inline-block border-2 border-primary text-primary hover:bg-primary hover:text-white font-semibold py-3 px-6 rounded-md transition-colors"
+            className="inline-block border-2 border-blue-800 text-blue-800 hover:bg-blue-800 hover:text-white font-semibold py-3 px-6 rounded-md transition-colors"
           >
             View All Articles
           </Link>

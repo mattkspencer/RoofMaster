@@ -44,7 +44,7 @@ const CTASection = ({
         <div className="flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-8">
           <Link 
             href={buttonLink}
-            className="bg-white text-blue-700 hover:bg-gray-100 font-semibold py-3 px-8 rounded-md transition-colors cursor-pointer min-w-[180px] shadow-md inline-block text-center"
+            className="bg-white text-blue-900 hover:bg-gray-100 font-semibold py-3 px-8 rounded-md transition-colors cursor-pointer min-w-[180px] shadow-md inline-block text-center border-2 border-blue-900"
             onClick={handleContactClick}
           >
             {buttonText}

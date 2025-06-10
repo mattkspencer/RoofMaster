@@ -31,10 +31,10 @@ const HeroSection = () => {
             specializing in storm damage repair and insurance claim assistance.
           </p>
           <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4" role="group" aria-label="Main actions">
-            <Link href="/contact" className="bg-blue-500 hover:bg-blue-600 text-white text-center font-semibold py-3 px-8 rounded-md transition-colors cursor-pointer shadow-lg inline-block" aria-describedby="free-inspection-desc">
+            <Link href="/contact" className="bg-blue-700 hover:bg-blue-800 text-white text-center font-semibold py-3 px-8 rounded-md transition-colors cursor-pointer shadow-lg inline-block" aria-describedby="free-inspection-desc">
               Get a Free Inspection
             </Link>
-            <Link href="/services/residential-roofing" className="bg-white hover:bg-gray-100 text-blue-800 text-center font-semibold py-3 px-8 rounded-md transition-colors cursor-pointer shadow-lg inline-block">
+            <Link href="/services/residential-roofing" className="bg-white hover:bg-gray-100 text-blue-900 text-center font-semibold py-3 px-8 rounded-md transition-colors cursor-pointer shadow-lg inline-block border-2 border-blue-900">
               Explore Services
             </Link>
           </div>
@@ -44,7 +44,7 @@ const HeroSection = () => {
         <div className="absolute right-4 bottom-0 transform translate-y-1/2 bg-white rounded-lg shadow-xl p-4 hidden md:block">
           <p className="font-bold text-lg mb-1">Emergency Roof Repairs?</p>
           <p className="text-sm mb-2">Call us now:</p>
-          <a href="tel:720-360-8546" className="text-xl font-bold text-blue-600 hover:text-blue-800 transition-colors">
+          <a href="tel:720-360-8546" className="text-xl font-bold text-blue-800 hover:text-blue-900 transition-colors underline">
             720-360-8546
           </a>
         </div>

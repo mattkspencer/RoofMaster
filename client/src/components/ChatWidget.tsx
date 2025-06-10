@@ -217,7 +217,7 @@ const ChatWidget = () => {
             <div className="space-y-4 pb-4">
               {messages.map((msg, index) => (
                 <div key={index} className={`flex items-start ${msg.isUser ? 'justify-end' : ''}`}>
-                  <div className={`${msg.isUser ? 'bg-gray-200' : 'bg-primary text-white'} rounded-lg py-3 px-4 max-w-[280px] ${msg.isUser ? 'ml-auto' : ''}`}>
+                  <div className={`${msg.isUser ? 'bg-gray-200 text-gray-900' : 'bg-blue-800 text-white'} rounded-lg py-3 px-4 max-w-[280px] ${msg.isUser ? 'ml-auto' : ''}`}>
                     <p className="text-sm whitespace-pre-line leading-relaxed">{msg.text}</p>
                   </div>
                 </div>

@@ -5,7 +5,7 @@ const EmergencyCallMobile = () => {
         <p className="font-bold text-lg">Emergency Roof Repairs?</p>
         <p>Call us now:</p>
       </div>
-      <a href="tel:720-360-8546" className="text-2xl font-bold text-secondary hover:text-secondary-dark transition-colors">
+      <a href="tel:720-360-8546" className="text-2xl font-bold text-blue-800 hover:text-blue-900 transition-colors underline">
         720-360-8546
       </a>
     </div>
