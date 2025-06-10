@@ -42,6 +42,16 @@ const Header = () => {
     setServicesDropdownOpen(false);
   };
 
+  const navigateToPage = (path: string) => {
+    setMobileMenuOpen(false);
+    setServicesDropdownOpen(false);
+    
+    // Force navigation for mobile devices with proper timing
+    setTimeout(() => {
+      window.location.href = path;
+    }, 100);
+  };
+
   // Close mobile menu when route changes
   useEffect(() => {
     setMobileMenuOpen(false);
@@ -216,21 +226,21 @@ const Header = () => {
                   servicesDropdownOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
                 }`}>
                   <div className="ml-8 mt-2 space-y-1 border-l-2 border-blue-100 pl-4">
-                    <Link to="/services/residential-roofing" onClick={handleMobileNavClick} className="mobile-nav-subitem py-3 px-3 rounded-md text-gray-600 hover:text-blue-600 hover:bg-blue-50 transition-all duration-200 font-medium cursor-pointer block">
+                    <button onClick={() => navigateToPage('/services/residential-roofing')} className="mobile-nav-subitem py-3 px-3 rounded-md text-gray-600 hover:text-blue-600 hover:bg-blue-50 transition-all duration-200 font-medium cursor-pointer block w-full text-left">
                       Residential Roofing
-                    </Link>
-                    <Link to="/services/commercial-roofing" onClick={handleMobileNavClick} className="mobile-nav-subitem py-3 px-3 rounded-md text-gray-600 hover:text-blue-600 hover:bg-blue-50 transition-all duration-200 font-medium cursor-pointer block">
+                    </button>
+                    <button onClick={() => navigateToPage('/services/commercial-roofing')} className="mobile-nav-subitem py-3 px-3 rounded-md text-gray-600 hover:text-blue-600 hover:bg-blue-50 transition-all duration-200 font-medium cursor-pointer block w-full text-left">
                       Commercial Roofing
-                    </Link>
-                    <Link to="/services/roof-repair" onClick={handleMobileNavClick} className="mobile-nav-subitem py-3 px-3 rounded-md text-gray-600 hover:text-blue-600 hover:bg-blue-50 transition-all duration-200 font-medium cursor-pointer block">
+                    </button>
+                    <button onClick={() => navigateToPage('/services/roof-repair')} className="mobile-nav-subitem py-3 px-3 rounded-md text-gray-600 hover:text-blue-600 hover:bg-blue-50 transition-all duration-200 font-medium cursor-pointer block w-full text-left">
                       Roof Repairs
-                    </Link>
-                    <Link to="/services/insurance-claims" onClick={handleMobileNavClick} className="mobile-nav-subitem py-3 px-3 rounded-md text-gray-600 hover:text-blue-600 hover:bg-blue-50 transition-all duration-200 font-medium cursor-pointer block">
+                    </button>
+                    <button onClick={() => navigateToPage('/services/insurance-claims')} className="mobile-nav-subitem py-3 px-3 rounded-md text-gray-600 hover:text-blue-600 hover:bg-blue-50 transition-all duration-200 font-medium cursor-pointer block w-full text-left">
                       Insurance Claims
-                    </Link>
-                    <Link to="/services/gutter-services" onClick={handleMobileNavClick} className="mobile-nav-subitem py-3 px-3 rounded-md text-gray-600 hover:text-blue-600 hover:bg-blue-50 transition-all duration-200 font-medium cursor-pointer block">
+                    </button>
+                    <button onClick={() => navigateToPage('/services/gutter-services')} className="mobile-nav-subitem py-3 px-3 rounded-md text-gray-600 hover:text-blue-600 hover:bg-blue-50 transition-all duration-200 font-medium cursor-pointer block w-full text-left">
                       Gutter Services
-                    </Link>
+                    </button>
                   </div>
                 </div>
               </div>
