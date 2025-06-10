@@ -65,7 +65,7 @@ const Header = () => {
     <header className={`sticky top-0 w-full bg-white z-50 transition-all duration-300 ${scrolled ? 'shadow-md bg-white/95 backdrop-blur-sm' : 'bg-white'}`}>
       <div className="container mx-auto px-4 py-3 flex justify-between items-center">
         <div className="flex items-center space-x-4">
-          <Link href="/" className="text-3xl font-bold cursor-pointer">
+          <Link to="/" className="text-3xl font-bold cursor-pointer">
             <span className="text-blue-500">Spencer</span>
             <span className="text-gray-700">Roofing</span>
           </Link>
@@ -85,7 +85,7 @@ const Header = () => {
         
         {/* Mobile CTA and Menu */}
         <div className="lg:hidden flex items-center space-x-3">
-          <Link href="/contact" className="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-3 rounded-md transition-colors text-sm cursor-pointer inline-block">
+          <Link to="/contact" className="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-3 rounded-md transition-colors text-sm cursor-pointer inline-block">
             Get Quote
           </Link>
           <button 
@@ -111,10 +111,10 @@ const Header = () => {
 
         {/* Desktop navigation */}
         <nav className="hidden lg:flex items-center space-x-8">
-          <Link href="/" className={`nav-link ${isActive('/') ? 'active text-primary font-semibold' : 'hover:text-primary'} transition-colors cursor-pointer`}>
+          <Link to="/" className={`nav-link ${isActive('/') ? 'active text-primary font-semibold' : 'hover:text-primary'} transition-colors cursor-pointer`}>
             Home
           </Link>
-          <Link href="/about" className={`nav-link ${isActive('/about') ? 'active text-primary font-semibold' : 'hover:text-primary'} transition-colors cursor-pointer`}>
+          <Link to="/about" className={`nav-link ${isActive('/about') ? 'active text-primary font-semibold' : 'hover:text-primary'} transition-colors cursor-pointer`}>
             About
           </Link>
           <div className="relative group">
@@ -122,33 +122,33 @@ const Header = () => {
               Services <i className="fas fa-chevron-down ml-1 text-xs"></i>
             </div>
             <div className="absolute left-0 top-full w-64 bg-white shadow-lg rounded-md overflow-hidden z-20 hidden group-hover:block">
-              <Link href="/services/residential-roofing" className="block px-4 py-3 hover:bg-primary hover:text-white transition-colors cursor-pointer border-b border-gray-100">
+              <Link to="/services/residential-roofing" className="block px-4 py-3 hover:bg-primary hover:text-white transition-colors cursor-pointer border-b border-gray-100">
                 Residential Roofing
               </Link>
-              <Link href="/services/commercial-roofing" className="block px-4 py-3 hover:bg-primary hover:text-white transition-colors cursor-pointer border-b border-gray-100">
+              <Link to="/services/commercial-roofing" className="block px-4 py-3 hover:bg-primary hover:text-white transition-colors cursor-pointer border-b border-gray-100">
                 Commercial Roofing
               </Link>
-              <Link href="/services/roof-repair" className="block px-4 py-3 hover:bg-primary hover:text-white transition-colors cursor-pointer border-b border-gray-100">
+              <Link to="/services/roof-repair" className="block px-4 py-3 hover:bg-primary hover:text-white transition-colors cursor-pointer border-b border-gray-100">
                 Roof Repairs
               </Link>
-              <Link href="/services/insurance-claims" className="block px-4 py-3 hover:bg-primary hover:text-white transition-colors cursor-pointer border-b border-gray-100">
+              <Link to="/services/insurance-claims" className="block px-4 py-3 hover:bg-primary hover:text-white transition-colors cursor-pointer border-b border-gray-100">
                 Insurance Claims
               </Link>
-              <Link href="/services/gutter-services" className="block px-4 py-3 hover:bg-primary hover:text-white transition-colors cursor-pointer">
+              <Link to="/services/gutter-services" className="block px-4 py-3 hover:bg-primary hover:text-white transition-colors cursor-pointer">
                 Gutter Services
               </Link>
             </div>
           </div>
-          <Link href="/portfolio" className={`nav-link ${isActive('/portfolio') ? 'active text-primary font-semibold' : 'hover:text-primary'} transition-colors cursor-pointer`}>
+          <Link to="/portfolio" className={`nav-link ${isActive('/portfolio') ? 'active text-primary font-semibold' : 'hover:text-primary'} transition-colors cursor-pointer`}>
             Portfolio
           </Link>
-          <Link href="/blog" className={`nav-link ${isActive('/blog') ? 'active text-primary font-semibold' : 'hover:text-primary'} transition-colors cursor-pointer`}>
+          <Link to="/blog" className={`nav-link ${isActive('/blog') ? 'active text-primary font-semibold' : 'hover:text-primary'} transition-colors cursor-pointer`}>
             Blog
           </Link>
-          <Link href="/faq" className={`nav-link ${isActive('/faq') ? 'active text-primary font-semibold' : 'hover:text-primary'} transition-colors cursor-pointer`}>
+          <Link to="/faq" className={`nav-link ${isActive('/faq') ? 'active text-primary font-semibold' : 'hover:text-primary'} transition-colors cursor-pointer`}>
             FAQ
           </Link>
-          <Link href="/contact" className="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded-md transition-colors cursor-pointer inline-block">
+          <Link to="/contact" className="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded-md transition-colors cursor-pointer inline-block">
             Get a Free Quote
           </Link>
         </nav>
@@ -184,12 +184,12 @@ const Header = () => {
           {/* Mobile menu content */}
           <div className="flex flex-col h-full overflow-y-auto bg-white" style={{ height: 'calc(100vh - 80px)' }}>
             <nav className="flex-1 px-6 py-6 space-y-3">
-              <Link href="/" onClick={handleMobileNavClick} className={`mobile-nav-item ${isActive('/') ? 'text-blue-600 bg-blue-50' : 'text-gray-700'} hover:text-blue-600 hover:bg-blue-50 transition-all duration-200 py-4 px-4 rounded-lg font-medium cursor-pointer block`}>
+              <Link to="/" onClick={handleMobileNavClick} className={`mobile-nav-item ${isActive('/') ? 'text-blue-600 bg-blue-50' : 'text-gray-700'} hover:text-blue-600 hover:bg-blue-50 transition-all duration-200 py-4 px-4 rounded-lg font-medium cursor-pointer block`}>
                 <i className="fas fa-home w-5 mr-3"></i>
                 Home
               </Link>
               
-              <Link href="/about" onClick={handleMobileNavClick} className={`mobile-nav-item ${isActive('/about') ? 'text-blue-600 bg-blue-50' : 'text-gray-700'} hover:text-blue-600 hover:bg-blue-50 transition-all duration-200 py-4 px-4 rounded-lg font-medium cursor-pointer block`}>
+              <Link to="/about" onClick={handleMobileNavClick} className={`mobile-nav-item ${isActive('/about') ? 'text-blue-600 bg-blue-50' : 'text-gray-700'} hover:text-blue-600 hover:bg-blue-50 transition-all duration-200 py-4 px-4 rounded-lg font-medium cursor-pointer block`}>
                 <i className="fas fa-info-circle w-5 mr-3"></i>
                 About
               </Link>
@@ -216,36 +216,36 @@ const Header = () => {
                   servicesDropdownOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
                 }`}>
                   <div className="ml-8 mt-2 space-y-1 border-l-2 border-blue-100 pl-4">
-                    <Link href="/services/residential-roofing" onClick={handleMobileNavClick} className="mobile-nav-subitem py-3 px-3 rounded-md text-gray-600 hover:text-blue-600 hover:bg-blue-50 transition-all duration-200 font-medium cursor-pointer block">
+                    <Link to="/services/residential-roofing" onClick={handleMobileNavClick} className="mobile-nav-subitem py-3 px-3 rounded-md text-gray-600 hover:text-blue-600 hover:bg-blue-50 transition-all duration-200 font-medium cursor-pointer block">
                       Residential Roofing
                     </Link>
-                    <Link href="/services/commercial-roofing" onClick={handleMobileNavClick} className="mobile-nav-subitem py-3 px-3 rounded-md text-gray-600 hover:text-blue-600 hover:bg-blue-50 transition-all duration-200 font-medium cursor-pointer block">
+                    <Link to="/services/commercial-roofing" onClick={handleMobileNavClick} className="mobile-nav-subitem py-3 px-3 rounded-md text-gray-600 hover:text-blue-600 hover:bg-blue-50 transition-all duration-200 font-medium cursor-pointer block">
                       Commercial Roofing
                     </Link>
-                    <Link href="/services/roof-repair" onClick={handleMobileNavClick} className="mobile-nav-subitem py-3 px-3 rounded-md text-gray-600 hover:text-blue-600 hover:bg-blue-50 transition-all duration-200 font-medium cursor-pointer block">
+                    <Link to="/services/roof-repair" onClick={handleMobileNavClick} className="mobile-nav-subitem py-3 px-3 rounded-md text-gray-600 hover:text-blue-600 hover:bg-blue-50 transition-all duration-200 font-medium cursor-pointer block">
                       Roof Repairs
                     </Link>
-                    <Link href="/services/insurance-claims" onClick={handleMobileNavClick} className="mobile-nav-subitem py-3 px-3 rounded-md text-gray-600 hover:text-blue-600 hover:bg-blue-50 transition-all duration-200 font-medium cursor-pointer block">
+                    <Link to="/services/insurance-claims" onClick={handleMobileNavClick} className="mobile-nav-subitem py-3 px-3 rounded-md text-gray-600 hover:text-blue-600 hover:bg-blue-50 transition-all duration-200 font-medium cursor-pointer block">
                       Insurance Claims
                     </Link>
-                    <Link href="/services/gutter-services" onClick={handleMobileNavClick} className="mobile-nav-subitem py-3 px-3 rounded-md text-gray-600 hover:text-blue-600 hover:bg-blue-50 transition-all duration-200 font-medium cursor-pointer block">
+                    <Link to="/services/gutter-services" onClick={handleMobileNavClick} className="mobile-nav-subitem py-3 px-3 rounded-md text-gray-600 hover:text-blue-600 hover:bg-blue-50 transition-all duration-200 font-medium cursor-pointer block">
                       Gutter Services
                     </Link>
                   </div>
                 </div>
               </div>
               
-              <Link href="/portfolio" onClick={handleMobileNavClick} className={`mobile-nav-item ${isActive('/portfolio') ? 'text-blue-600 bg-blue-50' : 'text-gray-700'} hover:text-blue-600 hover:bg-blue-50 transition-all duration-200 py-4 px-4 rounded-lg font-medium cursor-pointer block`}>
+              <Link to="/portfolio" onClick={handleMobileNavClick} className={`mobile-nav-item ${isActive('/portfolio') ? 'text-blue-600 bg-blue-50' : 'text-gray-700'} hover:text-blue-600 hover:bg-blue-50 transition-all duration-200 py-4 px-4 rounded-lg font-medium cursor-pointer block`}>
                 <i className="fas fa-images w-5 mr-3"></i>
                 Portfolio
               </Link>
               
-              <Link href="/blog" onClick={handleMobileNavClick} className={`mobile-nav-item ${isActive('/blog') ? 'text-blue-600 bg-blue-50' : 'text-gray-700'} hover:text-blue-600 hover:bg-blue-50 transition-all duration-200 py-4 px-4 rounded-lg font-medium cursor-pointer block`}>
+              <Link to="/blog" onClick={handleMobileNavClick} className={`mobile-nav-item ${isActive('/blog') ? 'text-blue-600 bg-blue-50' : 'text-gray-700'} hover:text-blue-600 hover:bg-blue-50 transition-all duration-200 py-4 px-4 rounded-lg font-medium cursor-pointer block`}>
                 <i className="fas fa-blog w-5 mr-3"></i>
                 Blog
               </Link>
               
-              <Link href="/faq" onClick={handleMobileNavClick} className={`mobile-nav-item ${isActive('/faq') ? 'text-blue-600 bg-blue-50' : 'text-gray-700'} hover:text-blue-600 hover:bg-blue-50 transition-all duration-200 py-4 px-4 rounded-lg font-medium cursor-pointer block`}>
+              <Link to="/faq" onClick={handleMobileNavClick} className={`mobile-nav-item ${isActive('/faq') ? 'text-blue-600 bg-blue-50' : 'text-gray-700'} hover:text-blue-600 hover:bg-blue-50 transition-all duration-200 py-4 px-4 rounded-lg font-medium cursor-pointer block`}>
                 <i className="fas fa-question-circle w-5 mr-3"></i>
                 FAQ
               </Link>
@@ -262,7 +262,7 @@ const Header = () => {
                 Call Now: 720-360-8546
               </a>
               
-              <Link href="/contact" onClick={handleMobileNavClick} className="flex items-center justify-center py-4 px-4 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-lg transition-all duration-200 shadow-md cursor-pointer">
+              <Link to="/contact" onClick={handleMobileNavClick} className="flex items-center justify-center py-4 px-4 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-lg transition-all duration-200 shadow-md cursor-pointer">
                 <i className="fas fa-quote-left mr-3"></i>
                 Get a Free Quote
               </Link>
