@@ -111,7 +111,7 @@ const PortfolioSection = () => {
                 <h3 className="text-xl font-semibold mb-2">{item.title}</h3>
                 <p className="text-gray-600 mb-3">{item.location}</p>
                 <p className="text-sm text-gray-600 mb-4">{item.description}</p>
-                <Link href={`/portfolio/${index}`} className="text-primary hover:text-primary-dark font-semibold">
+                <Link href={`/portfolio/${index}`} className="text-blue-800 hover:text-blue-900 font-semibold underline">
                   View Project Details
                 </Link>
               </div>

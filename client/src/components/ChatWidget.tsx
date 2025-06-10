@@ -233,37 +233,37 @@ const ChatWidget = () => {
             <div className="mb-2">
               <div className="flex flex-wrap gap-1 mb-2">
                 <button 
-                  className="text-xs bg-red-100 hover:bg-red-200 px-2 py-1 rounded-full text-red-700 font-medium"
+                  className="text-xs bg-red-200 hover:bg-red-300 px-2 py-1 rounded-full text-red-900 font-medium border border-red-900"
                   onClick={() => setInputValue("Emergency roof repair")}
                 >
                   🚨 Emergency
                 </button>
                 <button 
-                  className="text-xs bg-blue-100 hover:bg-blue-200 px-2 py-1 rounded-full text-blue-700"
+                  className="text-xs bg-blue-200 hover:bg-blue-300 px-2 py-1 rounded-full text-blue-900 border border-blue-900"
                   onClick={() => setInputValue("Schedule free roof inspection")}
                 >
                   Free Inspection
                 </button>
                 <button 
-                  className="text-xs bg-green-100 hover:bg-green-200 px-2 py-1 rounded-full text-green-700"
+                  className="text-xs bg-green-200 hover:bg-green-300 px-2 py-1 rounded-full text-green-900 border border-green-900"
                   onClick={() => setInputValue("Hail damage assessment")}
                 >
                   Hail Damage
                 </button>
                 <button 
-                  className="text-xs bg-purple-100 hover:bg-purple-200 px-2 py-1 rounded-full text-purple-700"
+                  className="text-xs bg-purple-200 hover:bg-purple-300 px-2 py-1 rounded-full text-purple-900 border border-purple-900"
                   onClick={() => setInputValue("Insurance claim help")}
                 >
                   Insurance Claims
                 </button>
                 <button 
-                  className="text-xs bg-orange-100 hover:bg-orange-200 px-2 py-1 rounded-full text-orange-700"
+                  className="text-xs bg-orange-200 hover:bg-orange-300 px-2 py-1 rounded-full text-orange-900 border border-orange-900"
                   onClick={() => setInputValue("Colorado roofing materials")}
                 >
                   Materials
                 </button>
                 <button 
-                  className="text-xs bg-yellow-100 hover:bg-yellow-200 px-2 py-1 rounded-full text-yellow-700"
+                  className="text-xs bg-yellow-200 hover:bg-yellow-300 px-2 py-1 rounded-full text-yellow-900 border border-yellow-900"
                   onClick={() => setInputValue("Roofing costs Colorado")}
                 >
                   Pricing
@@ -282,7 +282,7 @@ const ChatWidget = () => {
               />
               <button 
                 id="chat-send" 
-                className="bg-primary hover:bg-blue-700 text-white px-4 py-2 rounded-r-md transition-colors"
+                className="bg-blue-800 hover:bg-blue-900 text-white px-4 py-2 rounded-r-md transition-colors"
                 onClick={sendMessage}
                 aria-label="Send message"
               >
