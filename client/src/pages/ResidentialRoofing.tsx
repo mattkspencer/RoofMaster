@@ -85,11 +85,35 @@ const ResidentialRoofing = () => {
             
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               <div className="bg-white rounded-lg shadow-md overflow-hidden">
-                <img 
-                  src="https://picsum.photos/600/300?random=1" 
-                  alt="New roof installation" 
-                  className="w-full h-48 object-cover"
-                />
+                <picture>
+                  <source 
+                    media="(max-width: 768px)" 
+                    srcSet="/images/services/new-roof-installation-residential-thumbnail.webp" 
+                    type="image/webp"
+                  />
+                  <source 
+                    media="(max-width: 768px)" 
+                    srcSet="/images/services/new-roof-installation-residential-thumbnail.jpg" 
+                    type="image/jpeg"
+                  />
+                  <source 
+                    srcSet="/images/services/new-roof-installation-residential-medium.webp" 
+                    type="image/webp"
+                  />
+                  <source 
+                    srcSet="/images/services/new-roof-installation-residential-medium.jpg" 
+                    type="image/jpeg"
+                  />
+                  <img 
+                    src="/images/services/new-roof-installation-residential.jpg"
+                    alt="Professional new roof installation for residential homes"
+                    className="w-full h-48 object-cover"
+                    width="600"
+                    height="300"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </picture>
                 <div className="p-6">
                   <h3 className="text-xl font-bold mb-3">New Roof Installation</h3>
                   <p className="text-gray-600 mb-4">
