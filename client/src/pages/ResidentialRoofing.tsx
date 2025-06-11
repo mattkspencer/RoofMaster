@@ -173,11 +173,35 @@ const ResidentialRoofing = () => {
               </div>
               
               <div className="bg-white rounded-lg shadow-md overflow-hidden">
-                <img 
-                  src="https://picsum.photos/600/300?random=3" 
-                  alt="Roof repair work" 
-                  className="w-full h-48 object-cover"
-                />
+                <picture>
+                  <source 
+                    media="(max-width: 768px)" 
+                    srcSet="/images/services/roof-repairs-residential-thumbnail.webp" 
+                    type="image/webp"
+                  />
+                  <source 
+                    media="(max-width: 768px)" 
+                    srcSet="/images/services/roof-repairs-residential-thumbnail.jpg" 
+                    type="image/jpeg"
+                  />
+                  <source 
+                    srcSet="/images/services/roof-repairs-residential-medium.webp" 
+                    type="image/webp"
+                  />
+                  <source 
+                    srcSet="/images/services/roof-repairs-residential-medium.jpg" 
+                    type="image/jpeg"
+                  />
+                  <img 
+                    src="/images/services/roof-repairs-residential.jpg"
+                    alt="Professional roof repair services for residential homes"
+                    className="w-full h-48 object-cover"
+                    width="600"
+                    height="300"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </picture>
                 <div className="p-6">
                   <h3 className="text-xl font-bold mb-3">Roof Repairs</h3>
                   <p className="text-gray-600 mb-4">
