@@ -137,19 +137,35 @@ const ResidentialRoofing = () => {
               </div>
               
               <div className="bg-white rounded-lg shadow-md overflow-hidden">
-                <img 
-                  src="/images/woodshakebuild.jpg?v=2" 
-                  alt="Roof replacement service" 
-                  className="w-full h-48 object-cover max-w-full"
-                  loading="eager"
-                  width="600"
-                  height="300"
-                  onLoad={() => console.log('✓ woodshakebuild.jpg loaded successfully')}
-                  onError={(e) => {
-                    console.error('✗ woodshakebuild.jpg failed to load:', e);
-                    console.log('URL attempted:', (e.target as HTMLImageElement).src);
-                  }}
-                />
+                <picture>
+                  <source 
+                    media="(max-width: 768px)" 
+                    srcSet="/images/services/roofrepairsresidentialpage-thumbnail.webp" 
+                    type="image/webp"
+                  />
+                  <source 
+                    media="(max-width: 768px)" 
+                    srcSet="/images/services/roofrepairsresidentialpage-thumbnail.jpg" 
+                    type="image/jpeg"
+                  />
+                  <source 
+                    srcSet="/images/services/roofrepairsresidentialpage-medium.webp" 
+                    type="image/webp"
+                  />
+                  <source 
+                    srcSet="/images/services/roofrepairsresidentialpage-medium.jpg" 
+                    type="image/jpeg"
+                  />
+                  <img 
+                    src="/images/services/roofrepairsresidentialpage.jpg"
+                    alt="Professional roof replacement services for residential homes"
+                    className="w-full h-48 object-cover"
+                    width="600"
+                    height="300"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </picture>
                 <div className="p-6">
                   <h3 className="text-xl font-bold mb-3">Roof Replacement</h3>
                   <p className="text-gray-600 mb-4">
