@@ -96,11 +96,31 @@ const Blog = () => {
                   {blogPosts.map((post) => (
                     <div key={post.id} className="bg-white rounded-lg shadow-md overflow-hidden h-full flex flex-col">
                       <Link href={`/blog/${post.slug}`} className="block overflow-hidden h-48">
-                        <img 
-                          src={post.image} 
-                          alt={post.title} 
-                          className="w-full h-full object-cover transition-transform hover:scale-105 duration-300"
-                        />
+                        <picture>
+                          <source 
+                            media="(max-width: 768px)" 
+                            srcSet={post.image?.includes('.jpg') ? post.image.replace('.jpg', '-medium.webp') : post.image} 
+                            type="image/webp"
+                          />
+                          <source 
+                            media="(max-width: 768px)" 
+                            srcSet={post.image?.includes('.jpg') ? post.image.replace('.jpg', '-medium.jpg') : post.image} 
+                            type="image/jpeg"
+                          />
+                          <source 
+                            srcSet={post.image?.includes('.jpg') ? post.image.replace('.jpg', '.webp') : post.image} 
+                            type="image/webp"
+                          />
+                          <img 
+                            src={post.image}
+                            alt={post.title}
+                            className="w-full h-full object-cover transition-transform hover:scale-105 duration-300"
+                            width="600"
+                            height="300"
+                            loading="lazy"
+                            decoding="async"
+                          />
+                        </picture>
                       </Link>
                       <div className="p-6 flex flex-col flex-grow">
                         <div className="text-sm text-gray-500 mb-2">{formatDate(post.date)}</div>
