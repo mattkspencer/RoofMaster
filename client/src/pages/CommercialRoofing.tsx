@@ -35,11 +35,40 @@ const CommercialRoofing = () => {
           
           {/* Hero Section */}
           <div className="mb-16 relative rounded-lg overflow-hidden shadow-xl">
-            <img 
-              src="https://picsum.photos/1200/400?random=20" 
-              alt="Commercial roofing project in Denver" 
-              className="w-full h-96 object-cover"
-            />
+            <picture>
+              <source 
+                media="(max-width: 640px)" 
+                srcSet="/images/commercial-roofing-hero-small.webp" 
+                type="image/webp"
+              />
+              <source 
+                media="(max-width: 640px)" 
+                srcSet="/images/commercial-roofing-hero-small.jpg" 
+                type="image/jpeg"
+              />
+              <source 
+                media="(max-width: 1024px)" 
+                srcSet="/images/commercial-roofing-hero-medium.webp" 
+                type="image/webp"
+              />
+              <source 
+                media="(max-width: 1024px)" 
+                srcSet="/images/commercial-roofing-hero-medium.jpg" 
+                type="image/jpeg"
+              />
+              <source 
+                srcSet="/images/commercial-roofing-hero.webp" 
+                type="image/webp"
+              />
+              <img 
+                src="/images/commercial-roofing-hero.jpg"
+                alt="Professional commercial roofing services and solutions"
+                className="w-full h-96 object-cover"
+                width="1920"
+                height="1080"
+                loading="eager"
+              />
+            </picture>
             <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/50 to-black/70 flex items-center justify-center">
               <div className="text-center max-w-3xl px-6">
                 <h2 className="text-3xl md:text-4xl text-white font-bold mb-4 drop-shadow-lg">
@@ -97,11 +126,30 @@ const CommercialRoofing = () => {
               </div>
               
               <div className="bg-white rounded-lg shadow-md overflow-hidden">
-                <img 
-                  src="https://picsum.photos/600/300?random=22" 
-                  alt="Commercial roof repairs and maintenance" 
-                  className="w-full h-48 object-cover"
-                />
+                <picture>
+                  <source 
+                    media="(max-width: 768px)" 
+                    srcSet="/images/commercial-roof-repairs-maintenance-medium.webp" 
+                    type="image/webp"
+                  />
+                  <source 
+                    media="(max-width: 768px)" 
+                    srcSet="/images/commercial-roof-repairs-maintenance-medium.jpg" 
+                    type="image/jpeg"
+                  />
+                  <source 
+                    srcSet="/images/commercial-roof-repairs-maintenance.webp" 
+                    type="image/webp"
+                  />
+                  <img 
+                    src="/images/commercial-roof-repairs-maintenance.jpg"
+                    alt="Professional commercial roof repairs and maintenance services"
+                    className="w-full h-48 object-cover"
+                    width="800"
+                    height="600"
+                    loading="lazy"
+                  />
+                </picture>
                 <div className="p-6">
                   <h3 className="text-xl font-bold mb-3">Roof Repairs & Maintenance</h3>
                   <p className="text-gray-600 mb-4">
@@ -125,11 +173,30 @@ const CommercialRoofing = () => {
               </div>
               
               <div className="bg-white rounded-lg shadow-md overflow-hidden">
-                <img 
-                  src="https://picsum.photos/600/300?random=23" 
-                  alt="Commercial roof inspections and surveys" 
-                  className="w-full h-48 object-cover"
-                />
+                <picture>
+                  <source 
+                    media="(max-width: 768px)" 
+                    srcSet="/images/commercial-roof-inspections-surveys-medium.webp" 
+                    type="image/webp"
+                  />
+                  <source 
+                    media="(max-width: 768px)" 
+                    srcSet="/images/commercial-roof-inspections-surveys-medium.jpg" 
+                    type="image/jpeg"
+                  />
+                  <source 
+                    srcSet="/images/commercial-roof-inspections-surveys.webp" 
+                    type="image/webp"
+                  />
+                  <img 
+                    src="/images/commercial-roof-inspections-surveys.jpg"
+                    alt="Professional commercial roof inspections and survey services"
+                    className="w-full h-48 object-cover"
+                    width="800"
+                    height="600"
+                    loading="lazy"
+                  />
+                </picture>
                 <div className="p-6">
                   <h3 className="text-xl font-bold mb-3">Roof Inspections & Surveys</h3>
                   <p className="text-gray-600 mb-4">

@@ -35,11 +35,40 @@ const InsuranceClaims = () => {
           
           {/* Hero Section */}
           <div className="mb-16 relative rounded-lg overflow-hidden shadow-xl">
-            <img 
-              src="https://picsum.photos/1200/400?random=60" 
-              alt="Roof inspection for insurance claim" 
-              className="w-full h-96 object-cover"
-            />
+            <picture>
+              <source 
+                media="(max-width: 640px)" 
+                srcSet="/images/insurance-claims-hero-small.webp" 
+                type="image/webp"
+              />
+              <source 
+                media="(max-width: 640px)" 
+                srcSet="/images/insurance-claims-hero-small.jpg" 
+                type="image/jpeg"
+              />
+              <source 
+                media="(max-width: 1024px)" 
+                srcSet="/images/insurance-claims-hero-medium.webp" 
+                type="image/webp"
+              />
+              <source 
+                media="(max-width: 1024px)" 
+                srcSet="/images/insurance-claims-hero-medium.jpg" 
+                type="image/jpeg"
+              />
+              <source 
+                srcSet="/images/insurance-claims-hero.webp" 
+                type="image/webp"
+              />
+              <img 
+                src="/images/insurance-claims-hero.jpg"
+                alt="Professional roofing contractor documenting storm damage for insurance claim assistance in Denver"
+                className="w-full h-96 object-cover"
+                width="1920"
+                height="1080"
+                loading="eager"
+              />
+            </picture>
             <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/50 to-black/70 flex items-center justify-center">
               <div className="text-center max-w-3xl px-6">
                 <h2 className="text-3xl md:text-4xl text-white font-bold mb-4 drop-shadow-lg">
@@ -237,11 +266,30 @@ const InsuranceClaims = () => {
             
             <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
               <div className="bg-white rounded-lg shadow-md overflow-hidden">
-                <img 
-                  src="https://picsum.photos/600/300?random=70" 
-                  alt="Hail damage on roof" 
-                  className="w-full h-48 object-cover"
-                />
+                <picture>
+                  <source 
+                    media="(max-width: 768px)" 
+                    srcSet="/images/hail-damage-medium.webp" 
+                    type="image/webp"
+                  />
+                  <source 
+                    media="(max-width: 768px)" 
+                    srcSet="/images/hail-damage-medium.jpg" 
+                    type="image/jpeg"
+                  />
+                  <source 
+                    srcSet="/images/hail-damage.webp" 
+                    type="image/webp"
+                  />
+                  <img 
+                    src="/images/hail-damage.jpg"
+                    alt="Hail damage on roof requiring insurance claim assistance"
+                    className="w-full h-48 object-cover"
+                    width="800"
+                    height="600"
+                    loading="lazy"
+                  />
+                </picture>
                 <div className="p-6">
                   <h3 className="text-xl font-bold mb-3">Hail Damage</h3>
                   <p className="text-gray-600 mb-4">
@@ -273,11 +321,30 @@ const InsuranceClaims = () => {
               </div>
               
               <div className="bg-white rounded-lg shadow-md overflow-hidden">
-                <img 
-                  src="https://picsum.photos/600/300?random=71" 
-                  alt="Wind damage on roof" 
-                  className="w-full h-48 object-cover"
-                />
+                <picture>
+                  <source 
+                    media="(max-width: 768px)" 
+                    srcSet="/images/wind-damage-medium.webp" 
+                    type="image/webp"
+                  />
+                  <source 
+                    media="(max-width: 768px)" 
+                    srcSet="/images/wind-damage-medium.jpg" 
+                    type="image/jpeg"
+                  />
+                  <source 
+                    srcSet="/images/wind-damage.webp" 
+                    type="image/webp"
+                  />
+                  <img 
+                    src="/images/wind-damage.jpg"
+                    alt="Wind damage on roof requiring insurance claim assistance"
+                    className="w-full h-48 object-cover"
+                    width="800"
+                    height="600"
+                    loading="lazy"
+                  />
+                </picture>
                 <div className="p-6">
                   <h3 className="text-xl font-bold mb-3">Wind Damage</h3>
                   <p className="text-gray-600 mb-4">

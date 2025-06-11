@@ -107,7 +107,7 @@ export class MemStorage implements IStorage {
                   <li>Call your insurance company to report the damage</li>
                 </ol>
                 <p>Remember, climbing onto your roof can be dangerous. It's always best to have a professional roofing contractor inspect for damage. At Spencer Roofing Solutions, we offer free post-storm inspections to help you determine if you have a valid insurance claim.</p>`,
-        imageUrl: "/images/haildamagepic.jpg",
+        imageUrl: "/images/hail-damage-roof-blog.jpg",
         publishedAt: new Date("2023-06-15T12:00:00Z"),
         tags: ["hail damage", "roof inspection", "insurance claims"]
       },
@@ -150,7 +150,7 @@ export class MemStorage implements IStorage {
                   <li>Note: Requires reinforced roof structure due to weight</li>
                 </ul>
                 <p>When choosing a roofing material for your Colorado home, consider factors beyond just price: insurance discounts for impact-resistant materials, energy efficiency, and long-term durability all affect the true lifetime cost of your roof.</p>`,
-        imageUrl: "https://picsum.photos/600/400?random=101",
+        imageUrl: "/images/roof-materials-colorado-blog.jpg",
         publishedAt: new Date("2023-05-28T14:30:00Z"),
         tags: ["roofing materials", "colorado climate", "hail resistance"]
       },
@@ -191,7 +191,7 @@ export class MemStorage implements IStorage {
                   <li>Opportunity to upgrade: Chance to switch to more durable or attractive materials</li>
                 </ul>
                 <p>The best approach is to have a professional roofing contractor perform a thorough inspection. At Spencer Roofing Solutions, we provide honest assessments to help you make the most cost-effective decision for your specific situation.</p>`,
-        imageUrl: "https://picsum.photos/600/400?random=102",
+        imageUrl: "/images/repair-vs-replace-roof-blog.jpg",
         publishedAt: new Date("2023-04-10T09:15:00Z"),
         tags: ["roof repair", "roof replacement", "roofing costs"]
       },

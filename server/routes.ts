@@ -71,7 +71,13 @@ export async function registerRoutes(app: Express): Promise<Server> {
   app.get("/api/blog", async (_req: Request, res: Response) => {
     try {
       const posts = await storage.getBlogPosts();
-      return res.status(200).json(posts);
+      // Map imageUrl to image field for frontend compatibility
+      const mappedPosts = posts.map(post => ({
+        ...post,
+        image: post.imageUrl,
+        date: post.publishedAt.toISOString().split('T')[0]
+      }));
+      return res.status(200).json(mappedPosts);
     } catch (error) {
       console.error("Error fetching blog posts:", error);
       return res.status(500).json({

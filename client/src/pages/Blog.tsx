@@ -99,16 +99,16 @@ const Blog = () => {
                         <picture>
                           <source 
                             media="(max-width: 768px)" 
-                            srcSet={post.image?.includes('.jpg') ? post.image.replace('.jpg', '-medium.webp') : post.image} 
+                            srcSet={`${post.image.replace('.jpg', '-medium.webp')}`} 
                             type="image/webp"
                           />
                           <source 
                             media="(max-width: 768px)" 
-                            srcSet={post.image?.includes('.jpg') ? post.image.replace('.jpg', '-medium.jpg') : post.image} 
+                            srcSet={`${post.image.replace('.jpg', '-medium.jpg')}`} 
                             type="image/jpeg"
                           />
                           <source 
-                            srcSet={post.image?.includes('.jpg') ? post.image.replace('.jpg', '.webp') : post.image} 
+                            srcSet={`${post.image.replace('.jpg', '.webp')}`} 
                             type="image/webp"
                           />
                           <img 

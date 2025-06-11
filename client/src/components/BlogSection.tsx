@@ -14,7 +14,7 @@ interface BlogPost {
 const BlogSection = () => {
   const blogPosts: BlogPost[] = [
     {
-      image: "/images/haildamagepic.jpg",
+      image: "/images/hail-damage-roof-blog.jpg",
       date: "2023-06-15",
       title: "How to Identify Hail Damage on Your Roof",
       excerpt: "Learn the telltale signs of hail damage and what steps to take if you suspect your roof has been compromised after a storm.",
@@ -22,7 +22,7 @@ const BlogSection = () => {
       linkText: "Read About Identifying Hail Damage"
     },
     {
-      image: "https://picsum.photos/600/300?random=31",
+      image: "/images/roof-materials-colorado-blog.jpg",
       date: "2023-05-28",
       title: "The Best Roofing Materials for Colorado's Climate",
       excerpt: "Discover which roofing materials stand up best to Colorado's unique climate challenges, from hail to intense sun and everything in between.",
@@ -30,7 +30,7 @@ const BlogSection = () => {
       linkText: "Discover Best Roofing Materials for Colorado"
     },
     {
-      image: "https://picsum.photos/600/300?random=32",
+      image: "/images/repair-vs-replace-roof-blog.jpg",
       date: "2023-04-10",
       title: "When to Repair vs. Replace Your Roof",
       excerpt: "Is it time for a full roof replacement, or can repairs extend your roof's life? This guide helps you make the right decision for your home.",
@@ -55,17 +55,31 @@ const BlogSection = () => {
               key={index}
               className="bg-neutral-light rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-all duration-300"
             >
-              <OptimizedImage 
-                src={post.image} 
-                alt={`${post.title} - Spencer Roofing Solutions blog article`}
-                className="w-full h-48 object-cover"
-                loading="lazy"
-                decoding="async"
-                width={600}
-                height={300}
-                mobileWidth={400}
-                mobileHeight={200}
-              />
+              <picture>
+                <source 
+                  media="(max-width: 768px)" 
+                  srcSet={`${post.image.replace('.jpg', '-medium.webp')}`} 
+                  type="image/webp"
+                />
+                <source 
+                  media="(max-width: 768px)" 
+                  srcSet={`${post.image.replace('.jpg', '-medium.jpg')}`} 
+                  type="image/jpeg"
+                />
+                <source 
+                  srcSet={`${post.image.replace('.jpg', '.webp')}`} 
+                  type="image/webp"
+                />
+                <img 
+                  src={post.image}
+                  alt={`${post.title} - Spencer Roofing Solutions blog article`}
+                  className="w-full h-48 object-cover"
+                  width="600"
+                  height="300"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </picture>
               <div className="p-6">
                 <p className="text-sm text-gray-500 mb-2">{formatDate(post.date)}</p>
                 <h3 className="text-xl font-semibold mb-3">{post.title}</h3>

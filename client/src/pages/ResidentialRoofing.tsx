@@ -34,12 +34,28 @@ const ResidentialRoofing = () => {
           <h1 className="text-4xl font-bold mb-8 text-center">Residential Roofing Services</h1>
           
           {/* Hero Section */}
-          <div className="mb-16 relative rounded-lg overflow-hidden shadow-xl">
-            <img 
-              src="https://picsum.photos/1200/400?random=10" 
-              alt="Residential roof installation in Denver" 
-              className="w-full h-96 object-cover"
-            />
+          <div className="mb-16 relative rounded-lg overflow-hidden shadow-xl h-96 md:h-[500px] lg:h-[600px] hero-container">
+            <picture>
+              <source 
+                srcSet="/images/residential-roofing-hero-small.webp 800w, /images/residential-roofing-hero-medium.webp 1200w, /images/residential-roofing-hero.webp 1920w" 
+                type="image/webp" 
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 100vw, 1920px"
+              />
+              <source 
+                srcSet="/images/residential-roofing-hero-small.jpg 800w, /images/residential-roofing-hero-medium.jpg 1200w, /images/residential-roofing-hero.jpg 1920w" 
+                type="image/jpeg"
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 100vw, 1920px"
+              />
+              <img 
+                src="/images/residential-roofing-hero.jpg" 
+                alt="Professional residential roofing services - Aerial view of quality roof installation work by Spencer Roofing Solutions in Denver"
+                className="w-full h-full object-cover hero-image"
+                loading="eager"
+                decoding="async"
+                width="1920"
+                height="1080"
+              />
+            </picture>
             <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/50 to-black/70 flex items-center justify-center">
               <div className="text-center max-w-3xl px-6">
                 <h2 className="text-3xl md:text-4xl text-white font-bold mb-4 drop-shadow-lg">
@@ -50,7 +66,7 @@ const ResidentialRoofing = () => {
                 </p>
                 <Link href="/contact">
                   <div 
-                    className="inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold py-4 px-8 rounded-md transition-colors shadow-lg cursor-pointer"
+                    className="inline-block bg-blue-800 hover:bg-blue-900 text-white font-semibold py-4 px-8 rounded-md transition-colors shadow-lg cursor-pointer"
                     onClick={handleCTAClick}
                   >
                     Get a Free Estimate

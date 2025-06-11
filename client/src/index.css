@@ -68,3 +68,14 @@
     @apply font-sans antialiased bg-background text-foreground;
   }
 }
+
+/* Hero image performance optimizations */
+.hero-image {
+  will-change: transform;
+  transform: translateZ(0);
+}
+
+/* Prevent layout shift during image loading */
+.hero-container {
+  contain: layout style paint;
+}
