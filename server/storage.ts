@@ -326,9 +326,9 @@ export class MemStorage implements IStorage {
         location: "Highlands Ranch, CO",
         description: "Complete replacement of storm-damaged roof with architectural shingles and upgraded ventilation system.",
         category: "residential",
-        imageUrl: "/images/woodshakebuild.jpg",
+        imageUrl: "/images/portfolio/asphalt-shingle-roof-replacement.jpg",
         beforeImageUrl: "/images/barrackbuildfinished.jpg",
-        afterImageUrl: "/images/woodshakebuild.jpg",
+        afterImageUrl: "/images/portfolio/asphalt-shingle-roof-replacement.jpg",
         completionDate: new Date("2023-05-15"),
         testimonial: "Spencer and his team did an excellent job on our roof replacement. The work was completed on time and on budget. The new architectural shingles look fantastic and have already survived a hailstorm with no issues!",
         client: "Johnson Family"

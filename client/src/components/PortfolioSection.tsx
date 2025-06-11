@@ -96,17 +96,49 @@ const PortfolioSection = () => {
               key={index}
               className="portfolio-item bg-neutral-light rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-all duration-300"
             >
-              <OptimizedImage 
-                src={item.image} 
-                alt={`${item.title} roofing project in ${item.location}`}
-                className="w-full h-60 object-cover"
-                loading="lazy"
-                decoding="async"
-                width={600}
-                height={400}
-                mobileWidth={350}
-                mobileHeight={250}
-              />
+              {item.image.startsWith('/images/portfolio/') ? (
+                <picture>
+                  <source 
+                    media="(max-width: 768px)" 
+                    srcSet={`${item.image.replace('.jpg', '-thumbnail.webp')}`} 
+                    type="image/webp"
+                  />
+                  <source 
+                    media="(max-width: 768px)" 
+                    srcSet={`${item.image.replace('.jpg', '-thumbnail.jpg')}`} 
+                    type="image/jpeg"
+                  />
+                  <source 
+                    srcSet={`${item.image.replace('.jpg', '-medium.webp')}`} 
+                    type="image/webp"
+                  />
+                  <source 
+                    srcSet={`${item.image.replace('.jpg', '-medium.jpg')}`} 
+                    type="image/jpeg"
+                  />
+                  <img 
+                    src={item.image}
+                    alt={item.title === 'Asphalt Shingle Roof Replacement' ? 
+                      'Professional asphalt shingle roof replacement project showcase' : 
+                      `${item.title} roofing project in ${item.location}`}
+                    className="w-full h-60 object-cover"
+                    width="600"
+                    height="400"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </picture>
+              ) : (
+                <img 
+                  src={item.image} 
+                  alt={`${item.title} roofing project in ${item.location}`}
+                  className="w-full h-60 object-cover"
+                  width="600"
+                  height="400"
+                  loading="lazy"
+                  decoding="async"
+                />
+              )}
               <div className="p-4">
                 <h3 className="text-xl font-semibold mb-2">{item.title}</h3>
                 <p className="text-gray-600 mb-3">{item.location}</p>
