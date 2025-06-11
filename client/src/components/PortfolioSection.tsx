@@ -16,7 +16,7 @@ const PortfolioSection = () => {
   
   const portfolioItems: PortfolioItem[] = [
     {
-      image: "https://picsum.photos/600/400?random=50",
+      image: "/images/portfolio/asphalt-shingle-roof-replacement.jpg",
       title: "Asphalt Shingle Roof Replacement",
       location: "Highlands Ranch, CO",
       description: "Complete replacement of storm-damaged roof with architectural shingles and upgraded ventilation system.",
