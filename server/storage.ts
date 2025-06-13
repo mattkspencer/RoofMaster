@@ -338,7 +338,7 @@ export class MemStorage implements IStorage {
         location: "Denver, CO",
         description: "Installation of 20,000 sq. ft. TPO roofing system for a local business complex with improved drainage.",
         category: "commercial",
-        imageUrl: "/images/buildfinishedpicrobryan.jpg",
+        imageUrl: "/images/portfolio/tpo-commercial-roof-installation.jpg",
         beforeImageUrl: "/images/colburnbuild.jpg",
         afterImageUrl: "/images/buildfinishedpicrobryan.jpg",
         completionDate: new Date("2023-04-22"),
