@@ -1,0 +1,38 @@
+# Gutter Services Hero Banner Photo Optimization Prompt
+
+**Please optimize this uploaded photo for use as the hero banner on my Gutter Services page. Here's what I need you to do:**
+
+## 1. Image Processing:
+* Optimize the image for web performance while maintaining high quality (aim for under 500KB for hero banner)
+* Convert to WebP format as well for better compression
+* Resize to hero banner dimensions (recommend 1920x1080 or 1800x900 for wide banner format)
+* Preserve the original color saturation, brightness, and natural lighting - NO color corrections or brightness adjustments
+* Ensure the image works well as a background with text overlay
+
+## 2. File Management:
+* Save the optimized images to: `client/public/images/gutter-services/`
+* Name appropriately like `gutter-services-hero.webp` and `gutter-services-hero.jpg`
+* Create responsive versions (mobile/tablet/desktop) for different screen sizes
+
+## 3. Implementation:
+* Locate my "Gutter Services" page
+* **SPECIFICALLY:** Find the hero banner section at the top of the page
+* **REPLACE:** The current placeholder image in the hero banner background
+* Insert the new optimized image as the background image
+* Ensure the existing text "Protect Your Home with Quality Gutter Systems" remains clearly readable over the new image
+* Add proper alt text like 'Professional gutter installation and maintenance services'
+
+## 4. Performance & Quality:
+* Implement WebP format with JPG fallback for browser compatibility
+* Add responsive srcset for optimal loading across all devices
+* Maintain fast loading performance for the hero banner
+* Keep the image looking exactly like the original upload - just web-optimized
+* Ensure proper contrast so the hero text remains highly visible and readable
+* Optimize for hero banner aspect ratio and focal point positioning
+
+## 5. Text Overlay Compatibility:
+* Ensure the image composition works well with the overlay text
+* Maintain good contrast between background image and white/light text
+* Position focal points to not interfere with text readability
+
+**Please locate the hero banner section on the Gutter Services page and replace the current placeholder background image with this optimized photo while ensuring the "Protect Your Home with Quality Gutter Systems" text remains clearly visible and professional.**
