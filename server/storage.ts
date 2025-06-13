@@ -484,7 +484,13 @@ export class MemStorage implements IStorage {
   // Blog post methods
   async createBlogPost(post: InsertBlogPost): Promise<BlogPost> {
     const id = this.currentIds.blogPosts++;
-    const newPost: BlogPost = { ...post, id };
+    const newPost: BlogPost = { 
+      ...post, 
+      id,
+      author: post.author || "Spencer Roofing Solutions",
+      publishedAt: post.publishedAt || new Date(),
+      tags: post.tags || null
+    };
     this.blogPosts.set(id, newPost);
     return newPost;
   }
@@ -518,7 +524,15 @@ export class MemStorage implements IStorage {
   // Portfolio project methods
   async createPortfolioProject(project: InsertPortfolioProject): Promise<PortfolioProject> {
     const id = this.currentIds.portfolioProjects++;
-    const newProject: PortfolioProject = { ...project, id };
+    const newProject: PortfolioProject = { 
+      ...project, 
+      id,
+      beforeImageUrl: project.beforeImageUrl || null,
+      afterImageUrl: project.afterImageUrl || null,
+      completionDate: project.completionDate || null,
+      testimonial: project.testimonial || null,
+      client: project.client || null
+    };
     this.portfolioProjects.set(id, newProject);
     return newProject;
   }
@@ -556,7 +570,9 @@ export class MemStorage implements IStorage {
       ...testimonial, 
       id,
       createdAt: new Date(),
-      isApproved: false
+      isApproved: false,
+      imageUrl: testimonial.imageUrl || null,
+      projectType: testimonial.projectType || null
     };
     this.testimonials.set(id, newTestimonial);
     return newTestimonial;
