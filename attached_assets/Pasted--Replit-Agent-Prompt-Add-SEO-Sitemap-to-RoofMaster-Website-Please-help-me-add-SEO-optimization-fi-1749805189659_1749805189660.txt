@@ -1,0 +1,207 @@
+# Replit Agent Prompt: Add SEO Sitemap to RoofMaster Website
+
+Please help me add SEO optimization files to my RoofMaster roofing website project. I need you to create two files in the public directory:
+
+## Task 1: Create sitemap.xml file
+Create a file called `sitemap.xml` in the `public/` directory with the following content:
+
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  
+  <!-- Homepage - Highest Priority -->
+  <url>
+    <loc>https://your-replit-url.replit.app/</loc>
+    <lastmod>2024-01-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  
+  <!-- Main Service Pages - High Priority -->
+  <url>
+    <loc>https://your-replit-url.replit.app/services</loc>
+    <lastmod>2024-01-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  
+  <url>
+    <loc>https://your-replit-url.replit.app/services/roof-repair</loc>
+    <lastmod>2024-01-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
+    <loc>https://your-replit-url.replit.app/services/roof-replacement</loc>
+    <lastmod>2024-01-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
+    <loc>https://your-replit-url.replit.app/services/roof-inspection</loc>
+    <lastmod>2024-01-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
+    <loc>https://your-replit-url.replit.app/services/emergency-repair</loc>
+    <lastmod>2024-01-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
+    <loc>https://your-replit-url.replit.app/services/gutter-services</loc>
+    <lastmod>2024-01-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Core Business Pages -->
+  <url>
+    <loc>https://your-replit-url.replit.app/about</loc>
+    <lastmod>2024-01-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <url>
+    <loc>https://your-replit-url.replit.app/contact</loc>
+    <lastmod>2024-01-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  
+  <!-- Service Area Pages - Important for Local SEO -->
+  <url>
+    <loc>https://your-replit-url.replit.app/service-areas</loc>
+    <lastmod>2024-01-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <url>
+    <loc>https://your-replit-url.replit.app/service-areas/denver</loc>
+    <lastmod>2024-01-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
+    <loc>https://your-replit-url.replit.app/service-areas/englewood</loc>
+    <lastmod>2024-01-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
+    <loc>https://your-replit-url.replit.app/service-areas/littleton</loc>
+    <lastmod>2024-01-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <url>
+    <loc>https://your-replit-url.replit.app/service-areas/arvada</loc>
+    <lastmod>2024-01-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <url>
+    <loc>https://your-replit-url.replit.app/service-areas/lakewood</loc>
+    <lastmod>2024-01-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Resource/Information Pages -->
+  <url>
+    <loc>https://your-replit-url.replit.app/gallery</loc>
+    <lastmod>2024-01-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://your-replit-url.replit.app/testimonials</loc>
+    <lastmod>2024-01-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://your-replit-url.replit.app/free-estimate</loc>
+    <lastmod>2024-01-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  
+  <!-- Blog/Resources (if you add them) -->
+  <url>
+    <loc>https://your-replit-url.replit.app/blog</loc>
+    <lastmod>2024-01-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <!-- Legal Pages -->
+  <url>
+    <loc>https://your-replit-url.replit.app/privacy-policy</loc>
+    <lastmod>2024-01-27</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  
+  <url>
+    <loc>https://your-replit-url.replit.app/terms-of-service</loc>
+    <lastmod>2024-01-27</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+
+</urlset>
+```
+
+## Task 2: Create robots.txt file
+Create a file called `robots.txt` in the `public/` directory with the following content:
+
+```txt
+User-agent: *
+Allow: /
+
+# Block access to admin or sensitive areas (if any)
+Disallow: /admin/
+Disallow: /api/
+Disallow: /.env
+Disallow: /node_modules/
+
+# Allow specific bots
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+# Sitemap location
+Sitemap: https://your-replit-url.replit.app/sitemap.xml
+
+# Crawl delay (optional - helps prevent server overload)
+Crawl-delay: 1
+```
+
+## Task 3: Update URLs
+After creating both files, please:
+1. Replace ALL instances of `https://your-replit-url.replit.app/` in both files with the actual URL of this Replit deployment
+2. Make sure both files are properly saved in the `public/` directory so they're accessible at `/sitemap.xml` and `/robots.txt`
+
+## Important Notes:
+- These files will help with SEO by telling search engines about all the pages on the roofing website
+- The sitemap includes service pages, location pages, and other important pages for a roofing business
+- The robots.txt file guides search engine crawlers and references the sitemap
+- Both files should be accessible from the root domain (e.g., yoursite.com/sitemap.xml and yoursite.com/robots.txt)
+
+Please confirm when both files have been created and the URLs have been updated with the actual deployment URL.

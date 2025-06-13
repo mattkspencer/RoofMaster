@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  
+  <!-- Homepage - Highest Priority -->
+  <url>
+    <loc>https://spencerroofingsolutions.com/</loc>
+    <lastmod>2024-06-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  
+  <!-- Main Service Pages - High Priority -->
+  <url>
+    <loc>https://spencerroofingsolutions.com/services/roof-repair</loc>
+    <lastmod>2024-06-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  
+  <url>
+    <loc>https://spencerroofingsolutions.com/services/roof-replacement</loc>
+    <lastmod>2024-06-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  
+  <url>
+    <loc>https://spencerroofingsolutions.com/services/roof-inspection</loc>
+    <lastmod>2024-06-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
+    <loc>https://spencerroofingsolutions.com/services/emergency-repair</loc>
+    <lastmod>2024-06-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
+    <loc>https://spencerroofingsolutions.com/services/commercial-roofing</loc>
+    <lastmod>2024-06-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
+    <loc>https://spencerroofingsolutions.com/services/gutter-services</loc>
+    <lastmod>2024-06-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
+    <loc>https://spencerroofingsolutions.com/services/insurance-claims</loc>
+    <lastmod>2024-06-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <!-- Core Business Pages -->
+  <url>
+    <loc>https://spencerroofingsolutions.com/about</loc>
+    <lastmod>2024-06-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <url>
+    <loc>https://spencerroofingsolutions.com/contact</loc>
+    <lastmod>2024-06-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  
+  <url>
+    <loc>https://spencerroofingsolutions.com/portfolio</loc>
+    <lastmod>2024-06-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Content Pages -->
+  <url>
+    <loc>https://spencerroofingsolutions.com/blog</loc>
+    <lastmod>2024-06-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://spencerroofingsolutions.com/faq</loc>
+    <lastmod>2024-06-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <!-- Service Area Pages - Important for Local SEO -->
+  <url>
+    <loc>https://spencerroofingsolutions.com/service-areas/denver</loc>
+    <lastmod>2024-06-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
+    <loc>https://spencerroofingsolutions.com/service-areas/arvada</loc>
+    <lastmod>2024-06-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <url>
+    <loc>https://spencerroofingsolutions.com/service-areas/lakewood</loc>
+    <lastmod>2024-06-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <url>
+    <loc>https://spencerroofingsolutions.com/service-areas/littleton</loc>
+    <lastmod>2024-06-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <url>
+    <loc>https://spencerroofingsolutions.com/service-areas/englewood</loc>
+    <lastmod>2024-06-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <url>
+    <loc>https://spencerroofingsolutions.com/service-areas/thornton</loc>
+    <lastmod>2024-06-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <url>
+    <loc>https://spencerroofingsolutions.com/service-areas/westminster</loc>
+    <lastmod>2024-06-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <url>
+    <loc>https://spencerroofingsolutions.com/service-areas/aurora</loc>
+    <lastmod>2024-06-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <url>
+    <loc>https://spencerroofingsolutions.com/service-areas/highlands-ranch</loc>
+    <lastmod>2024-06-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <url>
+    <loc>https://spencerroofingsolutions.com/service-areas/centennial</loc>
+    <lastmod>2024-06-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+</urlset>

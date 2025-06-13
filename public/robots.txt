@@ -1,0 +1,36 @@
+User-agent: *
+Allow: /
+
+# Block access to admin or sensitive areas
+Disallow: /admin/
+Disallow: /api/
+Disallow: /.env
+Disallow: /node_modules/
+Disallow: /server/
+Disallow: /shared/
+
+# Allow specific bots
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: DuckDuckBot
+Allow: /
+
+# Sitemap location
+Sitemap: https://spencerroofingsolutions.com/sitemap.xml
+
+# Crawl delay (helps prevent server overload)
+Crawl-delay: 1
+
+# Additional directives for roofing business
+# Allow crawling of image directories
+Allow: /images/
+Allow: /assets/
+
+# Block any temporary or development files
+Disallow: /*.tmp
+Disallow: /temp/
+Disallow: /backup/
