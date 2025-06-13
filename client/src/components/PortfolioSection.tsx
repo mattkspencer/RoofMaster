@@ -30,7 +30,7 @@ const PortfolioSection = () => {
       category: "commercial"
     },
     {
-      image: "https://images.unsplash.com/photo-1591117207239-788bf8de6c3b?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
+      image: "/images/portfolio/hail-damage-insurance-claim.jpg",
       title: "Hail Damage Insurance Claim",
       location: "Aurora, CO",
       description: "Successfully processed insurance claim and replaced severely hail-damaged roof and gutters.",
