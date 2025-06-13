@@ -272,11 +272,30 @@ const GutterServices = () => {
               <div className="bg-white rounded-lg shadow-md p-6">
                 <h3 className="text-xl font-bold mb-4 text-center">Aluminum</h3>
                 <div className="h-40 bg-primary/5 rounded-md flex items-center justify-center mb-4">
-                  <img 
-                    src="https://images.unsplash.com/photo-1605118936262-0797bc7a82a4?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" 
-                    alt="Aluminum gutters"
-                    className="h-full w-full object-cover rounded-md"
-                  />
+                  <picture>
+                    <source 
+                      media="(max-width: 768px)" 
+                      srcSet="/images/gutter-services/aluminum-gutters-material-medium.webp" 
+                      type="image/webp"
+                    />
+                    <source 
+                      media="(max-width: 768px)" 
+                      srcSet="/images/gutter-services/aluminum-gutters-material-medium.jpg" 
+                      type="image/jpeg"
+                    />
+                    <source 
+                      srcSet="/images/gutter-services/aluminum-gutters-material.webp" 
+                      type="image/webp"
+                    />
+                    <img 
+                      src="/images/gutter-services/aluminum-gutters-material.jpg"
+                      alt="Professional aluminum gutter installation showcasing durable bronze finish and quality craftsmanship"
+                      className="h-full w-full object-cover rounded-md"
+                      width="900"
+                      height="675"
+                      loading="lazy"
+                    />
+                  </picture>
                 </div>
                 <div className="space-y-2 mb-4">
                   <div className="flex justify-between">
