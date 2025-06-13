@@ -376,11 +376,30 @@ const InsuranceClaims = () => {
               </div>
               
               <div className="bg-white rounded-lg shadow-md overflow-hidden">
-                <img 
-                  src="https://images.unsplash.com/photo-1517490232338-06b912a786b5?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" 
-                  alt="Fallen tree damage on roof" 
-                  className="w-full h-48 object-cover"
-                />
+                <picture>
+                  <source 
+                    media="(max-width: 768px)" 
+                    srcSet="/images/insurance-claims/falling-objects-claim-medium.webp" 
+                    type="image/webp"
+                  />
+                  <source 
+                    media="(max-width: 768px)" 
+                    srcSet="/images/insurance-claims/falling-objects-claim-medium.jpg" 
+                    type="image/jpeg"
+                  />
+                  <source 
+                    srcSet="/images/insurance-claims/falling-objects-claim.webp" 
+                    type="image/webp"
+                  />
+                  <img 
+                    src="/images/insurance-claims/falling-objects-claim.jpg"
+                    alt="Professional documentation of roof damage from falling objects for insurance claim in Denver"
+                    className="w-full h-48 object-cover"
+                    width="900"
+                    height="675"
+                    loading="lazy"
+                  />
+                </picture>
                 <div className="p-6">
                   <h3 className="text-xl font-bold mb-3">Falling Objects</h3>
                   <p className="text-gray-600 mb-4">

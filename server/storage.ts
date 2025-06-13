@@ -313,9 +313,9 @@ export class MemStorage implements IStorage {
         excerpt: post.excerpt,
         content: post.content,
         imageUrl: post.imageUrl,
-        author: "Spencer Roofing Solutions",
-        publishedAt: post.publishedAt,
-        tags: post.tags
+        author: post.author || "Spencer Roofing Solutions",
+        publishedAt: post.publishedAt || new Date(),
+        tags: post.tags || null
       });
     });
 
@@ -363,7 +363,12 @@ export class MemStorage implements IStorage {
       const id = this.currentIds.portfolioProjects++;
       this.portfolioProjects.set(id, {
         ...project,
-        id
+        id,
+        beforeImageUrl: project.beforeImageUrl || null,
+        afterImageUrl: project.afterImageUrl || null,
+        completionDate: project.completionDate || null,
+        testimonial: project.testimonial || null,
+        client: project.client || null
       });
     });
 
@@ -409,7 +414,9 @@ export class MemStorage implements IStorage {
         ...testimonial,
         id,
         createdAt: new Date(),
-        isApproved: true
+        isApproved: true,
+        imageUrl: testimonial.imageUrl || null,
+        projectType: testimonial.projectType || null
       });
     });
   }
@@ -445,7 +452,12 @@ export class MemStorage implements IStorage {
       id,
       consentTimestamp,
       createdAt: currentTime,
-      status: "new"
+      status: "new",
+      message: submission.message || null,
+      address: submission.address || null,
+      hearAbout: submission.hearAbout || null,
+      emailConsent: submission.emailConsent || false,
+      smsConsent: submission.smsConsent || false
     };
     this.contactSubmissions.set(id, newSubmission);
     return newSubmission;
