@@ -23,7 +23,7 @@ const PortfolioSection = () => {
       category: "residential"
     },
     {
-      image: "https://images.unsplash.com/photo-1589939705384-5185137a7f0f?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
+      image: "/images/portfolio/tpo-commercial-roof-installation.jpg",
       title: "TPO Commercial Roof Installation",
       location: "Denver, CO",
       description: "Installation of 20,000 sq. ft. TPO roofing system for a local business complex with improved drainage.",
