@@ -629,11 +629,30 @@ const GutterServices = () => {
           <div className="mb-16">
             <div className="flex flex-col lg:flex-row items-center gap-12">
               <div className="lg:w-1/2">
-                <img 
-                  src="https://images.unsplash.com/photo-1560170412-0f7df0eb0fb1?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
-                  alt="Gutter guard installation" 
-                  className="rounded-lg shadow-lg w-full h-auto"
-                />
+                <picture>
+                  <source 
+                    media="(max-width: 768px)" 
+                    srcSet="/images/gutter-services/gutter-guards-benefits-medium.webp" 
+                    type="image/webp"
+                  />
+                  <source 
+                    media="(max-width: 768px)" 
+                    srcSet="/images/gutter-services/gutter-guards-benefits-medium.jpg" 
+                    type="image/jpeg"
+                  />
+                  <source 
+                    srcSet="/images/gutter-services/gutter-guards-benefits.webp" 
+                    type="image/webp"
+                  />
+                  <img 
+                    src="/images/gutter-services/gutter-guards-benefits.jpg"
+                    alt="Professional gutter guards installation showing protective mesh design and debris filtering benefits"
+                    className="rounded-lg shadow-lg w-full h-auto"
+                    width="900"
+                    height="675"
+                    loading="lazy"
+                  />
+                </picture>
               </div>
               
               <div className="lg:w-1/2">
