@@ -431,11 +431,30 @@ const InsuranceClaims = () => {
               </div>
               
               <div className="bg-white rounded-lg shadow-md overflow-hidden">
-                <img 
-                  src="https://images.unsplash.com/photo-1517842645767-c639042777db?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" 
-                  alt="Snow and ice damage on roof" 
-                  className="w-full h-48 object-cover"
-                />
+                <picture>
+                  <source 
+                    media="(max-width: 768px)" 
+                    srcSet="/images/insurance-claims/snow-ice-damage-claim-medium.webp" 
+                    type="image/webp"
+                  />
+                  <source 
+                    media="(max-width: 768px)" 
+                    srcSet="/images/insurance-claims/snow-ice-damage-claim-medium.jpg" 
+                    type="image/jpeg"
+                  />
+                  <source 
+                    srcSet="/images/insurance-claims/snow-ice-damage-claim.webp" 
+                    type="image/webp"
+                  />
+                  <img 
+                    src="/images/insurance-claims/snow-ice-damage-claim.jpg"
+                    alt="Severe ice dam formation and snow damage requiring insurance claim assessment in Denver"
+                    className="w-full h-48 object-cover"
+                    width="900"
+                    height="675"
+                    loading="lazy"
+                  />
+                </picture>
                 <div className="p-6">
                   <h3 className="text-xl font-bold mb-3">Snow and Ice Damage</h3>
                   <p className="text-gray-600 mb-4">
