@@ -20,7 +20,7 @@ User-agent: DuckDuckBot
 Allow: /
 
 # Sitemap location
-Sitemap: https://spencerroofingsolutions.com/sitemap.xml
+Sitemap: https://roof-master-mattspen.replit.app/sitemap.xml
 
 # Crawl delay (helps prevent server overload)
 Crawl-delay: 1
