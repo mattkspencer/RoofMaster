@@ -245,7 +245,7 @@ export class MemStorage implements IStorage {
                   <li>Handle the entire repair or replacement process</li>
                 </ul>
                 <p>Remember, having a knowledgeable roofing professional on your side can significantly improve the outcome of your insurance claim. Don't hesitate to contact us before filing your claim.</p>`,
-        imageUrl: "https://picsum.photos/600/400?random=103",
+        imageUrl: "/images/blog/insurance-coverage-roof-damage.jpg",
         publishedAt: new Date("2023-03-22T11:45:00Z"),
         tags: ["insurance claims", "roof damage", "storm damage"]
       },
