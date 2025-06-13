@@ -34,12 +34,41 @@ const GutterServices = () => {
           <h1 className="text-4xl font-bold mb-8 text-center">Gutter Installation & Repair Services</h1>
           
           {/* Hero Section */}
-          <div className="mb-16 relative rounded-lg overflow-hidden">
-            <img 
-              src="https://picsum.photos/800/400?random=80" 
-              alt="Gutter installation on a home" 
-              className="w-full h-96 object-cover"
-            />
+          <div className="mb-16 relative rounded-lg overflow-hidden shadow-xl">
+            <picture>
+              <source 
+                media="(max-width: 640px)" 
+                srcSet="/images/gutter-services/gutter-services-hero-mobile.webp" 
+                type="image/webp"
+              />
+              <source 
+                media="(max-width: 640px)" 
+                srcSet="/images/gutter-services/gutter-services-hero-mobile.jpg" 
+                type="image/jpeg"
+              />
+              <source 
+                media="(max-width: 1024px)" 
+                srcSet="/images/gutter-services/gutter-services-hero-tablet.webp" 
+                type="image/webp"
+              />
+              <source 
+                media="(max-width: 1024px)" 
+                srcSet="/images/gutter-services/gutter-services-hero-tablet.jpg" 
+                type="image/jpeg"
+              />
+              <source 
+                srcSet="/images/gutter-services/gutter-services-hero.webp" 
+                type="image/webp"
+              />
+              <img 
+                src="/images/gutter-services/gutter-services-hero.jpg"
+                alt="Professional gutter installation and maintenance services showing quality aluminum gutters and downspouts"
+                className="w-full h-96 object-cover"
+                width="1920"
+                height="1080"
+                loading="eager"
+              />
+            </picture>
             <div className="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center">
               <div className="text-center max-w-3xl px-4">
                 <h2 className="text-3xl md:text-4xl text-white font-bold mb-4">
