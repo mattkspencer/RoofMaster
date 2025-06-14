@@ -1,0 +1,149 @@
+# Replit Agent Prompt: Roofing Website Maintenance Tips Page
+
+## Primary Objectives:
+1. Create a comprehensive "Roof Maintenance Tips" page 
+2. Fix the broken "learn roof maintenance tips" link on the blog page
+3. Evaluate and optimize the footer "maintenance tips" button placement
+4. Ensure SEO optimization and conversion-focused design
+
+## Content Structure for Maintenance Tips Page:
+
+### Page Title: "30 Essential Roof Maintenance Tips for Denver Homeowners"
+
+### Meta Description Options (choose best):
+- "Essential Denver Roof Maintenance Tips • Pro Advice & Smart DIY - Keep your Denver home safe year-round with smart roof care—from snow removal and gutter cleaning to hail prep."
+- "Denver Roof Care Guide • Prevent Hail, Ice Dam & Leak Damage - Protect your Denver roof with seasonal maintenance tips and know when to call a pro."
+
+### Content Sections:
+
+#### 1. 🗓️ Seasonal & Safety Essentials
+- Spring & Fall Professional Roof Inspections
+- Post-Storm & Hail Checks  
+- Know Your Roof's Snow-Load Threshold
+- Snow Raking & Ice Management
+- Avoid Risky DIY on Sloped or Wet Roofs
+
+**CTA Button:** "Need Help With Today's Roof Issue?"
+
+#### 2. ❄️ Winter Protection
+- Prevent Ice Dams with Attic Management
+- Seal Attic Air Leaks Thoroughly
+- Regularly Check Flashing & Shingles Post-Winter
+
+**CTA Button:** "Prepare for Denver Winter—Ask Us How"
+
+#### 3. 🌞 Year-Round Maintenance
+- Clean Gutters & Downspouts Biannually
+- Trim Overhanging Trees
+- Clear Moss, Algae & Debris Regularly
+- Inspect Metal Components Seasonally
+- Monitor Granule Accumulation in Gutters
+- Re-Seal Roof Penetrations Annually
+- Maintain Attic Ventilation Devices
+
+**CTA Button:** "Schedule a Pro Roof Check"
+
+#### 4. 💧 Drainage & Flat Roof Care
+- Regular Inspections on Flat or Low-Slope Roofing
+- Re-Level Ponding Areas on Flat Roofs
+
+**CTA Button:** "Worried About Ice Dams? Get Answers"
+
+#### 5. 🛠️ Durable Materials & Long-Term Upgrades
+- Upgrade to Impact-Resistant Shingles
+- Replace Drip Edge During Reroofs
+- Inspect Shingle UV Damage & Thermal Cracks
+- Assess Flashing for UV Degradation
+- Track Roof Age & Plan Replacement
+
+**CTA Button:** "Protect Your Roof from Hail—Request a Quote"
+
+#### 6. 🛡️ Structural Integrity & Code Compliance
+- Monitor Roof Deck & Decking Health
+- Understand Building Code Requirements
+- Ensure Proper Permitting for Major Projects
+
+**CTA Button:** "Not Comfortable Up There? We've Got You"
+
+#### 7. 🐾 Pests & Wildlife Prevention
+- Shield Against Animal Intrusion
+
+#### 8. 📋 Documentation & Records
+- Keep a Detailed Roof Maintenance Log
+- Review Warranties Before Maintenance
+
+#### 9. 🔧 Professional Readiness & Emergency Planning
+- Maintain Emergency Repair Kits & Contact Lists
+- Recognize When to Call a Professional
+
+**Final CTA Button:** "Extend Your Roof's Life—Let Us Show You How"
+
+## Technical Requirements:
+
+### Page Structure:
+- Use semantic HTML with proper heading hierarchy (H1, H2, H3)
+- Include schema markup for local business
+- Ensure mobile responsiveness
+- Add breadcrumb navigation
+- Include social sharing buttons
+
+### SEO Optimization:
+- Target keywords: "Denver roof maintenance", "roof care Denver", "Denver roofing tips"
+- Include internal links to other service pages
+- Add FAQ section at bottom
+- Optimize images with alt text like "Denver roof maintenance inspection"
+
+### Conversion Elements:
+- Place CTA buttons strategically after each section
+- Use contrasting colors for buttons (consistent with site design)
+- Include phone number prominently
+- Add customer testimonials or reviews
+- Include emergency contact section
+
+## Footer Button Analysis & Recommendation:
+
+**KEEP the "Maintenance Tips" button in footer** - This follows roofing industry best practices because:
+- Provides easy access to valuable educational content
+- Builds trust and authority
+- Captures leads from users researching maintenance
+- Common on high-converting roofing websites
+- Supports SEO with internal linking
+
+**Footer Button Placement:** Keep it in the "Quick Links" or "Resources" section of footer
+
+## Link Fixes Required:
+
+1. **Blog Page:** Update the "learn roof maintenance tips" link to point to `/maintenance-tips` or `/roof-maintenance-guide`
+2. **Footer:** Ensure "maintenance tips" button links to the same page
+3. **Navigation:** Consider adding to main navigation under "Resources" or "Blog"
+
+## Design Consistency:
+- Match existing site colors and fonts
+- Use consistent button styling throughout
+- Maintain current site layout structure
+- Ensure loading speed optimization
+- Add relevant stock photos of Denver roofing scenarios
+
+## Call-to-Action Strategy:
+- Use conversational, helpful tone (not pushy)
+- Focus on homeowner pain points
+- Include local Denver references
+- Provide multiple contact options (phone, form, chat)
+- Use urgency appropriately (seasonal timing, weather concerns)
+
+## Additional Features to Consider:
+- Downloadable maintenance checklist PDF
+- Seasonal maintenance reminder signup
+- Before/after photo gallery
+- Video tutorials for safe DIY tasks
+- Interactive roof age calculator
+
+**Implementation Priority:**
+1. Create the maintenance tips page with all content
+2. Fix broken links on blog page
+3. Optimize footer button placement
+4. Add internal linking throughout site
+5. Test all CTAs and contact forms
+6. Implement SEO optimizations
+
+Please implement this comprehensive maintenance tips page, ensuring it matches the professional, trustworthy tone of the existing Spencer Roofing Solutions website while maximizing both user value and conversion potential.

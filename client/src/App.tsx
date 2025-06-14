@@ -25,6 +25,7 @@ const Blog = lazy(() => import(/* webpackChunkName: "blog" */ "./pages/Blog"));
 const BlogPost = lazy(() => import(/* webpackChunkName: "blog" */ "./pages/BlogPost"));
 const Contact = lazy(() => import(/* webpackChunkName: "contact" */ "./pages/Contact"));
 const FAQ = lazy(() => import(/* webpackChunkName: "faq" */ "./pages/FAQ"));
+const MaintenanceTips = lazy(() => import(/* webpackChunkName: "blog" */ "./pages/MaintenanceTips"));
 const PrivacyPolicy = lazy(() => import(/* webpackChunkName: "legal" */ "./pages/PrivacyPolicy"));
 const TermsOfService = lazy(() => import(/* webpackChunkName: "legal" */ "./pages/TermsOfService"));
 const NotFound = lazy(() => import(/* webpackChunkName: "misc" */ "@/pages/not-found"));
@@ -71,6 +72,7 @@ function App() {
               <Route path="/portfolio" component={Portfolio} />
               <Route path="/blog" component={Blog} />
               <Route path="/blog/:id" component={BlogPost} />
+              <Route path="/maintenance-tips" component={MaintenanceTips} />
               <Route path="/contact" component={Contact} />
               <Route path="/faq" component={FAQ} />
               <Route path="/privacy-policy" component={PrivacyPolicy} />
