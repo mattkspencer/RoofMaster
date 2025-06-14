@@ -98,11 +98,30 @@ const CommercialRoofing = () => {
             
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               <div className="bg-white rounded-lg shadow-md overflow-hidden">
-                <img 
-                  src="https://picsum.photos/600/300?random=21" 
-                  alt="New commercial roof installation" 
-                  className="w-full h-48 object-cover"
-                />
+                <picture>
+                  <source 
+                    media="(max-width: 640px)" 
+                    srcSet="/images/commercial-roofing/new-roof-installation-medium.webp" 
+                    type="image/webp"
+                  />
+                  <source 
+                    media="(max-width: 640px)" 
+                    srcSet="/images/commercial-roofing/new-roof-installation-medium.png" 
+                    type="image/png"
+                  />
+                  <source 
+                    srcSet="/images/commercial-roofing/new-roof-installation.webp" 
+                    type="image/webp"
+                  />
+                  <img 
+                    src="/images/commercial-roofing/new-roof-installation.png" 
+                    alt="Professional new commercial roof installation services - Quality apartment complex roofing with proper gutters and ventilation" 
+                    className="w-full h-48 object-cover"
+                    width="900"
+                    height="675"
+                    loading="lazy"
+                  />
+                </picture>
                 <div className="p-6">
                   <h3 className="text-xl font-bold mb-3">New Roof Installation</h3>
                   <p className="text-gray-600 mb-4">

@@ -1,0 +1,48 @@
+Please optimize this uploaded PNG photo for use on my Commercial Roofing page. Here's what I need you to do:
+
+Image Processing:
+
+Optimize the PNG image for web performance while maintaining high quality (aim for under 400KB)
+Convert to WebP format as well for better compression
+Resize to optimal dimensions for the commercial roofing services section (recommend 800x600 or 900x675 for 4:3 ratio)
+Preserve the original color saturation, brightness, and natural lighting - NO color corrections or brightness adjustments
+
+
+File Management:
+
+Save the optimized images to: client/public/images/commercial-roofing/
+Name appropriately like new-roof-installation.webp and new-roof-installation.png
+Create responsive versions (thumbnail/medium/full) for different viewing contexts
+
+
+Implementation:
+
+Locate my "Commercial Roofing" page
+SPECIFICALLY: Find the "Our Commercial Roofing Services" section
+LOCATE: The "New Roof Installation" subsection within the services
+REPLACE: The placeholder image in the new roof installation area
+Insert the new optimized image in its place
+Add proper alt text like 'Professional new commercial roof installation services'
+Ensure consistent sizing with other commercial roofing service images
+
+
+Performance & Quality:
+
+Implement WebP format with PNG fallback for browser compatibility
+Add responsive srcset for optimal loading across devices
+Maintain fast loading performance within the commercial roofing services layout
+Keep the image looking exactly like the original PNG upload - just web-optimized
+Ensure proper aspect ratio consistency with other service option images
+
+
+Services Section Integration:
+
+Ensure the image showcases new roof installation effectively
+Position appropriately within the new roof installation subsection
+Maintain professional appearance consistent with other commercial roofing service images
+Complement the new roof installation information and specifications
+Ensure visual consistency across all service options
+
+
+
+Please locate the "Our Commercial Roofing Services" section on the Commercial Roofing page, find the "New Roof Installation" subsection, and replace the placeholder image with this optimized PNG image while maintaining the professional services layout and consistency with other commercial roofing service images.
