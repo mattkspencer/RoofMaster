@@ -69,10 +69,8 @@ const BlogPost = () => {
             <div className="text-center py-10">
               <h3 className="text-xl font-bold text-red-500 mb-2">Unable to load blog post</h3>
               <p className="mb-6">This post may have been removed or the URL might be incorrect.</p>
-              <Link href="/blog">
-                <a className="inline-block bg-primary hover:bg-primary-dark text-white font-semibold py-3 px-8 rounded-md transition-colors">
-                  Back to Blog
-                </a>
+              <Link href="/blog" className="inline-block bg-primary hover:bg-primary-dark text-white font-semibold py-3 px-8 rounded-md transition-colors">
+                Back to Blog
               </Link>
             </div>
           ) : post ? (
@@ -93,7 +91,7 @@ const BlogPost = () => {
                 />
               </div>
               
-              <div className="prose prose-lg max-w-none">
+              <div className="prose prose-lg max-w-none prose-headings:text-gray-900 prose-p:text-gray-700 prose-li:text-gray-700 prose-strong:text-gray-900">
                 <div dangerouslySetInnerHTML={{ __html: post.content }} />
               </div>
               
@@ -111,13 +109,11 @@ const BlogPost = () => {
               )}
               
               <div className="mt-10 pt-6 border-t border-gray-200">
-                <Link href="/blog">
-                  <a className="inline-flex items-center text-primary hover:text-primary-dark">
-                    <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-2" viewBox="0 0 20 20" fill="currentColor">
-                      <path fillRule="evenodd" d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z" clipRule="evenodd" />
-                    </svg>
-                    Back to all articles
-                  </a>
+                <Link href="/blog" className="inline-flex items-center text-primary hover:text-primary-dark">
+                  <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-2" viewBox="0 0 20 20" fill="currentColor">
+                    <path fillRule="evenodd" d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z" clipRule="evenodd" />
+                  </svg>
+                  Back to all articles
                 </Link>
               </div>
             </article>
@@ -125,10 +121,8 @@ const BlogPost = () => {
             <div className="text-center py-10">
               <h3 className="text-xl font-bold mb-2">Blog post not found</h3>
               <p className="mb-6">The article you're looking for may have been removed or the URL might be incorrect.</p>
-              <Link href="/blog">
-                <a className="inline-block bg-primary hover:bg-primary-dark text-white font-semibold py-3 px-8 rounded-md transition-colors">
-                  Back to Blog
-                </a>
+              <Link href="/blog" className="inline-block bg-primary hover:bg-primary-dark text-white font-semibold py-3 px-8 rounded-md transition-colors">
+                Back to Blog
               </Link>
             </div>
           )}
