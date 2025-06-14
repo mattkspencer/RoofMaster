@@ -337,28 +337,14 @@ const ProjectDetails: React.FC<ProjectDetailsProps> = ({ project }) => {
                   <div>
                     <h3 className="text-xl font-semibold mb-4 text-red-600">Challenge</h3>
                     <p className="text-gray-600 mb-4">
-                      Severe hail damage had compromised the existing roof structure, requiring careful assessment 
-                      of decking integrity while working within insurance claim parameters.
+                      {content.challenges}
                     </p>
-                    <ul className="text-gray-600 space-y-1">
-                      <li>• Extensive granule loss from hail impact</li>
-                      <li>• Multiple leak points during storms</li>
-                      <li>• Insurance claim coordination needed</li>
-                      <li>• Tight timeline for completion</li>
-                    </ul>
                   </div>
                   <div>
                     <h3 className="text-xl font-semibold mb-4 text-green-600">Solution</h3>
                     <p className="text-gray-600 mb-4">
-                      Our team conducted thorough documentation for insurance purposes and implemented a 
-                      systematic approach to ensure quality while meeting deadlines.
+                      {content.solutions}
                     </p>
-                    <ul className="text-gray-600 space-y-1">
-                      <li>• Comprehensive damage documentation</li>
-                      <li>• Strategic material ordering and delivery</li>
-                      <li>• Efficient two-day installation schedule</li>
-                      <li>• Enhanced ventilation system upgrade</li>
-                    </ul>
                   </div>
                 </div>
               </div>
@@ -390,19 +376,19 @@ const ProjectDetails: React.FC<ProjectDetailsProps> = ({ project }) => {
               <h2 className="text-3xl font-bold text-center mb-12">Project Statistics</h2>
               <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-primary mb-2">5,000</div>
+                  <div className="text-3xl font-bold text-primary mb-2">{content.squareFootage.split(' ')[0]}</div>
                   <div className="text-gray-600">Square Feet</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-primary mb-2">2</div>
+                  <div className="text-3xl font-bold text-primary mb-2">{content.completionTime.split(' ')[0]}</div>
                   <div className="text-gray-600">Days to Complete</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-primary mb-2">130</div>
-                  <div className="text-gray-600">MPH Wind Rating</div>
+                  <div className="text-3xl font-bold text-primary mb-2">{content.windRating.includes('mph') ? content.windRating.split(' ')[2] : 'Pro'}</div>
+                  <div className="text-gray-600">{content.windRating.includes('mph') ? 'MPH Wind Rating' : 'Grade Install'}</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-primary mb-2">Lifetime</div>
+                  <div className="text-3xl font-bold text-primary mb-2">{content.warranty.includes('Lifetime') ? 'Lifetime' : content.warranty.split(' ')[0]}</div>
                   <div className="text-gray-600">Material Warranty</div>
                 </div>
               </div>
