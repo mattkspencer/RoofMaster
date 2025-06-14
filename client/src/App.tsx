@@ -5,9 +5,6 @@ import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { useEffect, Suspense, lazy } from "react";
 import { initGA } from "./lib/analytics";
-import { initializeCSSOptimization } from "./utils/cssOptimization";
-import { initializeCompressionMonitoring } from "./utils/compressionMonitor";
-import { initializeCLSPrevention } from "./utils/clsMonitor";
 
 // Components
 import Layout from "./components/Layout";
@@ -40,7 +37,7 @@ const ArvadaRoofing = lazy(() => import(/* webpackChunkName: "locations" */ "./p
 const CastleRockRoofing = lazy(() => import(/* webpackChunkName: "locations" */ "./pages/CastleRockRoofing"));
 
 function App() {
-  // Initialize Google Analytics and CSS optimizations when app loads
+  // Initialize Google Analytics when app loads
   useEffect(() => {
     // Verify required environment variable is present
     if (!import.meta.env.VITE_GA_MEASUREMENT_ID) {
@@ -48,15 +45,6 @@ function App() {
     } else {
       initGA();
     }
-    
-    // Initialize CSS optimizations for performance
-    initializeCSSOptimization();
-    
-    // Initialize compression monitoring for resource optimization
-    initializeCompressionMonitoring();
-    
-    // Initialize CLS prevention and monitoring
-    initializeCLSPrevention();
   }, []);
 
   // Loading component for lazy-loaded pages
