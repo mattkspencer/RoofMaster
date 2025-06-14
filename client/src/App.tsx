@@ -57,7 +57,7 @@ function App() {
 
   return (
     <QueryClientProvider client={queryClient}>
-      <div>
+      <TooltipProvider>
         <Toaster />
         <EmergencyBanner />
         <Layout>
@@ -90,7 +90,7 @@ function App() {
             </Switch>
           </Suspense>
         </Layout>
-      </div>
+      </TooltipProvider>
     </QueryClientProvider>
   );
 }
