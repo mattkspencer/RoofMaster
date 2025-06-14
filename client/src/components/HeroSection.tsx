@@ -2,9 +2,9 @@ import { Link } from 'wouter';
 
 const HeroSection = () => {
   return (
-    <section id="home" className="relative min-h-[550px] py-20 flex items-center">
+    <section id="home" className="relative min-h-[550px] py-20 flex items-center" style={{ contain: 'layout' }}>
       {/* Denver skyline with mountains in background */}
-      <div className="absolute inset-0 z-0">
+      <div className="absolute inset-0 z-0" style={{ contain: 'layout style paint' }}>
         {/* A panoramic view of Denver skyline with mountains - the beautiful image you liked */}
         <img 
           src="https://images.unsplash.com/photo-1546156929-a4c0ac411f47?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&h=800&q=75&fm=webp" 
@@ -13,15 +13,21 @@ const HeroSection = () => {
                   https://images.unsplash.com/photo-1546156929-a4c0ac411f47?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&h=1067&q=75&fm=webp 1600w"
           sizes="100vw"
           alt="Denver skyline with mountains - Spencer Roofing Solutions service area" 
-          width="1200"
-          height="800"
+          width={1200}
+          height={800}
           className="w-full h-full object-cover"
           loading="eager"
-          decoding="sync"
+          decoding="async"
           {...({ fetchpriority: "high" } as any)}
-          style={{ width: '100%', height: '100%' }}
+          style={{ 
+            width: '100%', 
+            height: '100%',
+            aspectRatio: '1200/800',
+            objectFit: 'cover',
+            display: 'block'
+          }}
         />
-        <div className="absolute inset-0 bg-black/30"></div>
+        <div className="absolute inset-0 bg-black/30" style={{ contain: 'layout style paint' }}></div>
       </div>
       
       <div className="container mx-auto px-4 relative z-20">
