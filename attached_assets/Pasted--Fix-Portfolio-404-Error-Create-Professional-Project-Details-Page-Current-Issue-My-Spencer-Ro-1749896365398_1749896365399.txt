@@ -1,0 +1,91 @@
+# Fix Portfolio 404 Error & Create Professional Project Details Page
+
+## Current Issue
+My Spencer Roofing Solutions website has a broken "View Project Details" link in the portfolio section under "Asphalt Shingle Roof Replacement" that leads to a 404 error.
+
+## Task Requirements
+
+### Step 1: Analyze Current Website Structure
+1. First, examine my existing file structure and code organization
+2. Identify how the current website is built (single page, multiple pages, framework used)
+3. Locate the portfolio section and find the broken "Asphalt Shingle Roof Replacement" project link
+4. Determine the best file structure approach based on my existing setup
+
+### Step 2: Fix the Broken Portfolio Link
+1. Update the "View Project Details" link to work with the chosen file structure
+2. Use a path that makes sense with my current organization (could be `/projects/`, `/portfolio/`, or another structure)
+
+### Step 3: Create Project Directory & File Structure
+1. Based on the analysis, create the appropriate folder structure (e.g., `projects`, `portfolio`, or within existing structure)
+2. Create the new project details file using a naming convention that fits my site
+
+### Step 4: Build Professional Project Details Page
+Create a complete project details page that integrates seamlessly with my existing website structure:
+
+**Analysis-Based Requirements:**
+- Match my existing HTML structure, CSS framework, and navigation system
+- Use the same header/footer components or includes that my site currently uses
+- Follow my existing naming conventions and file organization patterns
+
+**Required Page Content:**
+- SEO-optimized title: "Asphalt Shingle Roof Replacement - Highlands Ranch, CO | Spencer Roofing Solutions"
+- Meta description: "Professional asphalt shingle roof replacement in Highlands Ranch, Colorado. Complete tear-off and installation with limited lifetime warranty. Expert Denver roofing contractor."
+- Include proper meta keywords for local SEO
+
+**Page Structure:**
+- Professional header with project title and location
+- Project metadata (location, completion date, warranty info)
+- High-quality project overview section
+- Detailed scope of work including:
+  - Complete tear-off & removal process
+  - Premium underlayment installation
+  - Architectural shingle installation details
+  - Ventilation system upgrade
+  - Gutter & downspout replacement
+- Challenges & solutions section
+- Customer satisfaction results
+- Project statistics (square footage, completion time, warranties)
+- Call-to-action section with links to contact and portfolio pages
+
+**Technical Requirements:**
+- Integrate with my existing website's architecture (single page app, multi-page, framework, etc.)
+- Use my current CSS classes, components, and styling patterns
+- Maintain consistency with my existing navigation structure
+- Include JSON-LD schema markup for local business SEO (if my site doesn't already have conflicting schema)
+- Follow my existing responsive design patterns
+- Use my current semantic HTML structure and conventions
+
+**Content Specifications:**
+- Project details: 5,000 sq ft roof in Highlands Ranch, CO
+- Completion time: 2 days
+- Materials: Premium architectural shingles in "Weathered Wood" color
+- Warranties: Limited lifetime warranty, 5-year labor and workmanship warranty
+- Special features: Wind resistance up to 130 mph, balanced ventilation system
+
+### Step 5: Styling & Integration
+- Analyze and replicate my existing website's CSS classes and styling patterns
+- Ensure the new page matches the visual design and branding of my current site
+- Add any necessary CSS for project-specific elements while maintaining design consistency
+- Ensure navigation header and footer match my existing implementation
+
+### Step 6: Testing Requirements
+- Verify the portfolio link now works correctly
+- Ensure all internal links function properly
+- Check responsive design on different screen sizes
+- Validate HTML and ensure proper page loading
+
+## Design Guidelines
+- Maintain professional appearance consistent with existing roofing contractor branding
+- Use clear typography hierarchy with proper headings (H1, H2, H3)
+- Include visual elements like icons or emojis for work scope sections
+- Create an engaging but professional layout that builds trust
+- Ensure fast loading times and clean code structure
+
+## SEO Optimization
+- Include local Denver/Highlands Ranch keywords naturally
+- Add proper alt text for any images
+- Use semantic HTML for better search engine crawling
+- Include the JSON-LD schema markup for local business
+- Optimize page title and meta description for click-through rates
+
+Please implement all these changes, ensuring the portfolio link is fixed and the new project page is fully functional and professionally designed.

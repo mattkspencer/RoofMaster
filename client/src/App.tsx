@@ -21,6 +21,7 @@ const RoofRepair = lazy(() => import(/* webpackChunkName: "services" */ "./pages
 const InsuranceClaims = lazy(() => import(/* webpackChunkName: "services" */ "./pages/InsuranceClaims"));
 const GutterServices = lazy(() => import(/* webpackChunkName: "services" */ "./pages/GutterServices"));
 const Portfolio = lazy(() => import(/* webpackChunkName: "portfolio" */ "./pages/Portfolio"));
+const PortfolioProject = lazy(() => import(/* webpackChunkName: "portfolio" */ "./pages/PortfolioProject"));
 const Blog = lazy(() => import(/* webpackChunkName: "blog" */ "./pages/Blog"));
 const BlogPost = lazy(() => import(/* webpackChunkName: "blog" */ "./pages/BlogPost"));
 const Contact = lazy(() => import(/* webpackChunkName: "contact" */ "./pages/Contact"));
@@ -70,6 +71,7 @@ function App() {
               <Route path="/services/insurance-claims" component={InsuranceClaims} />
               <Route path="/services/gutter-services" component={GutterServices} />
               <Route path="/portfolio" component={Portfolio} />
+              <Route path="/portfolio/:id" component={PortfolioProject} />
               <Route path="/blog" component={Blog} />
               <Route path="/blog/:id" component={BlogPost} />
               <Route path="/maintenance-tips" component={MaintenanceTips} />
