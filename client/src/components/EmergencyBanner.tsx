@@ -60,12 +60,7 @@ const EmergencyBanner = () => {
             
             <a 
               href="tel:720-360-8546"
-              className="bg-white text-red-600 px-4 py-2 rounded-lg font-bold text-sm md:text-base hover:bg-gray-100 transition-colors duration-200 flex items-center space-x-2 shadow-lg"
-              style={{
-                minWidth: '220px',
-                minHeight: '36px',
-                boxSizing: 'border-box'
-              }}
+              className="emergency-call-btn bg-white text-red-600 px-4 py-2 rounded-lg font-bold text-sm md:text-base hover:bg-gray-100 transition-colors duration-200 flex items-center space-x-2 shadow-lg"
             >
               <Phone className="h-4 w-4" style={{ minWidth: '16px' }} />
               <span>CALL NOW: 720-360-8546</span>
