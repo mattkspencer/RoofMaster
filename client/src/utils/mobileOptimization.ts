@@ -24,10 +24,10 @@ export const getOptimalImageSize = (baseWidth: number, baseHeight: number) => {
 
 export const preloadCriticalResources = () => {
   if (isMobileDevice()) {
-    // Preload only critical mobile resources
+    // Preload only critical optimized resources
     const criticalImages = [
-      '/images/colburnbuild-mobile.webp',
-      '/images/aboutspencerroofingsolutionswebsitephoto-mobile.webp'
+      '/images/colburnbuild.webp',
+      '/images/aboutspencerroofingsolutionswebsitephoto.webp'
     ];
     
     criticalImages.forEach(src => {
