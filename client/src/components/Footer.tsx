@@ -16,33 +16,24 @@ const Footer = () => {
               Your trusted roofing project manager for the Denver metropolitan area, specializing in residential, commercial, and insurance claim assistance.
             </p>
             <div className="flex space-x-4" role="navigation" aria-label="Social media links">
-              <a 
-                href="https://www.facebook.com/spencerroofingsolutions" 
-                className="text-white hover:text-blue-400 transition-colors" 
-                aria-label="Visit Spencer Roofing Solutions on Facebook"
-                target="_blank" 
-                rel="noopener noreferrer"
+              <span 
+                className="text-white hover:text-blue-400 transition-colors cursor-default" 
+                aria-label="Spencer Roofing Solutions Facebook (link coming soon)"
               >
                 <i className="fab fa-facebook-f text-xl" aria-hidden="true"></i>
-              </a>
-              <a 
-                href="https://www.instagram.com/spencerroofingsolutions" 
-                className="text-white hover:text-blue-400 transition-colors" 
-                aria-label="Visit Spencer Roofing Solutions on Instagram"
-                target="_blank" 
-                rel="noopener noreferrer"
+              </span>
+              <span 
+                className="text-white hover:text-blue-400 transition-colors cursor-default" 
+                aria-label="Spencer Roofing Solutions Instagram (link coming soon)"
               >
                 <i className="fab fa-instagram text-xl" aria-hidden="true"></i>
-              </a>
-              <a 
-                href="https://www.linkedin.com/in/spencer-roofing-solutions" 
-                className="text-white hover:text-blue-400 transition-colors" 
-                aria-label="Visit Spencer Roofing Solutions on LinkedIn"
-                target="_blank" 
-                rel="noopener noreferrer"
+              </span>
+              <span 
+                className="text-white hover:text-blue-400 transition-colors cursor-default" 
+                aria-label="Spencer Roofing Solutions LinkedIn (link coming soon)"
               >
                 <i className="fab fa-linkedin-in text-xl" aria-hidden="true"></i>
-              </a>
+              </span>
             </div>
           </div>
           
