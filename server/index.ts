@@ -5,18 +5,61 @@ import { setupVite, serveStatic, log } from "./vite";
 
 const app = express();
 
-// Enable gzip compression for all text-based resources
+// Enhanced compression for maximum performance
 app.use(compression({
-  level: 6,
-  threshold: 1024,
+  level: 9, // Maximum compression for production
+  threshold: 512, // Compress smaller files too
   filter: (req, res) => {
     if (req.headers['x-no-compression']) return false;
+    
+    // Compress text-based resources including JS, CSS, HTML, JSON, XML
+    const contentType = res.getHeader('Content-Type');
+    if (typeof contentType === 'string') {
+      return /text|javascript|json|xml|css|html/.test(contentType);
+    }
+    
     return compression.filter(req, res);
   }
 }));
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
+
+// Performance and security headers
+app.use((req, res, next) => {
+  // Cache control for static assets
+  if (req.url.match(/\.(js|css|png|jpg|jpeg|gif|ico|svg|woff2|woff|ttf|eot)$/)) {
+    res.setHeader('Cache-Control', 'public, max-age=31536000, immutable'); // 1 year
+  } else if (req.url.match(/\.(html|htm)$/)) {
+    res.setHeader('Cache-Control', 'public, max-age=3600'); // 1 hour for HTML
+  } else {
+    res.setHeader('Cache-Control', 'public, max-age=300'); // 5 minutes for API
+  }
+
+  // Security headers
+  res.setHeader('X-Content-Type-Options', 'nosniff');
+  res.setHeader('X-Frame-Options', 'DENY');
+  res.setHeader('X-XSS-Protection', '1; mode=block');
+  res.setHeader('Referrer-Policy', 'strict-origin-when-cross-origin');
+  
+  // Content Security Policy
+  res.setHeader('Content-Security-Policy', [
+    "default-src 'self'",
+    "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com https://www.google-analytics.com",
+    "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com",
+    "font-src 'self' https://fonts.gstatic.com",
+    "img-src 'self' data: https: http:",
+    "connect-src 'self' https://www.google-analytics.com https://www.googletagmanager.com",
+    "frame-src 'none'",
+    "object-src 'none'",
+    "base-uri 'self'"
+  ].join('; '));
+
+  // Performance headers
+  res.setHeader('Vary', 'Accept-Encoding');
+  
+  next();
+});
 
 app.use((req, res, next) => {
   const start = Date.now();

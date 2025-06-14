@@ -6,6 +6,7 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import { useEffect, Suspense, lazy } from "react";
 import { initGA } from "./lib/analytics";
 import { initializeCSSOptimization } from "./utils/cssOptimization";
+import { initializeCompressionMonitoring } from "./utils/compressionMonitor";
 
 // Components
 import Layout from "./components/Layout";
@@ -49,6 +50,9 @@ function App() {
     
     // Initialize CSS optimizations for performance
     initializeCSSOptimization();
+    
+    // Initialize compression monitoring for resource optimization
+    initializeCompressionMonitoring();
   }, []);
 
   // Loading component for lazy-loaded pages
