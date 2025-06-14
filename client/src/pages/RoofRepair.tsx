@@ -339,14 +339,14 @@ const RoofRepair = () => {
                   </li>
                 </ul>
                 
-                <div className="flex flex-col sm:flex-row gap-4">
-                  <a href="tel:720-360-8546" className="bg-secondary hover:bg-secondary-dark text-white text-center font-semibold py-3 px-6 rounded-md transition-colors">
+                <div className="flex flex-col sm:flex-row justify-center items-center gap-4 max-w-lg mx-auto">
+                  <a href="tel:720-360-8546" className="bg-secondary hover:bg-secondary/90 text-white text-center font-semibold py-3 px-6 rounded-md transition-colors w-full sm:w-auto">
                     <i className="fas fa-phone-alt mr-2"></i> Emergency Repair Hotline
                   </a>
-                  <Link href="/contact">
-                    <a className="bg-primary hover:bg-primary-dark text-white text-center font-semibold py-3 px-6 rounded-md transition-colors">
+                  <Link href="/contact" className="w-full sm:w-auto">
+                    <div className="bg-primary hover:bg-primary/90 text-white text-center font-semibold py-3 px-6 rounded-md transition-colors cursor-pointer">
                       Contact Us
-                    </a>
+                    </div>
                   </Link>
                 </div>
               </div>
