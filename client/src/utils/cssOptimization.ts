@@ -153,16 +153,18 @@ export const initializeCSSOptimization = () => {
 export const measureCSSPerformance = () => {
   // Measure CSS loading performance
   if ('performance' in window) {
-    const entries = performance.getEntriesByType('resource');
+    const entries = performance.getEntriesByType('resource') as PerformanceResourceTiming[];
     const cssEntries = entries.filter(entry => 
       entry.name.includes('.css') || entry.name.includes('fonts.googleapis.com')
     );
     
+    const resourceEntries = cssEntries as PerformanceResourceTiming[];
+    
     console.log('CSS Performance Metrics:', {
-      totalCSSFiles: cssEntries.length,
-      totalCSSSize: cssEntries.reduce((sum, entry) => sum + (entry.transferSize || 0), 0),
-      largestCSS: cssEntries.reduce((max, entry) => 
-        (entry.transferSize || 0) > (max.transferSize || 0) ? entry : max, cssEntries[0]
+      totalCSSFiles: resourceEntries.length,
+      totalCSSSize: resourceEntries.reduce((sum, entry) => sum + (entry.transferSize || 0), 0),
+      largestCSS: resourceEntries.reduce((max, entry) => 
+        (entry.transferSize || 0) > (max.transferSize || 0) ? entry : max, resourceEntries[0]
       )
     });
   }
