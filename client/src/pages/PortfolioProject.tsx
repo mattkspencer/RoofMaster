@@ -201,7 +201,7 @@ const ProjectDetails: React.FC<ProjectDetailsProps> = ({ project }) => {
   }, [project]);
 
   return (
-
+    <>
       <div className="min-h-screen bg-gray-50">
         {/* Hero Section */}
         <section className="bg-primary text-white py-16">

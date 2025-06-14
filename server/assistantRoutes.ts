@@ -4,6 +4,10 @@ import { v4 as uuidv4 } from 'uuid';
 
 const router = Router();
 
+// Initialize Natural language processing tools
+const tokenizer = new natural.WordTokenizer();
+const stemmer = natural.PorterStemmer;
+
 // In-memory conversation storage
 const conversations = new Map();
 
@@ -85,9 +89,7 @@ const roofingKnowledge = {
   }
 };
 
-// Natural language processing setup
-const tokenizer = new natural.WordTokenizer();
-const stemmer = natural.PorterStemmer;
+
 
 // Conversation state management
 class ConversationManager {
