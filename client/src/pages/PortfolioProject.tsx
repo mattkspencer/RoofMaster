@@ -9,20 +9,198 @@ interface ProjectDetailsProps {
   project: PortfolioProjectType;
 }
 
+// Project-specific content data
+const getProjectContent = (project: PortfolioProjectType) => {
+  if (project.title === "Asphalt Shingle Roof Replacement") {
+    return {
+      squareFootage: "5,000 sq ft",
+      completionTime: "2 days",
+      materials: "Premium Architectural Shingles - \"Weathered Wood\" Color",
+      windRating: "Up to 130 mph",
+      warranty: "Limited Lifetime + 5-Year Labor",
+      specialFeatures: "Enhanced wind resistance, balanced ventilation system",
+      challenges: "Severe hail damage had compromised the existing roof structure at this elevated Highlands Ranch location, requiring careful assessment of decking integrity while working within insurance claim parameters and Colorado's challenging weather conditions.",
+      solutions: "Our team conducted thorough documentation for insurance purposes and implemented a systematic approach to ensure quality while meeting deadlines. We used specialized installation techniques for high-altitude conditions and premium fasteners exceeding local building codes.",
+      scopeOfWork: [
+        {
+          title: "Complete Tear-Off & Removal",
+          icon: "🔨",
+          items: [
+            "Safe removal of existing 20-year-old damaged shingles",
+            "Thorough inspection and replacement of damaged roof decking",
+            "Professional disposal of all old roofing materials",
+            "Preparation of clean work surface for new installation"
+          ]
+        },
+        {
+          title: "Premium Underlayment Installation",
+          icon: "🛡️",
+          items: [
+            "High-quality synthetic underlayment across entire 5,000 sq ft",
+            "Enhanced water protection barrier system",
+            "Proper overlap and sealing techniques for Colorado weather",
+            "Code-compliant installation exceeding local requirements"
+          ]
+        },
+        {
+          title: "Architectural Shingle Installation",
+          icon: "🏘️",
+          items: [
+            "Premium \"Weathered Wood\" dimensional architectural shingles",
+            "Precision nail placement using specialized high-altitude techniques",
+            "Exact alignment and spacing for optimal performance",
+            "Wind-resistant installation methods for 130 mph rating"
+          ]
+        },
+        {
+          title: "Ventilation System Upgrade",
+          icon: "💨",
+          items: [
+            "Balanced intake and exhaust ventilation design",
+            "Professional ridge vent installation along entire peak",
+            "Soffit vent optimization for energy efficiency",
+            "Climate-specific ventilation for Highlands Ranch elevation"
+          ]
+        }
+      ]
+    };
+  } else if (project.title === "TPO Commercial Roof Installation") {
+    return {
+      squareFootage: "20,000 sq ft",
+      completionTime: "5 days",
+      materials: "Premium TPO Roofing System",
+      windRating: "Up to 110 mph",
+      warranty: "20-Year Material + 10-Year Labor",
+      specialFeatures: "Improved drainage system, energy-efficient design",
+      challenges: "The existing commercial roof had significant ponding issues and outdated drainage that was causing structural concerns for this Denver business complex.",
+      solutions: "We redesigned the drainage system with additional drains and proper slope adjustments, while upgrading to a high-performance TPO system that eliminated ponding and improved energy efficiency.",
+      scopeOfWork: [
+        {
+          title: "Existing Roof Assessment",
+          icon: "🔍",
+          items: [
+            "Comprehensive structural evaluation of 20,000 sq ft surface",
+            "Drainage system analysis and redesign planning",
+            "Insulation assessment and upgrade recommendations",
+            "Building code compliance review for commercial standards"
+          ]
+        },
+        {
+          title: "TPO System Installation",
+          icon: "🏢",
+          items: [
+            "Premium white TPO membrane for energy efficiency",
+            "Mechanically fastened system for wind resistance",
+            "Seamless welded seams for complete waterproofing",
+            "Enhanced insulation for improved building performance"
+          ]
+        },
+        {
+          title: "Drainage System Upgrade",
+          icon: "🌊",
+          items: [
+            "Strategic placement of additional roof drains",
+            "Proper slope adjustments to eliminate ponding",
+            "High-capacity gutters and downspout system",
+            "Emergency overflow protection systems"
+          ]
+        },
+        {
+          title: "Quality Assurance",
+          icon: "✅",
+          items: [
+            "Electronic leak detection testing across entire surface",
+            "Seam strength testing for long-term performance",
+            "Final inspection and documentation for warranty",
+            "Comprehensive maintenance plan and training"
+          ]
+        }
+      ]
+    };
+  } else if (project.title === "Hail Damage Insurance Claim") {
+    return {
+      squareFootage: "3,200 sq ft",
+      completionTime: "3 days",
+      materials: "Impact-Resistant Architectural Shingles",
+      windRating: "Up to 120 mph",
+      warranty: "Limited Lifetime + 5-Year Labor",
+      specialFeatures: "Class 4 impact resistance, insurance claim coordination",
+      challenges: "After a major hailstorm damaged this Aurora roof, the insurance company initially wanted to approve only partial repairs rather than complete replacement, despite extensive damage throughout the roof system.",
+      solutions: "Spencer provided comprehensive damage documentation with detailed photos and measurements, demonstrating that partial repairs would be inadequate. His expertise convinced the insurance company to approve a complete replacement with impact-resistant materials.",
+      scopeOfWork: [
+        {
+          title: "Insurance Claim Documentation",
+          icon: "📋",
+          items: [
+            "Comprehensive damage assessment and photo documentation",
+            "Detailed measurements and impact analysis report",
+            "Insurance adjuster coordination and advocacy",
+            "Supplemental claim preparation for complete replacement"
+          ]
+        },
+        {
+          title: "Complete Roof System Replacement",
+          icon: "🏠",
+          items: [
+            "Full tear-off of hail-damaged roofing materials",
+            "Class 4 impact-resistant architectural shingle installation",
+            "Upgraded underlayment for enhanced protection",
+            "Professional installation exceeding manufacturer specifications"
+          ]
+        },
+        {
+          title: "Gutter System Restoration",
+          icon: "🌧️",
+          items: [
+            "Complete replacement of hail-damaged gutters",
+            "Seamless aluminum gutter installation",
+            "Proper slope and drainage optimization",
+            "Durable downspout and extension system"
+          ]
+        },
+        {
+          title: "Final Protection Measures",
+          icon: "🛡️",
+          items: [
+            "Impact-resistant materials throughout entire system",
+            "Enhanced wind resistance for future storm protection",
+            "Comprehensive warranty coverage documentation",
+            "Preventive maintenance plan and recommendations"
+          ]
+        }
+      ]
+    };
+  }
+  
+  // Default fallback
+  return {
+    squareFootage: "N/A",
+    completionTime: "N/A",
+    materials: "Professional Grade Materials",
+    windRating: "Code Compliant",
+    warranty: "Professional Warranty",
+    specialFeatures: "Quality craftsmanship",
+    challenges: "This project presented unique challenges that required professional expertise and attention to detail.",
+    solutions: "Our team implemented proven solutions to deliver exceptional results for our client.",
+    scopeOfWork: []
+  };
+};
+
 const ProjectDetails: React.FC<ProjectDetailsProps> = ({ project }) => {
+  const content = getProjectContent(project);
+  
+  // Update document title and meta tags
+  useEffect(() => {
+    document.title = `${project.title} - ${project.location} | Spencer Roofing Solutions`;
+    
+    // Update meta description
+    const metaDesc = document.querySelector('meta[name="description"]');
+    if (metaDesc) {
+      metaDesc.setAttribute('content', `Professional ${project.title.toLowerCase()} in ${project.location}. ${project.description} Expert Denver roofing contractor.`);
+    }
+  }, [project]);
+
   return (
-    <>
-      {/* SEO Meta Tags */}
-      <head>
-        <title>Asphalt Shingle Roof Replacement - Highlands Ranch, CO | Spencer Roofing Solutions</title>
-        <meta name="description" content="Professional asphalt shingle roof replacement in Highlands Ranch, Colorado. Complete tear-off and installation with limited lifetime warranty. Expert Denver roofing contractor." />
-        <meta name="keywords" content="asphalt shingle replacement, Highlands Ranch roofing, Denver roof replacement, architectural shingles, roof warranty, Colorado roofing contractor" />
-        <meta property="og:title" content="Asphalt Shingle Roof Replacement - Highlands Ranch, CO | Spencer Roofing Solutions" />
-        <meta property="og:description" content="Professional asphalt shingle roof replacement in Highlands Ranch, Colorado. Complete tear-off and installation with limited lifetime warranty." />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://roof-master-mattspen.replit.app/portfolio/1" />
-        <meta property="og:image" content="https://roof-master-mattspen.replit.app/images/portfolio/asphalt-shingle-roof-replacement.jpg" />
-      </head>
 
       <div className="min-h-screen bg-gray-50">
         {/* Hero Section */}
@@ -38,15 +216,15 @@ const ProjectDetails: React.FC<ProjectDetailsProps> = ({ project }) => {
               <div className="flex flex-wrap justify-center gap-6 text-lg">
                 <div className="flex items-center">
                   <span className="text-blue-200">📅</span>
-                  <span className="ml-2">Completed: {project.completionDate ? new Date(project.completionDate).toLocaleDateString() : 'May 2023'}</span>
+                  <span className="ml-2">Completed: {project.completionDate ? new Date(project.completionDate).toLocaleDateString() : 'Recently'}</span>
                 </div>
                 <div className="flex items-center">
                   <span className="text-blue-200">🏠</span>
-                  <span className="ml-2">5,000 sq ft</span>
+                  <span className="ml-2">{content.squareFootage}</span>
                 </div>
                 <div className="flex items-center">
                   <span className="text-blue-200">⏱️</span>
-                  <span className="ml-2">2 days</span>
+                  <span className="ml-2">{content.completionTime}</span>
                 </div>
               </div>
             </div>
@@ -66,15 +244,15 @@ const ProjectDetails: React.FC<ProjectDetailsProps> = ({ project }) => {
                   <div className="grid grid-cols-2 gap-4 mb-6">
                     <div className="bg-gray-50 p-4 rounded-lg">
                       <h3 className="font-semibold text-primary mb-2">Materials</h3>
-                      <p className="text-gray-600">Premium Architectural Shingles - "Weathered Wood" Color</p>
+                      <p className="text-gray-600">{content.materials}</p>
                     </div>
                     <div className="bg-gray-50 p-4 rounded-lg">
                       <h3 className="font-semibold text-primary mb-2">Warranty</h3>
-                      <p className="text-gray-600">Limited Lifetime + 5-Year Labor</p>
+                      <p className="text-gray-600">{content.warranty}</p>
                     </div>
                     <div className="bg-gray-50 p-4 rounded-lg">
                       <h3 className="font-semibold text-primary mb-2">Wind Rating</h3>
-                      <p className="text-gray-600">Up to 130 mph</p>
+                      <p className="text-gray-600">{content.windRating}</p>
                     </div>
                     <div className="bg-gray-50 p-4 rounded-lg">
                       <h3 className="font-semibold text-primary mb-2">Category</h3>
@@ -102,57 +280,19 @@ const ProjectDetails: React.FC<ProjectDetailsProps> = ({ project }) => {
             <div className="max-w-4xl mx-auto">
               <h2 className="text-3xl font-bold text-center mb-12">Detailed Scope of Work</h2>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <div className="bg-white p-6 rounded-lg shadow-md">
-                  <h3 className="text-xl font-semibold mb-4 flex items-center">
-                    <span className="text-2xl mr-3">🔨</span>
-                    Complete Tear-Off & Removal
-                  </h3>
-                  <ul className="text-gray-600 space-y-2">
-                    <li>• Safe removal of existing damaged shingles</li>
-                    <li>• Inspection of roof decking for damage</li>
-                    <li>• Disposal of all old roofing materials</li>
-                    <li>• Preparation of clean work surface</li>
-                  </ul>
-                </div>
-
-                <div className="bg-white p-6 rounded-lg shadow-md">
-                  <h3 className="text-xl font-semibold mb-4 flex items-center">
-                    <span className="text-2xl mr-3">🛡️</span>
-                    Premium Underlayment Installation
-                  </h3>
-                  <ul className="text-gray-600 space-y-2">
-                    <li>• High-quality synthetic underlayment</li>
-                    <li>• Enhanced water protection barrier</li>
-                    <li>• Proper overlap and sealing techniques</li>
-                    <li>• Code-compliant installation methods</li>
-                  </ul>
-                </div>
-
-                <div className="bg-white p-6 rounded-lg shadow-md">
-                  <h3 className="text-xl font-semibold mb-4 flex items-center">
-                    <span className="text-2xl mr-3">🏘️</span>
-                    Architectural Shingle Installation
-                  </h3>
-                  <ul className="text-gray-600 space-y-2">
-                    <li>• Premium "Weathered Wood" architectural shingles</li>
-                    <li>• Proper nail placement and pattern</li>
-                    <li>• Precise alignment and spacing</li>
-                    <li>• Wind-resistant installation techniques</li>
-                  </ul>
-                </div>
-
-                <div className="bg-white p-6 rounded-lg shadow-md">
-                  <h3 className="text-xl font-semibold mb-4 flex items-center">
-                    <span className="text-2xl mr-3">💨</span>
-                    Ventilation System Upgrade
-                  </h3>
-                  <ul className="text-gray-600 space-y-2">
-                    <li>• Balanced intake and exhaust ventilation</li>
-                    <li>• Ridge vent installation</li>
-                    <li>• Soffit vent optimization</li>
-                    <li>• Improved energy efficiency</li>
-                  </ul>
-                </div>
+                {content.scopeOfWork.map((workItem, index) => (
+                  <div key={index} className="bg-white p-6 rounded-lg shadow-md">
+                    <h3 className="text-xl font-semibold mb-4 flex items-center">
+                      <span className="text-2xl mr-3">{workItem.icon}</span>
+                      {workItem.title}
+                    </h3>
+                    <ul className="text-gray-600 space-y-2">
+                      {workItem.items.map((item, itemIndex) => (
+                        <li key={itemIndex}>• {item}</li>
+                      ))}
+                    </ul>
+                  </div>
+                ))}
               </div>
             </div>
           </div>

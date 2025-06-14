@@ -1,0 +1,86 @@
+# Add Professional Content to Asphalt Shingle Roof Replacement Project Page
+
+## Current Situation
+My portfolio page now has working links for all three projects. The "Asphalt Shingle Roof Replacement" project page currently exists but has minimal or placeholder content, while the other two projects ("TPO Commercial Roof Installation" and "Hail Damage Insurance Claim") have good layouts and content structure.
+
+## Task Requirements
+
+### Step 1: Analyze Existing Project Pages
+1. First, examine the content structure and layout of the "TPO Commercial Roof Installation" project page
+2. Also review the "Hail Damage Insurance Claim" project page layout
+3. Identify the content sections, styling patterns, and overall structure used in these successful project pages
+4. Note the writing style, section organization, and visual elements that work well
+
+### Step 2: Apply Similar Structure to Asphalt Shingle Project
+Using the same layout pattern and content structure as the other two projects, add comprehensive content to the "Asphalt Shingle Roof Replacement" project page located in Highlands Ranch.
+
+**Content Requirements:**
+- Follow the same section structure and layout as the existing successful project pages
+- Use similar writing style and tone that matches the other project descriptions
+- Maintain consistency with the visual elements and formatting used in the other projects
+
+**Project Details to Include:**
+- **Location**: Highlands Ranch, Colorado
+- **Project Size**: 5,000 square foot roof
+- **Completion Time**: 2 days
+- **Materials**: Premium architectural shingles in "Weathered Wood" color
+- **Warranties**: Limited lifetime warranty on materials, 5-year labor and workmanship warranty
+- **Special Features**: Wind resistance up to 130 mph, balanced ventilation system upgrade
+
+### Step 3: Content Sections to Develop
+Based on the structure of the other project pages, create comprehensive content for:
+
+**Project Overview Section:**
+- Professional description of the Highlands Ranch asphalt shingle replacement project
+- Context about why the homeowners needed the roof replacement
+- Highlight the challenges of Colorado weather and elevation
+
+**Scope of Work Section:**
+- **Complete Tear-Off & Removal**: Full removal of existing 20-year-old shingles, inspection and replacement of damaged roof decking
+- **Premium Underlayment Installation**: High-quality synthetic underlayment across entire 5,000 sq ft roof
+- **Architectural Shingle Installation**: Premium dimensional shingles with enhanced wind resistance
+- **Ventilation System Upgrade**: Balanced ventilation with ridge vents and soffit vents for energy efficiency
+- **Gutter & Downspout Replacement**: Seamless aluminum gutters with proper drainage extensions
+
+**Challenges & Solutions Section:**
+- Address unique aspects of Highlands Ranch location (elevation, wind exposure)
+- Specialized installation techniques for Colorado weather conditions
+- Premium fasteners and materials exceeding local building codes
+
+**Results & Customer Satisfaction:**
+- Enhanced home protection and energy efficiency
+- Improved curb appeal and property value
+- Professional worksite management and customer service
+- Successful 2-day completion timeline
+
+**Project Statistics:**
+- Square footage: 5,000 sq ft
+- Completion time: 2 days
+- Material warranty: Limited lifetime
+- Workmanship warranty: 5 years
+
+### Step 4: Maintain Design Consistency
+- Use the exact same CSS classes and styling as the other project pages
+- Follow the same visual hierarchy and section organization
+- Include any icons, graphics, or visual elements that appear on the other project pages
+- Ensure responsive design matches the existing project pages
+
+### Step 5: SEO and Local Optimization
+- Include natural references to Highlands Ranch and Denver area
+- Use roofing industry keywords that match the tone of the other project pages
+- Maintain the same level of technical detail and professionalism
+
+## Writing Guidelines
+- Match the professional tone and expertise level demonstrated in the other project pages
+- Use similar sentence structure and paragraph length as the existing content
+- Include technical roofing terminology where appropriate
+- Emphasize quality, craftsmanship, and customer satisfaction
+- Build trust and credibility through detailed project information
+
+## Quality Standards
+- Content should be comprehensive and detailed like the other project pages
+- Maintain the same high level of professionalism and expertise
+- Ensure all information is accurate and reflects industry standards
+- Create engaging content that builds confidence in potential customers
+
+Please analyze the existing successful project pages and create matching content for the Asphalt Shingle Roof Replacement project, ensuring consistency in structure, style, and quality while incorporating all the specified project details.
