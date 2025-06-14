@@ -7,6 +7,7 @@ import { useEffect, Suspense, lazy } from "react";
 import { initGA } from "./lib/analytics";
 import { initializeCSSOptimization } from "./utils/cssOptimization";
 import { initializeCompressionMonitoring } from "./utils/compressionMonitor";
+import { initializeCLSPrevention } from "./utils/clsMonitor";
 
 // Components
 import Layout from "./components/Layout";
@@ -53,6 +54,9 @@ function App() {
     
     // Initialize compression monitoring for resource optimization
     initializeCompressionMonitoring();
+    
+    // Initialize CLS prevention and monitoring
+    initializeCLSPrevention();
   }, []);
 
   // Loading component for lazy-loaded pages

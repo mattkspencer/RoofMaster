@@ -350,6 +350,53 @@
       .gap-8 { gap: 2rem; }
       .gap-10 { gap: 2.5rem; }
       
+      /* Critical CLS prevention for call buttons */
+      .sticky-call-button {
+        position: fixed;
+        bottom: 1.5rem;
+        right: 1.5rem;
+        z-index: 50;
+        width: 180px;
+        height: 64px;
+        contain: layout;
+      }
+      
+      .emergency-banner {
+        min-height: 60px;
+        contain: layout;
+      }
+      
+      .emergency-call-btn {
+        min-width: 220px;
+        min-height: 36px;
+        box-sizing: border-box;
+      }
+      
+      /* Image dimension fixes for CLS */
+      img {
+        max-width: 100%;
+        height: auto;
+        display: block;
+      }
+      
+      .hero-image {
+        aspect-ratio: 3/2;
+        width: 100%;
+        height: auto;
+      }
+      
+      .about-image {
+        aspect-ratio: 4/3;
+        width: 100%;
+        height: auto;
+      }
+      
+      .service-image {
+        aspect-ratio: 3/2;
+        width: 100%;
+        height: auto;
+      }
+      
       @media (min-width: 768px) {
         .md\\:grid-cols-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
         .md\\:flex-row { flex-direction: row; }

@@ -29,19 +29,21 @@ const EmergencyBanner = () => {
   if (!isVisible) return null;
 
   return (
-    <div className={`relative overflow-hidden ${
-      isStormSeason 
-        ? 'bg-gradient-to-r from-red-600 to-orange-600' 
-        : 'bg-gradient-to-r from-orange-600 to-red-600'
-    } text-white`}>
+    <div 
+      className={`emergency-banner relative overflow-hidden ${
+        isStormSeason 
+          ? 'bg-gradient-to-r from-red-600 to-orange-600' 
+          : 'bg-gradient-to-r from-orange-600 to-red-600'
+      } text-white`}
+    >
       {/* Pulsing animation overlay */}
       <div className="absolute inset-0 bg-white opacity-10 animate-[pulse_4.5s_ease-in-out_infinite]"></div>
       
       <div className="relative max-w-7xl mx-auto px-4 py-3">
-        <div className="flex items-center justify-between">
+        <div className="flex items-center justify-between" style={{ minHeight: '36px' }}>
           <div className="flex items-center space-x-4 flex-1">
             <div className="flex items-center space-x-2">
-              <Phone className="h-5 w-5 animate-bounce" />
+              <Phone className="h-5 w-5 animate-bounce" style={{ minWidth: '20px' }} />
               <span className="font-bold text-sm md:text-base">
                 {isStormSeason ? '⚡ STORM DAMAGE?' : '🚨 EMERGENCY ROOF REPAIRS'}
               </span>
@@ -59,8 +61,13 @@ const EmergencyBanner = () => {
             <a 
               href="tel:720-360-8546"
               className="bg-white text-red-600 px-4 py-2 rounded-lg font-bold text-sm md:text-base hover:bg-gray-100 transition-colors duration-200 flex items-center space-x-2 shadow-lg"
+              style={{
+                minWidth: '220px',
+                minHeight: '36px',
+                boxSizing: 'border-box'
+              }}
             >
-              <Phone className="h-4 w-4" />
+              <Phone className="h-4 w-4" style={{ minWidth: '16px' }} />
               <span>CALL NOW: 720-360-8546</span>
             </a>
           </div>
@@ -69,13 +76,17 @@ const EmergencyBanner = () => {
             onClick={handleDismiss}
             className="ml-4 p-1 hover:bg-white hover:bg-opacity-20 rounded-full transition-colors duration-200"
             aria-label="Close emergency banner"
+            style={{
+              minWidth: '32px',
+              minHeight: '32px'
+            }}
           >
             <X className="h-5 w-5" />
           </button>
         </div>
         
         {/* Mobile-optimized layout */}
-        <div className="sm:hidden mt-2 text-center">
+        <div className="sm:hidden mt-2 text-center" style={{ minHeight: '20px' }}>
           <span className="text-sm">
             {isStormSeason 
               ? 'Storm Season - 24/7 Emergency Response'
