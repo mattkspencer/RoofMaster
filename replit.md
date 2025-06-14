@@ -131,7 +131,13 @@ DATABASE_URL=postgresql_connection_string (for future database integration)
 
 ## Changelog
 
-- June 14, 2025. Initial setup
+- June 14, 2025: Portfolio project details functionality added
+  - Created PortfolioProject.tsx component for individual project pages
+  - Added /portfolio/:id route to App.tsx
+  - Updated PortfolioSection to use API data instead of hardcoded data
+  - Fixed broken "View Project Details" links to use database IDs
+  - Added comprehensive project details page with SEO optimization
+- June 14, 2025: Initial setup
 
 ## User Preferences
 

@@ -1,42 +1,22 @@
 import { useState } from 'react';
 import { Link } from 'wouter';
+import { useQuery } from '@tanstack/react-query';
 import { trackEvent } from '@/lib/analytics';
-import OptimizedImage from './OptimizedImage';
-
-interface PortfolioItem {
-  image: string;
-  title: string;
-  location: string;
-  description: string;
-  category: string;
-}
+import { PortfolioProject } from '@/../../shared/schema';
 
 const PortfolioSection = () => {
   const [activeFilter, setActiveFilter] = useState('all');
   
-  const portfolioItems: PortfolioItem[] = [
-    {
-      image: "/images/portfolio/asphalt-shingle-roof-replacement.jpg",
-      title: "Asphalt Shingle Roof Replacement",
-      location: "Highlands Ranch, CO",
-      description: "Complete replacement of storm-damaged roof with architectural shingles and upgraded ventilation system.",
-      category: "residential"
-    },
-    {
-      image: "/images/portfolio/tpo-commercial-roof-installation.jpg",
-      title: "TPO Commercial Roof Installation",
-      location: "Denver, CO",
-      description: "Installation of 20,000 sq. ft. TPO roofing system for a local business complex with improved drainage.",
-      category: "commercial"
-    },
-    {
-      image: "/images/portfolio/hail-damage-insurance-claim.jpg",
-      title: "Hail Damage Insurance Claim",
-      location: "Aurora, CO",
-      description: "Successfully processed insurance claim and replaced severely hail-damaged roof and gutters.",
-      category: "insurance"
+  const { data: portfolioItems = [], isLoading } = useQuery({
+    queryKey: ['/api/portfolio'],
+    queryFn: async () => {
+      const response = await fetch('/api/portfolio');
+      if (!response.ok) {
+        throw new Error('Failed to fetch portfolio projects');
+      }
+      return response.json();
     }
-  ];
+  });
 
   const handleFilterChange = (filter: string) => {
     setActiveFilter(filter);
@@ -45,7 +25,7 @@ const PortfolioSection = () => {
 
   const filteredItems = activeFilter === 'all' 
     ? portfolioItems 
-    : portfolioItems.filter(item => item.category === activeFilter);
+    : portfolioItems.filter((item: PortfolioProject) => item.category === activeFilter);
 
   return (
     <section id="portfolio" className="py-16 bg-white">
@@ -77,12 +57,6 @@ const PortfolioSection = () => {
             Commercial
           </button>
           <button 
-            className={`filter-btn px-4 py-2 rounded-md transition-colors ${activeFilter === 'repair' ? 'bg-primary text-white' : 'bg-neutral-light hover:bg-primary hover:text-white'}`}
-            onClick={() => handleFilterChange('repair')}
-          >
-            Repairs
-          </button>
-          <button 
             className={`filter-btn px-4 py-2 rounded-md transition-colors ${activeFilter === 'insurance' ? 'bg-primary text-white' : 'bg-neutral-light hover:bg-primary hover:text-white'}`}
             onClick={() => handleFilterChange('insurance')}
           >
@@ -90,66 +64,72 @@ const PortfolioSection = () => {
           </button>
         </div>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {filteredItems.map((item, index) => (
-            <div 
-              key={index}
-              className="portfolio-item bg-neutral-light rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-all duration-300"
-            >
-              {item.image.startsWith('/images/portfolio/') ? (
-                <picture>
-                  <source 
-                    media="(max-width: 768px)" 
-                    srcSet={`${item.image.replace('.jpg', '-thumbnail.webp')}`} 
-                    type="image/webp"
-                  />
-                  <source 
-                    media="(max-width: 768px)" 
-                    srcSet={`${item.image.replace('.jpg', '-thumbnail.jpg')}`} 
-                    type="image/jpeg"
-                  />
-                  <source 
-                    srcSet={`${item.image.replace('.jpg', '-medium.webp')}`} 
-                    type="image/webp"
-                  />
-                  <source 
-                    srcSet={`${item.image.replace('.jpg', '-medium.jpg')}`} 
-                    type="image/jpeg"
-                  />
+        {isLoading ? (
+          <div className="flex items-center justify-center py-12">
+            <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600"></div>
+          </div>
+        ) : (
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {filteredItems.map((item: PortfolioProject) => (
+              <div 
+                key={item.id}
+                className="portfolio-item bg-neutral-light rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-all duration-300"
+              >
+                {item.imageUrl && item.imageUrl.startsWith('/images/portfolio/') ? (
+                  <picture>
+                    <source 
+                      media="(max-width: 768px)" 
+                      srcSet={`${item.imageUrl.replace('.jpg', '-thumbnail.webp')}`} 
+                      type="image/webp"
+                    />
+                    <source 
+                      media="(max-width: 768px)" 
+                      srcSet={`${item.imageUrl.replace('.jpg', '-thumbnail.jpg')}`} 
+                      type="image/jpeg"
+                    />
+                    <source 
+                      srcSet={`${item.imageUrl.replace('.jpg', '-medium.webp')}`} 
+                      type="image/webp"
+                    />
+                    <source 
+                      srcSet={`${item.imageUrl.replace('.jpg', '-medium.jpg')}`} 
+                      type="image/jpeg"
+                    />
+                    <img 
+                      src={item.imageUrl}
+                      alt={item.title === 'Asphalt Shingle Roof Replacement' ? 
+                        'Professional asphalt shingle roof replacement project showcase' : 
+                        `${item.title} roofing project in ${item.location}`}
+                      className="w-full h-60 object-cover"
+                      width="600"
+                      height="400"
+                      loading="lazy"
+                      decoding="async"
+                    />
+                  </picture>
+                ) : (
                   <img 
-                    src={item.image}
-                    alt={item.title === 'Asphalt Shingle Roof Replacement' ? 
-                      'Professional asphalt shingle roof replacement project showcase' : 
-                      `${item.title} roofing project in ${item.location}`}
+                    src={item.imageUrl} 
+                    alt={`${item.title} roofing project in ${item.location}`}
                     className="w-full h-60 object-cover"
                     width="600"
                     height="400"
                     loading="lazy"
                     decoding="async"
                   />
-                </picture>
-              ) : (
-                <img 
-                  src={item.image} 
-                  alt={`${item.title} roofing project in ${item.location}`}
-                  className="w-full h-60 object-cover"
-                  width="600"
-                  height="400"
-                  loading="lazy"
-                  decoding="async"
-                />
-              )}
-              <div className="p-4">
-                <h3 className="text-xl font-semibold mb-2">{item.title}</h3>
-                <p className="text-gray-600 mb-3">{item.location}</p>
-                <p className="text-sm text-gray-600 mb-4">{item.description}</p>
-                <Link href={`/portfolio/${index}`} className="text-blue-800 hover:text-blue-900 font-semibold underline">
-                  View Project Details
-                </Link>
+                )}
+                <div className="p-6">
+                  <h3 className="text-xl font-semibold mb-2">{item.title}</h3>
+                  <p className="text-gray-500 mb-2">{item.location}</p>
+                  <p className="text-gray-600 mb-4">{item.description}</p>
+                  <Link href={`/portfolio/${item.id}`} className="text-blue-800 hover:text-blue-900 font-semibold underline">
+                    View Project Details
+                  </Link>
+                </div>
               </div>
-            </div>
-          ))}
-        </div>
+            ))}
+          </div>
+        )}
         
         <div className="text-center mt-10">
           <Link 
