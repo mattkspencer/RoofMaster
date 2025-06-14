@@ -128,8 +128,11 @@ const Blog = () => {
                           {post.title}
                         </Link>
                         <p className="text-gray-600 mb-4 flex-grow">{truncateText(post.excerpt, 120)}</p>
-                        <Link href={`/blog/${post.slug}`} className="text-blue-600 font-semibold hover:text-blue-700 transition-colors inline-flex items-center">
-                          {generateLinkText(post.title)}
+                        <Link 
+                          href={post.title.toLowerCase().includes('maintenance') ? '/maintenance-tips' : `/blog/${post.slug}`} 
+                          className="text-blue-600 font-semibold hover:text-blue-700 transition-colors inline-flex items-center"
+                        >
+                          {post.title.toLowerCase().includes('maintenance') ? 'View Our 30 Essential Maintenance Tips' : generateLinkText(post.title)}
                           <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                           </svg>

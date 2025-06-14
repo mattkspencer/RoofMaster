@@ -1,0 +1,48 @@
+# Replit Agent Prompt: Fix Broken Blog Page Link
+
+## Issue to Fix:
+On the blog page, in the "Roofing Blog" section, the "learn roof maintenance tips" clickable link/button currently goes to an empty page and needs to be fixed.
+
+## Solution:
+Link the "learn roof maintenance tips" button to the same destination as the "maintenance tips" button in the footer - the comprehensive 30 maintenance tips page we just created.
+
+## Specific Instructions:
+
+### 1. Locate the Problem:
+- Navigate to the blog page
+- Find the "Roofing Blog" section 
+- Locate the "learn roof maintenance tips" clickable element
+- Identify the current broken link/URL it's pointing to
+
+### 2. Fix the Link:
+- Update the href attribute to point to the same URL as the footer "maintenance tips" button
+- Ensure the link opens in the same tab (not a new window) for better user experience
+- Test that the link works properly after the fix
+
+### 3. Verify Consistency:
+- Confirm both links (blog page and footer) now go to the same maintenance tips page
+- Check that the maintenance tips page loads properly from both locations
+- Ensure no 404 errors or broken redirects
+
+### 4. Optional Improvements (if time permits):
+- Consider updating the button text to be more specific: "View Our 30 Essential Maintenance Tips"
+- Ensure the button styling matches other CTAs on the blog page
+- Add hover effects if not already present
+
+### 5. Test the Fix:
+- Click the "learn roof maintenance tips" button from the blog page
+- Verify it successfully navigates to the maintenance tips page
+- Confirm the page loads completely with all 30 tips visible
+- Test on both desktop and mobile if possible
+
+## Why This Approach:
+- Provides consistent user experience across the site
+- Concentrates SEO value on one comprehensive resource
+- Reduces maintenance overhead (one page to update vs. multiple)
+- Eliminates duplicate content issues
+- Maximizes conversion potential by directing all traffic to the optimized tips page
+
+## Expected Outcome:
+After implementing this fix, users will be able to click "learn roof maintenance tips" from the blog page and successfully navigate to the comprehensive 30 maintenance tips page, providing them with valuable Denver-specific roofing advice and multiple opportunities to contact Spencer Roofing Solutions.
+
+Please implement this fix and confirm that the link is working properly.
