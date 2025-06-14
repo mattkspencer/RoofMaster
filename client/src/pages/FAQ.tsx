@@ -451,21 +451,21 @@ const FAQ = () => {
           </div>
 
           {/* Contact CTA */}
-          <div className="max-w-3xl mx-auto mt-16 text-center bg-primary/5 p-8 rounded-lg">
-            <h2 className="text-2xl font-bold mb-4">Still Have Questions?</h2>
-            <p className="text-lg text-gray-600 mb-6">
+          <div className="bg-primary/5 p-12 rounded-lg text-center">
+            <h2 className="text-3xl font-bold mb-4">Still Have Questions?</h2>
+            <p className="text-lg max-w-2xl mx-auto mb-6">
               Can't find what you're looking for? Our Denver roofing experts are here to help 
               with personalized answers to your specific roofing questions.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link href="/contact">
-                <a className="bg-primary hover:bg-primary-dark text-white font-semibold py-3 px-8 rounded-md transition-colors">
+            <div className="flex flex-col sm:flex-row justify-center items-center gap-4 max-w-lg mx-auto">
+              <Link href="/contact" className="w-full sm:w-auto">
+                <div className="bg-primary hover:bg-primary/90 text-white font-semibold py-3 px-8 rounded-md transition-colors text-center cursor-pointer">
                   Contact Our Experts
-                </a>
+                </div>
               </Link>
               <a 
                 href="tel:720-360-8546" 
-                className="bg-secondary hover:bg-secondary-dark text-white font-semibold py-3 px-8 rounded-md transition-colors"
+                className="bg-secondary hover:bg-secondary/90 text-white font-semibold py-3 px-8 rounded-md transition-colors text-center w-full sm:w-auto"
               >
                 Call (720) 360-8546
               </a>
