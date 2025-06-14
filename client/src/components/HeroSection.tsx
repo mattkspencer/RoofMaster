@@ -3,23 +3,21 @@ import { Link } from 'wouter';
 const HeroSection = () => {
   return (
     <section id="home" className="relative min-h-[550px] py-20 flex items-center">
-      {/* Denver skyline with mountains in background */}
-      <div className="absolute inset-0 z-0">
+      {/* Denver skyline with mountains in background - LCP optimized */}
+      <div className="lcp-hero-container absolute inset-0 z-0">
         {/* A panoramic view of Denver skyline with mountains - the beautiful image you liked */}
         <img 
-          src="https://images.unsplash.com/photo-1546156929-a4c0ac411f47?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&h=800&q=75&fm=webp" 
-          srcSet="https://images.unsplash.com/photo-1546156929-a4c0ac411f47?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=533&q=75&fm=webp 800w,
-                  https://images.unsplash.com/photo-1546156929-a4c0ac411f47?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&h=800&q=75&fm=webp 1200w,
-                  https://images.unsplash.com/photo-1546156929-a4c0ac411f47?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&h=1067&q=75&fm=webp 1600w"
+          src="https://images.unsplash.com/photo-1546156929-a4c0ac411f47?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=75" 
+          srcSet="https://images.unsplash.com/photo-1546156929-a4c0ac411f47?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=75 800w,
+                  https://images.unsplash.com/photo-1546156929-a4c0ac411f47?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=75 1200w"
           sizes="100vw"
           alt="Denver skyline with mountains - Spencer Roofing Solutions service area" 
-          width="1200"
-          height="800"
+          width={1200}
+          height={800}
           className="w-full h-full object-cover"
           loading="eager"
-          decoding="sync"
-          {...({ fetchpriority: "high" } as any)}
-          style={{ width: '100%', height: '100%' }}
+          decoding="async"
+          fetchPriority="high"
         />
         <div className="absolute inset-0 bg-black/30"></div>
       </div>
