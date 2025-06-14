@@ -96,7 +96,14 @@ export async function registerRoutes(app: Express): Promise<Server> {
         });
       }
       
-      return res.status(200).json(post);
+      // Map fields for frontend compatibility
+      const mappedPost = {
+        ...post,
+        image: post.imageUrl,
+        date: post.publishedAt.toISOString().split('T')[0]
+      };
+      
+      return res.status(200).json(mappedPost);
     } catch (error) {
       console.error("Error fetching blog post:", error);
       return res.status(500).json({
