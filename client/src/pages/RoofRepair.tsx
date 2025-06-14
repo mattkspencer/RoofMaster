@@ -524,16 +524,19 @@ const RoofRepair = () => {
             <p className="text-lg max-w-2xl mx-auto mb-6">
               Don't wait until a small problem becomes a major expense. Contact us today for a free roof inspection and repair estimate.
             </p>
-            <div className="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4">
-              <Link href="/contact">
-                <a 
-                  className="bg-secondary hover:bg-secondary-dark text-white font-semibold py-3 px-8 rounded-md transition-colors"
+            <div className="flex flex-col sm:flex-row justify-center items-center gap-4 max-w-lg mx-auto">
+              <Link href="/contact" className="w-full sm:w-auto">
+                <div 
+                  className="bg-secondary hover:bg-secondary/90 text-white font-semibold py-3 px-8 rounded-md transition-colors text-center cursor-pointer"
                   onClick={handleCTAClick}
                 >
                   Schedule a Repair
-                </a>
+                </div>
               </Link>
-              <a href="tel:720-360-8546" className="bg-primary hover:bg-primary-dark text-white font-semibold py-3 px-8 rounded-md transition-colors">
+              <a 
+                href="tel:720-360-8546" 
+                className="bg-primary hover:bg-primary/90 text-white font-semibold py-3 px-8 rounded-md transition-colors text-center w-full sm:w-auto"
+              >
                 Call 720-360-8546
               </a>
             </div>
