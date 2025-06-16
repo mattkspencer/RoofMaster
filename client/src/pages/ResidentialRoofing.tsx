@@ -6,7 +6,7 @@ import { trackEvent } from '@/lib/analytics';
 
 const ResidentialRoofing = () => {
   useEffect(() => {
-    document.title = "Residential Roofing Services | Spencer Roofing Solutions";
+    document.title = "Residential Roofing Services | Spencer Roofing";
     
     const metaDescription = document.querySelector('meta[name="description"]');
     if (metaDescription) {
@@ -48,7 +48,7 @@ const ResidentialRoofing = () => {
               />
               <img 
                 src="/images/residential-roofing-hero.jpg" 
-                alt="Professional residential roofing services - Aerial view of quality roof installation work by Spencer Roofing Solutions in Denver"
+                alt="Professional residential roofing services - Aerial view of quality roof installation work by Spencer Roofing in Denver"
                 className="w-full h-full object-cover hero-image"
                 loading="eager"
                 decoding="async"
@@ -457,7 +457,7 @@ const ResidentialRoofing = () => {
           
           {/* Why Choose Us */}
           <div className="mb-16">
-            <h2 className="text-3xl font-bold mb-6 text-center">Why Choose Spencer Roofing Solutions</h2>
+            <h2 className="text-3xl font-bold mb-6 text-center">Why Choose Spencer Roofing</h2>
             
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               <div className="bg-white rounded-lg p-6 shadow-md">

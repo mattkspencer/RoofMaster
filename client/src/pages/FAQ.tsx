@@ -29,7 +29,7 @@ const FAQ = () => {
   const { trackEvent } = useAnalytics();
 
   useEffect(() => {
-    document.title = "Frequently Asked Questions | Spencer Roofing Solutions - Denver Roofing FAQ";
+    document.title = "Frequently Asked Questions | Spencer Roofing - Denver Roofing FAQ";
     
     const metaDescription = document.querySelector('meta[name="description"]');
     if (metaDescription) {

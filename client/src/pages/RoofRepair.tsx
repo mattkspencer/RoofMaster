@@ -6,7 +6,7 @@ import { trackEvent } from '@/lib/analytics';
 
 const RoofRepair = () => {
   useEffect(() => {
-    document.title = "Roof Repair Services | Spencer Roofing Solutions";
+    document.title = "Roof Repair Services | Spencer Roofing";
     
     const metaDescription = document.querySelector('meta[name="description"]');
     if (metaDescription) {
@@ -37,7 +37,7 @@ const RoofRepair = () => {
           <div className="mb-16 relative rounded-lg overflow-hidden shadow-xl">
             <img 
               src="/images/roof-repair-hero.jpg" 
-              alt="Professional roof repair work showing damaged roof section being repaired by Spencer Roofing Solutions in Denver" 
+              alt="Professional roof repair work showing damaged roof section being repaired by Spencer Roofing in Denver" 
               className="w-full h-96 object-cover"
             />
             <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/50 to-black/70 flex items-center justify-center">

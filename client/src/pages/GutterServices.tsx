@@ -6,7 +6,7 @@ import { trackEvent } from '@/lib/analytics';
 
 const GutterServices = () => {
   useEffect(() => {
-    document.title = "Gutter Installation & Repair | Spencer Roofing Solutions";
+    document.title = "Gutter Installation & Repair | Spencer Roofing";
     
     const metaDescription = document.querySelector('meta[name="description"]');
     if (metaDescription) {

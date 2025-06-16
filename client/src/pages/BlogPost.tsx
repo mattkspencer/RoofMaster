@@ -28,7 +28,7 @@ const BlogPost = () => {
 
   useEffect(() => {
     if (post) {
-      document.title = `${post.title} | Spencer Roofing Solutions`;
+      document.title = `${post.title} | Spencer Roofing`;
       
       const metaDescription = document.querySelector('meta[name="description"]');
       if (metaDescription) {

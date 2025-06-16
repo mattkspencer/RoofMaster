@@ -6,7 +6,7 @@ import { trackEvent } from '@/lib/analytics';
 
 const CommercialRoofing = () => {
   useEffect(() => {
-    document.title = "Commercial Roofing Services | Spencer Roofing Solutions";
+    document.title = "Commercial Roofing Services | Spencer Roofing";
     
     const metaDescription = document.querySelector('meta[name="description"]');
     if (metaDescription) {
