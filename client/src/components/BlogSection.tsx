@@ -72,7 +72,7 @@ const BlogSection = () => {
                 />
                 <img 
                   src={post.image}
-                  alt={`${post.title} - Spencer Roofing Solutions blog article`}
+                  alt={`${post.title} - Spencer Roofing blog article`}
                   className="w-full h-48 object-cover"
                   width="600"
                   height="300"

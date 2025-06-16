@@ -164,7 +164,7 @@ const ChatWidget = () => {
     
     // Contact and Scheduling
     if (input.includes('contact') || input.includes('call') || input.includes('phone') || input.includes('schedule') || input.includes('appointment')) {
-      return "📞 READY TO GET STARTED?\n\n🏠 Spencer Roofing Solutions\n📱 Call/Text: 720-360-8546\n📧 Email: mattkspencer@gmail.com\n📍 Location: Englewood, Colorado\n\n✅ FREE estimates & inspections\n✅ Licensed, bonded & insured\n✅ A+ BBB rating\n✅ Local Denver metro specialists\n\nWe typically respond within 24 hours!";
+      return "📞 READY TO GET STARTED?\n\n🏠 Spencer Roofing\n📱 Call/Text: 720-360-8546\n📧 Email: mattkspencer@gmail.com\n📍 Location: Englewood, Colorado\n\n✅ FREE estimates & inspections\n✅ Licensed, bonded & insured\n✅ A+ BBB rating\n✅ Local Denver metro specialists\n\nWe typically respond within 24 hours!";
     }
     
     // Greeting responses

@@ -1,4 +1,4 @@
-// Image optimization utilities for Spencer Roofing Solutions
+// Image optimization utilities for Spencer Roofing
 // Provides optimized image URLs with proper sizing and compression
 
 export const getOptimizedImageUrl = (

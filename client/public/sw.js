@@ -1,4 +1,4 @@
-// Service Worker for Spencer Roofing Solutions
+// Service Worker for Spencer Roofing
 // Caches critical resources for improved performance
 
 const CACHE_NAME = 'spencer-roofing-v1';

@@ -105,7 +105,7 @@ const TestimonialsSection = () => {
         <div className="text-center mb-10">
           <h2 className="text-3xl font-bold font-sans mb-4">What Our Clients Say</h2>
           <p className="text-lg max-w-2xl mx-auto text-gray-600">
-            Hear from homeowners and businesses across the Denver metro area who have trusted Spencer Roofing Solutions.
+            Hear from homeowners and businesses across the Denver metro area who have trusted Spencer Roofing.
           </p>
         </div>
         

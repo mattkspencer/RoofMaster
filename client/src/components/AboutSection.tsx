@@ -11,7 +11,7 @@ const AboutSection = () => {
       <div className="container mx-auto px-4">
         <div className="flex flex-col lg:flex-row items-center gap-12">
           <div className="lg:w-1/2">
-            {/* Spencer from Spencer Roofing Solutions */}
+            {/* Spencer from Spencer Roofing */}
             <img 
               src="/images/aboutspencerroofingsolutionswebsitephoto.webp" 
               alt="Spencer from Spencer Roofing Solutions giving thumbs up in front of residential home" 

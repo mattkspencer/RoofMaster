@@ -18,19 +18,19 @@ const Footer = () => {
             <div className="flex space-x-4" role="navigation" aria-label="Social media links">
               <span 
                 className="text-white hover:text-blue-400 transition-colors cursor-default" 
-                aria-label="Spencer Roofing Solutions Facebook (link coming soon)"
+                aria-label="Spencer Roofing Facebook (link coming soon)"
               >
                 <i className="fab fa-facebook-f text-xl" aria-hidden="true"></i>
               </span>
               <span 
                 className="text-white hover:text-blue-400 transition-colors cursor-default" 
-                aria-label="Spencer Roofing Solutions Instagram (link coming soon)"
+                aria-label="Spencer Roofing Instagram (link coming soon)"
               >
                 <i className="fab fa-instagram text-xl" aria-hidden="true"></i>
               </span>
               <span 
                 className="text-white hover:text-blue-400 transition-colors cursor-default" 
-                aria-label="Spencer Roofing Solutions LinkedIn (link coming soon)"
+                aria-label="Spencer Roofing LinkedIn (link coming soon)"
               >
                 <i className="fab fa-linkedin-in text-xl" aria-hidden="true"></i>
               </span>
@@ -126,7 +126,7 @@ const Footer = () => {
         
         <div className="flex flex-col md:flex-row justify-between items-center text-gray-400">
           <div className="mb-4 md:mb-0">
-            <p>&copy; {new Date().getFullYear()} Spencer Roofing Solutions. All rights reserved.</p>
+            <p>&copy; {new Date().getFullYear()} Spencer Roofing. All rights reserved.</p>
           </div>
           <div className="flex space-x-6 text-sm text-gray-400">
             <Link href="/privacy-policy" className="hover:text-blue-400 transition-colors">

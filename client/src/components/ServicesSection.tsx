@@ -99,7 +99,7 @@ const ServicesSection = () => {
           <div className="order-2 md:order-1">
             <img 
               src="/images/roofrepairswebsitepic.webp" 
-              alt="Professional roof repair work showing damaged shingles being replaced by Spencer Roofing Solutions team" 
+              alt="Professional roof repair work showing damaged shingles being replaced by Spencer Roofing team" 
               width="600"
               height="400"
               loading="lazy"
