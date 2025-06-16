@@ -135,7 +135,7 @@ export const sendCustomerConfirmationEmail = async (formData: ContactFormData): 
           </div>
           
           <div style="margin-top: 30px; padding-top: 20px; border-top: 1px solid #e5e7eb;">
-            <p><strong>Spencer Roofing Solutions</strong><br>
+            <p><strong>Spencer Roofing</strong><br>
             Licensed & Insured | Serving Denver Since 2012<br>
             📧 mattkspencer@gmail.com<br>
             📍 Englewood, Colorado</p>

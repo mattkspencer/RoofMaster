@@ -106,7 +106,7 @@ export class MemStorage implements IStorage {
                   <li>Contact a professional roofing inspector</li>
                   <li>Call your insurance company to report the damage</li>
                 </ol>
-                <p>Remember, climbing onto your roof can be dangerous. It's always best to have a professional roofing contractor inspect for damage. At Spencer Roofing Solutions, we offer free post-storm inspections to help you determine if you have a valid insurance claim.</p>`,
+                <p>Remember, climbing onto your roof can be dangerous. It's always best to have a professional roofing contractor inspect for damage. At Spencer Roofing, we offer free post-storm inspections to help you determine if you have a valid insurance claim.</p>`,
         imageUrl: "/images/hail-damage-roof-blog.jpg",
         publishedAt: new Date("2023-06-15T12:00:00Z"),
         tags: ["hail damage", "roof inspection", "insurance claims"]
@@ -190,7 +190,7 @@ export class MemStorage implements IStorage {
                   <li>Peace of mind: A complete replacement eliminates worries about future problems</li>
                   <li>Opportunity to upgrade: Chance to switch to more durable or attractive materials</li>
                 </ul>
-                <p>The best approach is to have a professional roofing contractor perform a thorough inspection. At Spencer Roofing Solutions, we provide honest assessments to help you make the most cost-effective decision for your specific situation.</p>`,
+                <p>The best approach is to have a professional roofing contractor perform a thorough inspection. At Spencer Roofing, we provide honest assessments to help you make the most cost-effective decision for your specific situation.</p>`,
         imageUrl: "/images/repair-vs-replace-roof-blog.jpg",
         publishedAt: new Date("2023-04-10T09:15:00Z"),
         tags: ["roof repair", "roof replacement", "roofing costs"]
@@ -236,7 +236,7 @@ export class MemStorage implements IStorage {
                   <li>Appeal if necessary</li>
                 </ol>
                 <h2>How We Can Help</h2>
-                <p>As experienced insurance claim specialists, Spencer Roofing Solutions can:</p>
+                <p>As experienced insurance claim specialists, Spencer Roofing can:</p>
                 <ul>
                   <li>Provide a thorough damage assessment</li>
                   <li>Document all damage properly for your claim</li>
@@ -297,7 +297,7 @@ export class MemStorage implements IStorage {
                   <li>Address small issues before they become major problems</li>
                   <li>Schedule professional inspections twice a year (spring and fall)</li>
                 </ul>
-                <p>Remember, safety first! Many roof maintenance tasks can be done from the ground using binoculars. For tasks requiring roof access, consider hiring a professional. At Spencer Roofing Solutions, we offer maintenance programs designed specifically for Denver's climate to keep your roof in optimal condition year-round.</p>`,
+                <p>Remember, safety first! Many roof maintenance tasks can be done from the ground using binoculars. For tasks requiring roof access, consider hiring a professional. At Spencer Roofing, we offer maintenance programs designed specifically for Denver's climate to keep your roof in optimal condition year-round.</p>`,
         imageUrl: "/images/blog/seasonal-roof-maintenance-denver.jpg",
         publishedAt: new Date("2023-02-17T10:00:00Z"),
         tags: ["roof maintenance", "seasonal tips", "denver weather"]
@@ -313,7 +313,7 @@ export class MemStorage implements IStorage {
         excerpt: post.excerpt,
         content: post.content,
         imageUrl: post.imageUrl,
-        author: post.author || "Spencer Roofing Solutions",
+        author: post.author || "Spencer Roofing",
         publishedAt: post.publishedAt || new Date(),
         tags: post.tags || null
       });

@@ -51,7 +51,7 @@ export const blogPosts = pgTable("blog_posts", {
   excerpt: text("excerpt").notNull(),
   content: text("content").notNull(),
   imageUrl: text("image_url").notNull(),
-  author: text("author").default("Spencer Roofing Solutions").notNull(),
+  author: text("author").default("Spencer Roofing").notNull(),
   publishedAt: timestamp("published_at").defaultNow().notNull(),
   tags: text("tags").array(),
 });
