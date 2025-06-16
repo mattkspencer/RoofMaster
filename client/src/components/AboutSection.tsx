@@ -26,7 +26,7 @@ const AboutSection = () => {
           <div className="lg:w-1/2">
             <h2 className="text-3xl font-bold font-sans mb-6">About Spencer Roofing</h2>
             <p className="text-lg mb-6">
-              At Spencer Roofing, we specialize in managing and executing roofing projects with precision and professionalism. As an independent contractor affiliated with Interstate Roofing, we leverage their extensive resources and industry expertise to deliver top-tier roofing solutions. Our focus is on guiding homeowners through the complexities of roofing projects, particularly those involving insurance claims for hail and wind damage.
+              At Spencer Roofing, we specialize in managing and executing roofing projects with precision and professionalism. As an independent contractor affiliated with Interstate Roofing, we leverage their extensive resources and industry expertise to deliver top-tier roofing solutions. Our focus is on guiding homeowners through the complexities of roofing projects, particularly those involving insurance claims for hail and wind damage. With years of experience in the roofing industry, we collaborate closely with homeowners and insurance providers to ensure a seamless and efficient roofing experience.
             </p>
             
             <div className="grid grid-cols-2 gap-6 mb-8">
