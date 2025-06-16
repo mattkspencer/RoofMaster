@@ -1,4 +1,4 @@
-# Spencer Roofing Solutions Website
+# Spencer Roofing Website
 
 A professional roofing contractor website built with React, Node.js, and Express, featuring a comprehensive contact form with email delivery system.
 
@@ -146,7 +146,7 @@ Handles contact form submissions with email delivery.
 
 ## Contact Information
 
-**Spencer Roofing Solutions**
+**Spencer Roofing**
 - **Phone**: 720-360-8546
 - **Email**: mattkspencer@gmail.com
 - **Location**: Englewood, Colorado
