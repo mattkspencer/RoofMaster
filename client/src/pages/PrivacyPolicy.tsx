@@ -7,7 +7,7 @@ const PrivacyPolicy = () => {
     
     const metaDescription = document.querySelector('meta[name="description"]');
     if (metaDescription) {
-      metaDescription.setAttribute("content", "Spencer Roofing Solutions privacy policy. Learn how we collect, use, and protect your personal information when you contact us for roofing services.");
+      metaDescription.setAttribute("content", "Spencer Roofing privacy policy. Learn how we collect, use, and protect your personal information when you contact us for roofing services.");
     }
     
     window.scrollTo(0, 0);
@@ -34,7 +34,7 @@ const PrivacyPolicy = () => {
             <section className="mb-8">
               <h2 className="text-2xl font-bold mb-4">Information We Collect</h2>
               <p className="mb-4">
-                When you contact Spencer Roofing Solutions through our website, we collect the following personal information:
+                When you contact Spencer Roofing through our website, we collect the following personal information:
               </p>
               <ul className="list-disc pl-6 mb-4 space-y-2">
                 <li><strong>Name:</strong> To identify you and personalize our communication</li>
@@ -124,7 +124,7 @@ const PrivacyPolicy = () => {
                 If you have any questions about this Privacy Policy or want to exercise your rights regarding your personal information, please contact us:
               </p>
               <div className="bg-gray-50 p-6 rounded-lg">
-                <p><strong>Spencer Roofing Solutions</strong></p>
+                <p><strong>Spencer Roofing</strong></p>
                 <p>Email: <a href="mailto:mattkspencer@gmail.com" className="text-blue-600 hover:underline">mattkspencer@gmail.com</a></p>
                 <p>Phone: <a href="tel:720-360-8546" className="text-blue-600 hover:underline">720-360-8546</a></p>
                 <p>Location: Englewood, Colorado</p>

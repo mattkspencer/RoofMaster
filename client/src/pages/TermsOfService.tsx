@@ -3,11 +3,11 @@ import Breadcrumb from '@/components/Breadcrumb';
 
 const TermsOfService = () => {
   useEffect(() => {
-    document.title = "Terms of Service | Spencer Roofing Solutions";
+    document.title = "Terms of Service | Spencer Roofing";
     
     const metaDescription = document.querySelector('meta[name="description"]');
     if (metaDescription) {
-      metaDescription.setAttribute("content", "Terms of service for Spencer Roofing Solutions. Understand our service expectations, policies, and terms for roofing projects in the Denver metro area.");
+      metaDescription.setAttribute("content", "Terms of service for Spencer Roofing. Understand our service expectations, policies, and terms for roofing projects in the Denver metro area.");
     }
     
     window.scrollTo(0, 0);

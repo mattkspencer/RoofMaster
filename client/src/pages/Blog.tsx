@@ -19,7 +19,7 @@ interface BlogPost {
 
 const Blog = () => {
   useEffect(() => {
-    document.title = "Roofing Blog - Expert Tips & Advice | Spencer Roofing Solutions";
+    document.title = "Roofing Blog - Expert Tips & Advice | Spencer Roofing";
     
     const metaDescription = document.querySelector('meta[name="description"]');
     if (metaDescription) {

@@ -42,11 +42,11 @@ const Contact = () => {
   const { toast } = useToast();
   
   useEffect(() => {
-    document.title = "Contact Us | Spencer Roofing Solutions";
+    document.title = "Contact Us | Spencer Roofing";
     
     const metaDescription = document.querySelector('meta[name="description"]');
     if (metaDescription) {
-      metaDescription.setAttribute("content", "Contact Spencer Roofing Solutions for a free roof inspection and estimate. Professional roofing services in Denver - residential, commercial, repairs, and insurance claims assistance.");
+      metaDescription.setAttribute("content", "Contact Spencer Roofing for a free roof inspection and estimate. Professional roofing services in Denver - residential, commercial, repairs, and insurance claims assistance.");
     }
     
     window.scrollTo(0, 0);
@@ -360,12 +360,12 @@ const Contact = () => {
                   allowFullScreen={true} 
                   loading="lazy" 
                   referrerPolicy="no-referrer-when-downgrade"
-                  title="Spencer Roofing Solutions Location"
+                  title="Spencer Roofing Location"
                 />
                 <div className="p-6">
                   <h3 className="text-xl font-bold mb-4">Our Service Area</h3>
                   <p className="mb-4">
-                    Spencer Roofing Solutions provides expert roofing services throughout the Denver metro area, including:
+                    Spencer Roofing provides expert roofing services throughout the Denver metro area, including:
                   </p>
                   <div className="grid grid-cols-2 gap-2">
                     <div>
