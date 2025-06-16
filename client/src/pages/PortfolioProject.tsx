@@ -191,7 +191,7 @@ const ProjectDetails: React.FC<ProjectDetailsProps> = ({ project }) => {
   
   // Update document title and meta tags
   useEffect(() => {
-    document.title = `${project.title} - ${project.location} | Spencer Roofing Solutions`;
+    document.title = `${project.title} - ${project.location} | Spencer Roofing`;
     
     // Update meta description
     const metaDesc = document.querySelector('meta[name="description"]');
@@ -445,7 +445,7 @@ const ProjectDetails: React.FC<ProjectDetailsProps> = ({ project }) => {
               },
               "provider": {
                 "@type": "LocalBusiness",
-                "name": "Spencer Roofing Solutions",
+                "name": "Spencer Roofing",
                 "@id": "https://roof-master-mattspen.replit.app",
                 "url": "https://roof-master-mattspen.replit.app",
                 "telephone": "720-360-8546",

@@ -34,14 +34,14 @@ const TermsOfService = () => {
             <section className="mb-8">
               <h2 className="text-2xl font-bold mb-4">Agreement to Terms</h2>
               <p className="mb-4">
-                By using the Spencer Roofing Solutions website or contacting us for services, you agree to these terms. 
+                By using the Spencer Roofing website or contacting us for services, you agree to these terms. 
                 If you don't agree with any part of these terms, please don't use our website or services.
               </p>
             </section>
 
             <section className="mb-8">
               <h2 className="text-2xl font-bold mb-4">Our Services</h2>
-              <p className="mb-4">Spencer Roofing Solutions provides:</p>
+              <p className="mb-4">Spencer Roofing provides:</p>
               <ul className="list-disc pl-6 mb-4 space-y-2">
                 <li>Residential and commercial roofing installation</li>
                 <li>Roof repairs and maintenance</li>
@@ -117,7 +117,7 @@ const TermsOfService = () => {
             <section className="mb-8">
               <h2 className="text-2xl font-bold mb-4">Limitation of Liability</h2>
               <p className="mb-4">
-                To the fullest extent permitted by law, Spencer Roofing Solutions shall not be liable for any indirect, 
+                To the fullest extent permitted by law, Spencer Roofing shall not be liable for any indirect, 
                 incidental, special, or consequential damages arising from our services or website use.
               </p>
               <p className="mb-4">
@@ -161,7 +161,7 @@ const TermsOfService = () => {
                 Questions about these terms? Contact us:
               </p>
               <div className="bg-gray-50 p-6 rounded-lg">
-                <p><strong>Spencer Roofing Solutions</strong></p>
+                <p><strong>Spencer Roofing</strong></p>
                 <p>Email: <a href="mailto:mattkspencer@gmail.com" className="text-blue-600 hover:underline">mattkspencer@gmail.com</a></p>
                 <p>Phone: <a href="tel:720-360-8546" className="text-blue-600 hover:underline">720-360-8546</a></p>
                 <p>Location: Englewood, Colorado</p>

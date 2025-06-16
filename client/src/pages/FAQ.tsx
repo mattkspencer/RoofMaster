@@ -33,7 +33,7 @@ const FAQ = () => {
     
     const metaDescription = document.querySelector('meta[name="description"]');
     if (metaDescription) {
-      metaDescription.setAttribute("content", "Get answers to common roofing questions from Denver's trusted roofing contractors. Learn about hail damage, insurance claims, costs, materials, and more from Spencer Roofing Solutions.");
+      metaDescription.setAttribute("content", "Get answers to common roofing questions from Denver's trusted roofing contractors. Learn about hail damage, insurance claims, costs, materials, and more from Spencer Roofing.");
     }
     
     window.scrollTo(0, 0);
@@ -488,7 +488,7 @@ const FAQ = () => {
       {/* CTA Section */}
       <CTASection 
         title="Ready to Get Started?"
-        text="Contact Spencer Roofing Solutions for professional roofing services throughout the Denver metro area."
+        text="Contact Spencer Roofing for professional roofing services throughout the Denver metro area."
         buttonText="Get Free Estimate"
         buttonLink="/contact"
         showPhoneButton={true}
