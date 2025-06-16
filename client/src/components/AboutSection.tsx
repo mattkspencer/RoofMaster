@@ -14,7 +14,7 @@ const AboutSection = () => {
             {/* Spencer from Spencer Roofing */}
             <img 
               src="/images/aboutspencerroofingsolutionswebsitephoto.webp" 
-              alt="Spencer from Spencer Roofing Solutions giving thumbs up in front of residential home" 
+              alt="Spencer from Spencer Roofing giving thumbs up in front of residential home" 
               width="600"
               height="400"
               loading="lazy"

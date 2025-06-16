@@ -5,7 +5,7 @@ import ContactSection from '@/components/ContactSection';
 
 const DenverRoofing = () => {
   useEffect(() => {
-    document.title = "Denver Roofing Contractor | Licensed Roofer | Spencer Roofing Solutions";
+    document.title = "Denver Roofing Contractor | Licensed Roofer | Spencer Roofing";
     const metaDescription = document.querySelector('meta[name="description"]');
     if (metaDescription) {
       metaDescription.setAttribute("content", "Professional Denver roofing contractor providing roof repair, replacement & storm damage services. Licensed Colorado roofer serving Denver metro. Call (720) 360-8546!");

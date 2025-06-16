@@ -14,12 +14,12 @@ import { useEffect } from "react";
 const Home = () => {
   useEffect(() => {
     // Set page title and meta description
-    document.title = "Spencer Roofing Solutions | Your Trusted Roofing Project Manager for the Denver Metro Area";
+    document.title = "Spencer Roofing | Your Trusted Roofing Project Manager for the Denver Metro Area";
     
     // Update meta description
     const metaDescription = document.querySelector('meta[name="description"]');
     if (metaDescription) {
-      metaDescription.setAttribute("content", "Spencer Roofing Solutions provides professional roofing services including residential, commercial, repairs, and insurance claim assistance in the Denver metropolitan area.");
+      metaDescription.setAttribute("content", "Spencer Roofing provides professional roofing services including residential, commercial, repairs, and insurance claim assistance in the Denver metropolitan area.");
     }
   }, []);
 

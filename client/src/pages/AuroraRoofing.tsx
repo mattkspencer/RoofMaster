@@ -5,7 +5,7 @@ import ContactSection from '@/components/ContactSection';
 
 const AuroraRoofing = () => {
   useEffect(() => {
-    document.title = "Aurora Roofing Company | Licensed Roofer | Spencer Roofing Solutions";
+    document.title = "Aurora Roofing Company | Licensed Roofer | Spencer Roofing";
     const metaDescription = document.querySelector('meta[name="description"]');
     if (metaDescription) {
       metaDescription.setAttribute("content", "Professional Aurora roofing company providing roof replacement, repair & storm damage restoration. Licensed Colorado roofer serving Aurora CO. Free estimates!");

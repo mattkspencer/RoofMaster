@@ -5,7 +5,7 @@ import ContactSection from '@/components/ContactSection';
 
 const ArvadaRoofing = () => {
   useEffect(() => {
-    document.title = "Arvada Roof Repair | Licensed Roofer | Spencer Roofing Solutions";
+    document.title = "Arvada Roof Repair | Licensed Roofer | Spencer Roofing";
     const metaDescription = document.querySelector('meta[name="description"]');
     if (metaDescription) {
       metaDescription.setAttribute("content", "Professional Arvada roof repair and roofing company serving Arvada CO. Licensed Colorado roofer with storm damage restoration. Call (720) 360-8546!");

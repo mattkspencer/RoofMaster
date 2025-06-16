@@ -5,7 +5,7 @@ import ContactSection from '@/components/ContactSection';
 
 const EnglewoodRoofing = () => {
   useEffect(() => {
-    document.title = "Englewood Roofing Services | Licensed Roofer | Spencer Roofing Solutions";
+    document.title = "Englewood Roofing Services | Licensed Roofer | Spencer Roofing";
     const metaDescription = document.querySelector('meta[name="description"]');
     if (metaDescription) {
       metaDescription.setAttribute("content", "Professional Englewood roofing services including repair, replacement & storm damage restoration. Licensed Colorado roofer serving Englewood CO. Free estimates!");

@@ -5,7 +5,7 @@ import ContactSection from '@/components/ContactSection';
 
 const LittletonRoofing = () => {
   useEffect(() => {
-    document.title = "Littleton Roof Replacement | Licensed Roofer | Spencer Roofing Solutions";
+    document.title = "Littleton Roof Replacement | Licensed Roofer | Spencer Roofing";
     const metaDescription = document.querySelector('meta[name="description"]');
     if (metaDescription) {
       metaDescription.setAttribute("content", "Professional Littleton roof replacement and repair services. Licensed Colorado roofer serving Littleton CO with storm damage restoration. Call (720) 360-8546!");

@@ -3,7 +3,7 @@ import Breadcrumb from '@/components/Breadcrumb';
 
 const PrivacyPolicy = () => {
   useEffect(() => {
-    document.title = "Privacy Policy | Spencer Roofing Solutions";
+    document.title = "Privacy Policy | Spencer Roofing";
     
     const metaDescription = document.querySelector('meta[name="description"]');
     if (metaDescription) {

@@ -5,7 +5,7 @@ import ContactSection from '@/components/ContactSection';
 
 const CastleRockRoofing = () => {
   useEffect(() => {
-    document.title = "Castle Rock Roofing Services | Licensed Roofer | Spencer Roofing Solutions";
+    document.title = "Castle Rock Roofing Services | Licensed Roofer | Spencer Roofing";
     const metaDescription = document.querySelector('meta[name="description"]');
     if (metaDescription) {
       metaDescription.setAttribute("content", "Professional Castle Rock roofing services including repair, replacement & storm damage restoration. Licensed Colorado roofer serving Castle Rock CO. Call (720) 360-8546!");
