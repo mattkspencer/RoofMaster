@@ -1,8 +1,8 @@
-# Spencer Roofing Solutions - Replit Project Guide
+# Spencer Roofing - Replit Project Guide
 
 ## Overview
 
-Spencer Roofing Solutions is a professional roofing contractor website built as a full-stack web application. The project serves as a business website and lead generation platform for a roofing project manager serving the Denver metropolitan area. The application features contact form management, email automation, AI-powered roofing assistance, and comprehensive service pages.
+Spencer Roofing is a professional roofing contractor website built as a full-stack web application. The project serves as a business website and lead generation platform for a roofing project manager serving the Denver metropolitan area. The application features contact form management, email automation, AI-powered roofing assistance, and comprehensive service pages.
 
 ## System Architecture
 

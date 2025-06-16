@@ -7,12 +7,12 @@ import OptimizedImage from "@/components/OptimizedImage";
 const About = () => {
   useEffect(() => {
     // Set page title and meta description
-    document.title = "About Us | Spencer Roofing Solutions";
+    document.title = "About Us | Spencer Roofing";
     
     // Update meta description
     const metaDescription = document.querySelector('meta[name="description"]');
     if (metaDescription) {
-      metaDescription.setAttribute("content", "Learn about Spencer Roofing Solutions, your dedicated roofing project manager in the Denver metropolitan area. Discover our approach to roofing projects and customer service.");
+      metaDescription.setAttribute("content", "Learn about Spencer Roofing, your dedicated roofing project manager in the Denver metropolitan area. Discover our approach to roofing projects and customer service.");
     }
     
     // Scroll to top on page load
@@ -29,13 +29,13 @@ const About = () => {
         />
         
         <div className="py-12">
-          <h1 className="text-4xl font-bold mb-8 text-center">About Spencer Roofing Solutions</h1>
+          <h1 className="text-4xl font-bold mb-8 text-center">About Spencer Roofing</h1>
           
           <div className="flex flex-col md:flex-row gap-12 mb-16">
             <div className="md:w-1/2">
               <img 
                 src="/images/aboutspencerroofingsolutionswebsitephoto.webp" 
-                alt="Spencer from Spencer Roofing Solutions giving thumbs up in front of residential home" 
+                alt="Spencer from Spencer Roofing giving thumbs up in front of residential home" 
                 className="rounded-lg shadow-lg w-full h-auto"
                 loading="eager"
                 width="600"
@@ -47,13 +47,10 @@ const About = () => {
             <div className="md:w-1/2">
               <h2 className="text-2xl font-bold mb-4">Your Trusted Roofing Project Manager</h2>
               <p className="text-lg mb-4">
-                As your dedicated roofing project manager in the Denver metropolitan area, I provide expert guidance throughout your entire roofing project.
+                At Spencer Roofing, we specialize in managing and executing roofing projects with precision and professionalism. As an independent contractor affiliated with Interstate Roofing, we leverage their extensive resources and industry expertise to deliver top-tier roofing solutions. Our focus is on guiding homeowners through the complexities of roofing projects, particularly those involving insurance claims for hail and wind damage.
               </p>
               <p className="text-lg mb-4">
-                I partner with established roofing companies as an independent 1099 project manager and salesperson, bringing years of experience in navigating complex roofing projects, particularly those involving insurance claims for hail and wind damage.
-              </p>
-              <p className="text-lg mb-4">
-                My approach focuses on transparent communication, meticulous attention to detail, and ensuring your complete satisfaction from initial consultation to project completion.
+                With years of experience in the roofing industry, Spencer Roofing is committed to providing expert project management and sales services. We collaborate closely with homeowners and insurance providers to ensure a seamless and efficient roofing experience. Trust Spencer Roofing to protect your home with quality and integrity.
               </p>
             </div>
           </div>
