@@ -487,7 +487,7 @@ export class MemStorage implements IStorage {
     const newPost: BlogPost = { 
       ...post, 
       id,
-      author: post.author || "Spencer Roofing Solutions",
+      author: post.author || "Spencer Roofing",
       publishedAt: post.publishedAt || new Date(),
       tags: post.tags || null
     };

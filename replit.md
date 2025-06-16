@@ -131,6 +131,12 @@ DATABASE_URL=postgresql_connection_string (for future database integration)
 
 ## Changelog
 
+- June 16, 2025: Brand name update and About page content refresh
+  - Global text replacement: "Spencer Roofing Solutions" → "Spencer Roofing" across entire website
+  - Updated About page content to reflect Interstate Roofing affiliation
+  - Updated all page titles, meta descriptions, and SEO markup
+  - Updated email templates, blog content, and portfolio references
+  - Maintained all existing functionality and responsive design
 - June 14, 2025: Portfolio project details functionality added
   - Created PortfolioProject.tsx component for individual project pages
   - Added /portfolio/:id route to App.tsx
